@@ -5,7 +5,7 @@ const MainPage = () => {
         <div className="flex flex-col items-center md:flex-row max-w-[60rem] frosted-glass-card p-10 gap-10">
           <div className="flex-1 flex-col min-w-0 space-y-2">
             <div className="flex flex-col gap-4 items-center text-4xl">ProMed Exams</div>
-            <div className="flex flex-col gap-4 items-center text-xl">[ COMING SOON ]</div>
+            <div className="flex flex-col gap-4 items-center text-xl">[ WEBSITE COMING SOON ]</div>
           </div>
         </div>
       </main>
