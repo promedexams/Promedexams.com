@@ -1,7 +1,5 @@
-import { redirect } from "next/navigation";
-
 const NotFound = () => {
-  redirect("/");
+  return <p>404</p>;
 };
 
 export default NotFound;

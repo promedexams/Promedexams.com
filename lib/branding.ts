@@ -1,5 +1,6 @@
 export const Branding = {
   Name: "ProMed Exams",
-  Email: "office@promedexams.com",
-  CopyrightYear: new Date().getFullYear(),
+  OfficeEmail: "office@promedexams.com",
+  Logo: "/branding/placeholder-logo.svg",
+  CopyrightDisclaimer: `© ${new Date().getFullYear()}, ProMed Exams PC`,
 };
