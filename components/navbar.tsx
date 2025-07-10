@@ -30,14 +30,12 @@ const Navbar = () => {
         •
         <Link href="/schedule-appointment">
           <Button className="bg-[#f1a208] hover:bg-[#f1a208]/80 cursor-pointer text-black text-base font-bold hover:scale-105">
-            <CalendarDaysIcon className="w-4 h-4" /> Schedule an Appointment
+            <CalendarDaysIcon className="w-4 h-4" /> Schedule Appointment
           </Button>
         </Link>
       </div>
       <div className="flex min-[980px]:hidden flex-row">
-        <Button size="icon" className="bg-[#f1a208] hover:bg-[#f1a208]/80 cursor-pointer">
-          <MenuIcon className="text-black w-4 h-4" />
-        </Button>
+        <MenuIcon className="text-[#f1a208] hover:text-[#f1a208]/80 w-10 h-10 transition-colors duration-300 cursor-pointer" />
       </div>
       <div className="absolute left-0 bottom-0 w-full h-px bg-gray-300" />
     </nav>
