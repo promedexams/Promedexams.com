@@ -1,5 +1,5 @@
 import Footer from "@/components/footer/footer";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 
 const ScheduleAppointmentPage = () => {
   return (

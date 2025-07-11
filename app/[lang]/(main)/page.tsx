@@ -1,5 +1,5 @@
 import Footer from "@/components/footer/footer";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 import HeroSection from "./_components/hero-section";
 
 const MainPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {

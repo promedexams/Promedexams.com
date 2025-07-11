@@ -140,3 +140,26 @@ html {
   white-space: nowrap;
   border-width: 0;
 }
+
+.hover-underline-animation {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
