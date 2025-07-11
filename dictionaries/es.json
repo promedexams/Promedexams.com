@@ -1,0 +1,17 @@
+{
+  "footer": {
+    "languageSwitcher": {
+      "search": "Buscar idiomas...",
+      "notFound": "Idioma no encontrado."
+    }
+  },
+  "navbar": {
+    "navlinks": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "team": "Nuestro Equipo",
+      "contact": "Contacto",
+      "scheduleAppointment": "Reservar Cita"
+    }
+  }
+}

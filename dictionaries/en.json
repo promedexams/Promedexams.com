@@ -1,0 +1,17 @@
+{
+  "footer": {
+    "languageSwitcher": {
+      "search": "Search Languages...",
+      "notFound": "Language not found."
+    }
+  },
+  "navbar": {
+    "navlinks": {
+      "home": "Home",
+      "services": "Services",
+      "team": "Team",
+      "contact": "Contact",
+      "scheduleAppointment": "Schedule Appointment"
+    }
+  }
+}
