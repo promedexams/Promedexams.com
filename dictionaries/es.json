@@ -49,19 +49,25 @@
   },
   "pages": {
     "home": {
-      "name": "Inicio"
+      "title": "Inicio"
     },
     "services": {
-      "name": "Servicios"
+      "title": "Servicios"
     },
     "team": {
-      "name": "Nuestro Equipo"
+      "title": "Nuestro Equipo"
     },
     "contact": {
-      "name": "Contacto"
+      "title": "Contacto y Ubicación",
+      "contactInfoHeader": "Nuestra Oficina",
+      "address": "Dirección",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "fax": "Fax",
+      "contactBlurb": "Estamos convenientemente ubicados y listos para atenderle. No dude en visitarnos durante nuestro horario de atención o enviarnos un correo electrónico."
     },
     "scheduleAppointment": {
-      "name": "Agendar Cita"
+      "title": "Agendar Cita"
     }
   }
 }

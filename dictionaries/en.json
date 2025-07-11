@@ -49,19 +49,25 @@
   },
   "pages": {
     "home": {
-      "name": "Home"
+      "title": "Home"
     },
     "services": {
-      "name": "Services"
+      "title": "Services"
     },
     "team": {
-      "name": "Team"
+      "title": "Team"
     },
     "contact": {
-      "name": "Contact"
+      "title": "Contact & Location",
+      "contactInfoHeader": "Our Office",
+      "address": "Address",
+      "email": "Email",
+      "phone": "Phone",
+      "fax": "Fax",
+      "contactBlurb": "We are conveniently located and ready to assist you. Please feel free to stop by during our business hours or send us an email."
     },
     "scheduleAppointment": {
-      "name": "Schedule Appointment"
+      "title": "Schedule Appointment"
     }
   }
 }

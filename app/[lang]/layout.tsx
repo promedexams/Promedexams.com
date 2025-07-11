@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className="overflow-x-clip">{children}</body>
+      <body className="overflow-x-clip bg-[#07001c]">{children}</body>
     </html>
   );
 }
