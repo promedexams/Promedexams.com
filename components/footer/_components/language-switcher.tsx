@@ -31,6 +31,10 @@ export const LanguageSwitcher = ({ params }: { params: Promise<{ lang: "en" | "e
     setOpen(false);
   };
 
+  if (!dict) {
+    return null;
+  }
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
