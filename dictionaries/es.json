@@ -3,6 +3,39 @@
     "languageSwitcher": {
       "search": "Buscar idiomas...",
       "notFound": "Idioma no encontrado."
+    },
+    "navlinks": {
+      "navigation": {
+        "header": "Navegación del Sitio",
+        "home": "Inicio",
+        "services": "Servicios",
+        "team": "Nuestro Equipo",
+        "contact": "Contacto"
+      },
+      "services": {
+        "header": "Servicios",
+        "ImmigrationMedicalExams": "Exámenes Médicos de Inmigración",
+        "FAAPhysicals": "Exámenes Médicos de la FAA (2da y 3ra Clase)",
+        "DOTPhysicals": "Exámenes Médicos del DOT",
+        "schoolSportsCampPhysicals": "Exámenes Físicos Escolares, Deportivos y de Campamento"
+      },
+      "appointments": {
+        "header": "Citas",
+        "scheduleAppointment": "Agendar Cita",
+        "whatToBring": "Preparación para su Cita"
+      },
+      "legal": {
+        "header": "Legal",
+        "noticeOfPrivacyPractices": "Aviso de Prácticas de Privacidad (HIPAA)",
+        "termsOfUse": "Términos de Uso",
+        "informedConsentInfo": "Información de Consentimiento Informado",
+        "specificDisclaimersForMedicalExams": "Avisos Legales Específicos para Exámenes Médicos",
+        "privacyPolicy": "Política de Privacidad"
+      }
+    },
+    "officeStatus": {
+      "open": "Consultorio Cerrado",
+      "closed": "Consultorio Abierto"
     }
   },
   "navbar": {
@@ -11,7 +44,24 @@
       "services": "Servicios",
       "team": "Nuestro Equipo",
       "contact": "Contacto",
-      "scheduleAppointment": "Reservar Cita"
+      "scheduleAppointment": "Agendar Cita"
+    }
+  },
+  "pages": {
+    "home": {
+      "name": "Inicio"
+    },
+    "services": {
+      "name": "Servicios"
+    },
+    "team": {
+      "name": "Nuestro Equipo"
+    },
+    "contact": {
+      "name": "Contacto"
+    },
+    "scheduleAppointment": {
+      "name": "Agendar Cita"
     }
   }
 }

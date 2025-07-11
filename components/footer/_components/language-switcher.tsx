@@ -50,7 +50,7 @@ export const LanguageSwitcher = ({ params }: { params: Promise<{ lang: "en" | "e
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-auto justify-start gap-2 bg-[#f1a208] hover:bg-[#f1a208]/80 text-black cursor-pointer"
+          className="w-auto justify-start gap-2 border-0 bg-[#f1a208] hover:bg-[#f1a208]/80 text-black cursor-pointer"
         >
           {languages.find((language) => language.value === value)?.flag && (
             <span className="inline-block align-middle">
@@ -59,8 +59,10 @@ export const LanguageSwitcher = ({ params }: { params: Promise<{ lang: "en" | "e
               })}
             </span>
           )}
-          <span className="align-middle">{languages.find((language) => language.value === value)?.label}</span>
-          <ChevronsUpDownIcon className="ml-auto h-4 w-4 shrink-0 opacity-50" />
+          <span className="align-middle font-bold">
+            {languages.find((language) => language.value === value)?.label}
+          </span>
+          <ChevronsUpDownIcon className="ml-auto h-4 w-4 shrink-0" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0" align="end">

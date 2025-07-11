@@ -3,6 +3,39 @@
     "languageSwitcher": {
       "search": "Search Languages...",
       "notFound": "Language not found."
+    },
+    "navlinks": {
+      "navigation": {
+        "header": "Site Navigation",
+        "home": "Home",
+        "services": "Services",
+        "team": "Team",
+        "contact": "Contact"
+      },
+      "services": {
+        "header": "Services",
+        "ImmigrationMedicalExams": "Immigration Medical Exams",
+        "FAAPhysicals": "FAA Physicals (2nd & 3rd Class)",
+        "DOTPhysicals": "DOT Physicals",
+        "schoolSportsCampPhysicals": "School/Sports/Camp Physicals"
+      },
+      "appointments": {
+        "header": "Appointments",
+        "scheduleAppointment": "Schedule Appointment",
+        "whatToBring": "What to Bring to Your Appointment"
+      },
+      "legal": {
+        "header": "Legal",
+        "noticeOfPrivacyPractices": "Notice of Privacy Practices (HIPAA)",
+        "termsOfUse": "Terms of Use",
+        "informedConsentInfo": "Informed Consent Information",
+        "specificDisclaimersForMedicalExams": "Specific Disclaimers for Medical Exams",
+        "privacyPolicy": "Privacy Policy"
+      }
+    },
+    "officeStatus": {
+      "open": "Office is Open",
+      "closed": "Office is Closed"
     }
   },
   "navbar": {
@@ -12,6 +45,23 @@
       "team": "Team",
       "contact": "Contact",
       "scheduleAppointment": "Schedule Appointment"
+    }
+  },
+  "pages": {
+    "home": {
+      "name": "Home"
+    },
+    "services": {
+      "name": "Services"
+    },
+    "team": {
+      "name": "Team"
+    },
+    "contact": {
+      "name": "Contact"
+    },
+    "scheduleAppointment": {
+      "name": "Schedule Appointment"
     }
   }
 }
