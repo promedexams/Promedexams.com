@@ -1,6 +1,7 @@
 "use client";
 
 import { createElement, useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { MX, US } from "country-flag-icons/react/3x2";
 import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
 
@@ -11,23 +12,30 @@ import { getDictionary } from "@/lib/dictionaries";
 import { cn } from "@/lib/utils";
 
 const languages = [
-  { label: "English", value: "english", flag: US },
-  { label: "Español", value: "espanol", flag: MX },
+  { label: "English", value: "en", flag: US },
+  { label: "Español", value: "es", flag: MX },
 ];
 
 export const LanguageSwitcher = ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("english");
+  const [value, setValue] = useState("en");
   const [dict, setDict] = useState<any>(null);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     params.then(({ lang }) => {
+      setValue(lang);
       getDictionary(lang).then(setDict);
     });
   }, [params]);
 
   const handleSelect = (currentValue: string) => {
-    if (currentValue !== value) setValue(currentValue);
+    if (currentValue !== value) {
+      const newPath = pathname.replace(`/${value}`, `/${currentValue}`);
+      document.cookie = `NEXT_LOCALE=${currentValue}; path=/; max-age=31536000`; // 1 year
+      router.push(newPath);
+    }
     setOpen(false);
   };
 
