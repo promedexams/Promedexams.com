@@ -11,7 +11,7 @@ const HeroSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
   return (
     <section id="hero" className="relative flex flex-col md:flex-row items-center w-full gap-12 overflow-hidden">
       <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
-        <source src="/videos/mountains-timelapse.mp4" type="video/webm" />
+        <source src="/videos/mountains-timelapse.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-[#07001c]/40 z-10" />
