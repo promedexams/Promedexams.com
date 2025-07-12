@@ -8,4 +8,14 @@ export const Branding = {
     PhoneNumber: "(123) 123-1234",
     FaxNumber: "(123) 123-1234",
   },
+  Employees: {
+    Jill: {
+      Name: "Dr. Jill Quigley, MD",
+      Email: "jquigley@promedexams.com",
+    },
+    Trish: {
+      Name: "Trish Peery",
+      Email: "tpeery@promedexams.com",
+    },
+  },
 };

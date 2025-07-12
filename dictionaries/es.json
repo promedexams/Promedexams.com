@@ -55,7 +55,31 @@
       "title": "Servicios"
     },
     "team": {
-      "title": "Nuestro Equipo"
+      "title": "Nuestro Equipo",
+      "employee": {
+        "jill": {
+          "name": "Dra. Jill Quigley, MD",
+          "jobTitle": "Médica Principal",
+          "bioParagraphs": [
+            "La Dra. Quigley creció en el área de Kansas City, Missouri, asistió a la facultad de medicina en la University of Missouri-Columbia School of Medicine y completó su residencia en medicina familiar en la Wake Forest University School of Medicine. Ha practicado la medicina desde 2008 y está certificada por el consejo en Medicina Familiar.",
+            "Después de ejercer la medicina familiar durante más de 16 años, se entusiasmó por embarcarse en una nueva trayectoria más enfocada en la medicina, realizando exámenes médicos específicos como examinadora médica de aviación designada por la FAA para chequeos de pilotos, examinadora médica certificada por la FMCSA para chequeos del DOT, y cirujana civil designada por el USCIS para exámenes médicos de inmigración. También quería seguir atendiendo a niños y adolescentes para sus chequeos escolares, deportivos y de campamento. Se esfuerza por brindar una atención excepcional y oportuna a cada paciente. Cree en la comunicación honesta y clara, la escucha, la atención a los detalles, la puntualidad y el respeto mutuo.",
+            "La Dra. Quigley está felizmente casada y tiene dos perros. Le gusta viajar, hacer senderismo, esquiar, la jardinería, la música y leer."
+          ]
+        },
+        "trish": {
+          "name": "Trish Peery",
+          "jobTitle": "Gerente de Oficina",
+          "bioParagraphs": [
+            "Trish trabajó en la consulta de medicina familiar de la Dra. Quigley durante 10 años como gerente de recepción. Su experiencia previa fue en la industria de seguros y finanzas, trabajando para State Farm y Edward Jones. Actualmente, mantiene su Licencia de Seguros de CO.",
+            "A Trish le gusta viajar, correr, esquiar y pasar tiempo con su familia. Está emocionada de trabajar para la Dra. Quigley mientras sirven a la comunidad con cuidado, compasión y equilibrio de vida."
+          ]
+        }
+      },
+      "contactSubSection": {
+        "header": "¿Quiere ponerse en contacto?",
+        "message": "Contáctenos para agendar una cita o para obtener más información sobre los servicios que ofrecemos.",
+        "buttonText": "Contáctenos"
+      }
     },
     "contact": {
       "title": "Contacto y Ubicación",

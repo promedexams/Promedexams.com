@@ -55,7 +55,31 @@
       "title": "Services"
     },
     "team": {
-      "title": "Team"
+      "title": "Our Team",
+      "employee": {
+        "jill": {
+          "name": "Jill Quigley, MD",
+          "jobTitle": "Lead Physician",
+          "bioParagraphs": [
+            "Dr. Quigley grew up in the Kansas City, Missouri area, attended medical school at the University of Missouri-Columbia School of Medicine, and completed family medicine residency at Wake Forest University School of Medicine. She has been practicing medicine since 2008 and is board certified in Family Medicine.",
+            "After practicing family medicine for more than 16 years, she was excited to embark on a new, more focused journey in medicine performing specific medical examinations as an FAA-designated aviation medical examiner performing pilot physicals, FMCSA-certified medical examiner performing DOT physicals, and USCIS-designated civil surgeon performing immigration medical examinations. She also wanted to continue seeing children and adolescents for their school/sports/camp physicals. She strives to give exceptional care in a timely manner to every patient. She believes in honest clear communication, listening, caring about the details, being on time, and mutual respect.",
+            "Dr. Quigley is happily married with two dogs. She enjoys traveling, hiking, skiing, gardening, music, and reading."
+          ]
+        },
+        "trish": {
+          "name": "Trish Peery",
+          "jobTitle": "Office Manager",
+          "bioParagraphs": [
+            "Trish worked at Dr. Quigley's family practice for 10 years as her front office manager. Her previous background was in the insurance and finance industry working for State Farm and Edward Jones. She continues to hold her CO Insurance License.",
+            "Trish enjoys travel, jogging, skiing, and family. She is looking forward to working for Dr. Quigley as they serve the community with care, compassion, and life balance."
+          ]
+        }
+      },
+      "contactSubSection": {
+        "header": "Want to get in touch?",
+        "message": "Contact us to schedule an appointment or to learn more about the services we offer.",
+        "buttonText": "Contact Us"
+      }
     },
     "contact": {
       "title": "Contact & Location",
