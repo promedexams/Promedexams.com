@@ -13,8 +13,8 @@ const ContactPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
     <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#4F759B]">
       <Navbar params={params} />
       <main className="md:relative flex flex-col gap-8 flex-1 justify-center items-center p-4 z-10">
-        <div className="text-white p-8 w-full max-w-6xl">
-          <h1 className="text-4xl font-bold mb-12 text-center text-white">{dict.pages.contact.title}</h1>
+        <div className="text-white px-2 py-8 w-full max-w-6xl">
+          <h1 className="text-5xl font-bold mb-12 text-center text-white">{dict.pages.contact.title}</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="rounded-lg overflow-hidden h-full min-h-[450px] border border-gray-200 shadow-lg">
               {/* <iframe
@@ -37,7 +37,7 @@ const ContactPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
                 className="select-none"
               />
             </div>
-            <div className="space-y-8 flex flex-col justify-center">
+            <div className="space-y-8 flex flex-col justify-center bg-slate-800/20 p-6 rounded-lg">
               <h2 className="text-3xl font-semibold text-white border-b pb-4 text-center md:text-start">
                 {dict.pages.contact.contactInfoHeader}
               </h2>
@@ -82,7 +82,7 @@ const ContactPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
                   </div>
                 </div>
               </div>
-              <p className="text-md text-white/90 pt-6 italic">{dict.pages.contact.contactBlurb}</p>
+              <p className="text-md text-white/90 pt-6 border-t italic">{dict.pages.contact.contactBlurb}</p>
             </div>
           </div>
         </div>

@@ -26,6 +26,22 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // Skip locale prefix for static assets in public/
+  const staticAssetPrefixes = [
+    "/_next/",
+    "/favicon.ico",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/headshots/",
+    "/videos/",
+    "/images/",
+    "/branding/",
+    "/fonts/",
+  ];
+  if (staticAssetPrefixes.some((prefix) => pathname.startsWith(prefix))) {
+    return;
+  }
+
   const pathnameHasLocale = locales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`);
 
   if (pathnameHasLocale) return;
