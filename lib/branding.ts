@@ -1,5 +1,6 @@
 export const Branding = {
   Name: "ProMed Exams",
+  Motto: "Excellence in Medical Examinations",
   Logo: "/branding/placeholder-logo.svg",
   CopyrightDisclaimer: `© ${new Date().getFullYear()}, ProMed Exams PC`,
   ContactInformation: {

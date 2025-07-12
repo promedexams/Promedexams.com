@@ -155,7 +155,7 @@ html {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: white;
+  background-color: #f1a208;
   transform-origin: center;
   transition: transform 0.2s ease-out;
 }
