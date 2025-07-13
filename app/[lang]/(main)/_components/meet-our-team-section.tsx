@@ -52,7 +52,7 @@ const MeetOurTeamSection = async ({ params }: { params: Promise<{ lang: "en" | "
           </div>
         </div>
         <div className="mt-12 flex justify-center w-full">
-          <Link href="/services" className="inline-block">
+          <Link href="/team" className="inline-block">
             <button className="bg-transparent hover:bg-[#f1a208] text-white hover:text-black border-2 border-[#f1a208] transition-colors duration-200 font-bold text-lg cursor-pointer whitespace-normal text-center px-2 py-1 rounded-lg">
               {dict.pages.home.meetOurTeamSection.learnMoreButton}
             </button>

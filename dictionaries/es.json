@@ -155,6 +155,11 @@
     },
     "scheduleAppointment": {
       "title": "Agendar Cita"
+    },
+    "notFound": {
+      "title": "Página No Encontrada",
+      "message": "Lo sentimos, la página que está buscando no existe.",
+      "goHomeButton": "Volver a la Página de Inicio"
     }
   }
 }
