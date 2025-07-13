@@ -1,33 +1,34 @@
 import { Clock, HeartHandshake, ShieldCheck } from "lucide-react";
 
-const reasons = [
-  {
-    icon: Clock,
-    title: "Timely & Efficient",
-    description:
-      "We respect your time. Our processes are streamlined to ensure you are seen promptly and your results are delivered quickly.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Experienced & Certified",
-    description:
-      "Our team is certified and experienced in FAA, DOT, and USCIS medical examinations, ensuring accuracy and compliance.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Patient-Centered Care",
-    description:
-      "We believe in honest, clear communication and compassionate care. Your health and peace of mind are our top priorities.",
-  },
-];
+import { getDictionary } from "@/lib/dictionaries";
 
-const WhyChooseUsSection = () => {
+const WhyChooseUsSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+  const dict = await getDictionary((await params).lang);
+
+  const reasons = [
+    {
+      icon: Clock,
+      title: dict.pages.home.whyChooseUsSection.reasons.timelyAndEfficient.title,
+      description: dict.pages.home.whyChooseUsSection.reasons.timelyAndEfficient.description,
+    },
+    {
+      icon: ShieldCheck,
+      title: dict.pages.home.whyChooseUsSection.reasons.experiencedAndCertified.title,
+      description: dict.pages.home.whyChooseUsSection.reasons.experiencedAndCertified.description,
+    },
+    {
+      icon: HeartHandshake,
+      title: dict.pages.home.whyChooseUsSection.reasons.patientCenteredCare.title,
+      description: dict.pages.home.whyChooseUsSection.reasons.patientCenteredCare.description,
+    },
+  ];
+
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto text-center text-white">
-        <h2 className="text-4xl font-extrabold tracking-tight mb-4">Why Choose ProMed Exams?</h2>
+        <h2 className="text-4xl font-extrabold tracking-tight mb-4">{dict.pages.home.whyChooseUsSection.header}</h2>
         <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto">
-          Discover the benefits of choosing our practice for your medical examination needs.
+          {dict.pages.home.whyChooseUsSection.description}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
           {reasons.map((reason, index) => (

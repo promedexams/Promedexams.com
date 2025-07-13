@@ -4,7 +4,7 @@ import { Branding } from "@/lib/branding";
 
 const FindUsSection = () => {
   return (
-    <section className="bg-slate-800/20 py-20 px-4">
+    <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto text-center text-white">
         <h2 className="text-4xl font-extrabold tracking-tight mb-4">Find Us</h2>
         <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto">

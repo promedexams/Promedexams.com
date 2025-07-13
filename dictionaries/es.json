@@ -77,6 +77,41 @@
           }
         },
         "learnMoreButton": "Conozca Más Sobre Nuestros Servicios"
+      },
+      "whyChooseUsSection": {
+        "header": "¿Por qué elegir ProMed Exams?",
+        "description": "Descubra los beneficios de elegir nuestra consulta para sus necesidades de exámenes médicos.",
+        "reasons": {
+          "timelyAndEfficient": {
+            "title": "Oportuno y Eficiente",
+            "description": "Respetamos su tiempo. Nuestros procesos están optimizados para asegurar que sea atendido puntualmente y que sus resultados se entreguen rápidamente."
+          },
+          "experiencedAndCertified": {
+            "title": "Experimentados y Certificados",
+            "description": "Nuestro equipo está certificado y tiene experiencia en exámenes médicos de la FAA, del DOT y del USCIS, garantizando precisión y cumplimiento."
+          },
+          "patientCenteredCare": {
+            "title": "Atención Centrada en el Paciente",
+            "description": "Creemos en la comunicación honesta y clara y en la atención compasiva. Su salud y tranquilidad son nuestras máximas prioridades."
+          }
+        }
+      },
+      "meetOurTeamSection": {
+        "header": "Conozca a Nuestro Equipo",
+        "description": "Nuestros profesionales dedicados están aquí para brindarle el mejor servicio.",
+        "employee": {
+          "jill": {
+            "name": "Dra. Jill Quigley, MD",
+            "jobTitle": "Médica Principal",
+            "shortDescription": "La Dra. Quigley ha practicado la medicina desde 2008 y está certificada por el consejo en Medicina Familiar. Se dedica a brindar una atención excepcional y oportuna a cada paciente."
+          },
+          "trish": {
+            "name": "Trish Peery",
+            "jobTitle": "Gerente de Oficina",
+            "shortDescription": "Con experiencia en seguros y finanzas, Trish se asegura de que nuestra oficina funcione sin problemas y de que su experiencia sea perfecta de principio a fin."
+          }
+        },
+        "learnMoreButton": "Conozca Más Sobre Nuestro Equipo"
       }
     },
     "services": {

@@ -13,8 +13,8 @@ const MainPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
       <main className="flex-1">
         <HeroSection params={params} />
         <OurServicesSection params={params} />
-        <WhyChooseUsSection />
-        <MeetOurTeamSection />
+        <WhyChooseUsSection params={params} />
+        <MeetOurTeamSection params={params} />
         <FindUsSection />
       </main>
       <Footer params={params} />

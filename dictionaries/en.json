@@ -77,6 +77,41 @@
           }
         },
         "learnMoreButton": "Learn More About Our Services"
+      },
+      "whyChooseUsSection": {
+        "header": "Why Choose ProMed Exams?",
+        "description": "Discover the benefits of choosing our practice for your medical examination needs.",
+        "reasons": {
+          "timelyAndEfficient": {
+            "title": "Timely & Efficient",
+            "description": "We respect your time. Our processes are streamlined to ensure you are seen promptly and your results are delivered quickly."
+          },
+          "experiencedAndCertified": {
+            "title": "Experienced & Certified",
+            "description": "Our team is certified and experienced in FAA, DOT, and USCIS medical examinations, ensuring accuracy and compliance."
+          },
+          "patientCenteredCare": {
+            "title": "Patient-Centered Care",
+            "description": "We believe in honest, clear communication and compassionate care. Your health and peace of mind are our top priorities."
+          }
+        }
+      },
+      "meetOurTeamSection": {
+        "header": "Meet Our Team",
+        "description": "Our dedicated professionals are here to provide you with the best service.",
+        "employee": {
+          "jill": {
+            "name": "Dr. Jill Quigley, MD",
+            "jobTitle": "Lead Physician",
+            "shortDescription": "Dr. Quigley has been practicing medicine since 2008 and is board certified in Family Medicine. She is dedicated to providing exceptional care in a timely manner to every patient."
+          },
+          "trish": {
+            "name": "Trish Peery",
+            "jobTitle": "Office Manager",
+            "shortDescription": "With a background in insurance and finance, Trish ensures that our office runs smoothly and that your experience is seamless from start to finish."
+          }
+        },
+        "learnMoreButton": "Learn More About Our Team"
       }
     },
     "services": {
