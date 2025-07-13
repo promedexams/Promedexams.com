@@ -32,3 +32,15 @@ export function isOfficeOpen(): boolean {
   // 5. Compare the current time to see if it's within the open/close range.
   return now >= openTime && now < closeTime;
 }
+
+/**
+ * Formats a time string (HH:mm) into a 12-hour format with AM/PM.
+ * @param time - The time string to format (e.g., "09:00").
+ * @returns The formatted time string (e.g., "9:00 AM").
+ */
+export const formatTime = (time: string) => {
+  const [hour, minute] = time.split(":").map(Number);
+  const amPm = hour >= 12 ? "PM" : "AM";
+  const formattedHour = hour % 12 || 12;
+  return `${formattedHour}:${minute.toString().padStart(2, "0")} ${amPm}`;
+};

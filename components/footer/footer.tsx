@@ -3,7 +3,7 @@ import { toZonedTime } from "date-fns-tz";
 import { Globe2Icon } from "lucide-react";
 
 import { BusinessInfo } from "@/lib/business-info";
-import { isOfficeOpen } from "@/lib/utils/business-hours";
+import { formatTime, isOfficeOpen } from "@/lib/utils/business-hours";
 import { getDictionary } from "@/lib/utils/dictionaries";
 import LanguageSwitcher from "./_components/language-switcher";
 
@@ -11,13 +11,6 @@ const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
   const dict = await getDictionary((await params).lang);
 
   const officeIsOpen = isOfficeOpen();
-
-  const formatTime = (time: string) => {
-    const [hour, minute] = time.split(":").map(Number);
-    const ampm = hour >= 12 ? "PM" : "AM";
-    const formattedHour = hour % 12 || 12;
-    return `${formattedHour}:${minute.toString().padStart(2, "0")} ${ampm}`;
-  };
 
   const { hours, timezone } = BusinessInfo.ContactInformation.HoursOfOperation;
   const todayIndex = toZonedTime(new Date(), timezone).getDay();

@@ -4,18 +4,12 @@ import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon, Printer } from "lucide-reac
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { BusinessInfo } from "@/lib/business-info";
+import { formatTime } from "@/lib/utils/business-hours";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
 const ContactPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const dict = await getDictionary((await params).lang);
   const days = dict.pages.contact.hoursOfOperation.daysOfTheWeek;
-
-  const formatTime = (time: string) => {
-    const [hour, minute] = time.split(":").map(Number);
-    const ampm = hour >= 12 ? "PM" : "AM";
-    const formattedHour = hour % 12 || 12;
-    return `${formattedHour}:${minute.toString().padStart(2, "0")} ${ampm}`;
-  };
 
   return (
     <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#4F759B]">

@@ -17,9 +17,7 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
       <Navbar params={params} />
       <main className="md:relative flex flex-col gap-8 flex-1 justify-center items-center p-4 z-10">
         <div className="text-white w-full max-w-7xl pt-8 md:p-8">
-          <h1 className="text-5xl font-extrabold mb-16 text-center text-white tracking-tight">
-            {dict.pages.team.title}
-          </h1>
+          <h1 className="text-5xl font-bold mb-12 text-center text-white">{dict.pages.team.title}</h1>
           <div className="space-y-20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center bg-slate-800/20 p-8 rounded-2xl shadow-xl">
               <div className="md:col-span-1 flex justify-center">
