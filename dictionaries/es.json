@@ -49,7 +49,35 @@
   },
   "pages": {
     "home": {
-      "title": "Inicio"
+      "title": "Inicio",
+      "heroSection": {
+        "descriptorWords": ["Excelencia", "Integridad", "Eficiencia"],
+        "description": "Ofrecemos exámenes médicos integrales y eficientes para profesionales de la inmigración, la aviación y el transporte. Nuestro equipo dedicado está aquí para garantizar un proceso ágil y oportuno para todas sus necesidades de examinación.",
+        "scheduleAppointment": "Agendar Cita"
+      },
+      "ourServicesSection": {
+        "header": "Nuestros Servicios",
+        "description": "Ofrecemos una gama de exámenes médicos especializados para satisfacer sus necesidades.",
+        "services": {
+          "immigrationMedicalExams": {
+            "title": "Exámenes Médicos de Inmigración",
+            "description": "Cirujana civil designada por el USCIS que realiza exámenes médicos de inmigración."
+          },
+          "faaPhysicals": {
+            "title": "Exámenes Médicos de la FAA (2da y 3ra Clase)",
+            "description": "Examinadora médica de aviación designada por la FAA que realiza exámenes médicos para pilotos."
+          },
+          "dotPhysicals": {
+            "title": "Exámenes Médicos del DOT",
+            "description": "Examinadora médica certificada por la FMCSA que realiza exámenes médicos del DOT."
+          },
+          "schoolSportsCampPhysicals": {
+            "title": "Exámenes Físicos Escolares, Deportivos y de Campamento",
+            "description": "Exámenes físicos integrales para niños y adolescentes."
+          }
+        },
+        "learnMoreButton": "Conozca Más Sobre Nuestros Servicios"
+      }
     },
     "services": {
       "title": "Servicios"

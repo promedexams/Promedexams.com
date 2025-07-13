@@ -11,7 +11,7 @@ const Navbar = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
   const dict = await getDictionary(lang);
 
   return (
-    <nav className="p-8 flex flex-row h-full relative border-b border-gray-200 justify-between items-center bg-[#07001c]">
+    <nav className="p-8 flex flex-row h-full relative border-b border-gray-200 justify-between items-center bg-[#07001c] z-40">
       <Link href={`/${lang}`} className="flex flex-row gap-4 items-center text-white">
         <Globe2Icon className="w-10 h-10" />
         <p className="text-2xl font-bold">{Branding.Name}</p>

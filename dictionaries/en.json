@@ -49,7 +49,35 @@
   },
   "pages": {
     "home": {
-      "title": "Home"
+      "title": "Home",
+      "heroSection": {
+        "descriptorWords": ["Excellence", "Integrity", "Efficiency"],
+        "description": "Providing comprehensive and efficient medical examinations for immigration, aviation, and transportation professionals. Our dedicated team is here to ensure a smooth and timely process for all your examination needs.",
+        "scheduleAppointment": "Schedule Appointment"
+      },
+      "ourServicesSection": {
+        "header": "Our Services",
+        "description": "We offer a range of specialized medical examinations to meet your needs.",
+        "services": {
+          "immigrationMedicalExams": {
+            "title": "Immigration Medical Exams",
+            "description": "USCIS-designated civil surgeon performing immigration medical exams."
+          },
+          "faaPhysicals": {
+            "title": "FAA Physicals (2nd & 3rd Class)",
+            "description": "FAA-designated aviation medical examiner performing pilot physicals."
+          },
+          "dotPhysicals": {
+            "title": "DOT Physicals",
+            "description": "FMCSA-certified medical examiner performing DOT physicals."
+          },
+          "schoolSportsCampPhysicals": {
+            "title": "School/Sports/Camp Physicals",
+            "description": "Comprehensive physicals for children and adolescents."
+          }
+        },
+        "learnMoreButton": "Learn More About Our Services"
+      }
     },
     "services": {
       "title": "Services"
