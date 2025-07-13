@@ -9,8 +9,8 @@ const OurServicesSection = async ({ params }: { params: Promise<{ lang: "en" | "
   const Services = [
     {
       icon: Globe2Icon,
-      title: dict.pages.home.ourServicesSection.services.dotPhysicals.title,
-      description: dict.pages.home.ourServicesSection.services.dotPhysicals.description,
+      title: dict.pages.home.ourServicesSection.services.immigrationMedicalExams.title,
+      description: dict.pages.home.ourServicesSection.services.immigrationMedicalExams.description,
       href: "/services/immigration-medical-exams",
     },
     {
