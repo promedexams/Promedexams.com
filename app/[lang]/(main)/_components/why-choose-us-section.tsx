@@ -1,6 +1,6 @@
 import { Clock, HeartHandshake, ShieldCheck } from "lucide-react";
 
-import { getDictionary } from "@/lib/dictionaries";
+import { getDictionary } from "@/lib/utils/dictionaries";
 
 const WhyChooseUsSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const dict = await getDictionary((await params).lang);

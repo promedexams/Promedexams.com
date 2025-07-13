@@ -8,8 +8,8 @@ import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { getDictionary } from "@/lib/dictionaries";
-import { cn } from "@/lib/utils";
+import { getDictionary } from "@/lib/utils/dictionaries";
+import { cn } from "@/lib/utils/utils";
 
 const languages = [
   { label: "English", value: "en", flag: US },

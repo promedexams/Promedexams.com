@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { getDictionary } from "@/lib/dictionaries";
+import { getDictionary } from "@/lib/utils/dictionaries";
 
 const MeetOurTeamSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const dict = await getDictionary((await params).lang);

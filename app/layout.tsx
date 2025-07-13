@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import { Branding } from "@/lib/branding";
+import { BusinessInfo } from "@/lib/business-info";
 import { DomainURL } from "@/lib/links";
 
 export const metadata: Metadata = {
   metadataBase: new URL(DomainURL),
-  title: Branding.Name,
-  description: `The official website for ${Branding.Name}.`,
+  title: BusinessInfo.Name,
+  description: `The official website for ${BusinessInfo.Name}.`,
 };
 
 export default function RootLayout({
@@ -19,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className="overflow-x-clip bg-[#07001c]">{children}</body>
+      <body id="top" className="overflow-x-clip bg-[#07001c]">
+        {children}
+      </body>
     </html>
   );
 }

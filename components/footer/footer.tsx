@@ -1,15 +1,27 @@
 import Link from "next/link";
+import { toZonedTime } from "date-fns-tz";
 import { Globe2Icon } from "lucide-react";
 
-import { Branding } from "@/lib/branding";
-import { getDictionary } from "@/lib/dictionaries";
+import { BusinessInfo } from "@/lib/business-info";
+import { isOfficeOpen } from "@/lib/utils/business-hours";
+import { getDictionary } from "@/lib/utils/dictionaries";
 import LanguageSwitcher from "./_components/language-switcher";
 
 const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
-  const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const dict = await getDictionary((await params).lang);
 
-  const officeIsOpen = true;
+  const officeIsOpen = isOfficeOpen();
+
+  const formatTime = (time: string) => {
+    const [hour, minute] = time.split(":").map(Number);
+    const ampm = hour >= 12 ? "PM" : "AM";
+    const formattedHour = hour % 12 || 12;
+    return `${formattedHour}:${minute.toString().padStart(2, "0")} ${ampm}`;
+  };
+
+  const { hours, timezone } = BusinessInfo.ContactInformation.HoursOfOperation;
+  const todayIndex = toZonedTime(new Date(), timezone).getDay();
+  const todayHours = hours[todayIndex];
 
   return (
     <footer className="bg-[#07001c] text-white/70 p-8 border-t border-gray-200">
@@ -17,7 +29,7 @@ const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
         <div className="flex flex-col sm:flex-row justify-between items-start md:items-center gap-8 mb-8">
           <Link href="/" className="flex flex-row gap-4 items-center text-white">
             <Globe2Icon className="w-10 h-10" />
-            <p className="text-2xl font-bold">{Branding.Name}</p>
+            <p className="text-2xl font-bold">{BusinessInfo.Name}</p>
           </Link>
           <LanguageSwitcher params={params} />
         </div>
@@ -25,6 +37,9 @@ const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-3">
             <h3 className="font-bold text-white mb-2">{dict.footer.navlinks.navigation.header}</h3>
+            <Link href="#top" className="block hover:text-white transition-colors">
+              {dict.footer.navlinks.navigation.topOfPage}
+            </Link>
             <Link href="/" className="block hover:text-white transition-colors">
               {dict.footer.navlinks.navigation.home}
             </Link>
@@ -83,15 +98,15 @@ const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
         </div>
         <hr className="my-6 border-gray-600" />
         <div className="flex flex-col-reverse md:flex-row justify-between items-center text-center md:text-left gap-2">
-          <p className="text-sm text-white/50">{Branding.CopyrightDisclaimer}</p>
+          <p className="text-sm text-white/50">{BusinessInfo.CopyrightDisclaimer}</p>
           <div className="flex flex-row gap-2 items-center justify-center">
-            {officeIsOpen ? (
+            {officeIsOpen && todayHours ? (
               <div className="text-white flex flex-row gap-2 justify-center items-center">
                 <div className="relative flex items-center justify-center w-4 h-4">
                   <div className="absolute w-3 h-3 bg-green-500 rounded-full animate-ping" />
                   <div className="w-3 h-3 bg-green-500 rounded-full" />
                 </div>
-                {dict.footer.officeStatus.open} (9am - 5pm MST)
+                {dict.footer.officeStatus.open} {`(${formatTime(todayHours.open)} - ${formatTime(todayHours.close)})`}
               </div>
             ) : (
               <div className="text-white flex flex-row gap-2 justify-center items-center">

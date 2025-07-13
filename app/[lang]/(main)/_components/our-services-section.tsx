@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Globe2Icon, PlaneIcon, SchoolIcon, TruckIcon } from "lucide-react";
 
-import { getDictionary } from "@/lib/dictionaries";
+import { getDictionary } from "@/lib/utils/dictionaries";
 
 const OurServicesSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const dict = await getDictionary((await params).lang);

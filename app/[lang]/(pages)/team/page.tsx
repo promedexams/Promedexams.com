@@ -5,8 +5,8 @@ import { MailIcon } from "lucide-react";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
-import { Branding } from "@/lib/branding";
-import { getDictionary } from "@/lib/dictionaries";
+import { BusinessInfo } from "@/lib/business-info";
+import { getDictionary } from "@/lib/utils/dictionaries";
 
 const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const { lang } = await params;
@@ -42,8 +42,11 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
                 </div>
                 <div className="flex items-center gap-3 pt-2">
                   <MailIcon className="w-6 h-6 text-[#f1a208]" />
-                  <Link href={`mailto:${Branding.Employees.Jill.Email}`} className="hover-underline-animation text-lg">
-                    {Branding.Employees.Jill.Email}
+                  <Link
+                    href={`mailto:${BusinessInfo.Employees.Jill.Email}`}
+                    className="hover-underline-animation text-lg"
+                  >
+                    {BusinessInfo.Employees.Jill.Email}
                   </Link>
                 </div>
               </div>
@@ -69,8 +72,11 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
                 </div>
                 <div className="flex items-center gap-3 pt-2">
                   <MailIcon className="w-6 h-6 text-[#f1a208]" />
-                  <Link href={`mailto:${Branding.Employees.Trish.Email}`} className="hover-underline-animation text-lg">
-                    {Branding.Employees.Trish.Email}
+                  <Link
+                    href={`mailto:${BusinessInfo.Employees.Trish.Email}`}
+                    className="hover-underline-animation text-lg"
+                  >
+                    {BusinessInfo.Employees.Trish.Email}
                   </Link>
                 </div>
               </div>

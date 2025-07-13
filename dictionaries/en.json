@@ -7,6 +7,7 @@
     "navlinks": {
       "navigation": {
         "header": "Site Navigation",
+        "topOfPage": "Top of Page",
         "home": "Home",
         "services": "Services",
         "team": "Team",
@@ -147,6 +148,12 @@
     "contact": {
       "title": "Contact & Location",
       "contactInfoHeader": "Our Office",
+      "hoursOfOperation": {
+        "hoursOfOperation": "Hours of Operation",
+        "closed": "Closed",
+        "daysOfTheWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "timezoneDisclaimer": "All times listed are in Denver time (MST)."
+      },
       "address": "Address",
       "email": "Email",
       "phone": "Phone",

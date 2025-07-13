@@ -1,6 +1,6 @@
 import { MapPinIcon } from "lucide-react";
 
-import { Branding } from "@/lib/branding";
+import { BusinessInfo } from "@/lib/business-info";
 
 const FindUsSection = () => {
   return (
@@ -29,7 +29,7 @@ const FindUsSection = () => {
               <MapPinIcon className="w-8 h-8 text-[#f1a208] mt-1 shrink-0" />
               <div>
                 <h4 className="font-bold text-xl mb-1">Address</h4>
-                <p className="text-white/90 text-lg">{Branding.ContactInformation.Address}</p>
+                <p className="text-white/90 text-lg">{BusinessInfo.ContactInformation.Address}</p>
               </div>
             </div>
             <div className="text-white/80 italic">

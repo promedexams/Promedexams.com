@@ -2,8 +2,8 @@ import Link from "next/link";
 import { CalendarDaysIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Branding } from "@/lib/branding";
-import { getDictionary } from "@/lib/dictionaries";
+import { BusinessInfo } from "@/lib/business-info";
+import { getDictionary } from "@/lib/utils/dictionaries";
 
 const HeroSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const dict = await getDictionary((await params).lang);
@@ -26,7 +26,7 @@ const HeroSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
         <div className="absolute bottom-0 right-0 h-2 w-full bg-[#f1a208] rounded-l-full" />
       </div>
       <div className="relative z-20 flex flex-col items-center justify-center gap-6 p-10 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight">{Branding.Name}</h1>
+        <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight">{BusinessInfo.Name}</h1>
         <p className="text-xl md:text-2xl text-white/90">
           {dict.pages.home.heroSection.descriptorWords.map((word, i, arr) => (
             <span key={word}>

@@ -5,8 +5,8 @@ import { HomeIcon } from "lucide-react";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
-import { getDictionary } from "@/lib/dictionaries";
 import { SiteSettings } from "@/lib/site-settings";
+import { getDictionary } from "@/lib/utils/dictionaries";
 
 const NotFoundPage = async () => {
   const lang = ((await cookies()).get("NEXT_LOCALE")?.value || SiteSettings.DefaultLocale) as "en" | "es";
