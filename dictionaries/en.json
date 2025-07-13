@@ -1,4 +1,17 @@
 {
+  "contactCard": {
+    "hoursOfOperation": {
+      "hoursOfOperation": "Hours of Operation",
+      "closed": "Closed",
+      "daysOfTheWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "timezoneDisclaimer": "All times listed are in Denver time (MST)."
+    },
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "fax": "Fax",
+    "contactBlurb": "We are conveniently located and ready to assist you. Please feel free to stop by during our business hours or send us an email."
+  },
   "footer": {
     "languageSwitcher": {
       "search": "Search Languages...",
@@ -113,6 +126,11 @@
           }
         },
         "learnMoreButton": "Learn More About Our Team"
+      },
+      "findUsSection": {
+        "header": "Find Us",
+        "description": "We are conveniently located in Littleton, CO. Visit us for your medical examination needs.",
+        "buttonText": "Get In Touch"
       }
     },
     "services": {
@@ -147,18 +165,7 @@
     },
     "contact": {
       "title": "Contact & Location",
-      "contactInfoHeader": "Our Office",
-      "hoursOfOperation": {
-        "hoursOfOperation": "Hours of Operation",
-        "closed": "Closed",
-        "daysOfTheWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "timezoneDisclaimer": "All times listed are in Denver time (MST)."
-      },
-      "address": "Address",
-      "email": "Email",
-      "phone": "Phone",
-      "fax": "Fax",
-      "contactBlurb": "We are conveniently located and ready to assist you. Please feel free to stop by during our business hours or send us an email."
+      "contactInfoHeader": "Our Office"
     },
     "scheduleAppointment": {
       "title": "Schedule Appointment"

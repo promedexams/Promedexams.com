@@ -15,7 +15,7 @@ const MainPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
         <OurServicesSection params={params} />
         <WhyChooseUsSection params={params} />
         <MeetOurTeamSection params={params} />
-        <FindUsSection />
+        <FindUsSection params={params} />
       </main>
       <Footer params={params} />
     </div>

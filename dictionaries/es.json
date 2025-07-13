@@ -1,4 +1,17 @@
 {
+  "contactCard": {
+    "hoursOfOperation": {
+      "hoursOfOperation": "Horario de Atención",
+      "closed": "Cerrado",
+      "daysOfTheWeek": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
+      "timezoneDisclaimer": "Todos los horarios se muestran en la hora de Denver (MST)."
+    },
+    "address": "Dirección",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "fax": "Fax",
+    "contactBlurb": "Estamos convenientemente ubicados y listos para atenderle. No dude en visitarnos durante nuestro horario de atención o enviarnos un correo electrónico."
+  },
   "footer": {
     "languageSwitcher": {
       "search": "Buscar idiomas...",
@@ -113,6 +126,11 @@
           }
         },
         "learnMoreButton": "Conozca Más Sobre Nuestro Equipo"
+      },
+      "findUsSection": {
+        "header": "Encuéntrenos",
+        "description": "Estamos convenientemente ubicados en Littleton, CO. Visítenos para sus necesidades de exámenes médicos.",
+        "buttonText": "Póngase en Contacto"
       }
     },
     "services": {
@@ -147,18 +165,7 @@
     },
     "contact": {
       "title": "Contacto y Ubicación",
-      "contactInfoHeader": "Nuestra Oficina",
-      "hoursOfOperation": {
-        "hoursOfOperation": "Horario de Atención",
-        "closed": "Cerrado",
-        "daysOfTheWeek": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
-        "timezoneDisclaimer": "Todos los horarios se muestran en la hora de Denver (MST)."
-      },
-      "address": "Dirección",
-      "email": "Correo Electrónico",
-      "phone": "Teléfono",
-      "fax": "Fax",
-      "contactBlurb": "Estamos convenientemente ubicados y listos para atenderle. No dude en visitarnos durante nuestro horario de atención o enviarnos un correo electrónico."
+      "contactInfoHeader": "Nuestra Oficina"
     },
     "scheduleAppointment": {
       "title": "Agendar Cita"
