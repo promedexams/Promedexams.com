@@ -163,7 +163,7 @@
     },
     "team": {
       "title": "Our Team",
-      "description": "",
+      "description": "Our team of dedicated and experienced professionals is the heart of Promedexams. We are committed to providing compassionate and expert care to every client. Learn more about the individuals who are here to support your health and wellness journey.",
       "employee": {
         "jill": {
           "name": "Dr. Jill Quigley, MD",
@@ -191,7 +191,7 @@
     },
     "contact": {
       "title": "Contact & Location",
-      "description": "",
+      "description": "Have questions or ready to book an appointment? Our team is here to assist you. Use the contact form below, give us a call, or stop by our office. We look forward to hearing from you and helping you with your medical examination needs.",
       "contactInfoHeader": "Our Office"
     },
     "scheduleAppointment": {

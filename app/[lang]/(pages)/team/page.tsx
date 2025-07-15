@@ -19,7 +19,7 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
         <div className="text-white w-full max-w-7xl pt-8 md:p-8">
           <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl">
             <h1 className="text-5xl font-bold mb-4 text-center text-white pb-4 border-b">{dict.pages.team.title}</h1>
-            <p className="text-lg text-white/80">Description about team....</p>
+            <p className="text-lg text-white/80">{dict.pages.team.description}</p>
           </div>
           <div className="space-y-20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center bg-slate-800/20 p-8 rounded-2xl shadow-xl">
