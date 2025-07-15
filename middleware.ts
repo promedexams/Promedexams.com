@@ -29,7 +29,6 @@ export function middleware(request: NextRequest) {
   // Skip locale prefix for static assets in public/
   const staticAssetPrefixes = [
     "/_next/",
-    "/favicon.ico",
     "/robots.txt",
     "/sitemap.xml",
     "/headshots/",

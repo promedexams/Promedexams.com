@@ -134,10 +134,36 @@
       }
     },
     "services": {
-      "title": "Services"
+      "title": "Services",
+      "description": "At ProMed Exams, we are dedicated to providing comprehensive and efficient medical examinations for immigration, aviation, and transportation professionals. Our experienced and certified team is here to ensure a smooth and timely process for all your examination needs. We believe in honest, clear communication and compassionate, patient-centered care.",
+      "services": {
+        "moreInfoButton": "Learn More",
+        "immigrationMedicalExams": {
+          "title": "Immigration Medical Exams",
+          "description": "Only doctors designated by the USCIS as civil surgeons can complete an immigration exam. The exam assesses your health to determine if you meet the requirements for immigration to the U.S."
+        },
+        "faaPhysicals": {
+          "title": "FAA Physicals (2nd & 3rd Class)",
+          "description": "The FAA requires pilots to be medically certified for their desired class of pilot certificate so that potential medical issues can be identified and addressed to prevent accidents and improve aviation safety."
+        },
+        "dotPhysicals": {
+          "title": "DOT Physicals",
+          "description": "A DOT (Department of Transportation) physical is a medical examination mandated by the Federal Motor Carrier Safety Administration (FMCSA) for commercial motor vehicle drivers."
+        },
+        "schoolSportsCampPhysicals": {
+          "title": "School/Sports/Camp Physicals",
+          "description": "Many schools, sports organizations, and camps require these physicals as a prerequisite for participation to assess a person's overall health and fitness."
+        }
+      },
+      "contactSubSection": {
+        "header": "Want to get in touch?",
+        "message": "Contact us to schedule an appointment or to learn more about the services we offer.",
+        "buttonText": "Contact Us"
+      }
     },
     "team": {
       "title": "Our Team",
+      "description": "",
       "employee": {
         "jill": {
           "name": "Dr. Jill Quigley, MD",
@@ -165,6 +191,7 @@
     },
     "contact": {
       "title": "Contact & Location",
+      "description": "",
       "contactInfoHeader": "Our Office"
     },
     "scheduleAppointment": {

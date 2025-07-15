@@ -134,10 +134,36 @@
       }
     },
     "services": {
-      "title": "Servicios"
+      "title": "Servicios",
+      "description": "En ProMed Exams, nos dedicamos a ofrecer exámenes médicos integrales y eficientes para profesionales de la inmigración, la aviación y el transporte. Nuestro equipo experimentado y certificado está aquí para garantizar un proceso ágil y oportuno para todas sus necesidades de examinación. Creemos en la comunicación honesta y clara, y en una atención compasiva y centrada en el paciente.",
+      "services": {
+        "moreInfoButton": "Más Información",
+        "immigrationMedicalExams": {
+          "title": "Exámenes Médicos de Inmigración",
+          "description": "Solo los médicos designados por el USCIS como cirujanos civiles pueden completar un examen de inmigración. El examen evalúa su estado de salud para determinar si cumple con los requisitos para la inmigración a los EE. UU."
+        },
+        "faaPhysicals": {
+          "title": "Exámenes Médicos de la FAA (2da y 3ra Clase)",
+          "description": "La FAA exige que los pilotos estén certificados médicamente para la clase de certificado que desean. Esto permite identificar y tratar posibles problemas médicos para prevenir accidentes y mejorar la seguridad de la aviación."
+        },
+        "dotPhysicals": {
+          "title": "Exámenes Médicos del DOT",
+          "description": "Un examen físico del DOT (Departamento de Transporte) es un examen médico exigido por la Administración Federal de Seguridad de Autotransportes (FMCSA) para los conductores de vehículos comerciales."
+        },
+        "schoolSportsCampPhysicals": {
+          "title": "Exámenes Físicos Escolares, Deportivos y de Campamento",
+          "description": "Muchas escuelas, organizaciones deportivas y campamentos exigen estos exámenes físicos como requisito previo para la participación, con el fin de evaluar la salud general y el estado físico de una persona."
+        }
+      },
+      "contactSubSection": {
+        "header": "¿Quiere ponerse en contacto?",
+        "message": "Contáctenos para agendar una cita o para obtener más información sobre los servicios que ofrecemos.",
+        "buttonText": "Contáctenos"
+      }
     },
     "team": {
       "title": "Nuestro Equipo",
+      "description": "",
       "employee": {
         "jill": {
           "name": "Dra. Jill Quigley, MD",
@@ -165,6 +191,7 @@
     },
     "contact": {
       "title": "Contacto y Ubicación",
+      "description": "",
       "contactInfoHeader": "Nuestra Oficina"
     },
     "scheduleAppointment": {
