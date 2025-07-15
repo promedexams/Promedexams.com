@@ -140,19 +140,66 @@
         "moreInfoButton": "Más Información",
         "immigrationMedicalExams": {
           "title": "Exámenes Médicos de Inmigración",
-          "description": "Solo los médicos designados por el USCIS como cirujanos civiles pueden completar un examen de inmigración. El examen evalúa su estado de salud para determinar si cumple con los requisitos para la inmigración a los EE. UU."
+          "shortDescription": "Solo los médicos designados por el USCIS como cirujanos civiles pueden completar un examen de inmigración. El examen evalúa su estado de salud para determinar si cumple con los requisitos para la inmigración a los EE. UU.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "¿Quién Necesita un Examen Médico de Inmigración?",
+              "description": [
+                "El USCIS (Servicios de Ciudadanía e Inmigración de EE. UU.) exige que cualquier persona que presente el Formulario I-485 para solicitar una tarjeta de residencia (green card) o para ajustar su estatus migratorio dentro de los EE. UU., se someta a un examen médico de inmigración. Solo los médicos designados por el USCIS como cirujanos civiles pueden completar un examen de inmigración."
+              ]
+            },
+            "whatToExpect": {
+              "header": "Qué Esperar",
+              "description": [
+                "El examen evalúa su estado de salud para determinar si cumple con los requisitos de inmigración a los EE. UU. Puede esperar una revisión de su historial médico, su salud mental y un examen físico.",
+                "Se requieren análisis de sangre y orina según la edad para evaluar enfermedades infecciosas, incluyendo tuberculosis, sífilis y gonorrea. Se requiere una radiografía de tórax si el análisis de sangre para tuberculosis da positivo. Se requieren vacunas si las vacunas apropiadas para la edad, según la recomendación de los CDC (Centros para el Control y la Prevención de Enfermedades), no están al día. Puede comer y beber antes del examen.",
+                "Las condiciones médicas comunes como la diabetes, el colesterol alto y la presión arterial alta, que no son una preocupación para la salud pública, no interfieren con el proceso de inmigración, pero deben ser listadas en el Formulario I-693 del USCIS (Informe de Examen Médico y Registro de Vacunación). Al completar todos los requisitos del Formulario I-693, se le entregará el formulario completado, firmado y fechado en un sobre sellado. No abra este sobre; debe presentarlo sellado al USCIS como parte del proceso de solicitud. También se le proporcionará un juego idéntico de documentos sin sellar."
+              ],
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
+              "messagePanel": {
+                "title": "ACTUALIZACIÓN (2 de diciembre de 2024)",
+                "message": "El USCIS anunció que se requiere que presente el Formulario I-693 junto con su Formulario I-485. No puede optar por enviar los resultados del examen médico por correo en una fecha posterior. Si no presenta el Formulario I-693 como parte de su paquete de solicitud de ajuste de estatus, el USCIS puede rechazar su solicitud completa."
+              }
+            }
+          },
+          "whatToBringSection": {
+            "header": "Qué Traer a su Cita",
+            "items": [
+              "Pasaporte válido u otra identificación con fotografía emitida por el gobierno",
+              "Registros de vacunación",
+              "Formulario I-693, Informe de Examen Médico y Registro de Vacunación",
+              "Lista de medicamentos actuales",
+              "Certificado de tuberculosis de su médico si fue diagnosticado y tratado adecuadamente en el pasado",
+              "Certificado de alta médica si ha sido diagnosticado con sífilis y tratado adecuadamente, firmado por un médico o un funcionario de salud pública",
+              "Informe de la condición y cualquier requisito de educación especial o supervisión si inmigra con discapacidades de aprendizaje",
+              "Si tiene un historial de comportamiento dañino o violento que haya resultado en lesiones a personas o animales, información que permita al médico determinar si el comportamiento estuvo relacionado con un problema psiquiátrico o médico, o con el uso de drogas o alcohol",
+              "Si ha sido tratado u hospitalizado por una enfermedad psiquiátrica o mental, o por abuso de alcohol o drogas, una certificación por escrito que incluya el diagnóstico, la duración del tratamiento y su pronóstico"
+            ]
+          }
         },
         "faaPhysicals": {
           "title": "Exámenes Médicos de la FAA (2da y 3ra Clase)",
-          "description": "La FAA exige que los pilotos estén certificados médicamente para la clase de certificado que desean. Esto permite identificar y tratar posibles problemas médicos para prevenir accidentes y mejorar la seguridad de la aviación."
+          "shortDescription": "La Administración Federal de Aviación (FAA) exige que los pilotos estén certificados médicamente para la clase de certificado que desean. Esto permite identificar y tratar posibles problemas médicos para prevenir accidentes y mejorar la seguridad de la aviación."
         },
         "dotPhysicals": {
           "title": "Exámenes Médicos del DOT",
-          "description": "Un examen físico del DOT (Departamento de Transporte) es un examen médico exigido por la Administración Federal de Seguridad de Autotransportes (FMCSA) para los conductores de vehículos comerciales."
+          "shortDescription": "Un examen físico del DOT (Departamento de Transporte) es un examen médico exigido por la Administración Federal de Seguridad de Autotransportes (FMCSA) para los conductores de vehículos comerciales."
         },
         "schoolSportsCampPhysicals": {
           "title": "Exámenes Físicos Escolares, Deportivos y de Campamento",
-          "description": "Muchas escuelas, organizaciones deportivas y campamentos exigen estos exámenes físicos como requisito previo para la participación, con el fin de evaluar la salud general y el estado físico de una persona."
+          "shortDescription": "Los exámenes físicos escolares, deportivos y de campamento también se conocen como evaluaciones físicas de preparticipación (PPE). Muchas escuelas, organizaciones deportivas y campamentos exigen estos exámenes físicos como requisito previo para la participación, con el fin de evaluar la salud general y el estado físico de una persona."
+        },
+        "specificServicePages": {
+          "scheduleSection": {
+            "header": "¿Listo para Agendar su Examen?",
+            "description": "Agendemos su visita. Nuestro equipo está listo para ayudarle.",
+            "scheduleAppointmentButtonText": "Agendar Cita"
+          },
+          "wrongServiceSection": {
+            "header": "¿No es el servicio que busca?",
+            "description": "Ofrecemos una gama de otros exámenes médicos especializados. Explore nuestros otros servicios para encontrar el adecuado para usted.",
+            "otherServicesButtonText": "Ver Otros Servicios"
+          }
         }
       },
       "contactSubSection": {

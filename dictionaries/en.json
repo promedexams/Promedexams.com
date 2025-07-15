@@ -140,19 +140,66 @@
         "moreInfoButton": "Learn More",
         "immigrationMedicalExams": {
           "title": "Immigration Medical Exams",
-          "description": "Only doctors designated by the USCIS as civil surgeons can complete an immigration exam. The exam assesses your health to determine if you meet the requirements for immigration to the U.S."
+          "shortDescription": "Only doctors designated by the USCIS as civil surgeons can complete an immigration exam. The exam assesses your health to determine if you meet the requirements for immigration to the U.S.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "Who Needs an Immigration Medical Exam?",
+              "description": [
+                "Anyone filing Form I-485 to apply for a U.S. green card or adjusting their immigration status within the U.S. is required by the USCIS (U.S. Citizenship and Immigration Services) to have an immigration medical examination. Only doctors designated by the USCIS as civil surgeons can complete an immigration exam."
+              ]
+            },
+            "whatToExpect": {
+              "header": "What to Expect",
+              "description": [
+                "The exam assesses your health to determine if you meet the requirements for immigration to the U.S. Expect a review of your medical history, mental health, and physical exam.",
+                "Blood and urine testing is required based on age to evaluate infectious diseases including tuberculosis, syphilis, and gonorrhea. A chest x-ray is required if the tuberculosis blood test is positive. Vaccinations are required if age-appropriate vaccinations per CDC (Centers for Disease Control and Prevention) recommendation are not up-to-date. You can eat/drink before the exam.",
+                "Common medical conditions such as diabetes, high cholesterol, and high blood pressure that are not of concern to public health do not interfere with the immigration process but are required to be listed on USCIS Form I-693 (Report of Medical Examination and Vaccination Record). Upon completion of all Form I-693 requirements, you will be given a completed signed and dated Form I-693 in a sealed envelope. Do not open this envelope; it should be submitted in the sealed envelope to the USCIS as part of the application process. An unsealed identical set of documents will also be provided to you."
+              ],
+              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
+              "messagePanel": {
+                "title": "UPDATE (December 2nd, 2024)",
+                "message": "USCIS announced that you are required to submit Form I-693 with your Form I-485. You may not opt to mail the medical exam results at a later date. If you do not submit Form I-693 as a part of your adjustment of status application package, USCIS may reject your entire application."
+              }
+            }
+          },
+          "whatToBringSection": {
+            "header": "What to Bring to Your Appointment",
+            "items": [
+              "Valid passport or other government-issued photo identification",
+              "Vaccination records",
+              "Form I-693, Report of Medical Examination and Vaccination Record",
+              "List of current medications",
+              "Tuberculosis certificate from your doctor if you were diagnosed and properly treated in the past",
+              "Certificate of clearance if you have been diagnosed with syphilis and properly treated signed by a doctor or public health official",
+              "Report of the condition and any special education or supervision requirements if immigrating with learning disabilities",
+              "If you have a history of harmful or violent behavior resulting in injury to people or animals, information that will allow the doctor to determine whether the behavior was related to a psychiatric or medical problem, or to drug or alcohol use",
+              "If you have been treated or hospitalized for psychiatric or mental illness, or alcohol or drug abuse, written certification including the diagnosis, length of treatment, and your prognosis"
+            ]
+          }
         },
         "faaPhysicals": {
           "title": "FAA Physicals (2nd & 3rd Class)",
-          "description": "The FAA requires pilots to be medically certified for their desired class of pilot certificate so that potential medical issues can be identified and addressed to prevent accidents and improve aviation safety."
+          "shortDescription": "The Federal Aviation Administration (FAA) requires pilots to be medically certified for their desired class of pilot certificate so that potential medical issues can be identified and addressed to prevent accidents and improve aviation safety."
         },
         "dotPhysicals": {
           "title": "DOT Physicals",
-          "description": "A DOT (Department of Transportation) physical is a medical examination mandated by the Federal Motor Carrier Safety Administration (FMCSA) for commercial motor vehicle drivers."
+          "shortDescription": "A DOT (Department of Transportation) physical is a medical examination mandated by the Federal Motor Carrier Safety Administration (FMCSA) for commercial motor vehicle drivers."
         },
         "schoolSportsCampPhysicals": {
           "title": "School/Sports/Camp Physicals",
-          "description": "Many schools, sports organizations, and camps require these physicals as a prerequisite for participation to assess a person's overall health and fitness."
+          "shortDescription": "School, sports, and camp physicals are also known as pre-participation physical evaluations (PPEs). Many schools, sports organizations, and camps require these physicals as a prerequisite for participation to assess a person's overall health and fitness."
+        },
+        "specificServicePages": {
+          "scheduleSection": {
+            "header": "Ready to Schedule Your Exam?",
+            "description": "Let's get your visit scheduled. Our team is ready to assist you.",
+            "scheduleAppointmentButtonText": "Schedule Appointment"
+          },
+          "wrongServiceSection": {
+            "header": "Not the Service You're Looking For?",
+            "description": "We offer a range of other specialized medical examinations. Explore our other services to find the one that's right for you.",
+            "otherServicesButtonText": "View Other Services"
+          }
         }
       },
       "contactSubSection": {

@@ -4,9 +4,10 @@ import { CalendarDaysIcon, GlassesIcon, PersonStandingIcon, PlaneIcon } from "lu
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
+import { getDictionary } from "@/lib/utils/dictionaries";
 
 const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
-  // const dict = await getDictionary((await params).lang);
+  const dict = await getDictionary((await params).lang);
 
   const whatToBring = [
     { text: "Current photo ID (Driver's license or Passport)", icon: PersonStandingIcon },
@@ -26,11 +27,9 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
             <div className="p-4 bg-[#f1a208] rounded-full inline-block mb-4">
               <PlaneIcon className="w-16 h-16 text-black" />
             </div>
-            <h1 className="text-5xl font-bold mb-4">FAA Physicals (2nd & 3rd Class)</h1>
+            <h1 className="text-5xl font-bold mb-4">{dict.pages.services.services.faaPhysicals.title}</h1>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
-              The Federal Aviation Administration (FAA) requires pilots to be medically certified for their desired
-              class of pilot certificate so that potential medical issues can be identified and addressed to prevent
-              accidents and improve aviation safety.
+              {dict.pages.services.services.faaPhysicals.shortDescription}
             </p>
           </div>
         </section>
@@ -89,9 +88,11 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
           </div>
         </section>
         <section className="text-center text-white bg-slate-800/20 p-12 rounded-2xl w-full max-w-5xl shadow-xl">
-          <h2 className="text-4xl font-bold mb-4">Ready to Schedule Your Exam?</h2>
+          <h2 className="text-4xl font-bold mb-4">
+            {dict.pages.services.services.specificServicePages.scheduleSection.header}
+          </h2>
           <p className="mb-8 text-lg max-w-2xl mx-auto text-white/80">
-            Contact us today to book your FAA physical. Our team is ready to assist you.
+            {dict.pages.services.services.specificServicePages.scheduleSection.description}
           </p>
           <Link href="/schedule-appointment">
             <Button
@@ -99,20 +100,21 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
               className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105"
             >
               <CalendarDaysIcon className="w-5 h-5 mr-2" />
-              Schedule Appointment
+              {dict.pages.services.services.specificServicePages.scheduleSection.scheduleAppointmentButtonText}
             </Button>
           </Link>
         </section>
         <section className="text-center text-white bg-slate-800/20 mb-10 p-12 rounded-2xl w-full max-w-5xl shadow-xl">
-          <h2 className="text-4xl font-bold mb-4">Not the Service You're Looking For?</h2>
+          <h2 className="text-4xl font-bold mb-4">
+            {dict.pages.services.services.specificServicePages.wrongServiceSection.header}
+          </h2>
           <p className="mb-8 text-lg max-w-2xl mx-auto text-white/80">
-            We offer a range of other specialized medical examinations. Explore our other services to find the one
-            that's right for you.
+            {dict.pages.services.services.specificServicePages.wrongServiceSection.description}
           </p>
           <div className="mt-12 flex justify-center w-full">
             <Link href="/services" className="inline-block">
               <button className="bg-transparent hover:bg-[#f1a208] text-white hover:text-black border-2 border-[#f1a208] transition-colors duration-200 font-bold text-lg cursor-pointer whitespace-normal text-center px-2 py-1 rounded-lg">
-                View Other Services
+                {dict.pages.services.services.specificServicePages.wrongServiceSection.otherServicesButtonText}
               </button>
             </Link>
           </div>

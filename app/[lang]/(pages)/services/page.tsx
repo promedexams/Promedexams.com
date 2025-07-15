@@ -13,25 +13,25 @@ const ServicesPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }>
     {
       icon: Globe2Icon,
       title: dict.pages.services.services.immigrationMedicalExams.title,
-      description: dict.pages.services.services.immigrationMedicalExams.description,
+      description: dict.pages.services.services.immigrationMedicalExams.shortDescription,
       href: "/services/immigration-medical-exams",
     },
     {
       icon: PlaneIcon,
       title: dict.pages.services.services.faaPhysicals.title,
-      description: dict.pages.services.services.faaPhysicals.description,
+      description: dict.pages.services.services.faaPhysicals.shortDescription,
       href: "/services/faa-physicals",
     },
     {
       icon: TruckIcon,
       title: dict.pages.services.services.dotPhysicals.title,
-      description: dict.pages.services.services.dotPhysicals.description,
+      description: dict.pages.services.services.dotPhysicals.shortDescription,
       href: "/services/dot-physicals",
     },
     {
       icon: SchoolIcon,
       title: dict.pages.services.services.schoolSportsCampPhysicals.title,
-      description: dict.pages.services.services.schoolSportsCampPhysicals.description,
+      description: dict.pages.services.services.schoolSportsCampPhysicals.shortDescription,
       href: "/services/school-sports-camp-physicals",
     },
   ];
