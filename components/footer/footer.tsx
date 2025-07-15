@@ -48,16 +48,16 @@ const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
           </div>
           <div className="space-y-3">
             <h3 className="font-bold text-white mb-2">{dict.footer.navlinks.services.header}</h3>
-            <Link href="/" className="block hover:text-white transition-colors">
+            <Link href="/services/immigration-medical-exams" className="block hover:text-white transition-colors">
               {dict.footer.navlinks.services.ImmigrationMedicalExams}
             </Link>
-            <Link href="/" className="block hover:text-white transition-colors">
+            <Link href="/services/faa-physicals" className="block hover:text-white transition-colors">
               {dict.footer.navlinks.services.FAAPhysicals}
             </Link>
-            <Link href="/" className="block hover:text-white transition-colors">
+            <Link href="/services/dot-physicals" className="block hover:text-white transition-colors">
               {dict.footer.navlinks.services.DOTPhysicals}
             </Link>
-            <Link href="/" className="block hover:text-white transition-colors">
+            <Link href="/services/school-sports-camp-physicals" className="block hover:text-white transition-colors">
               {dict.footer.navlinks.services.schoolSportsCampPhysicals}
             </Link>
           </div>
@@ -66,7 +66,7 @@ const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
             <Link href="/schedule-appointment" className="block hover:text-white transition-colors">
               {dict.footer.navlinks.appointments.scheduleAppointment}
             </Link>
-            <Link href="/" className="block hover:text-white transition-colors">
+            <Link href="/services" className="block hover:text-white transition-colors">
               {dict.footer.navlinks.appointments.whatToBring}
             </Link>
           </div>

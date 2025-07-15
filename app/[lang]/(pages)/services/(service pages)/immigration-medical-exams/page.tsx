@@ -16,10 +16,9 @@ import {
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
-import { getDictionary } from "@/lib/utils/dictionaries";
 
 const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
-  const dict = await getDictionary((await params).lang);
+  // const dict = await getDictionary((await params).lang);
 
   const whatToBring = [
     { text: "Valid passport or other government-issued photo identification", icon: FingerprintIcon },
@@ -102,9 +101,8 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
                 </p>
               </div>
             </div>
-            {/* USCIS Update Box */}
             <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
-              <h3 className="font-bold text-xl text-blue-300 mb-2">UPDATE 12/2/2024</h3>
+              <h3 className="font-bold text-xl text-blue-300 mb-2">UPDATE (12/2/2024)</h3>
               <p className="text-white/90">
                 USCIS announced that you are required to submit Form I-693 with your Form I-485. You may not opt to mail
                 the medical exam results at a later date. If you do not submit Form I-693 as a part of your adjustment
