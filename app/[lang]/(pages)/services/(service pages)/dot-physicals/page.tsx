@@ -1,12 +1,5 @@
 import Link from "next/link";
-import {
-  CalendarDaysIcon,
-  FileTextIcon,
-  GlassesIcon,
-  PersonStandingIcon,
-  PillBottleIcon,
-  TruckIcon,
-} from "lucide-react";
+import { CalendarDaysIcon, FileTextIcon, GlassesIcon, IdCardIcon, PillBottleIcon, TruckIcon } from "lucide-react";
 
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
@@ -17,13 +10,10 @@ const DOTPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
   const dict = await getDictionary((await params).lang);
 
   const whatToBring = [
-    { text: "Current state-issued driver's license", icon: PersonStandingIcon },
-    {
-      text: "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
-      icon: GlassesIcon,
-    },
-    { text: "List of current medications with dosages and prescriber's name", icon: PillBottleIcon },
-    { text: "Any special circumstances or exemption letters from your doctor(s)", icon: FileTextIcon },
+    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[0], icon: IdCardIcon },
+    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[1], icon: GlassesIcon },
+    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[2], icon: PillBottleIcon },
+    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[3], icon: FileTextIcon },
   ];
 
   return (
@@ -44,39 +34,30 @@ const DOTPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
         <section className="w-full max-w-5xl">
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">Who Needs a DOT Physical?</h2>
-              <p className="text-lg text-white/90">
-                Passing the DOT physical is required to obtain and maintain a commercial driver's license (CDL). The
-                FMCSA requires that DOT physicals be performed by a certified medical examiner (CME) that has undergone
-                extensive training and is certified by the FMCSA to perform DOT physicals. At ProMed Exams, we offer
-                prompt services to help get you on the road again as soon as possible, and we understand the importance
-                of accuracy to avoid processing delays.
-              </p>
+              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">
+                {dict.pages.services.services.dotPhysicals.informationSection.whoApplies.header}
+              </h2>
+              <div className="space-y-4 text-lg text-white/90">
+                {dict.pages.services.services.dotPhysicals.informationSection.whoApplies.description.map(
+                  (paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  )
+                )}
+              </div>
             </div>
             <div className="w-full h-px bg-white/20" />
             <div>
-              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">What to Expect</h2>
+              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">
+                {dict.pages.services.services.dotPhysicals.informationSection.whatToExpect.header}
+              </h2>
               <div className="space-y-4 text-lg text-white/90">
-                <p>
-                  The exam ensures drivers are physically and mentally fit to operate commercial vehicles safely. Expect
-                  a review of your medical history, mental health, and physical exam. Evaluation of blood pressure,
-                  heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.
-                </p>
-                <p>
-                  Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of
-                  the exam, your results will be reported electronically to the National Registry of Certified Medical
-                  Examiners (NRCME). If you meet all FMCSA requirements, you will leave your appointment with your
-                  medical examiner's certificate (DOT medical card).
-                </p>
-                <p>
-                  If we find an issue that needs attention, you may need to see your primary care provider and/or a
-                  specialist for further testing, treatment, or paperwork. You may still qualify for your medical
-                  certificate, but only after taking care of the medical issue or obtaining necessary documentation. In
-                  some cases, a health condition may disqualify you from receiving a medical certificate.
-                </p>
+                {dict.pages.services.services.dotPhysicals.informationSection.whatToExpect.description.map(
+                  (paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  )
+                )}
                 <p className="italic">
-                  This examination is not a substitute for a full physical examination, consultation, diagnosis, or
-                  treatment by your primary health care provider.
+                  {dict.pages.services.services.dotPhysicals.informationSection.whatToExpect.disclaimer}
                 </p>
               </div>
             </div>
@@ -84,7 +65,9 @@ const DOTPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
         </section>
         <section className="w-full max-w-5xl">
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl">
-            <h2 className="text-3xl font-bold text-center text-[#f1a208] mb-8">What to Bring to Your Appointment</h2>
+            <h2 className="text-3xl font-bold text-center text-[#f1a208] mb-8">
+              {dict.pages.services.services.dotPhysicals.whatToBringSection.header}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
               {whatToBring.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
@@ -96,13 +79,11 @@ const DOTPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
               ))}
             </div>
             <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
-              <h3 className="font-bold text-xl text-blue-300 mb-2">IMPORTANT NOTE</h3>
+              <h3 className="font-bold text-xl text-blue-300 mb-2">
+                {dict.pages.services.services.dotPhysicals.whatToBringSection.messagePanel.title}
+              </h3>
               <p className="text-white/90">
-                Be sure to complete the driver information and health history sections on the Medical Examination Report
-                Form prior to your appointment. As of 2023, CMV drivers with insulin-treated diabetes mellitus (type 1
-                or type 2) and/or monocular vision must meet updated standards to be certified. Forms for these
-                exemptions must be completed no more than 45 days before the DOT exam is performed and brought to the
-                DOT exam.
+                {dict.pages.services.services.dotPhysicals.whatToBringSection.messagePanel.message}
               </p>
             </div>
           </div>

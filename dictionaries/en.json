@@ -211,7 +211,37 @@
         },
         "dotPhysicals": {
           "title": "DOT Physicals",
-          "shortDescription": "A DOT (Department of Transportation) physical is a medical examination mandated by the Federal Motor Carrier Safety Administration (FMCSA) for commercial motor vehicle drivers."
+          "shortDescription": "A DOT (Department of Transportation) physical is a medical examination mandated by the Federal Motor Carrier Safety Administration (FMCSA) for commercial motor vehicle drivers.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "Who Needs a DOT Physical?",
+              "description": [
+                "Passing the DOT physical is required to obtain and maintain a commercial driver's license (CDL). The FMCSA requires that DOT physicals be performed by a certified medical examiner (CME) that has undergone extensive training and is certified by the FMCSA to perform DOT physicals. At ProMed Exams, we offer prompt services to help get you on the road again as soon as possible, and we understand the importance of accuracy to avoid processing delays."
+              ]
+            },
+            "whatToExpect": {
+              "header": "What to Expect",
+              "description": [
+                "The exam ensures drivers are physically and mentally fit to operate commercial vehicles safely. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.",
+                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, your results will be reported electronically to the National Registry of Certified Medical Examiners (NRCME). If you meet all FMCSA requirements, you will leave your appointment with your medical examiner's certificate (DOT medical card).",
+                "If we find an issue that needs attention, you may need to see your primary care provider and/or a specialist for further testing, treatment, or paperwork. You may still qualify for your medical certificate, but only after taking care of the medical issue or obtaining necessary documentation. In some cases, a health condition may disqualify you from receiving a medical certificate."
+              ],
+              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider."
+            }
+          },
+          "whatToBringSection": {
+            "header": "What to Bring to Your Appointment",
+            "items": [
+              "Current state-issued driver's license",
+              "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
+              "List of current medications with dosages and prescriber's name",
+              "Any special circumstances or exemption letters from your doctor(s)"
+            ],
+            "messagePanel": {
+              "title": "IMPORTANT NOTE",
+              "message": "Be sure to complete the driver information and health history sections on the Medical Examination Report Form prior to your appointment. As of 2023, CMV drivers with insulin-treated diabetes mellitus (type 1 or type 2) and/or monocular vision must meet updated standards to be certified. Forms for these exemptions must be completed no more than 45 days before the DOT exam is performed and brought to the DOT exam."
+            }
+          }
         },
         "schoolSportsCampPhysicals": {
           "title": "School/Sports/Camp Physicals",

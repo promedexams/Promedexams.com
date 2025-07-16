@@ -211,7 +211,37 @@
         },
         "dotPhysicals": {
           "title": "Exámenes Médicos del DOT",
-          "shortDescription": "Un examen físico del DOT (Departamento de Transporte) es un examen médico exigido por la Administración Federal de Seguridad de Autotransportes (FMCSA) para los conductores de vehículos comerciales."
+          "shortDescription": "Un examen físico del DOT (Departamento de Transporte) es un examen médico exigido por la Administración Federal de Seguridad de Autotransportes (FMCSA) para los conductores de vehículos comerciales.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "¿Quién necesita un examen físico del DOT?",
+              "description": [
+                "Aprobar el examen físico del DOT es un requisito para obtener y mantener una licencia de conducir comercial (CDL). La FMCSA exige que los exámenes físicos del DOT sean realizados por un examinador médico certificado (CME, por sus siglas en inglés) que haya recibido una formación exhaustiva y esté certificado por la FMCSA para realizar dichos exámenes. En ProMed Exams, ofrecemos servicios rápidos para ayudarle a volver a la carretera lo antes posible, y entendemos la importancia de la precisión para evitar retrasos en el procesamiento."
+              ]
+            },
+            "whatToExpect": {
+              "header": "Qué Esperar",
+              "description": [
+                "El examen asegura que los conductores estén física y mentalmente aptos para operar vehículos comerciales de forma segura. Puede esperar una revisión de su historial médico, salud mental y un examen físico. Para el examen se requiere la evaluación de la presión arterial, la frecuencia cardíaca, la altura/peso, la visión, la audición y un análisis de orina.",
+                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, sus resultados se informarán electrónicamente al Registro Nacional de Examinadores Médicos Certificados (NRCME). Si cumple con todos los requisitos de la FMCSA, saldrá de su cita con su certificado de examinador médico (tarjeta médica del DOT).",
+                "Si encontramos un problema que requiere atención, es posible que deba consultar a su proveedor de atención primaria y/o a un especialista para realizar más pruebas, tratamientos o trámites. Aún podría calificar para su certificado médico, pero solo después de resolver el problema médico u obtener la documentación necesaria. En algunos casos, una condición de salud puede descalificarlo para recibir un certificado médico."
+              ],
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria."
+            }
+          },
+          "whatToBringSection": {
+            "header": "Qué Traer a su Cita",
+            "items": [
+              "Licencia de conducir vigente emitida por el estado",
+              "Lentes de contacto/gafas, audífonos (si aplica) - Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir",
+              "Lista de medicamentos actuales con dosis y el nombre de quien los recetó",
+              "Cualquier circunstancia especial o carta de exención de su(s) médico(s)"
+            ],
+            "messagePanel": {
+              "title": "NOTA IMPORTANTE",
+              "message": "Asegúrese de completar las secciones de información del conductor e historial de salud en el Formulario de Informe de Examen Médico antes de su cita. A partir de 2023, los conductores de CMV (vehículos motorizados comerciales) con diabetes mellitus tratada con insulina (tipo 1 o tipo 2) y/o visión monocular deben cumplir con estándares actualizados para ser certificados. Los formularios para estas exenciones deben completarse no más de 45 días antes de realizar el examen del DOT y deben traerse al examen."
+            }
+          }
         },
         "schoolSportsCampPhysicals": {
           "title": "Exámenes Físicos Escolares, Deportivos y de Campamento",
