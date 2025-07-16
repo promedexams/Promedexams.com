@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDaysIcon, GlassesIcon, PersonStandingIcon, PlaneIcon } from "lucide-react";
+import { CalendarDaysIcon, GlassesIcon, HashIcon, IdCardIcon, PlaneIcon } from "lucide-react";
 
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
@@ -10,12 +10,12 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
   const dict = await getDictionary((await params).lang);
 
   const whatToBring = [
-    { text: "Current photo ID (Driver's license or Passport)", icon: PersonStandingIcon },
+    { text: dict.pages.services.services.faaPhysicals.whatToBringSection.items[0], icon: IdCardIcon },
     {
-      text: "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
+      text: dict.pages.services.services.faaPhysicals.whatToBringSection.items[1],
       icon: GlassesIcon,
     },
-    { text: "MedXPress confirmation number", icon: CalendarDaysIcon },
+    { text: dict.pages.services.services.faaPhysicals.whatToBringSection.items[2], icon: HashIcon },
   ];
 
   return (
@@ -36,31 +36,30 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
         <section className="w-full max-w-5xl">
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">Who Needs an FAA Physical?</h2>
-              <p className="text-lg text-white/90">
-                The FAA designates physicians known as Aviation Medical Examiners (AME) who complete specialized FAA
-                training to perform these medical certification exams. While the priority is aviation safety, my goal as
-                an AME is to help pilots attain and maintain certification to fly. In addition, we can assist when
-                medical conditions occur that require additional information for certification.
-              </p>
+              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">
+                {dict.pages.services.services.faaPhysicals.informationSection.whoApplies.header}
+              </h2>
+              <div className="space-y-4 text-lg text-white/90">
+                {dict.pages.services.services.faaPhysicals.informationSection.whoApplies.description.map(
+                  (paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  )
+                )}
+              </div>
             </div>
             <div className="w-full h-px bg-white/20" />
             <div>
-              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">What to Expect</h2>
+              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">
+                {dict.pages.services.services.faaPhysicals.informationSection.whatToExpect.header}
+              </h2>
               <div className="space-y-4 text-lg text-white/90">
-                <p>
-                  The exam assesses your overall physical and mental fitness for duty to ensure you can safely operate
-                  an aircraft. Expect a review of your medical history, mental health, and physical exam. Evaluation of
-                  blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.
-                </p>
-                <p>
-                  Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of
-                  the exam, in most cases (unless concerns arise requiring deferment), you will leave your appointment
-                  with your medical certification.
-                </p>
+                {dict.pages.services.services.faaPhysicals.informationSection.whatToExpect.description.map(
+                  (paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  )
+                )}
                 <p className="italic">
-                  This examination is not a substitute for a full physical examination, consultation, diagnosis, or
-                  treatment by your primary health care provider.
+                  {dict.pages.services.services.faaPhysicals.informationSection.whatToExpect.disclaimer}
                 </p>
               </div>
             </div>
@@ -68,7 +67,9 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
         </section>
         <section className="w-full max-w-5xl">
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl">
-            <h2 className="text-3xl font-bold text-center text-[#f1a208] mb-8">What to Bring to Your Appointment</h2>
+            <h2 className="text-3xl font-bold text-center text-[#f1a208] mb-8">
+              {dict.pages.services.services.faaPhysicals.whatToBringSection.header}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
               {whatToBring.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
@@ -80,9 +81,11 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
               ))}
             </div>
             <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
-              <h3 className="font-bold text-xl text-blue-300 mb-2">IMPORTANT NOTE</h3>
+              <h3 className="font-bold text-xl text-blue-300 mb-2">
+                {dict.pages.services.services.faaPhysicals.whatToBringSection.messagePanel.title}
+              </h3>
               <p className="text-white/90">
-                Be sure to update your health history and current medications in MedXPress prior to your appointment.
+                {dict.pages.services.services.faaPhysicals.whatToBringSection.messagePanel.message}
               </p>
             </div>
           </div>

@@ -179,7 +179,35 @@
         },
         "faaPhysicals": {
           "title": "Exámenes Médicos de la FAA (2da y 3ra Clase)",
-          "shortDescription": "La Administración Federal de Aviación (FAA) exige que los pilotos estén certificados médicamente para la clase de certificado que desean. Esto permite identificar y tratar posibles problemas médicos para prevenir accidentes y mejorar la seguridad de la aviación."
+          "shortDescription": "La Administración Federal de Aviación (FAA) exige que los pilotos estén certificados médicamente para la clase de certificado que desean. Esto permite identificar y tratar posibles problemas médicos para prevenir accidentes y mejorar la seguridad de la aviación.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "¿Quién necesita un examen médico de la FAA?",
+              "description": [
+                "La FAA designa a médicos conocidos como Examinadores Médicos de Aviación (AME, por sus siglas en inglés) que completan una formación especializada de la FAA para realizar estos exámenes de certificación médica. Aunque la prioridad es la seguridad de la aviación, mi objetivo como AME es ayudar a los pilotos a obtener y mantener la certificación para volar. Además, podemos ayudar cuando surgen condiciones médicas que requieren información adicional para la certificación."
+              ]
+            },
+            "whatToExpect": {
+              "header": "Qué Esperar",
+              "description": [
+                "El examen evalúa su aptitud física y mental general para el servicio, para garantizar que puede operar una aeronave de forma segura. Puede esperar una revisión de su historial médico, salud mental y un examen físico. Para el examen se requiere la evaluación de la presión arterial, la frecuencia cardíaca, la altura/peso, la visión, la audición y un análisis de orina.",
+                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran un aplazamiento), saldrá de su cita con su certificación médica."
+              ],
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria."
+            }
+          },
+          "whatToBringSection": {
+            "header": "Qué Traer a su Cita",
+            "items": [
+              "Identificación con foto vigente (Licencia de conducir o Pasaporte)",
+              "Lentes de contacto/gafas, audífonos (si aplica) - Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir",
+              "Número de confirmación de MedXPress"
+            ],
+            "messagePanel": {
+              "title": "NOTA IMPORTANTE",
+              "message": "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress antes de su cita."
+            }
+          }
         },
         "dotPhysicals": {
           "title": "Exámenes Médicos del DOT",

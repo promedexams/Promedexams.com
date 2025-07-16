@@ -179,7 +179,35 @@
         },
         "faaPhysicals": {
           "title": "FAA Physicals (2nd & 3rd Class)",
-          "shortDescription": "The Federal Aviation Administration (FAA) requires pilots to be medically certified for their desired class of pilot certificate so that potential medical issues can be identified and addressed to prevent accidents and improve aviation safety."
+          "shortDescription": "The Federal Aviation Administration (FAA) requires pilots to be medically certified for their desired class of pilot certificate so that potential medical issues can be identified and addressed to prevent accidents and improve aviation safety.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "Who Needs an FAA Physical?",
+              "description": [
+                "The FAA designates physicians known as Aviation Medical Examiners (AME) who complete specialized FAA training to perform these medical certification exams. While the priority is aviation safety, my goal as an AME is to help pilots attain and maintain certification to fly. In addition, we can assist when medical conditions occur that require additional information for certification."
+              ]
+            },
+            "whatToExpect": {
+              "header": "What to Expect",
+              "description": [
+                "The exam assesses your overall physical and mental fitness for duty to ensure you can safely operate an aircraft. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.",
+                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, in most cases (unless concerns arise requiring deferment), you will leave your appointment with your medical certification."
+              ],
+              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider."
+            }
+          },
+          "whatToBringSection": {
+            "header": "What to Bring to Your Appointment",
+            "items": [
+              "Current photo ID (Driver's license or Passport)",
+              "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
+              "MedXPress confirmation number"
+            ],
+            "messagePanel": {
+              "title": "IMPORTANT NOTE",
+              "message": "Be sure to update your health history and current medications in MedXPress prior to your appointment."
+            }
+          }
         },
         "dotPhysicals": {
           "title": "DOT Physicals",

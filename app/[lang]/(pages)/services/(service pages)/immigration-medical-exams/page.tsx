@@ -2,10 +2,10 @@ import Link from "next/link";
 import {
   CalendarDaysIcon,
   FileTextIcon,
-  FingerprintIcon,
   Globe2Icon,
   HeartPulseIcon,
   HospitalIcon,
+  IdCardIcon,
   PersonStandingIcon,
   PillBottleIcon,
   StethoscopeIcon,
@@ -22,7 +22,7 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
   const dict = await getDictionary((await params).lang);
 
   const whatToBring = [
-    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[0], icon: FingerprintIcon },
+    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[0], icon: IdCardIcon },
     { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[1], icon: SyringeIcon },
     { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[2], icon: FileTextIcon },
     { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[3], icon: PillBottleIcon },
@@ -57,9 +57,13 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
               <h2 className="text-3xl font-bold text-[#f1a208] mb-4">
                 {dict.pages.services.services.immigrationMedicalExams.informationSection.whoApplies.header}
               </h2>
-              <p className="text-lg text-white/90">
-                {dict.pages.services.services.immigrationMedicalExams.informationSection.whoApplies.description}
-              </p>
+              <div className="space-y-4 text-lg text-white/90">
+                {dict.pages.services.services.immigrationMedicalExams.informationSection.whoApplies.description.map(
+                  (paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  )
+                )}
+              </div>
             </div>
             <div className="w-full h-px bg-white/20" />
             <div>
@@ -68,8 +72,8 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
               </h2>
               <div className="space-y-4 text-lg text-white/90">
                 {dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.description.map(
-                  (paragraph, i) => (
-                    <p key={`p-${i + 1}`}>{paragraph}</p>
+                  (paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
                   )
                 )}
                 <p className="italic">
