@@ -245,7 +245,33 @@
         },
         "schoolSportsCampPhysicals": {
           "title": "Exámenes Físicos Escolares, Deportivos y de Campamento",
-          "shortDescription": "Los exámenes físicos escolares, deportivos y de campamento también se conocen como evaluaciones físicas de preparticipación (PPE). Muchas escuelas, organizaciones deportivas y campamentos exigen estos exámenes físicos como requisito previo para la participación, con el fin de evaluar la salud general y el estado físico de una persona."
+          "shortDescription": "Los exámenes físicos escolares, deportivos y de campamento también se conocen como evaluaciones físicas de preparticipación (PPE). Muchas escuelas, organizaciones deportivas y campamentos exigen estos exámenes físicos como requisito previo para la participación, con el fin de evaluar la salud general y el estado físico de una persona.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "¿Quién necesita un examen físico escolar, deportivo y/o de campamento?",
+              "description": [
+                "Muchas escuelas, organizaciones deportivas y campamentos exigen estos exámenes físicos como requisito previo para la participación, con el fin de evaluar la salud general y el estado físico de una persona."
+              ]
+            },
+            "whatToExpect": {
+              "header": "Qué Esperar",
+              "description": [
+                "Estos exámenes ayudan a identificar posibles problemas médicos, como problemas cardíacos, pulmonares, neurológicos o musculoesqueléticos, que podrían afectar la capacidad de una persona para participar en actividades de forma segura y asegurar que todas las vacunas necesarias estén al día. Los requisitos de estos exámenes pueden variar según el estado, el deporte y la organización. Asegúrese de consultar con el administrador del programa sobre los requisitos necesarios para obtener la autorización para participar.",
+                "Puede esperar una revisión de su historial médico y un examen físico que incluye la presión arterial, la frecuencia cardíaca y la altura/peso. Generalmente, se requiere un análisis de orina, así como una prueba de la vista. Un electrocardiograma (ECG) puede ser necesario si está indicado. Se pueden requerir vacunas si las vacunas apropiadas para la edad no están al día. Puede comer y beber antes del examen.",
+                "Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran una evaluación adicional), saldrá de su cita con sus formularios completados y firmados."
+              ],
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria."
+            }
+          },
+          "whatToBringSection": {
+            "header": "Qué Traer a su Cita",
+            "items": [
+              "Cualquier formulario proporcionado por su escuela, programa deportivo o campamento que deba ser completado y/o firmado por la Dra. Quigley",
+              "Registros de inmunización",
+              "Lista de alergias y medicamentos actuales con dosis (recetados y de venta libre)",
+              "Lista de lesiones y cirugías pasadas, e historial familiar pertinente"
+            ]
+          }
         },
         "specificServicePages": {
           "scheduleSection": {

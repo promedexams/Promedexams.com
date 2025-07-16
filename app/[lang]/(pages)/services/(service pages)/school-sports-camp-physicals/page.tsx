@@ -11,15 +11,15 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: { params: Promise<{ lan
 
   const whatToBring = [
     {
-      text: "Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley",
+      text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[0],
       icon: FileTextIcon,
     },
-    { text: "Immunization records", icon: SyringeIcon },
+    { text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[1], icon: SyringeIcon },
     {
-      text: "List of allergies and current medications with dosages (prescription and over-the-counter)",
+      text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[2],
       icon: PillBottleIcon,
     },
-    { text: "List of past injuries and surgeries, pertinent family history", icon: HeartPulseIcon },
+    { text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[3], icon: HeartPulseIcon },
   ];
 
   return (
@@ -41,37 +41,29 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: { params: Promise<{ lan
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl space-y-8">
             <div>
               <h2 className="text-3xl font-bold text-[#f1a208] mb-4">
-                Who Needs a School, Sports, and/or Camp Physical?
+                {dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whoApplies.header}
               </h2>
-              <p className="text-lg text-white/90">
-                Many schools, sports organizations, and camps require these physicals as a prerequisite for
-                participation to assess a person's overall health and fitness.
-              </p>
+              <div className="space-y-4 text-lg text-white/90">
+                {dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whoApplies.description.map(
+                  (paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  )
+                )}
+              </div>
             </div>
             <div className="w-full h-px bg-white/20" />
             <div>
-              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">What to Expect</h2>
+              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">
+                {dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whatToExpect.header}
+              </h2>
               <div className="space-y-4 text-lg text-white/90">
-                <p>
-                  These exams help identify potential medical issues, such as heart, lung, neurologic, or
-                  musculoskeletal problems, that could affect an individual's ability to safely engage in activities and
-                  ensure that all necessary vaccinations are up-to-date. Requirements of these exams can vary by state,
-                  sport, and organization. Be sure to check with the program administrator about the necessary
-                  requirements to be cleared to participate.
-                </p>
-                <p>
-                  Expect a review of your medical history and physical exam including blood pressure, heart rate, and
-                  height/weight. Typically, a urinalysis is required, as well as vision testing. An ECG may be necessary
-                  if indicated. Vaccinations may be required if age-appropriate vaccinations are not up-to-date. You can
-                  eat/drink before the exam.
-                </p>
-                <p>
-                  Upon completion of the exam, in most cases (unless concerns arise requiring further evaluation), you
-                  will leave your appointment with your forms completed and signed.
-                </p>
+                {dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whatToExpect.description.map(
+                  (paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  )
+                )}
                 <p className="italic">
-                  This examination is not a substitute for a full physical examination, consultation, diagnosis, or
-                  treatment by your primary health care provider.
+                  {dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whatToExpect.disclaimer}
                 </p>
               </div>
             </div>
@@ -79,7 +71,9 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: { params: Promise<{ lan
         </section>
         <section className="w-full max-w-5xl">
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl">
-            <h2 className="text-3xl font-bold text-center text-[#f1a208] mb-8">What to Bring to Your Appointment</h2>
+            <h2 className="text-3xl font-bold text-center text-[#f1a208] mb-8">
+              {dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.header}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
               {whatToBring.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
