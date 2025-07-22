@@ -27,7 +27,7 @@ export const BusinessInfo = {
     },
     Trish: {
       Name: "Trish Peery",
-      Email: "tpeery@promedexams.com",
+      Email: "office@promedexams.com",
     },
   },
 };

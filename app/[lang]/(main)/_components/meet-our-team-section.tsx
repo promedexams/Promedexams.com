@@ -18,7 +18,7 @@ const MeetOurTeamSection = async ({ params }: { params: Promise<{ lang: "en" | "
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl flex flex-col items-center text-center">
             <Image
-              src="https://placehold.co/400x400"
+              src="/headshots/jill-quigley-square.jpg"
               alt="Picture of Dr. Jill Quigley, MD"
               width={200}
               height={200}
@@ -35,7 +35,7 @@ const MeetOurTeamSection = async ({ params }: { params: Promise<{ lang: "en" | "
           </div>
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl flex flex-col items-center text-center">
             <Image
-              src="https://placehold.co/400x400"
+              src="/headshots/trish-peery-square.jpg"
               alt="Picture of Trish Peery"
               width={200}
               height={200}

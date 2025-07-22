@@ -25,7 +25,7 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center bg-slate-800/20 p-8 rounded-2xl shadow-xl">
               <div className="md:col-span-1 flex justify-center">
                 <Image
-                  src="https://placehold.co/400x400"
+                  src="/headshots/jill-quigley-square.jpg"
                   alt={`Picture of ${dict.pages.team.employee.jill.name}`}
                   width={400}
                   height={400}
@@ -55,7 +55,7 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center bg-slate-800/20 p-8 rounded-2xl shadow-xl">
               <div className="md:col-span-1 flex justify-center">
                 <Image
-                  src="https://placehold.co/400x400"
+                  src="/headshots/trish-peery-square.jpg"
                   alt={`Picture of ${dict.pages.team.employee.trish.name}`}
                   width={400}
                   height={400}
