@@ -23,7 +23,7 @@ const MeetOurTeamSection = async ({ params }: { params: Promise<{ lang: "en" | "
               width={200}
               height={200}
               unoptimized
-              className="rounded-full border-4 border-[#f1a208] shadow-lg mb-6"
+              className="rounded-full border-4 border-[#f1a208] drop-shadow-lg mb-6"
             />
             <h3 className="text-3xl font-bold text-[#f1a208]">
               {dict.pages.home.meetOurTeamSection.employee.jill.name}
@@ -40,7 +40,7 @@ const MeetOurTeamSection = async ({ params }: { params: Promise<{ lang: "en" | "
               width={200}
               height={200}
               unoptimized
-              className="rounded-full border-4 border-[#f1a208] shadow-lg mb-6"
+              className="rounded-full border-4 border-[#f1a208] drop-shadow-lg mb-6"
             />
             <h3 className="text-3xl font-bold text-[#f1a208]">
               {dict.pages.home.meetOurTeamSection.employee.trish.name}

@@ -30,7 +30,7 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
                   width={400}
                   height={400}
                   unoptimized
-                  className="rounded-full border-4 border-[#f1a208] shadow-lg w-54 h-54 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-cover"
+                  className="rounded-full border-4 border-[#f1a208] drop-shadow-lg w-54 h-54 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-cover"
                 />
               </div>
               <div className="md:col-span-2 space-y-4">
@@ -60,7 +60,7 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
                   width={400}
                   height={400}
                   unoptimized
-                  className="rounded-full border-4 border-[#f1a208] shadow-lg w-54 h-54 sm:w-64 sm:h-64 lg:w-80 lg:h-80  object-cover"
+                  className="rounded-full border-4 border-[#f1a208] drop-shadow-lg w-54 h-54 sm:w-64 sm:h-64 lg:w-80 lg:h-80  object-cover"
                 />
               </div>
               <div className="md:col-span-2 space-y-4">
