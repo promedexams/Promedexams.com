@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(DomainURL),
   title: BusinessInfo.Name,
   description: `The official website for ${BusinessInfo.Name}.`,
+  icons: {
+    icon: [
+      {
+        url: BusinessInfo.Logos.GlobeIcon,
+        href: BusinessInfo.Logos.GlobeIcon,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

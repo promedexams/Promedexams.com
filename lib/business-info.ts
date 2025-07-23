@@ -1,6 +1,9 @@
 export const BusinessInfo = {
   Name: "ProMed Exams",
-  Logo: "/branding/placeholder-logo.svg",
+  Logos: {
+    Logo: "/branding/logos/logo.svg",
+    GlobeIcon: "/branding/logos/globe-logo.svg",
+  },
   CopyrightDisclaimer: `© ${new Date().getFullYear()}, ProMed Exams PC`,
   ContactInformation: {
     HoursOfOperation: {

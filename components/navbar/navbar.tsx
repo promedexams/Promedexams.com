@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { CalendarDaysIcon, Globe2Icon } from "lucide-react";
+import { CalendarDaysIcon } from "lucide-react";
 
-import { BusinessInfo } from "@/lib/business-info";
 import { getDictionary } from "@/lib/utils/dictionaries";
+import CombinationMark from "../combination-mark";
 import { Button } from "../ui/button";
 import MobileNavbar from "./_components/mobile-navbar";
 
@@ -12,10 +12,7 @@ const Navbar = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
 
   return (
     <nav className="p-8 flex flex-row h-full relative border-b border-gray-200 justify-between items-center bg-[#07001c] z-40">
-      <Link href={`/${lang}`} className="flex flex-row gap-4 items-center text-white">
-        <Globe2Icon className="w-10 h-10" />
-        <p className="text-2xl font-bold">{BusinessInfo.Name}</p>
-      </Link>
+      <CombinationMark params={params} />
       <div className="hidden min-[980px]:flex flex-row gap-4 justify-center items-center text-white text-lg">
         <Link href={`/${lang}`} className="font-bold hover-underline-animation">
           {dict.navbar.navlinks.home}

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { toZonedTime } from "date-fns-tz";
-import { Globe2Icon } from "lucide-react";
 
 import { BusinessInfo } from "@/lib/business-info";
 import { formatTime, isOfficeOpen } from "@/lib/utils/business-hours";
 import { getDictionary } from "@/lib/utils/dictionaries";
+import CombinationMark from "../combination-mark";
 import LanguageSwitcher from "./_components/language-switcher";
 
 const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
@@ -20,10 +20,7 @@ const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
     <footer className="bg-[#07001c] text-white/70 p-8 border-t border-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-start md:items-center gap-8 mb-8">
-          <Link href="/" className="flex flex-row gap-4 items-center text-white">
-            <Globe2Icon className="w-10 h-10" />
-            <p className="text-2xl font-bold">{BusinessInfo.Name}</p>
-          </Link>
+          <CombinationMark params={params} />
           <LanguageSwitcher params={params} />
         </div>
         <hr className="my-6 border-gray-600" />
