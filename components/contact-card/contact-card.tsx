@@ -14,6 +14,7 @@ const ContactCard = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
       <div className="rounded-lg overflow-hidden h-full min-h-[450px] border border-gray-200 shadow-lg">
         <iframe
+          title="Google Maps Preview"
           src={GoogleMapsURL}
           width="100%"
           height="100%"

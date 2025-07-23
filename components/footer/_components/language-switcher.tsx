@@ -50,8 +50,8 @@ export const LanguageSwitcher = ({ params }: { params: Promise<{ lang: "en" | "e
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-auto justify-start gap-2 border-0 bg-[#f1a208] hover:bg-[#f1a208]/80 text-black cursor-pointer"
           aria-label="Switch Language"
+          className="w-auto justify-start gap-2 border-0 bg-[#f1a208] hover:bg-[#f1a208]/80 text-black cursor-pointer"
         >
           {languages.find((language) => language.value === value)?.flag && (
             <span className="inline-block align-middle">
