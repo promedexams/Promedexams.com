@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { BusinessInfo } from "@/lib/business-info";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
 const MeetOurTeamSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
@@ -18,8 +19,8 @@ const MeetOurTeamSection = async ({ params }: { params: Promise<{ lang: "en" | "
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl flex flex-col items-center text-center">
             <Image
-              src="/headshots/jill-quigley-square.jpg"
-              alt="Picture of Dr. Jill Quigley, MD"
+              src={BusinessInfo.Employees.Jill.Headshot}
+              alt={`A picture of ${BusinessInfo.Employees.Jill.Name}`}
               width={200}
               height={200}
               unoptimized
@@ -35,8 +36,8 @@ const MeetOurTeamSection = async ({ params }: { params: Promise<{ lang: "en" | "
           </div>
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl flex flex-col items-center text-center">
             <Image
-              src="/headshots/trish-peery-square.jpg"
-              alt="Picture of Trish Peery"
+              src={BusinessInfo.Employees.Trish.Headshot}
+              alt={`A picture of ${BusinessInfo.Employees.Trish.Name}`}
               width={200}
               height={200}
               unoptimized

@@ -27,10 +27,12 @@ export const BusinessInfo = {
   Employees: {
     Jill: {
       Name: "Dr. Jill Quigley, MD",
+      Headshot: "/headshots/jill-quigley-square.jpg",
       Email: "jquigley@promedexams.com",
     },
     Trish: {
       Name: "Trish Peery",
+      Headshot: "/headshots/trish-peery-square.jpg",
       Email: "office@promedexams.com",
     },
   },

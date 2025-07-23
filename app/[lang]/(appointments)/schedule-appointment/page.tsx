@@ -1,6 +1,5 @@
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
-import { AppointmentForm } from "./_components/appointment-form";
 
 const ScheduleAppointmentPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   return (
@@ -15,7 +14,6 @@ const ScheduleAppointmentPage = async ({ params }: { params: Promise<{ lang: "en
               to confirm your appointment.
             </p>
           </div>
-          <AppointmentForm />
         </div>
       </main>
       <Footer params={params} />
