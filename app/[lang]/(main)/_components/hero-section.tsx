@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { CalendarDaysIcon } from "lucide-react";
 
+import Logo from "@/components/logos/logo";
 import { Button } from "@/components/ui/button";
-import { BusinessInfo } from "@/lib/business-info";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
 const HeroSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
@@ -26,7 +26,7 @@ const HeroSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
         <div className="absolute bottom-0 right-0 h-2 w-full bg-[#f1a208] rounded-l-full" />
       </div>
       <div className="relative z-20 flex flex-col items-center justify-center gap-6 p-10 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight">{BusinessInfo.Name}</h1>
+        <Logo className="h-70 w-80" variant="Wordmark" />
         <p className="text-xl md:text-2xl text-white/90">
           {dict.pages.home.heroSection.descriptorWords.map((word, i, arr) => (
             <span key={word}>
@@ -39,7 +39,7 @@ const HeroSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
         <Link href="/schedule-appointment">
           <Button
             size="lg"
-            className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105 mt-4"
+            className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105 mt-4 mb-10"
           >
             <CalendarDaysIcon className="w-5 h-5 mr-2" />
             {dict.pages.home.heroSection.scheduleAppointment}

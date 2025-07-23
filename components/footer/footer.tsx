@@ -4,7 +4,7 @@ import { toZonedTime } from "date-fns-tz";
 import { BusinessInfo } from "@/lib/business-info";
 import { formatTime, isOfficeOpen } from "@/lib/utils/business-hours";
 import { getDictionary } from "@/lib/utils/dictionaries";
-import CombinationMark from "../combination-mark";
+import CombinationMark from "../logos/combination-mark";
 import LanguageSwitcher from "./_components/language-switcher";
 
 const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {

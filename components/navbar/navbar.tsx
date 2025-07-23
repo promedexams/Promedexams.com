@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CalendarDaysIcon } from "lucide-react";
 
 import { getDictionary } from "@/lib/utils/dictionaries";
-import CombinationMark from "../combination-mark";
+import CombinationMark from "../logos/combination-mark";
 import { Button } from "../ui/button";
 import MobileNavbar from "./_components/mobile-navbar";
 
