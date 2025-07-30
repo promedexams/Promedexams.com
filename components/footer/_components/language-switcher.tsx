@@ -1,14 +1,14 @@
 "use client";
 
 import { createElement, useEffect, useState } from "react";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { MX, US } from "country-flag-icons/react/3x2";
 import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { useDictionary } from "@/context/dictionary-context";
+import { getDictionary } from "@/lib/utils/dictionaries";
 import { cn } from "@/lib/utils/utils";
 
 const languages = [
@@ -16,20 +16,19 @@ const languages = [
   { label: "Español", value: "es", flag: MX },
 ];
 
-export const LanguageSwitcher = () => {
+export const LanguageSwitcher = ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("en");
-  const dict = useDictionary();
+  const [dict, setDict] = useState<any>(null);
   const router = useRouter();
   const pathname = usePathname();
-  const params = useParams();
 
   useEffect(() => {
-    const lang = Array.isArray(params.lang) ? params.lang[0] : params.lang;
-    if (lang) {
+    params.then(({ lang }) => {
       setValue(lang);
-    }
-  }, [params.lang]);
+      getDictionary(lang).then(setDict);
+    });
+  }, [params]);
 
   const handleSelect = (currentValue: string) => {
     if (currentValue !== value) {
