@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Globe2Icon, PlaneIcon, SchoolIcon, TruckIcon } from "lucide-react";
+import { PlaneIcon, TruckIcon } from "lucide-react";
 
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
@@ -11,25 +12,25 @@ const ServicesPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }>
 
   const Services = [
     {
-      icon: Globe2Icon,
+      icon: "globe",
       title: dict.pages.services.services.immigrationMedicalExams.title,
       description: dict.pages.services.services.immigrationMedicalExams.shortDescription,
       href: "/services/immigration-medical-exams",
     },
     {
-      icon: PlaneIcon,
+      icon: "plane",
       title: dict.pages.services.services.faaPhysicals.title,
       description: dict.pages.services.services.faaPhysicals.shortDescription,
       href: "/services/faa-physicals",
     },
     {
-      icon: TruckIcon,
+      icon: "truck",
       title: dict.pages.services.services.dotPhysicals.title,
       description: dict.pages.services.services.dotPhysicals.shortDescription,
       href: "/services/dot-physicals",
     },
     {
-      icon: SchoolIcon,
+      icon: "school",
       title: dict.pages.services.services.schoolSportsCampPhysicals.title,
       description: dict.pages.services.services.schoolSportsCampPhysicals.shortDescription,
       href: "/services/school-sports-camp-physicals",
@@ -53,8 +54,33 @@ const ServicesPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }>
                 key={index}
                 className="bg-slate-800/20 p-8 rounded-2xl shadow-xl flex flex-col items-center text-center"
               >
-                <div className="p-4 bg-[#f1a208] rounded-full inline-block mb-4">
-                  <service.icon className="w-8 h-8 text-black" />
+                <div className="p-4 bg-[#f1a208] rounded-full inline-flex items-center justify-center mb-4 h-16 w-16">
+                  {service.icon === "globe" && (
+                    <Image
+                      src="/icons/immigration.svg"
+                      width={32}
+                      height={32}
+                      alt="Immigration Icon"
+                      draggable={false}
+                      unoptimized
+                      className="w-8 h-8 select-none"
+                      style={{ objectFit: "contain" }}
+                    />
+                  )}
+                  {service.icon === "plane" && <PlaneIcon className="w-8 h-8 text-black" />}
+                  {service.icon === "truck" && <TruckIcon className="w-8 h-8 text-black" />}
+                  {service.icon === "school" && (
+                    <Image
+                      src="/icons/school-sports-camp.svg"
+                      width={32}
+                      height={32}
+                      alt="School/Sports/Camp Icon"
+                      draggable={false}
+                      unoptimized
+                      className="w-8 h-8 select-none"
+                      style={{ objectFit: "contain" }}
+                    />
+                  )}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
                 <p className="text-white/80 mb-6">{service.description}</p>

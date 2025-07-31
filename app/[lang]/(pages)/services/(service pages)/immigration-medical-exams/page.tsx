@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   CalendarDaysIcon,
   FileTextIcon,
-  Globe2Icon,
   HeartPulseIcon,
   HospitalIcon,
   IdCardIcon,
@@ -43,7 +43,16 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
         <section className="w-full max-w-5xl text-center pt-8">
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl">
             <div className="p-4 bg-[#f1a208] rounded-full inline-block mb-4">
-              <Globe2Icon className="w-16 h-16 text-black" />
+              <Image
+                src="/icons/immigration.svg"
+                width={32}
+                height={32}
+                alt="Immigration Icon"
+                draggable={false}
+                unoptimized
+                className="w-16 h-16 select-none"
+                style={{ objectFit: "contain" }}
+              />
             </div>
             <h1 className="text-5xl font-bold mb-4">{dict.pages.services.services.immigrationMedicalExams.title}</h1>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
