@@ -69,20 +69,19 @@ const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
           </div>
           <div className="space-y-3">
             <h3 className="font-bold text-white mb-2">{dict.footer.navlinks.legal.header}</h3>
-            <Link href="/" className="block hover:text-white transition-colors">
-              {dict.footer.navlinks.legal.noticeOfPrivacyPractices}
+            <Link
+              href="/legal-documents/notice-of-privacy-policy-july-2025.pdf"
+              target="_blank"
+              className="block hover:text-white transition-colors"
+            >
+              {dict.footer.navlinks.legal.noticeOfPrivacyPolicy}
             </Link>
-            <Link href="/" className="block hover:text-white transition-colors">
-              {dict.footer.navlinks.legal.termsOfUse}
-            </Link>
-            <Link href="/" className="block hover:text-white transition-colors">
-              {dict.footer.navlinks.legal.informedConsentInfo}
-            </Link>
-            <Link href="/" className="block hover:text-white transition-colors">
-              {dict.footer.navlinks.legal.specificDisclaimersForMedicalExams}
-            </Link>
-            <Link href="/" className="block hover:text-white transition-colors">
-              {dict.footer.navlinks.legal.privacyPolicy}
+            <Link
+              href="/legal-documents/pilot-bill-of-rights-july-2025.pdf"
+              target="_blank"
+              className="block hover:text-white transition-colors"
+            >
+              {dict.footer.navlinks.legal.pilotBillOfRights}
             </Link>
           </div>
         </div>

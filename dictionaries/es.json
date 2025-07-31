@@ -40,11 +40,8 @@
       },
       "legal": {
         "header": "Legal",
-        "noticeOfPrivacyPractices": "Aviso de Prácticas de Privacidad (HIPAA)",
-        "termsOfUse": "Términos de Uso",
-        "informedConsentInfo": "Información de Consentimiento Informado",
-        "specificDisclaimersForMedicalExams": "Avisos Legales Específicos para Exámenes Médicos",
-        "privacyPolicy": "Política de Privacidad"
+        "noticeOfPrivacyPolicy": "Aviso de Política de Privacidad (NPP)",
+        "pilotBillOfRights": "Declaración de Derechos del Piloto"
       }
     },
     "officeStatus": {

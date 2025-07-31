@@ -40,11 +40,8 @@
       },
       "legal": {
         "header": "Legal",
-        "noticeOfPrivacyPractices": "Notice of Privacy Practices (HIPAA)",
-        "termsOfUse": "Terms of Use",
-        "informedConsentInfo": "Informed Consent Information",
-        "specificDisclaimersForMedicalExams": "Specific Disclaimers for Medical Exams",
-        "privacyPolicy": "Privacy Policy"
+        "noticeOfPrivacyPolicy": "Notice of Privacy Policy (NPP)",
+        "pilotBillOfRights": "Pilot Bill of Rights"
       }
     },
     "officeStatus": {
