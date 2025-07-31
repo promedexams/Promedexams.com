@@ -36,6 +36,7 @@ export function middleware(request: NextRequest) {
     "/images/",
     "/branding/",
     "/fonts/",
+    "/legal-documents/",
   ];
   if (staticAssetPrefixes.some((prefix) => pathname.startsWith(prefix))) {
     return;
