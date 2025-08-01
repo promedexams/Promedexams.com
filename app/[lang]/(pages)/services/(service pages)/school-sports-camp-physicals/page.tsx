@@ -13,14 +13,14 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: { params: Promise<{ lan
   const whatToBring = [
     {
       text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[0],
-      icon: FileTextIcon,
-    },
-    { text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[1], icon: SyringeIcon },
-    {
-      text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[2],
       icon: PillBottleIcon,
     },
-    { text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[3], icon: HeartPulseIcon },
+    { text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[1], icon: HeartPulseIcon },
+    {
+      text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[2],
+      icon: FileTextIcon,
+    },
+    { text: dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.items[3], icon: SyringeIcon },
   ];
 
   return (
@@ -73,6 +73,20 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: { params: Promise<{ lan
                 )}
                 <p className="italic">
                   {dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whatToExpect.disclaimer}
+                </p>
+              </div>
+              <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
+                <h3 className="font-bold text-xl text-blue-300 mb-2">
+                  {
+                    dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whatToExpect.messagePanel
+                      .title
+                  }
+                </h3>
+                <p className="text-white/90">
+                  {
+                    dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whatToExpect.messagePanel
+                      .message
+                  }
                 </p>
               </div>
             </div>

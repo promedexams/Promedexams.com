@@ -269,19 +269,23 @@
               "header": "Qué Esperar",
               "description": [
                 "Estos exámenes ayudan a identificar posibles problemas médicos, como problemas cardíacos, pulmonares, neurológicos o musculoesqueléticos, que podrían afectar la capacidad de una persona para participar en actividades de forma segura y asegurar que todas las vacunas necesarias estén al día. Los requisitos de estos exámenes pueden variar según el estado, el deporte y la organización. Asegúrese de consultar con el administrador del programa sobre los requisitos necesarios para obtener la autorización para participar.",
-                "Puede esperar una revisión de su historial médico y un examen físico que incluye la presión arterial, la frecuencia cardíaca y la altura/peso. Generalmente, se requiere un análisis de orina, así como una prueba de la vista. Un electrocardiograma (ECG) puede ser necesario si está indicado. Se pueden requerir vacunas si las vacunas apropiadas para la edad no están al día. Puede comer y beber antes del examen.",
+                "Puede esperar una revisión de su historial médico y un examen físico que incluye la presión arterial, la frecuencia cardíaca y la altura/peso. Generalmente, se requiere un análisis de orina, así como una prueba de la vista. Un electrocardiograma (ECG) puede ser necesario si está indicado. Se pueden requerir vacunas si las vacunas apropiadas para la edad no están al día. No proporcionamos vacunas, pero podemos dirigirle a la ubicación más cercana y económica para vacunarse. Puede comer y beber antes del examen.",
                 "Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran una evaluación adicional), saldrá de su cita con sus formularios completados y firmados."
               ],
-              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria."
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
+              "messagePanel": {
+                "title": "NOTA IMPORTANTE",
+                "message": "ProMed Exams no factura a los seguros por ningún examen o servicio. Un recibo detallado está disponible para todos los pacientes para que lo envíen a su compañía de seguros para los exámenes físicos escolares, deportivos y de campamento."
+              }
             }
           },
           "whatToBringSection": {
             "header": "Qué Traer a su Cita",
             "items": [
-              "Cualquier formulario proporcionado por su escuela, programa deportivo o campamento que deba ser completado y/o firmado por la Dra. Quigley",
-              "Registros de inmunización",
               "Lista de alergias y medicamentos actuales con dosis (recetados y de venta libre)",
-              "Lista de lesiones y cirugías pasadas, e historial familiar pertinente"
+              "Lista de lesiones y cirugías pasadas, e historial familiar pertinente",
+              "Cualquier formulario proporcionado por su escuela, programa deportivo o campamento que deba ser completado y/o firmado por la Dra. Quigley",
+              "Registros de inmunización"
             ]
           }
         },

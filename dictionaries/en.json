@@ -269,19 +269,23 @@
               "header": "What to Expect",
               "description": [
                 "These exams help identify potential medical issues, such as heart, lung, neurologic, or musculoskeletal problems, that could affect an individual's ability to safely engage in activities and ensure that all necessary vaccinations are up-to-date. Requirements of these exams can vary by state, sport, and organization. Be sure to check with the program administrator about the necessary requirements to be cleared to participate.",
-                "Expect a review of your medical history and physical exam including blood pressure, heart rate, and height/weight. Typically, a urinalysis is required, as well as vision testing. An ECG may be necessary if indicated. Vaccinations may be required if age-appropriate vaccinations are not up-to-date. You can eat/drink before the exam.",
+                "Expect a review of your medical history and physical exam including blood pressure, heart rate, and height/weight. Typically, a urinalysis is required, as well as vision testing. An ECG may be necessary if indicated. Vaccinations may be required if age-appropriate vaccinations are not up-to-date. We do not provide vaccines but can direct you to the nearest, most cost-effective location for vaccination. You can eat/drink before the exam.",
                 "Upon completion of the exam, in most cases (unless concerns arise requiring further evaluation), you will leave your appointment with your forms completed and signed."
               ],
-              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider."
+              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
+              "messagePanel": {
+                "title": "IMPORTANT NOTE",
+                "message": "ProMed Exams does not bill insurance for any exams or services. An itemized receipt is available for all patients to send to their insurance company for school/sports/camp physicals."
+              }
             }
           },
           "whatToBringSection": {
             "header": "What to Bring to Your Appointment",
             "items": [
-              "Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley",
-              "Immunization records",
               "List of allergies and current medications with dosages (prescription and over-the-counter)",
-              "List of past injuries and surgeries, pertinent family history"
+              "List of past injuries and surgeries, pertinent family history",
+              "Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley",
+              "Immunization records"
             ]
           }
         },
