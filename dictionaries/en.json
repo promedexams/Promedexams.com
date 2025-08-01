@@ -9,7 +9,8 @@
     "address": "Address",
     "email": "Email",
     "phone": "Phone",
-    "fax": "Fax"
+    "fax": "Fax",
+    "scheduleAppointmentButtonText": "Schedule Appointment"
   },
   "footer": {
     "languageSwitcher": {

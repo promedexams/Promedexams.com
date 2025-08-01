@@ -9,7 +9,8 @@
     "address": "Dirección",
     "email": "Correo Electrónico",
     "phone": "Teléfono",
-    "fax": "Fax"
+    "fax": "Fax",
+    "scheduleAppointmentButtonText": "Agendar Cita"
   },
   "footer": {
     "languageSwitcher": {

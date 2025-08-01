@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { MailIcon, MapPinIcon, PhoneIcon, Printer } from "lucide-react";
+import { CalendarDaysIcon, MailIcon, MapPinIcon, PhoneIcon, Printer } from "lucide-react";
 
 import { BusinessInfo } from "@/lib/business-info";
 import { GoogleMapsURL } from "@/lib/links";
 import { getDictionary } from "@/lib/utils/dictionaries";
+import { Button } from "../ui/button";
 
 const ContactCard = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const dict = await getDictionary((await params).lang);
@@ -84,7 +85,17 @@ const ContactCard = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
             </div>
           </div>
         </div>
-        {/* <p className="text-md text-white/90 pt-6 border-t italic">{dict.contactCard.contactBlurb}</p> */}
+        <div className="text-white/90 pt-6 border-t">
+          <Link href="/schedule-appointment">
+            <Button
+              size="lg"
+              className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105"
+            >
+              <CalendarDaysIcon className="w-5 h-5 mr-2" />
+              {dict.contactCard.scheduleAppointmentButtonText}
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
