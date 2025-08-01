@@ -1,14 +1,13 @@
 import Link from "next/link";
-import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon, Printer } from "lucide-react";
+import { MailIcon, MapPinIcon, PhoneIcon, Printer } from "lucide-react";
 
 import { BusinessInfo } from "@/lib/business-info";
 import { GoogleMapsURL } from "@/lib/links";
-import { formatTime } from "@/lib/utils/business-hours";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
 const ContactCard = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
   const dict = await getDictionary((await params).lang);
-  const days = dict.contactCard.hoursOfOperation.daysOfTheWeek;
+  // const days = dict.contactCard.hoursOfOperation.daysOfTheWeek;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -27,7 +26,7 @@ const ContactCard = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
       </div>
       <div className="space-y-8 flex flex-col justify-center bg-slate-800/20 p-6 rounded-lg text-left">
         <h2 className="text-3xl font-semibold text-white border-b pb-4">{dict.pages.contact.contactInfoHeader}</h2>
-        <div className="flex items-center gap-5">
+        {/* <div className="flex items-center gap-5">
           <ClockIcon className="w-9 h-9 mt-1 text-[#f1a208] shrink-0" />
           <div>
             <h3 className="font-bold text-xl mb-1">{dict.contactCard.hoursOfOperation.hoursOfOperation}</h3>
@@ -43,7 +42,7 @@ const ContactCard = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
               * {dict.contactCard.hoursOfOperation.timezoneDisclaimer}
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="flex items-center gap-5">
           <MapPinIcon className="w-9 h-9 mt-1 text-[#f1a208] shrink-0" />
           <div>
@@ -85,7 +84,7 @@ const ContactCard = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
             </div>
           </div>
         </div>
-        <p className="text-md text-white/90 pt-6 border-t italic">{dict.contactCard.contactBlurb}</p>
+        {/* <p className="text-md text-white/90 pt-6 border-t italic">{dict.contactCard.contactBlurb}</p> */}
       </div>
     </div>
   );

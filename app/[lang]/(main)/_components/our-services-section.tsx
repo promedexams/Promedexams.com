@@ -45,7 +45,7 @@ const OurServicesSection = async ({ params }: { params: Promise<{ lang: "en" | "
           {Services.map((service, index) => (
             <Link href={service.href} key={index}>
               <div className="bg-gray-700/40 p-8 rounded-lg text-center h-full flex flex-col items-center hover:bg-gray-700/30 transition-all duration-200 transform hover:-translate-y-2">
-                <div className="p-4 bg-[#f1a208] rounded-full inline-flex items-center justify-center mb-4 h-16 w-16">
+                <div className="p-4 bg-[#f1a208] rounded-full inline-flex items-center justify-center mb-4 h-20 w-20">
                   {service.icon === "globe" && (
                     <Image
                       src="/icons/immigration.svg"
@@ -54,12 +54,12 @@ const OurServicesSection = async ({ params }: { params: Promise<{ lang: "en" | "
                       alt="Immigration Icon"
                       draggable={false}
                       unoptimized
-                      className="w-8 h-8 select-none"
+                      className="w-12 h-12 select-none"
                       style={{ objectFit: "contain" }}
                     />
                   )}
-                  {service.icon === "plane" && <PlaneIcon className="w-8 h-8 text-black" />}
-                  {service.icon === "truck" && <TruckIcon className="w-8 h-8 text-black" />}
+                  {service.icon === "plane" && <PlaneIcon className="w-12 h-12 text-black" />}
+                  {service.icon === "truck" && <TruckIcon className="w-12 h-12 text-black" />}
                   {service.icon === "school" && (
                     <Image
                       src="/icons/school-sports-camp.svg"
@@ -68,7 +68,7 @@ const OurServicesSection = async ({ params }: { params: Promise<{ lang: "en" | "
                       alt="School/Sports/Camp Icon"
                       draggable={false}
                       unoptimized
-                      className="w-8 h-8 select-none"
+                      className="w-12 h-12 select-none"
                       style={{ objectFit: "contain" }}
                     />
                   )}

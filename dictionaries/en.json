@@ -4,13 +4,12 @@
       "hoursOfOperation": "Hours of Operation",
       "closed": "Closed",
       "daysOfTheWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "timezoneDisclaimer": "All times listed are in Denver time (MST)."
+      "timezoneDisclaimer": "All times listed are in mountain time (MT)."
     },
     "address": "Address",
     "email": "Email",
     "phone": "Phone",
-    "fax": "Fax",
-    "contactBlurb": "We are conveniently located and ready to assist you. Please feel free to stop by during our business hours or send us an email."
+    "fax": "Fax"
   },
   "footer": {
     "languageSwitcher": {
@@ -63,19 +62,19 @@
       "title": "Home",
       "heroSection": {
         "descriptorWords": ["Excellence", "Integrity", "Efficiency"],
-        "description": "Providing comprehensive and efficient medical examinations for immigration, aviation, and transportation professionals. Our dedicated team is here to ensure a smooth and timely process for all your examination needs.",
+        "description": "Providing immigration medical exams, FAA Physicals, DOT Physicals, and School/Sports/Camp Physicals to help you meet important requirements for certification and clearance. Our team is dedicated to ensuring a smooth, timely, and stress-free experience from start to finish.",
         "scheduleAppointment": "Schedule Appointment"
       },
       "ourServicesSection": {
         "header": "Our Services",
-        "description": "We offer a range of specialized medical examinations to meet your needs.",
+        "description": "We offer a range of specialized medical examinations to meet your needs. Same-day or same-week appointments often available.",
         "services": {
           "immigrationMedicalExams": {
             "title": "Immigration Medical Exams",
             "description": "USCIS-designated civil surgeon performing immigration medical exams."
           },
           "faaPhysicals": {
-            "title": "FAA Physicals (2nd & 3rd Class)",
+            "title": "FAA Physicals (2nd & 3rd Class, No Basic Med)",
             "description": "FAA-designated aviation medical examiner performing pilot physicals."
           },
           "dotPhysicals": {
@@ -84,7 +83,7 @@
           },
           "schoolSportsCampPhysicals": {
             "title": "School/Sports/Camp Physicals",
-            "description": "Comprehensive physicals for children and adolescents."
+            "description": "Physicals for clearance to attend camp and school (including higher education) and perform sports."
           }
         },
         "learnMoreButton": "Learn More About Our Services"
@@ -99,7 +98,7 @@
           },
           "experiencedAndCertified": {
             "title": "Experienced & Certified",
-            "description": "Our team is certified and experienced in FAA, DOT, and USCIS medical examinations, ensuring accuracy and compliance."
+            "description": "Our team is certified and experienced in USCIS, FAA, DOT, and school/sports/camp examinations, ensuring accuracy and compliance."
           },
           "patientCenteredCare": {
             "title": "Patient-Centered Care",
@@ -112,21 +111,21 @@
         "description": "Our dedicated professionals are here to provide you with the best service.",
         "employee": {
           "jill": {
-            "name": "Dr. Jill Quigley, MD",
+            "name": "Jill Quigley, MD",
             "jobTitle": "Lead Physician",
             "shortDescription": "Dr. Quigley has been practicing medicine since 2008 and is board certified in Family Medicine. She is dedicated to providing exceptional care in a timely manner to every patient."
           },
           "trish": {
             "name": "Trish Peery",
             "jobTitle": "Office Manager",
-            "shortDescription": "With a background in insurance and finance, Trish ensures that our office runs smoothly and that your experience is seamless from start to finish."
+            "shortDescription": "With a strong background in front office management, Trish ensures that our office runs smoothly and that your experience is seamless from start to finish."
           }
         },
         "learnMoreButton": "Learn More About Our Team"
       },
       "findUsSection": {
         "header": "Find Us",
-        "description": "We are conveniently located in Littleton, CO. Visit us for your medical examination needs.",
+        "description": "We are conveniently located in Littleton, CO near C-470 and Broadway. Schedule an appointment with us for your medical examination needs.",
         "buttonText": "Get In Touch"
       }
     },
