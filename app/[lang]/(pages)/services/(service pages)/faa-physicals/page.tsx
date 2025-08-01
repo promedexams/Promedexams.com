@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDaysIcon, GlassesIcon, HashIcon, IdCardIcon, PlaneIcon } from "lucide-react";
+import { CalendarDaysIcon, GlassesIcon, HashIcon, IdCardIcon, PlaneIcon, ToiletIcon } from "lucide-react";
 
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
@@ -13,9 +13,10 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
     { text: dict.pages.services.services.faaPhysicals.whatToBringSection.items[0], icon: IdCardIcon },
     {
       text: dict.pages.services.services.faaPhysicals.whatToBringSection.items[1],
-      icon: GlassesIcon,
+      icon: HashIcon,
     },
-    { text: dict.pages.services.services.faaPhysicals.whatToBringSection.items[2], icon: HashIcon },
+    { text: dict.pages.services.services.faaPhysicals.whatToBringSection.items[2], icon: GlassesIcon },
+    { text: dict.pages.services.services.faaPhysicals.whatToBringSection.items[3], icon: ToiletIcon },
   ];
 
   return (
@@ -85,8 +86,26 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
                 {dict.pages.services.services.faaPhysicals.whatToBringSection.messagePanel.title}
               </h3>
               <p className="text-white/90">
-                {dict.pages.services.services.faaPhysicals.whatToBringSection.messagePanel.message}
+                {dict.pages.services.services.faaPhysicals.whatToBringSection.messagePanel.message
+                  .split(/(\*[^*]+\*)/g)
+                  .map((part, idx) =>
+                    part.startsWith("*") && part.endsWith("*") ? (
+                      <span key={idx} className="underline">
+                        {part.slice(1, -1)}
+                      </span>
+                    ) : (
+                      <span key={idx}>{part}</span>
+                    )
+                  )}
               </p>
+              <Link href="https://medxpress.faa.gov/" target="_blank">
+                <Button
+                  size="lg"
+                  className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-4"
+                >
+                  {dict.pages.services.services.faaPhysicals.whatToBringSection.messagePanel.buttonText}
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

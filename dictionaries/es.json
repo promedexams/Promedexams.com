@@ -187,7 +187,7 @@
             "whoApplies": {
               "header": "¿Quién necesita un examen médico de la FAA?",
               "description": [
-                "La FAA designa a médicos conocidos como Examinadores Médicos de Aviación (AME, por sus siglas en inglés) que completan una formación especializada de la FAA para realizar estos exámenes de certificación médica. Aunque la prioridad es la seguridad de la aviación, mi objetivo como AME es ayudar a los pilotos a obtener y mantener la certificación para volar. Además, podemos ayudar cuando surgen condiciones médicas que requieren información adicional para la certificación."
+                "La FAA designa a médicos conocidos como Examinadores Médicos de Aviación (AME, por sus siglas en inglés) que completan una formación especializada de la FAA para realizar estos exámenes de certificación médica. Aunque la prioridad es la seguridad de la aviación, mi objetivo como AME es ayudar a los pilotos a obtener y mantener la certificación para volar. Además, podemos ayudar cuando surgen condiciones médicas que requieren información adicional para la certificación. En ProMed Exams, ofrecemos servicios rápidos para ayudarle a volver al aire lo antes posible, y entendemos la importancia de la precisión para evitar retrasos en el procesamiento."
               ]
             },
             "whatToExpect": {
@@ -203,12 +203,14 @@
             "header": "Qué Traer a su Cita",
             "items": [
               "Identificación con foto vigente (Licencia de conducir o Pasaporte)",
+              "Número de confirmación de MedXPress",
               "Lentes de contacto/gafas, audífonos (si aplica) - Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir",
-              "Número de confirmación de MedXPress"
+              "Venga preparado para proporcionar una muestra de orina."
             ],
             "messagePanel": {
               "title": "NOTA IMPORTANTE",
-              "message": "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress antes de su cita."
+              "message": "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress *antes* de su cita.",
+              "buttonText": "FAA MedExpress"
             }
           }
         },

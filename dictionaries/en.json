@@ -187,7 +187,7 @@
             "whoApplies": {
               "header": "Who Needs an FAA Physical?",
               "description": [
-                "The FAA designates physicians known as Aviation Medical Examiners (AME) who complete specialized FAA training to perform these medical certification exams. While the priority is aviation safety, my goal as an AME is to help pilots attain and maintain certification to fly. In addition, we can assist when medical conditions occur that require additional information for certification."
+                "The FAA designates physicians known as Aviation Medical Examiners (AME) who complete specialized FAA training to perform these medical certification exams. While the priority is aviation safety, my goal as an AME is to help pilots attain and maintain certification to fly. In addition, we can assist when medical conditions occur that require additional information for certification. At ProMed Exams, we offer prompt services to help get you in the air again as soon as possible, and we understand the importance of accuracy to avoid processing delays."
               ]
             },
             "whatToExpect": {
@@ -203,12 +203,14 @@
             "header": "What to Bring to Your Appointment",
             "items": [
               "Current photo ID (Driver's license or Passport)",
+              "MedXPress confirmation number",
               "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
-              "MedXPress confirmation number"
+              "Be prepared to leave a urine sample"
             ],
             "messagePanel": {
               "title": "IMPORTANT NOTE",
-              "message": "Be sure to update your health history and current medications in MedXPress prior to your appointment."
+              "message": "Be sure to update your health history and current medications in MedXPress *prior* to your appointment.",
+              "buttonText": "FAA MedExpress"
             }
           }
         },
