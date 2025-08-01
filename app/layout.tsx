@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
+import BackToTopButton from "@/components/back-to-top-button";
 import { BusinessInfo } from "@/lib/business-info";
 import { DomainURL } from "@/lib/links";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
       <head />
       <body id="top" className="overflow-x-clip bg-[#07001c]">
         {children}
+        <BackToTopButton />
       </body>
     </html>
   );
