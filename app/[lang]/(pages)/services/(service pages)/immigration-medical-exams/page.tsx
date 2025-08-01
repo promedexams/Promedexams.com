@@ -23,17 +23,20 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
 
   const whatToBring = [
     { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[0], icon: IdCardIcon },
-    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[1], icon: SyringeIcon },
-    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[2], icon: FileTextIcon },
+    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[1], icon: FileTextIcon },
+    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[2], icon: SyringeIcon },
     { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[3], icon: PillBottleIcon },
-    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[4], icon: HeartPulseIcon },
-    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[5], icon: StethoscopeIcon },
     {
-      text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[6],
+      text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[4],
       icon: PersonStandingIcon,
     },
-    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[7], icon: TriangleAlertIcon },
-    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[8], icon: HospitalIcon },
+    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[5], icon: HeartPulseIcon },
+    {
+      text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[6],
+      icon: TriangleAlertIcon,
+    },
+    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[7], icon: HospitalIcon },
+    { text: dict.pages.services.services.immigrationMedicalExams.whatToBringSection.items[8], icon: StethoscopeIcon },
   ];
 
   return (
@@ -98,8 +101,37 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
                 }
               </h3>
               <p className="text-white/90">
+                {dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.messagePanel.message
+                  .split(/(\*[^*]+\*)/g)
+                  .map((part, idx) =>
+                    part.startsWith("*") && part.endsWith("*") ? (
+                      <span key={idx} className="underline">
+                        {part.slice(1, -1)}
+                      </span>
+                    ) : (
+                      <span key={idx}>{part}</span>
+                    )
+                  )}
+              </p>
+              <Link href="https://www.uscis.gov/sites/default/files/document/forms/i-693.pdf" target="_blank">
+                <Button
+                  size="lg"
+                  className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-4"
+                >
+                  {
+                    dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.messagePanel
+                      .buttonText
+                  }
+                </Button>
+              </Link>
+            </div>
+            <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
+              <h3 className="font-bold text-xl text-blue-300 mb-2">
+                {dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.updatePanel.title}
+              </h3>
+              <p className="text-white/90">
                 {
-                  dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.messagePanel
+                  dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.updatePanel
                     .message
                 }
               </p>
