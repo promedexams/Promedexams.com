@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MailIcon } from "lucide-react";
 
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
@@ -41,15 +40,6 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
                     <p key={`jill-bio-${i}`}>{paragraph}</p>
                   ))}
                 </div>
-                <div className="flex items-center gap-3 pt-2">
-                  <MailIcon className="w-6 h-6 text-[#f1a208]" />
-                  <Link
-                    href={`mailto:${BusinessInfo.Employees.Jill.Email}`}
-                    className="hover-underline-animation text-lg"
-                  >
-                    {BusinessInfo.Employees.Jill.Email}
-                  </Link>
-                </div>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center bg-slate-800/20 p-8 rounded-2xl shadow-xl">
@@ -70,15 +60,6 @@ const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) 
                   {dict.pages.team.employee.trish.bioParagraphs.map((paragraph, i) => (
                     <p key={`trish-bio-${i}`}>{paragraph}</p>
                   ))}
-                </div>
-                <div className="flex items-center gap-3 pt-2">
-                  <MailIcon className="w-6 h-6 text-[#f1a208]" />
-                  <Link
-                    href={`mailto:${BusinessInfo.Employees.Trish.Email}`}
-                    className="hover-underline-animation text-lg"
-                  >
-                    {BusinessInfo.Employees.Trish.Email}
-                  </Link>
                 </div>
               </div>
             </div>
