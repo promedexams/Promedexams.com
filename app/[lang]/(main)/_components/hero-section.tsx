@@ -49,13 +49,17 @@ const HeroSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
         <Link href="/schedule-appointment">
           <Button
             size="lg"
-            className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105 mt-4"
+            className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105 my-2"
           >
             <CalendarDaysIcon className="w-5 h-5 mr-2" />
             {dict.pages.home.heroSection.scheduleAppointment}
           </Button>
         </Link>
-        <ChevronsDownIcon className="text-white/70 w-12 h-12 mb-10 animate-pulse" />
+        <div className="flex flex-row gap-4 mb-10 items-center select-none">
+          <ChevronsDownIcon className="text-white/60 w-6 h-6 animate-pulse" />
+          <p className="text-lg text-white/60 animate-pulse italic">{dict.pages.home.heroSection.scrollDownText}</p>
+          <ChevronsDownIcon className="text-white/60 w-6 h-6 animate-pulse" />
+        </div>
       </div>
     </section>
   );
