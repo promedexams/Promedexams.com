@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDaysIcon } from "lucide-react";
+import { CalendarDaysIcon, ChevronsDownIcon } from "lucide-react";
 
 import Logo from "@/components/logos/logo";
 import { Button } from "@/components/ui/button";
@@ -35,16 +35,27 @@ const HeroSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
             </span>
           ))}
         </p>
-        <p className="text-lg text-white/80 max-w-2xl">{dict.pages.home.heroSection.description}</p>
+        <p className="text-lg text-white/80 max-w-2xl">
+          {dict.pages.home.heroSection.description.split(/(\*[^*]+\*)/g).map((part, idx) =>
+            part.startsWith("*") && part.endsWith("*") ? (
+              <span key={idx} className="text-[#f1a208]">
+                {part.slice(1, -1)}
+              </span>
+            ) : (
+              <span key={idx}>{part}</span>
+            )
+          )}
+        </p>
         <Link href="/schedule-appointment">
           <Button
             size="lg"
-            className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105 mt-4 mb-10"
+            className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105 mt-4"
           >
             <CalendarDaysIcon className="w-5 h-5 mr-2" />
             {dict.pages.home.heroSection.scheduleAppointment}
           </Button>
         </Link>
+        <ChevronsDownIcon className="text-white/70 w-12 h-12 mb-10 animate-pulse" />
       </div>
     </section>
   );
