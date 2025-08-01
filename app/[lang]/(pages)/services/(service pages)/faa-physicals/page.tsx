@@ -4,6 +4,7 @@ import { CalendarDaysIcon, GlassesIcon, HashIcon, IdCardIcon, PlaneIcon, ToiletI
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
+import { MED_XPRESS_URL } from "@/lib/links";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
 const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
@@ -98,7 +99,7 @@ const FAAPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
                     )
                   )}
               </p>
-              <Link href="https://medxpress.faa.gov/" target="_blank">
+              <Link href={MED_XPRESS_URL} target="_blank">
                 <Button
                   size="lg"
                   className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-4"

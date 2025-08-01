@@ -4,10 +4,10 @@ import "./globals.css";
 
 import BackToTopButton from "@/components/back-to-top-button";
 import { BusinessInfo } from "@/lib/business-info";
-import { DomainURL } from "@/lib/links";
+import { DOMAIN_URL } from "@/lib/links";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DomainURL),
+  metadataBase: new URL(DOMAIN_URL),
   title: BusinessInfo.Name,
   description: `The official website for ${BusinessInfo.Name}.`,
   icons: {

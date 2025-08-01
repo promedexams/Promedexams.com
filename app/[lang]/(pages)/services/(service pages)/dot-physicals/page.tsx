@@ -13,6 +13,7 @@ import {
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
+import { MCSA_5875_URL } from "@/lib/links";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
 const DOTPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
@@ -114,10 +115,7 @@ const DOTPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
                     )
                   )}
               </p>
-              <Link
-                href="https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/2025-04/Medical%20Examination%20Report%20Form%20MCSA-5875%20508pdf.pdf"
-                target="_blank"
-              >
+              <Link href={MCSA_5875_URL} target="_blank">
                 <Button
                   size="lg"
                   className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-4"

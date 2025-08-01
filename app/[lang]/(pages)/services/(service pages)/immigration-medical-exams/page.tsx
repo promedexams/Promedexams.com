@@ -16,6 +16,7 @@ import {
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
+import { FORM_I693_URL } from "@/lib/links";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
 const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
@@ -138,7 +139,7 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
                     )
                   )}
               </p>
-              <Link href="https://www.uscis.gov/sites/default/files/document/forms/i-693.pdf" target="_blank">
+              <Link href={FORM_I693_URL} target="_blank">
                 <Button
                   size="lg"
                   className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-4"

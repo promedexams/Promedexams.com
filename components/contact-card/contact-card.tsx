@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CalendarDaysIcon, MailIcon, MapPinIcon, PhoneIcon, Printer } from "lucide-react";
 
 import { BusinessInfo } from "@/lib/business-info";
-import { GoogleMapsURL } from "@/lib/links";
+import { GOOGLE_MAPS_URL } from "@/lib/links";
 import { getDictionary } from "@/lib/utils/dictionaries";
 import { Button } from "../ui/button";
 
@@ -15,7 +15,7 @@ const ContactCard = async ({ params }: { params: Promise<{ lang: "en" | "es" }> 
       <div className="rounded-lg overflow-hidden h-full min-h-[450px] border border-gray-200 shadow-lg">
         <iframe
           title="Google Maps Preview"
-          src={GoogleMapsURL}
+          src={GOOGLE_MAPS_URL}
           width="100%"
           height="100%"
           style={{ border: 0 }}
