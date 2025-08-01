@@ -51,9 +51,6 @@ export function middleware(request: NextRequest) {
   request.nextUrl.pathname = `/${locale}${pathname}`;
 
   const response = NextResponse.redirect(request.nextUrl);
-  response.cookies.set("NEXT_LOCALE", locale, {
-    expires: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000), // 1 year
-  });
 
   return response;
 }

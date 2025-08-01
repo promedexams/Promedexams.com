@@ -4,6 +4,7 @@ import { toZonedTime } from "date-fns-tz";
 import { BusinessInfo } from "@/lib/business-info";
 import { formatTime, isOfficeOpen } from "@/lib/utils/business-hours";
 import { getDictionary } from "@/lib/utils/dictionaries";
+import LanguagePopup from "../language-popup";
 import CombinationMark from "../logos/combination-mark";
 import LanguageSwitcher from "./_components/language-switcher";
 
@@ -18,10 +19,11 @@ const Footer = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) =>
 
   return (
     <footer className="bg-[#07001c] text-white/70 p-8 border-t border-gray-200">
+      <LanguagePopup params={params} />
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-start md:items-center gap-8 mb-8">
           <CombinationMark params={params} />
-          <LanguageSwitcher params={params} />
+          <LanguageSwitcher params={params} handleSettingCookies />
         </div>
         <hr className="my-6 border-gray-600" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">

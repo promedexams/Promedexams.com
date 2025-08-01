@@ -3,6 +3,7 @@
 import { createElement, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { MX, US } from "country-flag-icons/react/3x2";
+import Cookies from "js-cookie";
 import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,13 @@ const languages = [
   { label: "Español", value: "es", flag: MX },
 ];
 
-export const LanguageSwitcher = ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+export const LanguageSwitcher = ({
+  params,
+  handleSettingCookies = false,
+}: {
+  params: Promise<{ lang: "en" | "es" }>;
+  handleSettingCookies?: boolean;
+}) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("en");
   const [dict, setDict] = useState<any>(null);
@@ -32,8 +39,10 @@ export const LanguageSwitcher = ({ params }: { params: Promise<{ lang: "en" | "e
 
   const handleSelect = (currentValue: string) => {
     if (currentValue !== value) {
+      if (handleSettingCookies) {
+        Cookies.set("SITE_LOCALE", currentValue, { path: "/", expires: 360 });
+      }
       const newPath = pathname.replace(`/${value}`, `/${currentValue}`);
-      document.cookie = `NEXT_LOCALE=${currentValue}; path=/; max-age=31536000`; // 1 year
       router.push(newPath);
     }
     setOpen(false);

@@ -1,5 +1,5 @@
-import { cookies } from "next/headers";
 import Link from "next/link";
+import Cookies from "js-cookie";
 import { HomeIcon } from "lucide-react";
 
 import Footer from "@/components/footer/footer";
@@ -9,7 +9,7 @@ import { SiteSettings } from "@/lib/site-settings";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
 const NotFoundPage = async () => {
-  const lang = ((await cookies()).get("NEXT_LOCALE")?.value || SiteSettings.DefaultLocale) as "en" | "es";
+  const lang = (Cookies.get("NEXT_SITE") || SiteSettings.DefaultLocale) as "en" | "es";
   const dict = await getDictionary(lang);
 
   const params = Promise.resolve({ lang });
