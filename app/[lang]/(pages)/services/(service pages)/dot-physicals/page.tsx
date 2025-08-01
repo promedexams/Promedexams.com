@@ -1,5 +1,14 @@
 import Link from "next/link";
-import { CalendarDaysIcon, FileTextIcon, GlassesIcon, IdCardIcon, PillBottleIcon, TruckIcon } from "lucide-react";
+import {
+  CalendarDaysIcon,
+  ClipboardPlusIcon,
+  FileTextIcon,
+  GlassesIcon,
+  IdCardIcon,
+  PillBottleIcon,
+  ToiletIcon,
+  TruckIcon,
+} from "lucide-react";
 
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
@@ -11,9 +20,11 @@ const DOTPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
 
   const whatToBring = [
     { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[0], icon: IdCardIcon },
-    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[1], icon: GlassesIcon },
+    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[1], icon: FileTextIcon },
     { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[2], icon: PillBottleIcon },
-    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[3], icon: FileTextIcon },
+    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[3], icon: ClipboardPlusIcon },
+    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[4], icon: GlassesIcon },
+    { text: dict.pages.services.services.dotPhysicals.whatToBringSection.items[5], icon: ToiletIcon },
   ];
 
   return (
@@ -60,6 +71,14 @@ const DOTPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
                   {dict.pages.services.services.dotPhysicals.informationSection.whatToExpect.disclaimer}
                 </p>
               </div>
+              <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
+                <h3 className="font-bold text-xl text-blue-300 mb-2">
+                  {dict.pages.services.services.dotPhysicals.informationSection.whatToExpect.updatePanel.title}
+                </h3>
+                <p className="text-white/90">
+                  {dict.pages.services.services.dotPhysicals.informationSection.whatToExpect.updatePanel.message}
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -83,8 +102,29 @@ const DOTPhysicalsPage = async ({ params }: { params: Promise<{ lang: "en" | "es
                 {dict.pages.services.services.dotPhysicals.whatToBringSection.messagePanel.title}
               </h3>
               <p className="text-white/90">
-                {dict.pages.services.services.dotPhysicals.whatToBringSection.messagePanel.message}
+                {dict.pages.services.services.dotPhysicals.whatToBringSection.messagePanel.message
+                  .split(/(\*[^*]+\*)/g)
+                  .map((part, idx) =>
+                    part.startsWith("*") && part.endsWith("*") ? (
+                      <span key={idx} className="underline">
+                        {part.slice(1, -1)}
+                      </span>
+                    ) : (
+                      <span key={idx}>{part}</span>
+                    )
+                  )}
               </p>
+              <Link
+                href="https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/2025-04/Medical%20Examination%20Report%20Form%20MCSA-5875%20508pdf.pdf"
+                target="_blank"
+              >
+                <Button
+                  size="lg"
+                  className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-4"
+                >
+                  {dict.pages.services.services.dotPhysicals.whatToBringSection.messagePanel.buttonText}
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

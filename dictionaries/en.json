@@ -154,11 +154,6 @@
                 "Common medical conditions such as diabetes, high cholesterol, and high blood pressure that are not of concern to public health do not interfere with the immigration process but are required to be listed on USCIS Form I-693 (Report of Medical Examination and Vaccination Record). Upon completion of all Form I-693 requirements, you will be given a completed signed and dated Form I-693 in a sealed envelope. Do not open this envelope; it should be submitted in the sealed envelope to the USCIS as part of the application process. An unsealed identical set of documents will also be provided to you."
               ],
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
-              "messagePanel": {
-                "title": "IMPORTANT NOTE",
-                "message": "Be sure to complete parts 1-5 on pages 1-3 of Form I-693 *prior* to your appointment.",
-                "buttonText": "Form I-693"
-              },
               "updatePanel": {
                 "title": "UPDATE (December 2, 2024)",
                 "message": "USCIS announced that you are required to submit Form I-693 with your Form I-485. You may not opt to mail the medical exam results at a later date. If you do not submit Form I-693 as a part of your adjustment of status application package, USCIS may reject your entire application."
@@ -177,7 +172,12 @@
               "If you have a history of harmful or violent behavior resulting in injury to people or animals, information that will allow the doctor to determine whether the behavior was related to a psychiatric or medical problem, or to drug or alcohol use",
               "If you have been treated or hospitalized for psychiatric or mental illness, or alcohol or drug abuse, written certification including the diagnosis, length of treatment, and your prognosis",
               "Tuberculosis certificate from your doctor if you were diagnosed and properly treated in the past"
-            ]
+            ],
+            "messagePanel": {
+              "title": "IMPORTANT NOTE",
+              "message": "Be sure to complete parts 1-5 on pages 1-3 of Form I-693 *prior* to your appointment.",
+              "buttonText": "Form I-693"
+            }
           }
         },
         "faaPhysicals": {
@@ -231,20 +231,27 @@
                 "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, your results will be reported electronically to the National Registry of Certified Medical Examiners (NRCME). If you meet all FMCSA requirements, you will leave your appointment with your medical examiner's certificate (DOT medical card).",
                 "If we find an issue that needs attention, you may need to see your primary care provider and/or a specialist for further testing, treatment, or paperwork. You may still qualify for your medical certificate, but only after taking care of the medical issue or obtaining necessary documentation. In some cases, a health condition may disqualify you from receiving a medical certificate."
               ],
-              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider."
+              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
+              "updatePanel": {
+                "title": "UPDATE",
+                "message": "As of 2023, CMV drivers with insulin-treated diabetes mellitus (type 1 or type 2) and/or monocular vision must meet updated standards to be certified. Forms for these exemptions must be completed no more than 45 days before the DOT exam is performed and brought to the DOT exam."
+              }
             }
           },
           "whatToBringSection": {
             "header": "What to Bring to Your Appointment",
             "items": [
               "Current state-issued driver's license",
-              "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
+              "Medical Examination Report Form (MCSA-5875)",
               "List of current medications with dosages and prescriber's name",
-              "Any special circumstances or exemption letters from your doctor(s)"
+              "Any special circumstances or exemption letters from your doctor(s)",
+              "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
+              "Be prepared to leave a urine sample"
             ],
             "messagePanel": {
               "title": "IMPORTANT NOTE",
-              "message": "Be sure to complete the driver information and health history sections on the Medical Examination Report Form prior to your appointment. As of 2023, CMV drivers with insulin-treated diabetes mellitus (type 1 or type 2) and/or monocular vision must meet updated standards to be certified. Forms for these exemptions must be completed no more than 45 days before the DOT exam is performed and brought to the DOT exam."
+              "message": "Be sure to complete the driver information and health history sections on the Medical Examination Report Form *prior* to your appointment.",
+              "buttonText": "Form MCSA-5875"
             }
           }
         },

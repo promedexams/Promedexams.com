@@ -154,11 +154,6 @@
                 "Las condiciones médicas comunes como la diabetes, el colesterol alto y la presión arterial alta, que no son una preocupación para la salud pública, no interfieren con el proceso de inmigración, pero deben ser listadas en el Formulario I-693 del USCIS (Informe de Examen Médico y Registro de Vacunación). Al completar todos los requisitos del Formulario I-693, se le entregará el formulario completado, firmado y fechado en un sobre sellado. No abra este sobre; debe presentarlo sellado al USCIS como parte del proceso de solicitud. También se le proporcionará un juego idéntico de documentos sin sellar."
               ],
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
-              "messagePanel": {
-                "title": "NOTA IMPORTANTE",
-                "message": "Asegúrese de completar las partes 1 a 5 de las páginas 1 a 3 del Formulario I-693 *antes* de su cita.",
-                "buttonText": "Formulario I-693"
-              },
               "updatePanel": {
                 "title": "ACTUALIZACIÓN (2 de diciembre de 2024)",
                 "message": "El USCIS anunció que se requiere que presente el Formulario I-693 junto con su Formulario I-485. No puede optar por enviar los resultados del examen médico por correo en una fecha posterior. Si no presenta el Formulario I-693 como parte de su paquete de solicitud de ajuste de estatus, el USCIS puede rechazar su solicitud completa."
@@ -177,7 +172,12 @@
               "Si tiene un historial de comportamiento dañino o violento que haya resultado en lesiones a personas o animales, información que permita al médico determinar si el comportamiento estuvo relacionado con un problema psiquiátrico o médico, o con el uso de drogas o alcohol",
               "Si ha sido tratado u hospitalizado por una enfermedad psiquiátrica o mental, o por abuso de alcohol o drogas, una certificación por escrito que incluya el diagnóstico, la duración del tratamiento y su pronóstico",
               "Certificado de tuberculosis de su médico si fue diagnosticado y tratado adecuadamente en el pasado"
-            ]
+            ],
+            "messagePanel": {
+              "title": "NOTA IMPORTANTE",
+              "message": "Asegúrese de completar las partes 1 a 5 de las páginas 1 a 3 del Formulario I-693 *antes* de su cita.",
+              "buttonText": "Formulario I-693"
+            }
           }
         },
         "faaPhysicals": {
@@ -231,20 +231,27 @@
                 "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, sus resultados se informarán electrónicamente al Registro Nacional de Examinadores Médicos Certificados (NRCME). Si cumple con todos los requisitos de la FMCSA, saldrá de su cita con su certificado de examinador médico (tarjeta médica del DOT).",
                 "Si encontramos un problema que requiere atención, es posible que deba consultar a su proveedor de atención primaria y/o a un especialista para realizar más pruebas, tratamientos o trámites. Aún podría calificar para su certificado médico, pero solo después de resolver el problema médico u obtener la documentación necesaria. En algunos casos, una condición de salud puede descalificarlo para recibir un certificado médico."
               ],
-              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria."
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
+              "updatePanel": {
+                "title": "ACTUALIZACIÓN",
+                "message": "A partir de 2023, los conductores de CMV (vehículos motorizados comerciales) con diabetes mellitus tratada con insulina (tipo 1 o tipo 2) y/o visión monocular deben cumplir con estándares actualizados para ser certificados. Los formularios para estas exenciones deben completarse no más de 45 días antes de realizar el examen del DOT y deben traerse al examen."
+              }
             }
           },
           "whatToBringSection": {
             "header": "Qué Traer a su Cita",
             "items": [
               "Licencia de conducir vigente emitida por el estado",
-              "Lentes de contacto/gafas, audífonos (si aplica) - Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir",
+              "Formulario de Informe de Examen Médico (MCSA-5875)",
               "Lista de medicamentos actuales con dosis y el nombre de quien los recetó",
-              "Cualquier circunstancia especial o carta de exención de su(s) médico(s)"
+              "Cualquier circunstancia especial o carta de exención de su(s) médico(s)",
+              "Lentes de contacto/gafas, audífonos (si aplica) - Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir",
+              "Esté preparado para proporcionar una muestra de orina"
             ],
             "messagePanel": {
               "title": "NOTA IMPORTANTE",
-              "message": "Asegúrese de completar las secciones de información del conductor e historial de salud en el Formulario de Informe de Examen Médico antes de su cita. A partir de 2023, los conductores de CMV (vehículos motorizados comerciales) con diabetes mellitus tratada con insulina (tipo 1 o tipo 2) y/o visión monocular deben cumplir con estándares actualizados para ser certificados. Los formularios para estas exenciones deben completarse no más de 45 días antes de realizar el examen del DOT y deben traerse al examen."
+              "message": "Asegúrese de completar las secciones de información del conductor e historial de salud en el Formulario de Informe de Examen Médico *antes* de su cita.",
+              "buttonText": "Formulario MCSA-5875"
             }
           }
         },

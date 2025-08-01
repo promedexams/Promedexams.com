@@ -95,38 +95,6 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
             </div>
             <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
               <h3 className="font-bold text-xl text-blue-300 mb-2">
-                {
-                  dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.messagePanel
-                    .title
-                }
-              </h3>
-              <p className="text-white/90">
-                {dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.messagePanel.message
-                  .split(/(\*[^*]+\*)/g)
-                  .map((part, idx) =>
-                    part.startsWith("*") && part.endsWith("*") ? (
-                      <span key={idx} className="underline">
-                        {part.slice(1, -1)}
-                      </span>
-                    ) : (
-                      <span key={idx}>{part}</span>
-                    )
-                  )}
-              </p>
-              <Link href="https://www.uscis.gov/sites/default/files/document/forms/i-693.pdf" target="_blank">
-                <Button
-                  size="lg"
-                  className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-4"
-                >
-                  {
-                    dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.messagePanel
-                      .buttonText
-                  }
-                </Button>
-              </Link>
-            </div>
-            <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
-              <h3 className="font-bold text-xl text-blue-300 mb-2">
                 {dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.updatePanel.title}
               </h3>
               <p className="text-white/90">
@@ -152,6 +120,32 @@ const ImmigrationMedicalExamsPage = async ({ params }: { params: Promise<{ lang:
                   <p className="text-lg text-white/90">{item.text}</p>
                 </div>
               ))}
+            </div>
+            <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
+              <h3 className="font-bold text-xl text-blue-300 mb-2">
+                {dict.pages.services.services.immigrationMedicalExams.whatToBringSection.messagePanel.title}
+              </h3>
+              <p className="text-white/90">
+                {dict.pages.services.services.immigrationMedicalExams.whatToBringSection.messagePanel.message
+                  .split(/(\*[^*]+\*)/g)
+                  .map((part, idx) =>
+                    part.startsWith("*") && part.endsWith("*") ? (
+                      <span key={idx} className="underline">
+                        {part.slice(1, -1)}
+                      </span>
+                    ) : (
+                      <span key={idx}>{part}</span>
+                    )
+                  )}
+              </p>
+              <Link href="https://www.uscis.gov/sites/default/files/document/forms/i-693.pdf" target="_blank">
+                <Button
+                  size="lg"
+                  className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-4"
+                >
+                  {dict.pages.services.services.immigrationMedicalExams.whatToBringSection.messagePanel.buttonText}
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
