@@ -9,6 +9,7 @@ import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { SupportedLanguages } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 import { cn } from "@/lib/utils/utils";
 
@@ -17,13 +18,10 @@ const languages = [
   { label: "Español", value: "es", flag: MX },
 ];
 
-export const LanguageSwitcher = ({
+const LanguageSwitcher = ({
   params,
   handleSettingCookies = false,
-}: {
-  params: Promise<{ lang: "en" | "es" }>;
-  handleSettingCookies?: boolean;
-}) => {
+}: SupportedLanguages & { handleSettingCookies?: boolean }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("en");
   const [dict, setDict] = useState<any>(null);

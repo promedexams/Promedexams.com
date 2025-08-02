@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { PlaneIcon, TruckIcon } from "lucide-react";
 
+import { SupportedLanguages } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const OurServicesSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+const OurServicesSection = async ({ params }: SupportedLanguages) => {
   const dict = await getDictionary((await params).lang);
 
   const Services = [

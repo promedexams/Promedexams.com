@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 import ContactCard from "@/components/contact-card/contact-card";
+import { SupportedLanguages } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const FindUsSection = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+const FindUsSection = async ({ params }: SupportedLanguages) => {
   const dict = await getDictionary((await params).lang);
 
   return (

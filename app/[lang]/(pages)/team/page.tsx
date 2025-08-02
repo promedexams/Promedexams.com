@@ -5,9 +5,10 @@ import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
 import { BusinessInfo } from "@/lib/business-info";
+import { SupportedLanguages } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const TeamPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+const TeamPage = async ({ params }: SupportedLanguages) => {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 

@@ -5,9 +5,10 @@ import { PlaneIcon, TruckIcon } from "lucide-react";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
+import { SupportedLanguages } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const ServicesPage = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+const ServicesPage = async ({ params }: SupportedLanguages) => {
   const dict = await getDictionary((await params).lang);
 
   const Services = [

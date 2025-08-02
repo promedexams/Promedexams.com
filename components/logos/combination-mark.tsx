@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 import { BusinessInfo } from "@/lib/business-info";
+import { SupportedLanguages } from "@/lib/types/supported-languages";
 import Logo from "./logo";
 
-const CombinationMark = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+const CombinationMark = async ({ params }: SupportedLanguages) => {
   const { lang } = await params;
 
   return (

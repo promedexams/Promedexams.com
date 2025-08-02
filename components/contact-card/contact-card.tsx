@@ -3,10 +3,11 @@ import { CalendarDaysIcon, MailIcon, MapPinIcon, PhoneIcon, Printer } from "luci
 
 import { BusinessInfo } from "@/lib/business-info";
 import { GOOGLE_MAPS_URL } from "@/lib/links";
+import { SupportedLanguages } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 import { Button } from "../ui/button";
 
-const ContactCard = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+const ContactCard = async ({ params }: SupportedLanguages) => {
   const dict = await getDictionary((await params).lang);
   // const days = dict.contactCard.hoursOfOperation.daysOfTheWeek;
 

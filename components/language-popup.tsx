@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { SupportedLanguages } from "@/lib/types/supported-languages";
 import LanguageSwitcher from "./footer/_components/language-switcher";
 import { Button } from "./ui/button";
 
-const LanguagePopup = ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+const LanguagePopup = ({ params }: SupportedLanguages) => {
   const [isOpen, setIsOpen] = useState(false);
   const [lang, setLang] = useState<"en" | "es">("en");
 
