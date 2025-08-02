@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { match } from "@formatjs/intl-localematcher";
-import Cookies from "js-cookie";
 import Negotiator from "negotiator";
 
 import { SiteSettings } from "./lib/site-settings";
@@ -15,7 +14,7 @@ function getLocale(request: NextRequest): string {
   });
 
   // Check for locale in cookies first
-  const cookieLocale = Cookies.get("SITE_LOCALE");
+  const cookieLocale = request.cookies.get("SITE_LOCALE")?.value;
   if (cookieLocale && locales.includes(cookieLocale)) {
     return cookieLocale;
   }
