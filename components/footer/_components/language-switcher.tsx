@@ -1,7 +1,7 @@
 "use client";
 
 import { createElement, useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { MX, US } from "country-flag-icons/react/3x2";
 import Cookies from "js-cookie";
 import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
@@ -25,7 +25,6 @@ const LanguageSwitcher = ({
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("en");
   const [dict, setDict] = useState<any>(null);
-  const router = useRouter();
   const pathname = usePathname();
 
   useEffect(() => {
@@ -41,7 +40,7 @@ const LanguageSwitcher = ({
         Cookies.set("SITE_LOCALE", currentValue, { path: "/", expires: 360 });
       }
       const newPath = pathname.replace(`/${value}`, `/${currentValue}`);
-      router.push(newPath);
+      window.location.href = newPath; // ! This may cause an error. Needs investigation. Would prefer to use `router.push(newPath);`.
     }
     setOpen(false);
   };
