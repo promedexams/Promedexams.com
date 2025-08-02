@@ -3,10 +3,10 @@ import { CalendarDaysIcon, ChevronsDownIcon } from "lucide-react";
 
 import Logo from "@/components/logos/logo";
 import { Button } from "@/components/ui/button";
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const HeroSection = async ({ params }: SupportedLanguages) => {
+const HeroSection = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   return (

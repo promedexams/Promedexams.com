@@ -1,9 +1,9 @@
 import { Clock, HeartHandshake, ShieldCheck } from "lucide-react";
 
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const WhyChooseUsSection = async ({ params }: SupportedLanguages) => {
+const WhyChooseUsSection = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   const reasons = [

@@ -1,8 +1,8 @@
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 
-const ScheduleAppointmentPage = async ({ params }: SupportedLanguages) => {
+const ScheduleAppointmentPage = async ({ params }: SupportedLanguagesProps) => {
   return (
     <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#4F759B]">
       <Navbar params={params} />

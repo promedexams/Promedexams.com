@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { BusinessInfo } from "@/lib/business-info";
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const MeetOurTeamSection = async ({ params }: SupportedLanguages) => {
+const MeetOurTeamSection = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   return (

@@ -17,10 +17,10 @@ import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
 import { FORM_I693_URL } from "@/lib/links";
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const ImmigrationMedicalExamsPage = async ({ params }: SupportedLanguages) => {
+const ImmigrationMedicalExamsPage = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   const whatToBring = [

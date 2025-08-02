@@ -2,14 +2,14 @@ import Link from "next/link";
 import { toZonedTime } from "date-fns-tz";
 
 import { BusinessInfo } from "@/lib/business-info";
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { formatTime, isOfficeOpen } from "@/lib/utils/business-hours";
 import { getDictionary } from "@/lib/utils/dictionaries";
 import LanguagePopup from "../language-popup";
 import CombinationMark from "../logos/combination-mark";
 import LanguageSwitcher from "./_components/language-switcher";
 
-const Footer = async ({ params }: SupportedLanguages) => {
+const Footer = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   const officeIsOpen = isOfficeOpen();

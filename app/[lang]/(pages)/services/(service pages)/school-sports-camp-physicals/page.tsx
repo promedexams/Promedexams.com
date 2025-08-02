@@ -5,10 +5,10 @@ import { CalendarDaysIcon, FileTextIcon, HeartPulseIcon, PillBottleIcon, Syringe
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const SchoolSportsCampPhysicalsPage = async ({ params }: SupportedLanguages) => {
+const SchoolSportsCampPhysicalsPage = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   const whatToBring = [

@@ -5,10 +5,10 @@ import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
 import { BusinessInfo } from "@/lib/business-info";
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const TeamPage = async ({ params }: SupportedLanguages) => {
+const TeamPage = async ({ params }: SupportedLanguagesProps) => {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 

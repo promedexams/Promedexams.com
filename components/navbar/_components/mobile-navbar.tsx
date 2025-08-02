@@ -6,9 +6,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CalendarDaysIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { SupportedLanguages } from "@/lib/types/supported-languages";
 import MenuToggle from "./menu-toggle";
 
-const MobileNavbar = ({ dict }: { dict: any; lang: "en" | "es" }) => {
+const MobileNavbar = ({ dict }: { dict: any; lang: SupportedLanguages }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => setIsOpen(!isOpen);
 

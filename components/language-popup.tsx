@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SiteSettings } from "@/lib/site-settings";
+import { SupportedLanguages, SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import LanguageSwitcher from "./footer/_components/language-switcher";
 import { Button } from "./ui/button";
 
-const LanguagePopup = ({ params }: SupportedLanguages) => {
+const LanguagePopup = ({ params }: SupportedLanguagesProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [lang, setLang] = useState<"en" | "es">("en");
+  const [lang, setLang] = useState<SupportedLanguages>(SiteSettings.DefaultLocale as SupportedLanguages);
 
   useEffect(() => {
     const languageCookie = Cookies.get("SITE_LOCALE");

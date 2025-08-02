@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { CalendarDaysIcon } from "lucide-react";
 
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 import CombinationMark from "../logos/combination-mark";
 import { Button } from "../ui/button";
 import MobileNavbar from "./_components/mobile-navbar";
 
-const Navbar = async ({ params }: { params: Promise<{ lang: "en" | "es" }> }) => {
+const Navbar = async ({ params }: SupportedLanguagesProps) => {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 

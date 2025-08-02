@@ -1,10 +1,10 @@
 import ContactCard from "@/components/contact-card/contact-card";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
-import { SupportedLanguages } from "@/lib/types/supported-languages";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const ContactPage = async ({ params }: SupportedLanguages) => {
+const ContactPage = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   return (
