@@ -305,7 +305,8 @@
       "contactSubSection": {
         "header": "¿Quiere ponerse en contacto?",
         "message": "Contáctenos para agendar una cita o para obtener más información sobre los servicios que ofrecemos.",
-        "buttonText": "Contáctenos"
+        "scheduleAppointmentButtonText": "Agendar Cita",
+        "contactButtonText": "Contáctenos"
       }
     },
     "team": {
@@ -333,7 +334,8 @@
       "contactSubSection": {
         "header": "¿Quiere ponerse en contacto?",
         "message": "Contáctenos para agendar una cita o para obtener más información sobre los servicios que ofrecemos.",
-        "buttonText": "Contáctenos"
+        "scheduleAppointmentButtonText": "Agendar Cita",
+        "contactButtonText": "Contáctenos"
       }
     },
     "contact": {

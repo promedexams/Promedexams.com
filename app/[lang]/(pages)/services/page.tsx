@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PlaneIcon, TruckIcon } from "lucide-react";
+import { CalendarDaysIcon, PlaneIcon, TruckIcon } from "lucide-react";
 
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
@@ -99,14 +99,25 @@ const ServicesPage = async ({ params }: SupportedLanguagesProps) => {
           <p className="mb-8 text-lg max-w-2xl mx-auto text-white/80">
             {dict.pages.services.contactSubSection.message}
           </p>
-          <Link href="/contact">
-            <Button
-              size="lg"
-              className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105"
-            >
-              {dict.pages.services.contactSubSection.buttonText}
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center align-middle">
+            <Link href="/schedule-appointment">
+              <Button
+                size="lg"
+                className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105 my-2"
+              >
+                <CalendarDaysIcon className="w-5 h-5 mr-2" />
+                {dict.pages.services.contactSubSection.scheduleAppointmentButtonText}
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-transparent hover:bg-[#f1a208] text-white hover:text-black border-2 border-[#f1a208] transition-colors duration-200 font-bold text-lg cursor-pointer whitespace-normal text-center px-2 py-1 rounded-lg"
+              >
+                {dict.pages.services.contactSubSection.contactButtonText}
+              </Button>
+            </Link>
+          </div>
         </div>
       </main>
       <Footer params={params} />

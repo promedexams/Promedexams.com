@@ -305,7 +305,8 @@
       "contactSubSection": {
         "header": "Want to get in touch?",
         "message": "Contact us to schedule an appointment or to learn more about the services we offer.",
-        "buttonText": "Contact Us"
+        "scheduleAppointmentButtonText": "Schedule Appointment",
+        "contactButtonText": "Contact Us"
       }
     },
     "team": {
@@ -333,7 +334,8 @@
       "contactSubSection": {
         "header": "Want to get in touch?",
         "message": "Contact us to schedule an appointment or to learn more about the services we offer.",
-        "buttonText": "Contact Us"
+        "scheduleAppointmentButtonText": "Schedule Appointment",
+        "contactButtonText": "Contact Us"
       }
     },
     "contact": {
