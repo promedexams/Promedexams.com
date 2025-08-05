@@ -344,7 +344,12 @@
       "contactInfoHeader": "Our Office"
     },
     "scheduleAppointment": {
-      "title": "Schedule Appointment"
+      "title": "Schedule Appointment",
+      "description": "Please fill out the form below to schedule your appointment. We will get back to you as soon as possible to confirm your appointment.",
+      "maintenanceWindow": {
+        "header": "Self-Scheduling Undergoing Maintenance",
+        "subheader": "The ability to schedule an appointment through our website will be available soon. In the meantime, please call (720) 517-3111 or email office@promedexams.com to schedule an appointment."
+      }
     },
     "notFound": {
       "title": "Page Not Found",
