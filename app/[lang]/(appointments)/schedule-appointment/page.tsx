@@ -1,9 +1,8 @@
-import { ConstructionIcon } from "lucide-react";
-
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
+import ScheduleAppointmentForm from "./_components/schedule-appointment-form";
 
 const ScheduleAppointmentPage = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
@@ -19,15 +18,7 @@ const ScheduleAppointmentPage = async ({ params }: SupportedLanguagesProps) => {
             </h1>
             <p className="text-lg text-white/80 text-center">{dict.pages.scheduleAppointment.description}</p>
           </div>
-          <div className="flex flex-col justify-center items-center w-full bg-slate-800/20 p-8 rounded-2xl shadow-xl text-center">
-            <div className="p-4 bg-[#f1a208] rounded-full inline-block mb-4">
-              <ConstructionIcon className="w-16 h-16 text-black" />
-            </div>
-            <h1 className="text-3xl font-bold mb-4">{dict.pages.scheduleAppointment.maintenanceWindow.header}</h1>
-            <p className="text-lg text-white/80 max-w-3xl mx-auto">
-              {dict.pages.scheduleAppointment.maintenanceWindow.subheader}
-            </p>
-          </div>
+          <ScheduleAppointmentForm params={params} />
         </div>
       </main>
       <Footer params={params} />

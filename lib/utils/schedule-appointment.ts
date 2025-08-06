@@ -1,20 +1,30 @@
 /**
- * Formats a string of digits into a standard US phone number format.
+ * Formats a phone number string into a standard US format or an international format with a country code.
  *
- * The function removes all non-digit characters from the input string and then formats
- * the digits as "(XXX) XXX-XXXX". If the input does not contain enough digits, it will
- * format as much as possible based on the available digits.
+ * - For input with 10 or fewer digits, formats as "(XXX) XXX-XXXX".
+ * - For input with more than 10 digits, treats the leading digits as the country code and formats as "+<country> (XXX) XXX-XXXX".
+ * - Non-digit characters in the input are ignored.
  *
- * @param value - The input string containing a phone number, possibly with non-digit characters.
- * @returns The formatted phone number string, or the original input if formatting is not possible.
+ * @param value - The input phone number string to format.
+ * @returns The formatted phone number string.
  */
 export function formatPhoneNumber(value: string) {
   const digits = value.replace(/\D/g, "");
-  const match = digits.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
-  if (!match) return value;
-  let formatted = "";
-  if (match[1]) formatted = `(${match[1]}`;
-  if (match[2]) formatted += `) ${match[2]}`;
-  if (match[3]) formatted += `-${match[3]}`;
-  return formatted;
+  if (digits.length <= 10) {
+    // Standard US format
+    const match = digits.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+    if (!match) return value;
+    let formatted = "";
+    if (match[1]) formatted = `(${match[1]}`;
+    if (match[2]) formatted += `) ${match[2]}`;
+    if (match[3]) formatted += `-${match[3]}`;
+    return formatted;
+  } else {
+    // Country/area code + US format
+    const country = digits.slice(0, digits.length - 10);
+    const rest = digits.slice(-10);
+    const match = rest.match(/^(\d{3})(\d{3})(\d{4})$/);
+    if (!match) return `+${country} ${rest}`;
+    return `+${country} (${match[1]}) ${match[2]}-${match[3]}`;
+  }
 }
