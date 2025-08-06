@@ -11,7 +11,12 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [dict, setDict] = useState<any>(null);
 
   // Form values
+  // Personal Information
   const [phoneNumber, setPhoneNumber] = useState("");
+
+  // Appointment Information
+  const [newOrReturningCustomer, setNewOrReturningCustomer] = useState("");
+  const [hasQuestions, setHasQuestions] = useState("");
 
   useEffect(() => {
     params.then(({ lang }) => {
@@ -132,15 +137,16 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           </select>
         </div>
         <div>
-          <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningCustomer">
-            Are you a new or returning client?
+          <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningPatient">
+            Are you a new or returning patient?
           </label>
           <select
-            id="newOrReturningCustomer"
-            name="newOrReturningCustomer"
+            id="newOrReturningPatient"
+            name="newOrReturningPatient"
             required
             className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
-            defaultValue=""
+            value={newOrReturningCustomer}
+            onChange={(e) => setNewOrReturningCustomer(e.target.value)}
           >
             <option value="" disabled>
               Select patient type
@@ -149,6 +155,47 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             <option value="returning">Returning Patient</option>
           </select>
         </div>
+        {newOrReturningCustomer === "returning" && (
+          <>
+            <div>
+              <label className="block text-white text-lg font-semibold mb-2" htmlFor="newHeathConditions">
+                Do you have any new health issues since your last examination?
+              </label>
+              <select
+                id="newHeathConditions"
+                name="newHeathConditions"
+                required
+                className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select option
+                </option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-white text-lg font-semibold mb-2" htmlFor="newMedicationsOrSupplements">
+                Are you taking any new medications/supplements (prescribed or over-the-counter) since your last
+                examination?
+              </label>
+              <select
+                id="newMedicationsOrSupplements"
+                name="newMedicationsOrSupplements"
+                required
+                className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select option
+                </option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </>
+        )}
         <div>
           <label className="block text-white text-lg font-semibold" htmlFor="hasQuestions">
             Do you have any questions/concerns to discuss with Dr. Quigley prior to your examination?
@@ -162,7 +209,8 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             name="hasQuestions"
             required
             className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
-            defaultValue=""
+            value={hasQuestions}
+            onChange={(e) => setHasQuestions(e.target.value)}
           >
             <option value="" disabled>
               Select option
@@ -170,6 +218,21 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
+          {hasQuestions === "yes" && (
+            <div className="mt-4 bg-blue-900/50 border-l-4 border-blue-400 p-4 rounded">
+              <h3 className="font-bold text-xl text-blue-300 mb-2">NOTE:</h3>
+              <p className="text-white text-base">
+                You can schedule a pre-exam consultation appointment with Dr. Quigley before scheduling your exam to
+                discuss any potential issues, questions, or concerns with the goal of making the certification process
+                as smooth as possible.
+                <br />
+                <br />
+                Consultations will be billed by time spent during the consultation. Time spent by Dr. Quigley making
+                phone calls on your behalf or reviewing your medical or legal records after a consultation or medical
+                examination will also be billed.
+              </p>
+            </div>
+          )}
         </div>
       </div>
       <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6">
