@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
@@ -15,14 +18,35 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [phoneNumber, setPhoneNumber] = useState("");
 
   // Appointment Information
-  const [newOrReturningCustomer, setNewOrReturningCustomer] = useState("");
+  const [newOrReturningClient, setNewOrReturningClients] = useState("");
   const [hasQuestions, setHasQuestions] = useState("");
+
+  // Date and Time selection
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [availableTimes, setAvailableTimes] = useState<string[]>([]);
+  const [selectedTime, setSelectedTime] = useState("");
 
   useEffect(() => {
     params.then(({ lang }) => {
       getDictionary(lang).then(setDict);
     });
   }, [params]);
+
+  useEffect(() => {
+    if (!selectedDate) {
+      setAvailableTimes([]);
+      setSelectedTime("");
+      return;
+    }
+
+    const fetchTimes = async () => {
+      const res = await fetch("/api/appointments/available-times");
+      const data = await res.json();
+      setAvailableTimes(data);
+      setSelectedTime("");
+    };
+    fetchTimes();
+  }, [selectedDate]);
 
   if (!dict) {
     return (
@@ -137,25 +161,25 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           </select>
         </div>
         <div>
-          <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningPatient">
-            Are you a new or returning patient?
+          <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningClient">
+            Are you a new or returning client?
           </label>
           <select
-            id="newOrReturningPatient"
-            name="newOrReturningPatient"
+            id="newOrReturningClient"
+            name="newOrReturningClient"
             required
             className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
-            value={newOrReturningCustomer}
-            onChange={(e) => setNewOrReturningCustomer(e.target.value)}
+            value={newOrReturningClient}
+            onChange={(e) => setNewOrReturningClients(e.target.value)}
           >
             <option value="" disabled>
-              Select patient type
+              Select client type
             </option>
-            <option value="new">New Patient</option>
-            <option value="returning">Returning Patient</option>
+            <option value="new">New Client</option>
+            <option value="returning">Returning Client</option>
           </select>
         </div>
-        {newOrReturningCustomer === "returning" && (
+        {newOrReturningClient === "returning" && (
           <>
             <div>
               <label className="block text-white text-lg font-semibold mb-2" htmlFor="newHeathConditions">
@@ -237,6 +261,37 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
       </div>
       <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6">
         <h2 className="text-2xl font-bold mb-4 text-white pb-4 border-b">Calendar Booking</h2>
+        <div className="flex flex-col md:flex-row gap-4 items-start">
+          <div>
+            <label className="block text-white text-lg font-semibold mb-2">Select Date</label>
+            <DatePicker
+              selected={selectedDate}
+              onChange={(date) => setSelectedDate(date)}
+              minDate={new Date()}
+              className="p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
+              placeholderText="Choose a date"
+              dateFormat="MMMM d, yyyy"
+            />
+          </div>
+          <div className="flex-1">
+            <label className="block text-white text-lg font-semibold mb-2">Select Time</label>
+            <select
+              className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
+              value={selectedTime}
+              onChange={(e) => setSelectedTime(e.target.value)}
+              disabled={!selectedDate || availableTimes.length === 0}
+            >
+              <option value="" disabled>
+                {selectedDate ? "Select a time" : "Select a date first"}
+              </option>
+              {availableTimes.map((time) => (
+                <option key={time} value={time}>
+                  {time}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
         <button
           type="submit"
           className="w-full bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold py-3 rounded-lg transition-transform duration-200 hover:scale-105 cursor-pointer"
