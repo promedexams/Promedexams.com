@@ -38,7 +38,9 @@ const DOTPhysicalsPage = async ({ params }: SupportedLanguagesProps) => {
             <div className="p-4 bg-[#f1a208] rounded-full inline-block mb-4">
               <TruckIcon className="w-16 h-16 text-black" />
             </div>
-            <h1 className="text-5xl font-bold mb-4">{dict.pages.services.services.dotPhysicals.title}</h1>
+            <h1 className="text-3xl sm:text-5xl font-bold mb-4 text-center">
+              {dict.pages.services.services.dotPhysicals.title}
+            </h1>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
               {dict.pages.services.services.dotPhysicals.shortDescription}
             </p>

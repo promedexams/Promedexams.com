@@ -41,7 +41,9 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: SupportedLanguagesProps
                 className="w-16 h-16 select-none"
               />
             </div>
-            <h1 className="text-5xl font-bold mb-4">{dict.pages.services.services.schoolSportsCampPhysicals.title}</h1>
+            <h1 className="text-2xl sm:text-5xl font-bold mb-4 text-center">
+              {dict.pages.services.services.schoolSportsCampPhysicals.title}
+            </h1>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
               {dict.pages.services.services.schoolSportsCampPhysicals.shortDescription}
             </p>
