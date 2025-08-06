@@ -1,0 +1,360 @@
+{
+  "contactCard": {
+    "hoursOfOperation": {
+      "hoursOfOperation": "Horario de Atención",
+      "closed": "Cerrado",
+      "daysOfTheWeek": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
+      "timezoneDisclaimer": "Todos los horarios se muestran en la hora de la Montaña (MT)."
+    },
+    "address": "Dirección",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "fax": "Fax",
+    "scheduleAppointmentButtonText": "Agendar Cita"
+  },
+  "footer": {
+    "languageSwitcher": {
+      "search": "Buscar idiomas...",
+      "notFound": "Idioma no encontrado."
+    },
+    "navlinks": {
+      "navigation": {
+        "header": "Navegación del Sitio",
+        "topOfPage": "Volver arriba",
+        "home": "Inicio",
+        "services": "Servicios",
+        "team": "Nuestro Equipo",
+        "contact": "Contacto"
+      },
+      "services": {
+        "header": "Servicios",
+        "ImmigrationMedicalExams": "Exámenes Médicos de Inmigración",
+        "FAAPhysicals": "Exámenes Médicos de la FAA (2da y 3ra Clase, Sin Basic Med)",
+        "DOTPhysicals": "Exámenes Médicos del DOT",
+        "schoolSportsCampPhysicals": "Exámenes Físicos Escolares, Deportivos y de Campamento"
+      },
+      "appointments": {
+        "header": "Citas",
+        "scheduleAppointment": "Agendar Cita",
+        "whatToBring": "Preparación para su Cita"
+      },
+      "legal": {
+        "header": "Legal",
+        "noticeOfPrivacyPolicy": "Aviso de Política de Privacidad (NPP)",
+        "pilotBillOfRights": "Declaración de Derechos del Piloto"
+      }
+    },
+    "officeStatus": {
+      "open": "Consultorio Cerrado",
+      "closed": "Consultorio Abierto"
+    }
+  },
+  "navbar": {
+    "navlinks": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "team": "Nuestro Equipo",
+      "contact": "Contacto",
+      "scheduleAppointment": "Agendar Cita"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Inicio",
+      "heroSection": {
+        "descriptorWords": ["Excelencia", "Integridad", "Eficiencia"],
+        "description": "Ofrecemos *exámenes médicos de la FAA*, *exámenes médicos del DOT* y *exámenes físicos escolares, deportivos y de campamento* para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo se dedica a garantizar una experiencia ágil, oportuna y sin estrés de principio a fin.",
+        "scheduleAppointment": "Agendar Cita",
+        "scrollDownText": "desliza para más"
+      },
+      "ourServicesSection": {
+        "header": "Nuestros Servicios",
+        "description": "Ofrecemos una gama de exámenes médicos especializados para satisfacer sus necesidades. Generalmente hay citas disponibles para el mismo día o la misma semana.",
+        "services": {
+          "immigrationMedicalExams": {
+            "title": "Exámenes Médicos de Inmigración",
+            "description": "Cirujana civil designada por el USCIS que realiza exámenes médicos de inmigración."
+          },
+          "faaPhysicals": {
+            "title": "Exámenes Médicos de la FAA (2da y 3ra Clase, Sin Basic Med)",
+            "description": "Examinadora médica de aviación designada por la FAA que realiza exámenes médicos para pilotos."
+          },
+          "dotPhysicals": {
+            "title": "Exámenes Médicos del DOT",
+            "description": "Examinadora médica certificada por la FMCSA que realiza exámenes médicos del DOT."
+          },
+          "schoolSportsCampPhysicals": {
+            "title": "Exámenes Físicos Escolares, Deportivos y de Campamento",
+            "description": "Exámenes físicos para obtener la autorización para asistir a campamentos y escuelas (incluida la educación superior) y para practicar deportes."
+          }
+        },
+        "learnMoreButton": "Conozca Más Sobre Nuestros Servicios"
+      },
+      "whyChooseUsSection": {
+        "header": "¿Por qué elegir ProMed Exams?",
+        "description": "Descubra los beneficios de elegir nuestra consulta para sus necesidades de exámenes médicos.",
+        "reasons": {
+          "timelyAndEfficient": {
+            "title": "Oportuno y Eficiente",
+            "description": "Respetamos su tiempo. Nuestros procesos están optimizados para asegurar que sea atendido puntualmente y que sus resultados se entreguen rápidamente."
+          },
+          "experiencedAndCertified": {
+            "title": "Experimentados y Certificados",
+            "description": "Nuestro equipo está certificado y tiene experiencia en exámenes del USCIS, de la FAA, del DOT, y en exámenes escolares, deportivos y de campamento, garantizando precisión y cumplimiento."
+          },
+          "patientCenteredCare": {
+            "title": "Atención Centrada en el Paciente",
+            "description": "Creemos en la comunicación honesta y clara y en la atención compasiva. Su salud y tranquilidad son nuestras máximas prioridades."
+          }
+        }
+      },
+      "meetOurTeamSection": {
+        "header": "Conozca a Nuestro Equipo",
+        "description": "Nuestros profesionales dedicados están aquí para brindarle el mejor servicio.",
+        "employee": {
+          "jill": {
+            "name": "Jill Quigley, MD",
+            "jobTitle": "Médica Principal",
+            "shortDescription": "La Dra. Quigley ha practicado la medicina desde 2008 y está certificada por el consejo en Medicina Familiar. Se dedica a brindar una atención excepcional y oportuna a cada paciente."
+          },
+          "trish": {
+            "name": "Trish Peery",
+            "jobTitle": "Gerente de Oficina",
+            "shortDescription": "Con una sólida experiencia en la gerencia de recepción, Trish se asegura de que nuestra oficina funcione sin problemas y de que su experiencia sea perfecta de principio a fin."
+          }
+        },
+        "learnMoreButton": "Conozca Más Sobre Nuestro Equipo"
+      },
+      "findUsSection": {
+        "header": "Encuéntrenos",
+        "description": "Estamos convenientemente ubicados en Littleton, CO, cerca de la C-470 y Broadway. Agende una cita con nosotros para sus necesidades de exámenes médicos.",
+        "buttonText": "Póngase en Contacto"
+      }
+    },
+    "services": {
+      "title": "Servicios",
+      "description": "En ProMed Exams, nos dedicamos a ofrecer eficientes exámenes médicos de la FAA, exámenes médicos del DOT, y exámenes físicos escolares, deportivos y de campamento para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo experimentado y certificado está aquí para garantizar un proceso ágil y oportuno para todas sus necesidades de examinación. Creemos en la comunicación honesta y clara, y en una atención compasiva y centrada en el paciente.",
+      "services": {
+        "moreInfoButton": "Más Información",
+        "immigrationMedicalExams": {
+          "title": "Exámenes Médicos de Inmigración",
+          "shortDescription": "Solo los médicos designados por el USCIS como cirujanos civiles pueden completar un examen de inmigración. El examen evalúa su estado de salud para determinar si cumple con los requisitos para la inmigración a los EE. UU.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "¿Quién Necesita un Examen Médico de Inmigración?",
+              "description": [
+                "El USCIS (Servicios de Ciudadanía e Inmigración de EE. UU.) exige que cualquier persona que presente el Formulario I-485 para solicitar una tarjeta de residencia (green card) o para ajustar su estatus migratorio dentro de los EE. UU., se someta a un examen médico de inmigración. Solo los médicos designados por el USCIS como cirujanos civiles pueden completar un examen de inmigración."
+              ]
+            },
+            "whatToExpect": {
+              "header": "Qué Esperar",
+              "description": [
+                "El examen evalúa su estado de salud para determinar si cumple con los requisitos de inmigración a los EE. UU. Puede esperar una revisión de su historial médico, su salud mental y un examen físico.",
+                "Se requieren análisis de sangre y orina según la edad para evaluar enfermedades infecciosas, incluyendo tuberculosis, sífilis y gonorrea. En su cita, se le entregará una orden de laboratorio prepagada para LabCorp/Quest. Deberá realizarse los análisis inmediatamente después de su examen médico. Si es necesario, le proporcionaremos información con las ubicaciones e indicaciones para llegar a LabCorp/Quest. Se requiere una radiografía de tórax si el análisis de sangre para tuberculosis da positivo. Se requieren vacunas si las vacunas apropiadas para la edad, según la recomendación de los CDC (Centros para el Control y la Prevención de Enfermedades), no están al día. No proporcionamos vacunas, pero podemos dirigirle a la ubicación más cercana y económica para vacunarse. Puede comer y beber antes del examen.",
+                "Las condiciones médicas comunes como la diabetes, el colesterol alto y la presión arterial alta, que no son una preocupación para la salud pública, no interfieren con el proceso de inmigración, pero deben ser listadas en el Formulario I-693 del USCIS (Informe de Examen Médico y Registro de Vacunación). Al completar todos los requisitos del Formulario I-693, se le entregará el formulario completado, firmado y fechado en un sobre sellado. No abra este sobre; debe presentarlo sellado al USCIS como parte del proceso de solicitud. También se le proporcionará un juego idéntico de documentos sin sellar."
+              ],
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
+              "updatePanel": {
+                "title": "ACTUALIZACIÓN (2 de diciembre de 2024)",
+                "message": "El USCIS anunció que se requiere que presente el Formulario I-693 junto con su Formulario I-485. No puede optar por enviar los resultados del examen médico por correo en una fecha posterior. Si no presenta el Formulario I-693 como parte de su paquete de solicitud de ajuste de estatus, el USCIS puede rechazar su solicitud completa."
+              }
+            }
+          },
+          "whatToBringSection": {
+            "header": "Qué Traer a su Cita",
+            "items": [
+              "Pasaporte válido u otra identificación con fotografía emitida por el gobierno",
+              "Formulario I-693, Informe de Examen Médico y Registro de Vacunación",
+              "Registros de vacunación",
+              "Lista de medicamentos actuales",
+              "Informe de la condición y cualquier requisito de educación especial o supervisión si inmigra con discapacidades de aprendizaje",
+              "Certificado de alta médica si ha sido diagnosticado con sífilis y tratado adecuadamente, firmado por un médico o un funcionario de salud pública",
+              "Si tiene un historial de comportamiento dañino o violento que haya resultado en lesiones a personas o animales, información que permita al médico determinar si el comportamiento estuvo relacionado con un problema psiquiátrico o médico, o con el uso de drogas o alcohol",
+              "Si ha sido tratado u hospitalizado por una enfermedad psiquiátrica o mental, o por abuso de alcohol o drogas, una certificación por escrito que incluya el diagnóstico, la duración del tratamiento y su pronóstico",
+              "Certificado de tuberculosis de su médico si fue diagnosticado y tratado adecuadamente en el pasado"
+            ],
+            "messagePanel": {
+              "title": "NOTA IMPORTANTE",
+              "message": "Asegúrese de completar las partes 1 a 5 de las páginas 1 a 3 del Formulario I-693 *antes* de su cita.",
+              "buttonText": "Formulario I-693"
+            }
+          }
+        },
+        "faaPhysicals": {
+          "title": "Exámenes Médicos de la FAA (2da y 3ra Clase, Sin Basic Med)",
+          "shortDescription": "La Administración Federal de Aviación (FAA) exige que los pilotos estén certificados médicamente para la clase de certificado que desean. Esto permite identificar y tratar posibles problemas médicos para prevenir accidentes y mejorar la seguridad de la aviación.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "¿Quién necesita un examen médico de la FAA?",
+              "description": [
+                "La FAA designa a médicos conocidos como Examinadores Médicos de Aviación (AME, por sus siglas en inglés) que completan una formación especializada de la FAA para realizar estos exámenes de certificación médica. Aunque la prioridad es la seguridad de la aviación, mi objetivo como AME es ayudar a los pilotos a obtener y mantener la certificación para volar. Además, podemos ayudar cuando surgen condiciones médicas que requieren información adicional para la certificación. En ProMed Exams, ofrecemos servicios rápidos para ayudarle a volver al aire lo antes posible, y entendemos la importancia de la precisión para evitar retrasos en el procesamiento."
+              ]
+            },
+            "whatToExpect": {
+              "header": "Qué Esperar",
+              "description": [
+                "El examen evalúa su aptitud física y mental general para el servicio, para garantizar que puede operar una aeronave de forma segura. Puede esperar una revisión de su historial médico, salud mental y un examen físico. Para el examen se requiere la evaluación de la presión arterial, la frecuencia cardíaca, la altura/peso, la visión, la audición y un análisis de orina.",
+                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran un aplazamiento), saldrá de su cita con su certificación médica."
+              ],
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria."
+            }
+          },
+          "whatToBringSection": {
+            "header": "Qué Traer a su Cita",
+            "items": [
+              "Identificación con foto vigente (Licencia de conducir o Pasaporte)",
+              "Número de confirmación de MedXPress",
+              "Lentes de contacto/gafas, audífonos (si aplica) - Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir",
+              "Venga preparado para proporcionar una muestra de orina."
+            ],
+            "messagePanel": {
+              "title": "NOTA IMPORTANTE",
+              "message": "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress *antes* de su cita.",
+              "buttonText": "FAA MedExpress"
+            }
+          }
+        },
+        "dotPhysicals": {
+          "title": "Exámenes Médicos del DOT",
+          "shortDescription": "Un examen físico del DOT (Departamento de Transporte) es un examen médico exigido por la Administración Federal de Seguridad de Autotransportes (FMCSA) para los conductores de vehículos comerciales.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "¿Quién necesita un examen físico del DOT?",
+              "description": [
+                "Aprobar el examen físico del DOT es un requisito para obtener y mantener una licencia de conducir comercial (CDL). La FMCSA exige que los exámenes físicos del DOT sean realizados por un examinador médico certificado (CME, por sus siglas en inglés) que haya recibido una formación exhaustiva y esté certificado por la FMCSA para realizar dichos exámenes. En ProMed Exams, ofrecemos servicios rápidos para ayudarle a volver a la carretera lo antes posible, y entendemos la importancia de la precisión para evitar retrasos en el procesamiento."
+              ]
+            },
+            "whatToExpect": {
+              "header": "Qué Esperar",
+              "description": [
+                "El examen asegura que los conductores estén física y mentalmente aptos para operar vehículos comerciales de forma segura. Puede esperar una revisión de su historial médico, salud mental y un examen físico. Para el examen se requiere la evaluación de la presión arterial, la frecuencia cardíaca, la altura/peso, la visión, la audición y un análisis de orina.",
+                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, sus resultados se informarán electrónicamente al Registro Nacional de Examinadores Médicos Certificados (NRCME). Si cumple con todos los requisitos de la FMCSA, saldrá de su cita con su certificado de examinador médico (tarjeta médica del DOT).",
+                "Si encontramos un problema que requiere atención, es posible que deba consultar a su proveedor de atención primaria y/o a un especialista para realizar más pruebas, tratamientos o trámites. Aún podría calificar para su certificado médico, pero solo después de resolver el problema médico u obtener la documentación necesaria. En algunos casos, una condición de salud puede descalificarlo para recibir un certificado médico."
+              ],
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
+              "updatePanel": {
+                "title": "ACTUALIZACIÓN",
+                "message": "A partir de 2023, los conductores de CMV (vehículos motorizados comerciales) con diabetes mellitus tratada con insulina (tipo 1 o tipo 2) y/o visión monocular deben cumplir con estándares actualizados para ser certificados. Los formularios para estas exenciones deben completarse no más de 45 días antes de realizar el examen del DOT y deben traerse al examen."
+              }
+            }
+          },
+          "whatToBringSection": {
+            "header": "Qué Traer a su Cita",
+            "items": [
+              "Licencia de conducir vigente emitida por el estado",
+              "Formulario de Informe de Examen Médico (MCSA-5875)",
+              "Lista de medicamentos actuales con dosis y el nombre de quien los recetó",
+              "Cualquier circunstancia especial o carta de exención de su(s) médico(s)",
+              "Lentes de contacto/gafas, audífonos (si aplica) - Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir",
+              "Esté preparado para proporcionar una muestra de orina"
+            ],
+            "messagePanel": {
+              "title": "NOTA IMPORTANTE",
+              "message": "Asegúrese de completar las secciones de información del conductor e historial de salud en el Formulario de Informe de Examen Médico *antes* de su cita.",
+              "buttonText": "Formulario MCSA-5875"
+            }
+          }
+        },
+        "schoolSportsCampPhysicals": {
+          "title": "Exámenes Físicos Escolares, Deportivos y de Campamento",
+          "shortDescription": "Los exámenes físicos escolares, deportivos y de campamento también se conocen como evaluaciones físicas de preparticipación (PPE). Muchas escuelas, organizaciones deportivas y campamentos exigen estos exámenes físicos como requisito previo para la participación, con el fin de evaluar la salud general y el estado físico de una persona.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "¿Quién necesita un examen físico escolar, deportivo y/o de campamento?",
+              "description": [
+                "Muchas escuelas, organizaciones deportivas y campamentos exigen estos exámenes físicos como requisito previo para la participación, con el fin de evaluar la salud general y el estado físico de una persona."
+              ]
+            },
+            "whatToExpect": {
+              "header": "Qué Esperar",
+              "description": [
+                "Estos exámenes ayudan a identificar posibles problemas médicos, como problemas cardíacos, pulmonares, neurológicos o musculoesqueléticos, que podrían afectar la capacidad de una persona para participar en actividades de forma segura y asegurar que todas las vacunas necesarias estén al día. Los requisitos de estos exámenes pueden variar según el estado, el deporte y la organización. Asegúrese de consultar con el administrador del programa sobre los requisitos necesarios para obtener la autorización para participar.",
+                "Puede esperar una revisión de su historial médico y un examen físico que incluye la presión arterial, la frecuencia cardíaca y la altura/peso. Generalmente, se requiere un análisis de orina, así como una prueba de la vista. Un electrocardiograma (ECG) puede ser necesario si está indicado. Se pueden requerir vacunas si las vacunas apropiadas para la edad no están al día. No proporcionamos vacunas, pero podemos dirigirle a la ubicación más cercana y económica para vacunarse. Puede comer y beber antes del examen.",
+                "Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran una evaluación adicional), saldrá de su cita con sus formularios completados y firmados."
+              ],
+              "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
+              "messagePanel": {
+                "title": "NOTA IMPORTANTE",
+                "message": "ProMed Exams no factura a los seguros por ningún examen o servicio. Un recibo detallado está disponible para todos los pacientes para que lo envíen a su compañía de seguros para los exámenes físicos escolares, deportivos y de campamento."
+              }
+            }
+          },
+          "whatToBringSection": {
+            "header": "Qué Traer a su Cita",
+            "items": [
+              "Lista de alergias y medicamentos actuales con dosis (recetados y de venta libre)",
+              "Lista de lesiones y cirugías pasadas, e historial familiar pertinente",
+              "Cualquier formulario proporcionado por su escuela, programa deportivo o campamento que deba ser completado y/o firmado por la Dra. Quigley",
+              "Registros de inmunización"
+            ]
+          }
+        },
+        "specificServicePages": {
+          "scheduleSection": {
+            "header": "¿Listo para Agendar su Examen?",
+            "description": "Agendemos su visita. Nuestro equipo está listo para ayudarle.",
+            "scheduleAppointmentButtonText": "Agendar Cita"
+          },
+          "wrongServiceSection": {
+            "header": "¿No es el servicio que busca?",
+            "description": "Ofrecemos una gama de otros exámenes médicos especializados. Explore nuestros otros servicios para encontrar el adecuado para usted.",
+            "otherServicesButtonText": "Ver Otros Servicios"
+          }
+        }
+      },
+      "contactSubSection": {
+        "header": "¿Quiere ponerse en contacto?",
+        "message": "Contáctenos para agendar una cita o para obtener más información sobre los servicios que ofrecemos.",
+        "scheduleAppointmentButtonText": "Agendar Cita",
+        "contactButtonText": "Contáctenos"
+      }
+    },
+    "team": {
+      "title": "Nuestro Equipo",
+      "description": "Nuestro equipo de profesionales dedicados y experimentados es el corazón de ProMed Exams. Estamos comprometidos a brindar una atención compasiva y experta a cada cliente. Conozca más sobre las personas que están aquí para apoyar su trayectoria.",
+      "employee": {
+        "jill": {
+          "name": "Jill Quigley, MD",
+          "jobTitle": "Médica Principal",
+          "bioParagraphs": [
+            "La Dra. Quigley creció en el área de Kansas City, Missouri, asistió a la facultad de medicina en la University of Missouri-Columbia School of Medicine y completó su residencia en medicina familiar en la Wake Forest University School of Medicine. Ha practicado la medicina desde 2008 y está certificada por el consejo en Medicina Familiar.",
+            "Después de ejercer la medicina familiar durante más de 16 años, se entusiasmó por embarcarse en una nueva trayectoria más enfocada en la medicina, realizando exámenes médicos específicos como examinadora médica de aviación designada por la FAA (AME, por sus siglas en inglés) para chequeos de pilotos, examinadora médica certificada por la FMCSA para chequeos del DOT, y cirujana civil designada por el USCIS para exámenes médicos de inmigración. También quería seguir atendiendo a niños, adolescentes y adultos para sus chequeos escolares, deportivos y de campamento. Se esfuerza por brindar una atención excepcional y oportuna a cada persona. Cree en la comunicación honesta y clara, la escucha, la atención a los detalles, la puntualidad y el respeto mutuo.",
+            "La Dra. Quigley está felizmente casada y tiene dos perros (Linda y Margie). Le gusta viajar, hacer senderismo, esquiar, la jardinería, la música y leer."
+          ]
+        },
+        "trish": {
+          "name": "Trish Peery",
+          "jobTitle": "Gerente de Oficina",
+          "bioParagraphs": [
+            "Trish trabajó en la consulta de medicina familiar de la Dra. Quigley durante 10 años como gerente de recepción. Su experiencia previa fue en la industria de seguros y finanzas, trabajando para State Farm y Edward Jones. Actualmente, mantiene su Licencia de Seguros de CO.",
+            "A Trish le gusta viajar, correr, esquiar y pasar tiempo con su familia. Disfruta trabajar con la Dra. Quigley mientras sirven a la comunidad con cuidado, compasión y equilibrio de vida."
+          ]
+        }
+      },
+      "contactSubSection": {
+        "header": "¿Quiere ponerse en contacto?",
+        "message": "Contáctenos para agendar una cita o para obtener más información sobre los servicios que ofrecemos.",
+        "scheduleAppointmentButtonText": "Agendar Cita",
+        "contactButtonText": "Contáctenos"
+      }
+    },
+    "contact": {
+      "title": "Contacto y Ubicación",
+      "description": "¿Tiene preguntas o desea agendar una cita? Nuestro equipo está aquí para ayudarle. Envíenos un correo electrónico, llámenos o agende una cita en línea. Esperamos saber de usted y ayudarle con sus necesidades de exámenes médicos.",
+      "contactInfoHeader": "Nuestra Oficina"
+    },
+    "scheduleAppointment": {
+      "title": "Agendar Cita",
+      "description": "Por favor, complete el formulario a continuación para agendar su cita. Nos pondremos en contacto con usted lo antes posible para confirmar su cita.",
+      "maintenanceWindow": {
+        "header": "La Programación de Citas en Línea está en Mantenimiento",
+        "subheader": "La opción de agendar una cita a través de nuestro sitio web estará disponible pronto. Mientras tanto, por favor, llame al (720) 517-3111 o envíe un correo electrónico a office@promedexams.com para agendar una cita."
+      }
+    },
+    "notFound": {
+      "title": "Página No Encontrada",
+      "message": "Lo sentimos, la página que está buscando no existe.",
+      "goHomeButton": "Volver a la Página de Inicio"
+    }
+  }
+}

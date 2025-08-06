@@ -1,0 +1,360 @@
+{
+  "contactCard": {
+    "hoursOfOperation": {
+      "hoursOfOperation": "Hours of Operation",
+      "closed": "Closed",
+      "daysOfTheWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "timezoneDisclaimer": "All times listed are in mountain time (MT)."
+    },
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "fax": "Fax",
+    "scheduleAppointmentButtonText": "Schedule Appointment"
+  },
+  "footer": {
+    "languageSwitcher": {
+      "search": "Search Languages...",
+      "notFound": "Language not found."
+    },
+    "navlinks": {
+      "navigation": {
+        "header": "Site Navigation",
+        "topOfPage": "Top of Page",
+        "home": "Home",
+        "services": "Services",
+        "team": "Team",
+        "contact": "Contact"
+      },
+      "services": {
+        "header": "Services",
+        "ImmigrationMedicalExams": "Immigration Medical Exams",
+        "FAAPhysicals": "FAA Physicals (2nd & 3rd Class, No Basic Med)",
+        "DOTPhysicals": "DOT Physicals",
+        "schoolSportsCampPhysicals": "School/Sports/Camp Physicals"
+      },
+      "appointments": {
+        "header": "Appointments",
+        "scheduleAppointment": "Schedule Appointment",
+        "whatToBring": "What to Bring to Your Appointment"
+      },
+      "legal": {
+        "header": "Legal",
+        "noticeOfPrivacyPolicy": "Notice of Privacy Policy (NPP)",
+        "pilotBillOfRights": "Pilot Bill of Rights"
+      }
+    },
+    "officeStatus": {
+      "open": "Office is Open",
+      "closed": "Office is Closed"
+    }
+  },
+  "navbar": {
+    "navlinks": {
+      "home": "Home",
+      "services": "Services",
+      "team": "Team",
+      "contact": "Contact",
+      "scheduleAppointment": "Schedule Appointment"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "heroSection": {
+        "descriptorWords": ["Excellence", "Integrity", "Efficiency"],
+        "description": "Providing *FAA Physicals*, *DOT Physicals*, and *School/Sports/Camp Physicals* to help you meet important requirements for certification and clearance. Our team is dedicated to ensuring a smooth, timely, and stress-free experience from start to finish.",
+        "scheduleAppointment": "Schedule Appointment",
+        "scrollDownText": "scroll for more"
+      },
+      "ourServicesSection": {
+        "header": "Our Services",
+        "description": "We offer a range of specialized medical examinations to meet your needs. Same-day or same-week appointments often available.",
+        "services": {
+          "immigrationMedicalExams": {
+            "title": "Immigration Medical Exams",
+            "description": "USCIS-designated civil surgeon performing immigration medical exams."
+          },
+          "faaPhysicals": {
+            "title": "FAA Physicals (2nd & 3rd Class, No Basic Med)",
+            "description": "FAA-designated aviation medical examiner performing pilot physicals."
+          },
+          "dotPhysicals": {
+            "title": "DOT Physicals",
+            "description": "FMCSA-certified medical examiner performing DOT physicals."
+          },
+          "schoolSportsCampPhysicals": {
+            "title": "School/Sports/Camp Physicals",
+            "description": "Physicals for clearance to attend camp and school (including higher education) and perform sports."
+          }
+        },
+        "learnMoreButton": "Learn More About Our Services"
+      },
+      "whyChooseUsSection": {
+        "header": "Why Choose ProMed Exams?",
+        "description": "Discover the benefits of choosing our practice for your medical examination needs.",
+        "reasons": {
+          "timelyAndEfficient": {
+            "title": "Timely & Efficient",
+            "description": "We respect your time. Our processes are streamlined to ensure you are seen promptly and your results are delivered quickly."
+          },
+          "experiencedAndCertified": {
+            "title": "Experienced & Certified",
+            "description": "Our team is certified and experienced in USCIS, FAA, DOT, and school/sports/camp examinations, ensuring accuracy and compliance."
+          },
+          "patientCenteredCare": {
+            "title": "Patient-Centered Care",
+            "description": "We believe in honest, clear communication and compassionate care. Your health and peace of mind are our top priorities."
+          }
+        }
+      },
+      "meetOurTeamSection": {
+        "header": "Meet Our Team",
+        "description": "Our dedicated professionals are here to provide you with the best service.",
+        "employee": {
+          "jill": {
+            "name": "Jill Quigley, MD",
+            "jobTitle": "Lead Physician",
+            "shortDescription": "Dr. Quigley has been practicing medicine since 2008 and is board certified in Family Medicine. She is dedicated to providing exceptional care in a timely manner to every patient."
+          },
+          "trish": {
+            "name": "Trish Peery",
+            "jobTitle": "Office Manager",
+            "shortDescription": "With a strong background in front office management, Trish ensures that our office runs smoothly and that your experience is seamless from start to finish."
+          }
+        },
+        "learnMoreButton": "Learn More About Our Team"
+      },
+      "findUsSection": {
+        "header": "Find Us",
+        "description": "We are conveniently located in Littleton, CO near C-470 and Broadway. Schedule an appointment with us for your medical examination needs.",
+        "buttonText": "Get In Touch"
+      }
+    },
+    "services": {
+      "title": "Services",
+      "description": "At ProMed Exams, we are dedicated to providing efficient FAA physicals, DOT physicals, and school/sports/camp physicals to help you meet important requirements for certification and clearance. Our experienced and certified team is here to ensure a smooth and timely process for all your examination needs. We believe in honest, clear communication and compassionate, patient-centered care.",
+      "services": {
+        "moreInfoButton": "Learn More",
+        "immigrationMedicalExams": {
+          "title": "Immigration Medical Exams",
+          "shortDescription": "Only doctors designated by the USCIS as civil surgeons can complete an immigration exam. The exam assesses your health to determine if you meet the requirements for immigration to the U.S.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "Who Needs an Immigration Medical Exam?",
+              "description": [
+                "Anyone filing Form I-485 to apply for a U.S. green card or adjusting their immigration status within the U.S. is required by the USCIS (U.S. Citizenship and Immigration Services) to have an immigration medical examination. Only doctors designated by the USCIS as civil surgeons can complete an immigration exam."
+              ]
+            },
+            "whatToExpect": {
+              "header": "What to Expect",
+              "description": [
+                "The exam assesses your health to determine if you meet the requirements for immigration to the U.S. Expect a review of your medical history, mental health, and physical exam.",
+                "Blood and urine testing is required based on age to evaluate infectious diseases including tuberculosis, syphilis, and gonorrhea. A pre-paid lab order to LabCorp/Quest will be given to you at your appointment. You are expected to have your labs done immediately after your medical exam. We will provide information with locations and directions to LabCorp/Quest if needed. A chest x-ray is required if the tuberculosis blood test is positive. Vaccinations are required if age-appropriate vaccinations per CDC (Centers for Disease Control and Prevention) recommendation are not up-to-date. We do not provide vaccines but can direct you to the nearest, most cost-effective location for vaccination. You can eat/drink before the exam.",
+                "Common medical conditions such as diabetes, high cholesterol, and high blood pressure that are not of concern to public health do not interfere with the immigration process but are required to be listed on USCIS Form I-693 (Report of Medical Examination and Vaccination Record). Upon completion of all Form I-693 requirements, you will be given a completed signed and dated Form I-693 in a sealed envelope. Do not open this envelope; it should be submitted in the sealed envelope to the USCIS as part of the application process. An unsealed identical set of documents will also be provided to you."
+              ],
+              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
+              "updatePanel": {
+                "title": "UPDATE (December 2, 2024)",
+                "message": "USCIS announced that you are required to submit Form I-693 with your Form I-485. You may not opt to mail the medical exam results at a later date. If you do not submit Form I-693 as a part of your adjustment of status application package, USCIS may reject your entire application."
+              }
+            }
+          },
+          "whatToBringSection": {
+            "header": "What to Bring to Your Appointment",
+            "items": [
+              "Valid passport or other government-issued photo identification",
+              "Form I-693, Report of Medical Examination and Vaccination Record",
+              "Vaccination records",
+              "List of current medications",
+              "Report of the condition and any special education or supervision requirements if immigrating with learning disabilities",
+              "Certificate of clearance if you have been diagnosed with syphilis and properly treated signed by a doctor or public health official",
+              "If you have a history of harmful or violent behavior resulting in injury to people or animals, information that will allow the doctor to determine whether the behavior was related to a psychiatric or medical problem, or to drug or alcohol use",
+              "If you have been treated or hospitalized for psychiatric or mental illness, or alcohol or drug abuse, written certification including the diagnosis, length of treatment, and your prognosis",
+              "Tuberculosis certificate from your doctor if you were diagnosed and properly treated in the past"
+            ],
+            "messagePanel": {
+              "title": "IMPORTANT NOTE",
+              "message": "Be sure to complete parts 1-5 on pages 1-3 of Form I-693 *prior* to your appointment.",
+              "buttonText": "Form I-693"
+            }
+          }
+        },
+        "faaPhysicals": {
+          "title": "FAA Physicals (2nd & 3rd Class, No Basic Med)",
+          "shortDescription": "The Federal Aviation Administration (FAA) requires pilots to be medically certified for their desired class of pilot certificate so that potential medical issues can be identified and addressed to prevent accidents and improve aviation safety.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "Who Needs an FAA Physical?",
+              "description": [
+                "The FAA designates physicians known as Aviation Medical Examiners (AME) who complete specialized FAA training to perform these medical certification exams. While the priority is aviation safety, my goal as an AME is to help pilots attain and maintain certification to fly. In addition, we can assist when medical conditions occur that require additional information for certification. At ProMed Exams, we offer prompt services to help get you in the air again as soon as possible, and we understand the importance of accuracy to avoid processing delays."
+              ]
+            },
+            "whatToExpect": {
+              "header": "What to Expect",
+              "description": [
+                "The exam assesses your overall physical and mental fitness for duty to ensure you can safely operate an aircraft. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.",
+                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, in most cases (unless concerns arise requiring deferment), you will leave your appointment with your medical certification."
+              ],
+              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider."
+            }
+          },
+          "whatToBringSection": {
+            "header": "What to Bring to Your Appointment",
+            "items": [
+              "Current photo ID (Driver's license or Passport)",
+              "MedXPress confirmation number",
+              "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
+              "Be prepared to leave a urine sample"
+            ],
+            "messagePanel": {
+              "title": "IMPORTANT NOTE",
+              "message": "Be sure to update your health history and current medications in MedXPress *prior* to your appointment.",
+              "buttonText": "FAA MedExpress"
+            }
+          }
+        },
+        "dotPhysicals": {
+          "title": "DOT Physicals",
+          "shortDescription": "A DOT (Department of Transportation) physical is a medical examination mandated by the Federal Motor Carrier Safety Administration (FMCSA) for commercial motor vehicle drivers.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "Who Needs a DOT Physical?",
+              "description": [
+                "Passing the DOT physical is required to obtain and maintain a commercial driver's license (CDL). The FMCSA requires that DOT physicals be performed by a certified medical examiner (CME) that has undergone extensive training and is certified by the FMCSA to perform DOT physicals. At ProMed Exams, we offer prompt services to help get you on the road again as soon as possible, and we understand the importance of accuracy to avoid processing delays."
+              ]
+            },
+            "whatToExpect": {
+              "header": "What to Expect",
+              "description": [
+                "The exam ensures drivers are physically and mentally fit to operate commercial vehicles safely. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.",
+                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, your results will be reported electronically to the National Registry of Certified Medical Examiners (NRCME). If you meet all FMCSA requirements, you will leave your appointment with your medical examiner's certificate (DOT medical card).",
+                "If we find an issue that needs attention, you may need to see your primary care provider and/or a specialist for further testing, treatment, or paperwork. You may still qualify for your medical certificate, but only after taking care of the medical issue or obtaining necessary documentation. In some cases, a health condition may disqualify you from receiving a medical certificate."
+              ],
+              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
+              "updatePanel": {
+                "title": "UPDATE",
+                "message": "As of 2023, CMV drivers with insulin-treated diabetes mellitus (type 1 or type 2) and/or monocular vision must meet updated standards to be certified. Forms for these exemptions must be completed no more than 45 days before the DOT exam is performed and brought to the DOT exam."
+              }
+            }
+          },
+          "whatToBringSection": {
+            "header": "What to Bring to Your Appointment",
+            "items": [
+              "Current state-issued driver's license",
+              "Medical Examination Report Form (MCSA-5875)",
+              "List of current medications with dosages and prescriber's name",
+              "Any special circumstances or exemption letters from your doctor(s)",
+              "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
+              "Be prepared to leave a urine sample"
+            ],
+            "messagePanel": {
+              "title": "IMPORTANT NOTE",
+              "message": "Be sure to complete the driver information and health history sections on the Medical Examination Report Form *prior* to your appointment.",
+              "buttonText": "Form MCSA-5875"
+            }
+          }
+        },
+        "schoolSportsCampPhysicals": {
+          "title": "School/Sports/Camp Physicals",
+          "shortDescription": "School, sports, and camp physicals are also known as pre-participation physical evaluations (PPEs). Many schools, sports organizations, and camps require these physicals as a prerequisite for participation to assess a person's overall health and fitness.",
+          "informationSection": {
+            "whoApplies": {
+              "header": "Who Needs a School, Sports, and/or Camp Physical?",
+              "description": [
+                "Many schools, sports organizations, and camps require these physicals as a prerequisite for participation to assess a person's overall health and fitness."
+              ]
+            },
+            "whatToExpect": {
+              "header": "What to Expect",
+              "description": [
+                "These exams help identify potential medical issues, such as heart, lung, neurologic, or musculoskeletal problems, that could affect an individual's ability to safely engage in activities and ensure that all necessary vaccinations are up-to-date. Requirements of these exams can vary by state, sport, and organization. Be sure to check with the program administrator about the necessary requirements to be cleared to participate.",
+                "Expect a review of your medical history and physical exam including blood pressure, heart rate, and height/weight. Typically, a urinalysis is required, as well as vision testing. An ECG may be necessary if indicated. Vaccinations may be required if age-appropriate vaccinations are not up-to-date. We do not provide vaccines but can direct you to the nearest, most cost-effective location for vaccination. You can eat/drink before the exam.",
+                "Upon completion of the exam, in most cases (unless concerns arise requiring further evaluation), you will leave your appointment with your forms completed and signed."
+              ],
+              "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
+              "messagePanel": {
+                "title": "IMPORTANT NOTE",
+                "message": "ProMed Exams does not bill insurance for any exams or services. An itemized receipt is available for all patients to send to their insurance company for school/sports/camp physicals."
+              }
+            }
+          },
+          "whatToBringSection": {
+            "header": "What to Bring to Your Appointment",
+            "items": [
+              "List of allergies and current medications with dosages (prescription and over-the-counter)",
+              "List of past injuries and surgeries, pertinent family history",
+              "Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley",
+              "Immunization records"
+            ]
+          }
+        },
+        "specificServicePages": {
+          "scheduleSection": {
+            "header": "Ready to Schedule Your Exam?",
+            "description": "Let's get your visit scheduled. Our team is ready to assist you.",
+            "scheduleAppointmentButtonText": "Schedule Appointment"
+          },
+          "wrongServiceSection": {
+            "header": "Not the Service You're Looking For?",
+            "description": "We offer a range of other specialized medical examinations. Explore our other services to find the one that's right for you.",
+            "otherServicesButtonText": "View Other Services"
+          }
+        }
+      },
+      "contactSubSection": {
+        "header": "Want to get in touch?",
+        "message": "Contact us to schedule an appointment or to learn more about the services we offer.",
+        "scheduleAppointmentButtonText": "Schedule Appointment",
+        "contactButtonText": "Contact Us"
+      }
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "Our team of dedicated and experienced professionals is the heart of ProMed Exams. We are committed to providing compassionate and expert care to every client. Learn more about the individuals who are here to support your journey.",
+      "employee": {
+        "jill": {
+          "name": "Jill Quigley, MD",
+          "jobTitle": "Lead Physician",
+          "bioParagraphs": [
+            "Dr. Quigley grew up in the Kansas City, Missouri area, attended medical school at the University of Missouri-Columbia School of Medicine, and completed family medicine residency at Wake Forest University School of Medicine. She has been practicing medicine since 2008 and is board certified in Family Medicine.",
+            "After practicing family medicine for more than 16 years, she was excited to embark on a new, more focused journey in medicine performing specific medical examinations as an FAA-designated aviation medical examiner (AME) performing pilot physicals, FMCSA-certified medical examiner performing DOT physicals, and USCIS-designated civil surgeon performing immigration medical examinations. She also wanted to continue seeing children, adolescents, and adults for their school/sports/camp physicals. She strives to give exceptional care in a timely manner to every person. She believes in honest clear communication, listening, caring about the details, being on time, and mutual respect.",
+            "Dr. Quigley is happily married with two dogs (Linda and Margie). She enjoys traveling, hiking, skiing, gardening, music, and reading."
+          ]
+        },
+        "trish": {
+          "name": "Trish Peery",
+          "jobTitle": "Office Manager",
+          "bioParagraphs": [
+            "Trish worked at Dr. Quigley's family practice for 10 years as her front office manager. Her previous background was in the insurance and finance industry working for State Farm and Edward Jones. She continues to hold her CO Insurance License.",
+            "Trish enjoys traveling, jogging, skiing, and family. She enjoys working with Dr. Quigley as they serve the community with care, compassion, and life balance."
+          ]
+        }
+      },
+      "contactSubSection": {
+        "header": "Want to get in touch?",
+        "message": "Contact us to schedule an appointment or to learn more about the services we offer.",
+        "scheduleAppointmentButtonText": "Schedule Appointment",
+        "contactButtonText": "Contact Us"
+      }
+    },
+    "contact": {
+      "title": "Contact & Location",
+      "description": "Have questions or ready to book an appointment? Our team is here to assist you. Send us an email, give us a call, or schedule an appointment online. We look forward to hearing from you and helping you with your medical examination needs.",
+      "contactInfoHeader": "Our Office"
+    },
+    "scheduleAppointment": {
+      "title": "Schedule Appointment",
+      "description": "Please fill out the form below to schedule your appointment. We will get back to you as soon as possible to confirm your appointment.",
+      "maintenanceWindow": {
+        "header": "Self-Scheduling Undergoing Maintenance",
+        "subheader": "The ability to schedule an appointment through our website will be available soon. In the meantime, please call (720) 517-3111 or email office@promedexams.com to schedule an appointment."
+      }
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "message": "Sorry, the page you are looking for does not exist.",
+      "goHomeButton": "Go Back to Home Page"
+    }
+  }
+}

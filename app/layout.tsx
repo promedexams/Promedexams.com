@@ -2,13 +2,22 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import { Branding } from "@/lib/branding";
-import { DomainURL } from "@/lib/links";
+import BackToTopButton from "@/components/back-to-top-button";
+import { BusinessInfo } from "@/lib/business-info";
+import { DOMAIN_URL } from "@/lib/links";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DomainURL),
-  title: Branding.Name,
-  description: `The official website for ${Branding.Name}.`,
+  metadataBase: new URL(DOMAIN_URL),
+  title: BusinessInfo.Name,
+  description: `The official website for ${BusinessInfo.Name}.`,
+  icons: {
+    icon: [
+      {
+        url: BusinessInfo.Logos.GlobeIcon,
+        href: BusinessInfo.Logos.GlobeIcon,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -19,7 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className="bg-white overflow-x-clip">{children}</body>
+      <body id="top" className="overflow-x-clip bg-[#07001c]">
+        {children}
+        <BackToTopButton />
+      </body>
     </html>
   );
 }
