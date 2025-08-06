@@ -197,7 +197,8 @@
               "header": "What to Expect",
               "description": [
                 "The exam assesses your overall physical and mental fitness for duty to ensure you can safely operate an aircraft. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.",
-                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, in most cases (unless concerns arise requiring deferment), you will leave your appointment with your medical certification."
+                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, in most cases (unless concerns arise requiring deferment), you will leave your appointment with your medical certification.",
+                "Cost of exam is $200 for all classes. Extra charges may apply for SODA, CACI, Special Issuance based on case complexity."
               ],
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider."
             }
@@ -232,7 +233,8 @@
               "description": [
                 "The exam ensures drivers are physically and mentally fit to operate commercial vehicles safely. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.",
                 "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, your results will be reported electronically to the National Registry of Certified Medical Examiners (NRCME). If you meet all FMCSA requirements, you will leave your appointment with your medical examiner's certificate (DOT medical card).",
-                "If we find an issue that needs attention, you may need to see your primary care provider and/or a specialist for further testing, treatment, or paperwork. You may still qualify for your medical certificate, but only after taking care of the medical issue or obtaining necessary documentation. In some cases, a health condition may disqualify you from receiving a medical certificate."
+                "If we find an issue that needs attention, you may need to see your primary care provider and/or a specialist for further testing, treatment, or paperwork. You may still qualify for your medical certificate, but only after taking care of the medical issue or obtaining necessary documentation. In some cases, a health condition may disqualify you from receiving a medical certificate.",
+                "Cost of exam is $100. Extra charges may apply for complex cases requiring extra time spent reviewing records or completing forms, and for additional optional testing."
               ],
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
               "updatePanel": {
@@ -273,7 +275,8 @@
               "description": [
                 "These exams help identify potential medical issues, such as heart, lung, neurologic, or musculoskeletal problems, that could affect an individual's ability to safely engage in activities and ensure that all necessary vaccinations are up-to-date. Requirements of these exams can vary by state, sport, and organization. Be sure to check with the program administrator about the necessary requirements to be cleared to participate.",
                 "Expect a review of your medical history and physical exam including blood pressure, heart rate, and height/weight. Typically, a urinalysis is required, as well as vision testing. An ECG may be necessary if indicated. Vaccinations may be required if age-appropriate vaccinations are not up-to-date. We do not provide vaccines but can direct you to the nearest, most cost-effective location for vaccination. You can eat/drink before the exam.",
-                "Upon completion of the exam, in most cases (unless concerns arise requiring further evaluation), you will leave your appointment with your forms completed and signed."
+                "Upon completion of the exam, in most cases (unless concerns arise requiring further evaluation), you will leave your appointment with your forms completed and signed.",
+                "Cost of exam starts at $60 depending on case complexity and additional testing."
               ],
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
               "messagePanel": {

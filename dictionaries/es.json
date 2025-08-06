@@ -197,7 +197,8 @@
               "header": "Qué Esperar",
               "description": [
                 "El examen evalúa su aptitud física y mental general para el servicio, para garantizar que puede operar una aeronave de forma segura. Puede esperar una revisión de su historial médico, salud mental y un examen físico. Para el examen se requiere la evaluación de la presión arterial, la frecuencia cardíaca, la altura/peso, la visión, la audición y un análisis de orina.",
-                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran un aplazamiento), saldrá de su cita con su certificación médica."
+                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran un aplazamiento), saldrá de su cita con su certificación médica.",
+                "El costo del examen es de $200 para todas las clases. Se pueden aplicar cargos adicionales para SODA, CACI y Emisiones Especiales (Special Issuance) según la complejidad del caso."
               ],
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria."
             }
@@ -232,7 +233,8 @@
               "description": [
                 "El examen asegura que los conductores estén física y mentalmente aptos para operar vehículos comerciales de forma segura. Puede esperar una revisión de su historial médico, salud mental y un examen físico. Para el examen se requiere la evaluación de la presión arterial, la frecuencia cardíaca, la altura/peso, la visión, la audición y un análisis de orina.",
                 "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, sus resultados se informarán electrónicamente al Registro Nacional de Examinadores Médicos Certificados (NRCME). Si cumple con todos los requisitos de la FMCSA, saldrá de su cita con su certificado de examinador médico (tarjeta médica del DOT).",
-                "Si encontramos un problema que requiere atención, es posible que deba consultar a su proveedor de atención primaria y/o a un especialista para realizar más pruebas, tratamientos o trámites. Aún podría calificar para su certificado médico, pero solo después de resolver el problema médico u obtener la documentación necesaria. En algunos casos, una condición de salud puede descalificarlo para recibir un certificado médico."
+                "Si encontramos un problema que requiere atención, es posible que deba consultar a su proveedor de atención primaria y/o a un especialista para realizar más pruebas, tratamientos o trámites. Aún podría calificar para su certificado médico, pero solo después de resolver el problema médico u obtener la documentación necesaria. En algunos casos, una condición de salud puede descalificarlo para recibir un certificado médico.",
+                "El costo del examen es de $100. Se pueden aplicar cargos adicionales para casos complejos que requieran tiempo extra para la revisión de expedientes o para completar formularios, y por pruebas opcionales adicionales."
               ],
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
               "updatePanel": {
@@ -273,7 +275,8 @@
               "description": [
                 "Estos exámenes ayudan a identificar posibles problemas médicos, como problemas cardíacos, pulmonares, neurológicos o musculoesqueléticos, que podrían afectar la capacidad de una persona para participar en actividades de forma segura y asegurar que todas las vacunas necesarias estén al día. Los requisitos de estos exámenes pueden variar según el estado, el deporte y la organización. Asegúrese de consultar con el administrador del programa sobre los requisitos necesarios para obtener la autorización para participar.",
                 "Puede esperar una revisión de su historial médico y un examen físico que incluye la presión arterial, la frecuencia cardíaca y la altura/peso. Generalmente, se requiere un análisis de orina, así como una prueba de la vista. Un electrocardiograma (ECG) puede ser necesario si está indicado. Se pueden requerir vacunas si las vacunas apropiadas para la edad no están al día. No proporcionamos vacunas, pero podemos dirigirle a la ubicación más cercana y económica para vacunarse. Puede comer y beber antes del examen.",
-                "Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran una evaluación adicional), saldrá de su cita con sus formularios completados y firmados."
+                "Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran una evaluación adicional), saldrá de su cita con sus formularios completados y firmados.",
+                "El costo del examen es a partir de $60, dependiendo de la complejidad del caso y de las pruebas adicionales."
               ],
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
               "messagePanel": {
