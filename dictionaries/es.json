@@ -63,7 +63,7 @@
       "title": "Inicio",
       "heroSection": {
         "descriptorWords": ["Excelencia", "Integridad", "Eficiencia"],
-        "description": "Ofrecemos *exámenes médicos de inmigración*, *exámenes médicos de la FAA*, *exámenes médicos del DOT* y *exámenes físicos escolares, deportivos y de campamento* para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo se dedica a garantizar una experiencia ágil, oportuna y sin estrés de principio a fin.",
+        "description": "Ofrecemos *exámenes médicos de la FAA*, *exámenes médicos del DOT* y *exámenes físicos escolares, deportivos y de campamento* para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo se dedica a garantizar una experiencia ágil, oportuna y sin estrés de principio a fin.",
         "scheduleAppointment": "Agendar Cita",
         "scrollDownText": "desliza para más"
       },
@@ -133,7 +133,7 @@
     },
     "services": {
       "title": "Servicios",
-      "description": "En ProMed Exams, nos dedicamos a ofrecer eficientes exámenes médicos de inmigración, exámenes médicos de la FAA, exámenes médicos del DOT, y exámenes físicos escolares, deportivos y de campamento para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo experimentado y certificado está aquí para garantizar un proceso ágil y oportuno para todas sus necesidades de examinación. Creemos en la comunicación honesta y clara, y en una atención compasiva y centrada en el paciente.",
+      "description": "En ProMed Exams, nos dedicamos a ofrecer eficientes exámenes médicos de la FAA, exámenes médicos del DOT, y exámenes físicos escolares, deportivos y de campamento para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo experimentado y certificado está aquí para garantizar un proceso ágil y oportuno para todas sus necesidades de examinación. Creemos en la comunicación honesta y clara, y en una atención compasiva y centrada en el paciente.",
       "services": {
         "moreInfoButton": "Más Información",
         "immigrationMedicalExams": {

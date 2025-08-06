@@ -63,7 +63,7 @@
       "title": "Home",
       "heroSection": {
         "descriptorWords": ["Excellence", "Integrity", "Efficiency"],
-        "description": "Providing *Immigration Medical Exams*, *FAA Physicals*, *DOT Physicals*, and *School/Sports/Camp Physicals* to help you meet important requirements for certification and clearance. Our team is dedicated to ensuring a smooth, timely, and stress-free experience from start to finish.",
+        "description": "Providing *FAA Physicals*, *DOT Physicals*, and *School/Sports/Camp Physicals* to help you meet important requirements for certification and clearance. Our team is dedicated to ensuring a smooth, timely, and stress-free experience from start to finish.",
         "scheduleAppointment": "Schedule Appointment",
         "scrollDownText": "scroll for more"
       },
@@ -133,7 +133,7 @@
     },
     "services": {
       "title": "Services",
-      "description": "At ProMed Exams, we are dedicated to providing efficient immigration medical exams, FAA physicals, DOT physicals, and school/sports/camp physicals to help you meet important requirements for certification and clearance. Our experienced and certified team is here to ensure a smooth and timely process for all your examination needs. We believe in honest, clear communication and compassionate, patient-centered care.",
+      "description": "At ProMed Exams, we are dedicated to providing efficient FAA physicals, DOT physicals, and school/sports/camp physicals to help you meet important requirements for certification and clearance. Our experienced and certified team is here to ensure a smooth and timely process for all your examination needs. We believe in honest, clear communication and compassionate, patient-centered care.",
       "services": {
         "moreInfoButton": "Learn More",
         "immigrationMedicalExams": {

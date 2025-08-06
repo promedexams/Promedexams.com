@@ -48,9 +48,9 @@ const Footer = async ({ params }: SupportedLanguagesProps) => {
           </div>
           <div className="space-y-3">
             <h3 className="font-bold text-white mb-2">{dict.footer.navlinks.services.header}</h3>
-            <Link href="/services/immigration-medical-exams" className="block hover:text-white transition-colors">
+            {/* <Link href="/services/immigration-medical-exams" className="block hover:text-white transition-colors">
               {dict.footer.navlinks.services.ImmigrationMedicalExams}
-            </Link>
+            </Link> */}
             <Link href="/services/faa-physicals" className="block hover:text-white transition-colors">
               {dict.footer.navlinks.services.FAAPhysicals}
             </Link>
