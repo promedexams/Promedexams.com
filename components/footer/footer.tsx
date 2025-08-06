@@ -2,6 +2,7 @@ import Link from "next/link";
 import { toZonedTime } from "date-fns-tz";
 
 import { BusinessInfo } from "@/lib/business-info";
+import { RavisionTechInfo } from "@/lib/ravision-tech-info";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { formatTime, isOfficeOpen } from "@/lib/utils/business-hours";
 import { getDictionary } from "@/lib/utils/dictionaries";
@@ -90,7 +91,20 @@ const Footer = async ({ params }: SupportedLanguagesProps) => {
         </div>
         <hr className="my-6 border-gray-600" />
         <div className="flex flex-col-reverse md:flex-row justify-between items-center text-center md:text-left gap-2">
-          <p className="text-sm text-white/50">{BusinessInfo.CopyrightDisclaimer}</p>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <p className="text-sm text-white/50">{BusinessInfo.CopyrightDisclaimer}</p>
+            <span className="hidden sm:flex text-sm text-white/50">•</span>
+            <p className="text-sm text-white/50">
+              {dict.footer.websiteCredits.creditPrefix + " "}
+              <Link
+                href={RavisionTechInfo.WebsiteURL}
+                target="_blank"
+                className="underline hover:text-white transition-colors duration-200"
+              >
+                {RavisionTechInfo.CleanWebsiteURL}
+              </Link>
+            </p>
+          </div>
           <div className="flex flex-row gap-2 items-center justify-center">
             {officeIsOpen && todayHours ? (
               <div className="text-white flex flex-row gap-2 justify-center items-center">

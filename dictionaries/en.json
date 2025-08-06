@@ -13,6 +13,9 @@
     "scheduleAppointmentButtonText": "Schedule Appointment"
   },
   "footer": {
+    "websiteCredits": {
+      "creditPrefix": "Website by"
+    },
     "languageSwitcher": {
       "search": "Search Languages...",
       "notFound": "Language not found."

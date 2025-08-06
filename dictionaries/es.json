@@ -13,6 +13,9 @@
     "scheduleAppointmentButtonText": "Agendar Cita"
   },
   "footer": {
+    "websiteCredits": {
+      "creditPrefix": "Sitio web por"
+    },
     "languageSwitcher": {
       "search": "Buscar idiomas...",
       "notFound": "Idioma no encontrado."
