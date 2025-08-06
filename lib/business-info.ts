@@ -5,6 +5,7 @@ export const BusinessInfo = {
     WordMark: "/branding/logos/wordmark.svg",
     GlobeIcon: "/branding/logos/globe-logo.svg",
   },
+  SocialPreviewImage: "/images/meta-images/promed-exams-social-preview-image.png",
   CopyrightDisclaimer: `© ${new Date().getFullYear()}, ProMed Exams PC`,
   ContactInformation: {
     HoursOfOperation: {

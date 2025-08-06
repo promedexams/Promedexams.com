@@ -18,6 +18,27 @@ export const metadata: Metadata = {
       },
     ],
   },
+  openGraph: {
+    type: "website",
+    url: DOMAIN_URL,
+    title: BusinessInfo.Name,
+    images: [
+      {
+        url: BusinessInfo.SocialPreviewImage,
+        alt: `A preview image for the ${BusinessInfo.Name} website containing the logo.`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: BusinessInfo.Name,
+    images: [
+      {
+        url: BusinessInfo.SocialPreviewImage,
+        alt: `A preview image for the ${BusinessInfo.Name} website containing the logo.`,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
