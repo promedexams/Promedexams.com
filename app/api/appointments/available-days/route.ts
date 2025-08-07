@@ -23,7 +23,6 @@ export async function GET() {
   }
 
   try {
-    // Get location info (including business hours)
     const locationRes = await client.locations.get({ locationId });
     const location = locationRes.location;
 
@@ -31,10 +30,6 @@ export async function GET() {
       return NextResponse.json([], { status: 200 });
     }
 
-    // Debug: Log the business hours to see what Square is returning
-    console.log("Business hours periods:", JSON.stringify(location.businessHours.periods, null, 2));
-
-    // Get all unique days of week that have business hours
     const openDays = new Set<number>();
     for (const period of location.businessHours.periods) {
       if (period.dayOfWeek) {
@@ -47,12 +42,10 @@ export async function GET() {
       }
     }
 
-    // Generate next 60 days that match open days
     const today = new Date();
     const availableDays: string[] = [];
 
     for (let i = 0; i < 365; i++) {
-      // Create date in local timezone to avoid UTC conversion issues
       const year = today.getFullYear();
       const month = today.getMonth();
       const day = today.getDate() + i;
@@ -61,7 +54,6 @@ export async function GET() {
       const dayOfWeek = date.getDay();
 
       if (openDays.has(dayOfWeek)) {
-        // Format date manually to avoid timezone issues
         const isoDate =
           date.getFullYear() +
           "-" +
