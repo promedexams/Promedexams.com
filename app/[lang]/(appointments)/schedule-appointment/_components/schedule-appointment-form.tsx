@@ -6,12 +6,16 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
+import { AppointmentOption } from "@/lib/types/api/appointment-option";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 import { formatPhoneNumber } from "@/lib/utils/schedule-appointment";
 
 const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [dict, setDict] = useState<any>(null);
+
+  // API Pulls
+  const [appointmentTypes, setAppointmentTypes] = useState<AppointmentOption[]>([]);
 
   // Form values
   // Personal Information
@@ -33,6 +37,15 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   }, [params]);
 
   useEffect(() => {
+    const fetchAppointmentTypes = async () => {
+      const res = await fetch("/api/catalog/services");
+      const data = await res.json();
+      setAppointmentTypes(data);
+    };
+    fetchAppointmentTypes();
+  }, []);
+
+  useEffect(() => {
     if (!selectedDate) {
       setAvailableTimes([]);
       setSelectedTime("");
@@ -48,7 +61,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     fetchTimes();
   }, [selectedDate]);
 
-  if (!dict) {
+  if (!dict || appointmentTypes.length === 0) {
     return (
       <div className="flex justify-center items-center">
         <Loader2 className="w-24 h-24 animate-spin" />
@@ -153,11 +166,11 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             <option value="" disabled>
               Select appointment type
             </option>
-            <option value="consultation">Pre-Exam Consultation</option>
-            <option value="immigration">USCIS Immigration Medical Exam</option>
-            <option value="faa">FAA Pilot Physical (2nd & 3rd Class)</option>
-            <option value="dot">DOT Driver Physical</option>
-            <option value="school">School/Sports/Camp Physical</option>
+            {appointmentTypes.map((type) => (
+              <option key={type.id} value={type.id}>
+                {type.name}
+              </option>
+            ))}
           </select>
         </div>
         <div>
