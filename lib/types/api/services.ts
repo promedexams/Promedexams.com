@@ -3,8 +3,10 @@
  *
  * @property id - The unique identifier of the service type.
  * @property name - The display name of the service type.
+ * @property variationVersion - The variation version id of the service type.
  */
 export interface ServiceTypeResponse {
   id: string;
   name: string;
+  variationVersion: string;
 }

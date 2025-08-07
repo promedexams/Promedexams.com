@@ -1,4 +1,3 @@
-// api/appointments/book/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { SquareClient, SquareEnvironment } from "square";
 
@@ -15,6 +14,7 @@ export async function POST(request: NextRequest) {
       "email",
       "phoneNumber",
       "serviceId",
+      "serviceVariationVersion",
       "appointmentDate",
       "appointmentTime",
       "birthday",
@@ -40,8 +40,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           success: false,
-          error: customer.error || "Failed to create customer",
-          code: "CUSTOMER_ERROR",
+          error: customer.error || "Failed to create client",
+          code: "CLIENT_ERROR",
         },
         { status: 500 }
       );
@@ -112,8 +112,8 @@ async function createOrGetCustomer(client: SquareClient, bookingData: BookingReq
       givenName: bookingData.firstName,
       familyName: bookingData.lastName,
       emailAddress: bookingData.email,
-      phoneNumber: bookingData.phoneNumber.replace(/\D/g, ""), // Remove formatting
-      birthday: bookingData.birthday, // YYYY-MM-DD format
+      phoneNumber: bookingData.phoneNumber.replace(/\D/g, ""),
+      birthday: bookingData.birthday,
       note: generateCustomerNote(bookingData),
     });
 
@@ -146,10 +146,9 @@ async function createBooking(client: SquareClient, bookingData: BookingRequest, 
       booking: {
         appointmentSegments: [
           {
-            durationMinutes: 60, // Adjust based on your service duration
             serviceVariationId: bookingData.serviceId,
-            teamMemberId: "",
-            anyTeamMember: true,
+            serviceVariationVersion: BigInt(bookingData.serviceVariationVersion),
+            teamMemberId: process.env.SQUARE_OWNER_TEAM_MEMBER_ID!,
           },
         ],
         locationId: process.env.SQUARE_OFFICE_LOCATION_ID,
@@ -192,7 +191,8 @@ async function createBooking(client: SquareClient, bookingData: BookingRequest, 
 
 function convertToDateTime(date: string, time: string): string {
   // Parse the date (YYYY-MM-DD format)
-  const appointmentDate = new Date(date + "T00:00:00.000Z");
+  // Mountain Time is UTC-7 (MST) or UTC-6 (MDT, daylight saving)
+  // This version assumes MST (UTC-7) year-round. For DST, use a library like luxon.
 
   // Parse time (e.g., "10:00 AM" or "2:30 PM")
   const [timeStr, period] = time.split(" ");
@@ -205,9 +205,12 @@ function convertToDateTime(date: string, time: string): string {
     hour24 = 0;
   }
 
-  appointmentDate.setUTCHours(hour24, minutes, 0, 0);
+  // Create a Date object in UTC for the given date and time in MST
+  const appointmentDate = new Date(`${date}T00:00:00.000Z`);
+  // Set the time as if it were MST, then add 7 hours to convert MST to UTC
+  appointmentDate.setUTCHours(hour24 + 7, minutes, 0, 0);
 
-  // Return in RFC 3339 format
+  // Return in RFC 3339 format (ISO string)
   return appointmentDate.toISOString();
 }
 

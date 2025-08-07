@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { Check, ChevronRight, Edit2, Loader2 } from "lucide-react";
 import DatePicker from "react-datepicker";
 
@@ -30,6 +30,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
   // Appointment Information
   const [selectedAppointmentType, setSelectedAppointmentType] = useState("");
+  const [selectedAppointmentVariationVersion, setSelectedAppointmentVariationVersion] = useState<number | null>(null);
   const [newOrReturningClient, setNewOrReturningClients] = useState("");
   const [newHealthConditions, setNewHealthConditions] = useState("");
   const [newMedications, setNewMedications] = useState("");
@@ -40,6 +41,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [availableTimes, setAvailableTimes] = useState<string[]>([]);
   const [selectedTime, setSelectedTime] = useState("");
   const [availableDays, setAvailableDays] = useState<Date[]>([]);
+
+  // Booking Submission
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     params.then(({ lang }) => {
@@ -116,7 +120,11 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   };
 
   const validateAppointmentInfo = () => {
-    const baseValidation = selectedAppointmentType !== "" && newOrReturningClient !== "" && hasQuestions !== "";
+    const baseValidation =
+      selectedAppointmentType !== "" &&
+      selectedAppointmentVariationVersion !== null &&
+      newOrReturningClient !== "" &&
+      hasQuestions !== "";
 
     if (newOrReturningClient === "returning") {
       return baseValidation && newHealthConditions !== "" && newMedications !== "";
@@ -127,6 +135,16 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
   const validateCalendarBooking = () => {
     return selectedBookingDate !== null && selectedTime !== "";
+  };
+
+  const handleAppointmentTypeChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    const selectedId = e.target.value;
+    const selectedService = appointmentTypes.find((service) => service.id === selectedId);
+
+    if (selectedService) {
+      setSelectedAppointmentType(selectedService.id);
+      setSelectedAppointmentVariationVersion(Number(selectedService.variationVersion));
+    }
   };
 
   const handleNextStep = (step: number) => {
@@ -156,6 +174,63 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     setCurrentStep(step);
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validatePersonalInfo() || !validateAppointmentInfo() || !validateCalendarBooking()) {
+      alert("Please complete all required fields");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const bookingData = {
+        // Personal Information
+        firstName: firstName.trim(),
+        middleInitial: middleInitial.trim(),
+        lastName: lastName.trim(),
+        birthday: birthday!.toISOString().split("T")[0], // Convert to YYYY-MM-DD
+        email: email.trim().toLowerCase(),
+        phoneNumber: phoneNumber,
+
+        // Appointment Information
+        serviceId: selectedAppointmentType,
+        serviceVariationVersion: selectedAppointmentVariationVersion,
+        newOrReturningClient: newOrReturningClient as "new" | "returning",
+        newHealthConditions: newHealthConditions as "yes" | "no" | undefined,
+        newMedications: newMedications as "yes" | "no" | undefined,
+        hasQuestions: hasQuestions as "yes" | "no",
+
+        // Date/Time
+        appointmentDate: selectedBookingDate!.toISOString().split("T")[0],
+        appointmentTime: selectedTime,
+      };
+
+      const response = await fetch("/api/appointments/create-booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(bookingData),
+      });
+
+      const result = await response.json();
+
+      // Show alert with the response status/code
+      if (result.success) {
+        alert(`SUCCESS: ${result.code} - Booking ID: ${result.bookingId}`);
+      } else {
+        alert(`ERROR: ${result.code} - ${result.error}`);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("NETWORK_ERROR - An unexpected error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   if (!dict || appointmentTypes.length === 0) {
     return (
       <div className="flex justify-center items-center">
@@ -171,7 +246,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   ];
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       {/* Progress Indicator */}
       <div className="w-full bg-slate-800/20 p-6 mb-8 rounded-2xl shadow-xl">
         <div className="flex flex-col sm:flex-row items-center justify-center">
@@ -394,7 +469,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   disabled={completedSteps.has(2) && currentStep !== 2}
                   className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   value={selectedAppointmentType}
-                  onChange={(e) => setSelectedAppointmentType(e.target.value)}
+                  onChange={handleAppointmentTypeChange}
                 >
                   <option value="" disabled>
                     Select appointment type
@@ -633,12 +708,20 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             All sections have been completed. Review your information above and submit your appointment request when
             ready.
           </p>
+
           <button
             type="submit"
-            className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold py-3 px-8 rounded-lg transition-transform duration-200 hover:scale-105 cursor-pointer"
-            disabled={true}
+            disabled={isSubmitting}
+            className="bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold py-3 px-8 rounded-lg transition-transform duration-200 hover:scale-105 cursor-pointer flex items-center gap-2 mx-auto"
           >
-            Schedule Appointment
+            {isSubmitting ? (
+              <>
+                <Loader2 className="w-5 h-5 animate-spin" />
+                Scheduling...
+              </>
+            ) : (
+              "Schedule Appointment"
+            )}
           </button>
         </div>
       )}
