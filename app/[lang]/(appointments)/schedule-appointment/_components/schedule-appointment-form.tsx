@@ -1,17 +1,23 @@
 "use client";
 
 import { ChangeEvent, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { CalendarSearchIcon, Check, ChevronRight, ClipboardClockIcon, Edit2, Loader2, UserIcon } from "lucide-react";
 import DatePicker from "react-datepicker";
 
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+
 import "react-datepicker/dist/react-datepicker.css";
+
+import Link from "next/link";
 
 import { ServiceTypeResponse } from "@/lib/types/api/services";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
-import { formatPhoneNumber } from "@/lib/utils/schedule-appointment";
+import { ErrorInfo, formatPhoneNumber, getErrorInfo } from "@/lib/utils/schedule-appointment";
 
 const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
+  const router = useRouter();
   const [dict, setDict] = useState<any>(null);
   const [currentStep, setCurrentStep] = useState(1);
   const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
@@ -44,6 +50,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
   // Booking Submission
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<ErrorInfo | null>(null);
 
   useEffect(() => {
     params.then(({ lang }) => {
@@ -53,9 +60,15 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
   useEffect(() => {
     const fetchAppointmentTypes = async () => {
-      const res = await fetch("/api/catalog/services");
-      const data = await res.json();
-      setAppointmentTypes(data);
+      try {
+        const res = await fetch("/api/catalog/services");
+        if (!res.ok) throw new Error("Failed to fetch appointment types");
+        const data = await res.json();
+        setAppointmentTypes(data);
+      } catch (err) {
+        setError(getErrorInfo("NETWORK_ERROR"));
+        setAppointmentTypes([]);
+      }
     };
     fetchAppointmentTypes();
   }, []);
@@ -66,18 +79,18 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
       return;
     }
     const fetchAvailableDays = async () => {
-      const res = await fetch(`/api/appointments/available-days?serviceId=${selectedAppointmentType}`);
-      const data = await res.json();
-
       try {
+        const res = await fetch(`/api/appointments/available-days?serviceId=${selectedAppointmentType}`);
+        if (!res.ok) throw new Error("Failed to fetch available days");
+        const data = await res.json();
         setAvailableDays(
           data.map((dateStr: string) => {
-            // Convert to local timezone
             const [year, month, day] = dateStr.split("-").map(Number);
             return new Date(year, month - 1, day);
           })
         );
-      } catch {
+      } catch (err) {
+        setError(getErrorInfo("NETWORK_ERROR"));
         setAvailableDays([]);
       }
     };
@@ -92,11 +105,20 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     }
 
     const fetchTimes = async () => {
-      const dateStr = selectedBookingDate.toISOString().split("T")[0];
-      const res = await fetch(`/api/appointments/available-times?serviceId=${selectedAppointmentType}&date=${dateStr}`);
-      const data = await res.json();
-      setAvailableTimes(Array.isArray(data) ? data : []);
-      setSelectedTime("");
+      try {
+        const dateStr = selectedBookingDate.toISOString().split("T")[0];
+        const res = await fetch(
+          `/api/appointments/available-times?serviceId=${selectedAppointmentType}&date=${dateStr}`
+        );
+        if (!res.ok) throw new Error("Failed to fetch available times");
+        const data = await res.json();
+        setAvailableTimes(Array.isArray(data) ? data : []);
+        setSelectedTime("");
+      } catch (err) {
+        setError(getErrorInfo("NETWORK_ERROR"));
+        setAvailableTimes([]);
+        setSelectedTime("");
+      }
     };
     fetchTimes();
   }, [selectedBookingDate, selectedAppointmentType]);
@@ -165,20 +187,25 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     }
 
     if (isValid) {
+      setError(null);
       setCompletedSteps((prev) => new Set([...prev, step]));
       setCurrentStep(step + 1);
+    } else {
+      setError(getErrorInfo("VALIDATION_ERROR"));
     }
   };
 
   const handleEditStep = (step: number) => {
     setCurrentStep(step);
+    setError(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
 
     if (!validatePersonalInfo() || !validateAppointmentInfo() || !validateCalendarBooking()) {
-      alert("Please complete all required fields");
+      setError(getErrorInfo("VALIDATION_ERROR"));
       return;
     }
 
@@ -217,15 +244,29 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
       const result = await response.json();
 
-      // Show alert with the response status/code
       if (result.success) {
-        alert(`SUCCESS: ${result.code} - Booking ID: ${result.bookingId}`);
+        const selectedService = appointmentTypes.find((service) => service.id === selectedAppointmentType);
+        const appointmentTypeName = selectedService ? selectedService.name : "Unknown";
+
+        const queryParams = new URLSearchParams({
+          bookingId: result.bookingId,
+          customerId: result.customerId,
+          appointmentType: appointmentTypeName,
+          appointmentDate: selectedBookingDate!.toISOString().split("T")[0],
+          appointmentTime: selectedTime,
+          firstName: firstName.trim(),
+          lastName: lastName.trim(),
+          email: email.trim().toLowerCase(),
+          phoneNumber: phoneNumber,
+        });
+
+        router.push(`/schedule-appointment/appointment-confirmed?${queryParams.toString()}`);
       } else {
-        alert(`ERROR: ${result.code} - ${result.error}`);
+        setError(getErrorInfo(result.code || "UNKNOWN_ERROR"));
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("NETWORK_ERROR - An unexpected error occurred. Please try again.");
+      setError(getErrorInfo("NETWORK_ERROR"));
     } finally {
       setIsSubmitting(false);
     }
@@ -247,6 +288,34 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
   return (
     <form onSubmit={handleSubmit}>
+      {/* Error Display */}
+      <Dialog
+        open={!!error}
+        onOpenChange={(open) => {
+          if (!open) setError(null);
+        }}
+      >
+        <DialogContent className="bg-red-900">
+          <DialogHeader>
+            <DialogTitle className={error?.severity === "error" ? "text-white" : "text-yellow-400"}>
+              {error?.title}
+            </DialogTitle>
+            <DialogDescription>
+              <div className="text-white mb-2">{error?.message}</div>
+              {error?.action && <div className="text-sm text-white/90 mt-1">{error.action}</div>}
+              <hr className="my-4 border-t border-white/30" />
+              <div className="text-white">
+                If the problem persists, please visit our{" "}
+                <Link href="/contact" className="underline">
+                  contact page
+                </Link>{" "}
+                and give us a call or send us an email.
+              </div>
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+
       {/* Progress Indicator */}
       <div className="w-full bg-slate-800/20 p-6 mb-8 rounded-2xl shadow-xl">
         <div className="flex flex-col sm:flex-row items-center justify-center">
