@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { SquareClient, SquareEnvironment } from "square";
 
 const DAY_MAP: Record<string, number> = {
@@ -11,7 +11,7 @@ const DAY_MAP: Record<string, number> = {
   SAT: 6,
 };
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   const client = new SquareClient({
     token: process.env.SQUARE_PRODUCTION_ACCESS_TOKEN,
     environment: SquareEnvironment.Production,
