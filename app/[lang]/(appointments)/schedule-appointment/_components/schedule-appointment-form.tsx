@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Check, ChevronRight, Edit2, Loader2 } from "lucide-react";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -13,18 +13,26 @@ import { formatPhoneNumber } from "@/lib/utils/schedule-appointment";
 
 const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [dict, setDict] = useState<any>(null);
+  const [currentStep, setCurrentStep] = useState(1);
+  const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
 
   // API Pulls
   const [appointmentTypes, setAppointmentTypes] = useState<AppointmentOption[]>([]);
 
   // Form values
   // Personal Information
+  const [firstName, setFirstName] = useState("");
+  const [middleInitial, setMiddleInitial] = useState("");
+  const [lastName, setLastName] = useState("");
   const [birthday, setBirthday] = useState<Date | null>(null);
+  const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
   // Appointment Information
   const [selectedAppointmentType, setSelectedAppointmentType] = useState("");
   const [newOrReturningClient, setNewOrReturningClients] = useState("");
+  const [newHealthConditions, setNewHealthConditions] = useState("");
+  const [newMedications, setNewMedications] = useState("");
   const [hasQuestions, setHasQuestions] = useState("");
 
   // Date and Time selection
@@ -95,6 +103,59 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     }
   }, [availableDays, selectedBookingDate]);
 
+  // Validation functions
+  const validatePersonalInfo = () => {
+    return (
+      firstName.trim() !== "" &&
+      middleInitial.trim() !== "" &&
+      lastName.trim() !== "" &&
+      birthday !== null &&
+      email.trim() !== "" &&
+      phoneNumber.trim() !== ""
+    );
+  };
+
+  const validateAppointmentInfo = () => {
+    const baseValidation = selectedAppointmentType !== "" && newOrReturningClient !== "" && hasQuestions !== "";
+
+    if (newOrReturningClient === "returning") {
+      return baseValidation && newHealthConditions !== "" && newMedications !== "";
+    }
+
+    return baseValidation;
+  };
+
+  const validateCalendarBooking = () => {
+    return selectedBookingDate !== null && selectedTime !== "";
+  };
+
+  const handleNextStep = (step: number) => {
+    let isValid = false;
+
+    switch (step) {
+      case 1:
+        isValid = validatePersonalInfo();
+        break;
+      case 2:
+        isValid = validateAppointmentInfo();
+        break;
+      case 3:
+        isValid = validateCalendarBooking();
+        break;
+      default:
+        isValid = false;
+    }
+
+    if (isValid) {
+      setCompletedSteps((prev) => new Set([...prev, step]));
+      setCurrentStep(step + 1);
+    }
+  };
+
+  const handleEditStep = (step: number) => {
+    setCurrentStep(step);
+  };
+
   if (!dict || appointmentTypes.length === 0) {
     return (
       <div className="flex justify-center items-center">
@@ -103,275 +164,484 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     );
   }
 
+  const steps = [
+    { number: 1, title: "Personal Information", isCompleted: completedSteps.has(1) },
+    { number: 2, title: "Appointment Information", isCompleted: completedSteps.has(2) },
+    { number: 3, title: "Calendar Booking", isCompleted: completedSteps.has(3) },
+  ];
+
   return (
     <form>
-      <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6">
-        <h2 className="text-2xl font-bold mb-4 text-white pb-4 border-b">Personal Information</h2>
-        <div className="flex flex-row w-full gap-4">
-          <div className="flex-1">
-            <label className="block text-white text-lg font-semibold mb-2" htmlFor="firstName">
-              First Name
-            </label>
-            <input
-              id="firstName"
-              name="firstName"
-              type="text"
-              maxLength={50}
-              required
-              className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
-              placeholder="Enter your first name"
-            />
-          </div>
-          <div className="basis-1/6">
-            <label className="block text-white text-lg font-semibold mb-2" htmlFor="middleInitial">
-              Middle Initial
-            </label>
-            <input
-              id="middleInitial"
-              name="middleInitial"
-              type="text"
-              maxLength={3}
-              required
-              className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
-              placeholder="M.I."
-            />
-          </div>
-          <div className="flex-1">
-            <label className="block text-white text-lg font-semibold mb-2" htmlFor="lastName">
-              Last Name
-            </label>
-            <input
-              id="lastName"
-              name="lastName"
-              type="text"
-              maxLength={50}
-              required
-              className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
-              placeholder="Enter your last name"
-            />
-          </div>
-        </div>
-        <div className="flex flex-row w-full gap-4">
-          <div className="flex-1">
-            <label className="block text-white text-lg font-semibold mb-2" htmlFor="birthday">
-              Birthday
-            </label>
-            <DatePicker
-              selected={birthday}
-              onChange={(date) => setBirthday(date)}
-              maxDate={new Date()}
-              dropdownMode="select"
-              showYearDropdown
-              showMonthDropdown
-              className="p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
-              placeholderText="##/##/####"
-              dateFormat="MM/dd/yyyy"
-            />
-          </div>
-          <div className="flex-1">
-            <label className="block text-white text-lg font-semibold mb-2" htmlFor="email">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              maxLength={254}
-              required
-              className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
-              placeholder="Enter your email"
-            />
-          </div>
-          <div className="flex-1">
-            <label className="block text-white text-lg font-semibold mb-2" htmlFor="phone">
-              Phone Number
-            </label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              required
-              className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
-              placeholder="(###) ### - ####"
-              maxLength={19}
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(formatPhoneNumber(e.target.value))}
-            />
-          </div>
+      {/* Progress Indicator */}
+      <div className="w-full bg-slate-800/20 p-6 mb-8 rounded-2xl shadow-xl">
+        <div className="flex flex-col sm:flex-row items-center justify-center">
+          {steps.map((step, index) => (
+            <div key={step.number} className="flex flex-col sm:flex-row items-center">
+              <div className="flex flex-col items-center">
+                <div
+                  className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
+                    step.isCompleted
+                      ? "bg-green-600 text-white shadow-lg"
+                      : currentStep === step.number
+                        ? "bg-[#f1a208] text-black shadow-lg"
+                        : "bg-slate-600 text-white"
+                  }`}
+                >
+                  {step.isCompleted ? <Check className="w-6 h-6" /> : step.number}
+                </div>
+                <span
+                  className={`mt-2 font-medium text-sm text-center max-w-24 ${
+                    step.isCompleted || currentStep === step.number ? "text-white" : "text-white/60"
+                  }`}
+                >
+                  {step.title}
+                </span>
+              </div>
+              {index < steps.length - 1 && (
+                <div className="flex items-center my-4 sm:my-0 sm:mx-8">
+                  <div
+                    className={`w-1 h-12 sm:w-24 sm:h-1 rounded-full transition-all duration-300 ${
+                      step.isCompleted ? "bg-green-600" : "bg-slate-600"
+                    }`}
+                  />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
-      <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6">
-        <h2 className="text-2xl font-bold mb-4 text-white pb-4 border-b">Appointment Information</h2>
-        <div>
-          <label className="block text-white text-lg font-semibold mb-2" htmlFor="appointmentType">
-            What type of exam are you scheduling?
-          </label>
-          <select
-            id="appointmentType"
-            name="appointmentType"
-            required
-            className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
-            value={selectedAppointmentType}
-            onChange={(e) => setSelectedAppointmentType(e.target.value)}
-          >
-            <option value="" disabled>
-              Select appointment type
-            </option>
-            {appointmentTypes.map((type) => (
-              <option key={type.id} value={type.id}>
-                {type.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningClient">
-            Are you a new or returning client?
-          </label>
-          <select
-            id="newOrReturningClient"
-            name="newOrReturningClient"
-            required
-            className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
-            value={newOrReturningClient}
-            onChange={(e) => setNewOrReturningClients(e.target.value)}
-          >
-            <option value="" disabled>
-              Select client type
-            </option>
-            <option value="new">New Client</option>
-            <option value="returning">Returning Client</option>
-          </select>
-        </div>
-        {newOrReturningClient === "returning" && (
-          <>
-            <div>
-              <label className="block text-white text-lg font-semibold mb-2" htmlFor="newHeathConditions">
-                Do you have any new health issues since your last examination?
-              </label>
-              <select
-                id="newHeathConditions"
-                name="newHeathConditions"
-                required
-                className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select option
-                </option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-white text-lg font-semibold mb-2" htmlFor="newMedicationsOrSupplements">
-                Are you taking any new medications/supplements (prescribed or over-the-counter) since your last
-                examination?
-              </label>
-              <select
-                id="newMedicationsOrSupplements"
-                name="newMedicationsOrSupplements"
-                required
-                className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select option
-                </option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
-          </>
-        )}
-        <div>
-          <label className="block text-white text-lg font-semibold" htmlFor="hasQuestions">
-            Do you have any questions/concerns to discuss with Dr. Quigley prior to your examination?
-          </label>
-          <p className="block text-white/80 text-base font-normal mb-2">
-            Sometimes it is best to discuss potential issues <span className="underline">prior to</span> initiating the
-            examination/certification process to improve the possibility of receiving certification as soon as possible.
-          </p>
-          <select
-            id="hasQuestions"
-            name="hasQuestions"
-            required
-            className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
-            value={hasQuestions}
-            onChange={(e) => setHasQuestions(e.target.value)}
-          >
-            <option value="" disabled>
-              Select option
-            </option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-          {hasQuestions === "yes" && (
-            <div className="mt-4 bg-blue-900/50 border-l-4 border-blue-400 p-4 rounded">
-              <h3 className="font-bold text-xl text-blue-300 mb-2">NOTE:</h3>
-              <p className="text-white text-base">
-                You can schedule a pre-exam consultation appointment with Dr. Quigley before scheduling your exam to
-                discuss any potential issues, questions, or concerns with the goal of making the certification process
-                as smooth as possible.
-                <br />
-                <br />
-                Consultations will be billed by time spent during the consultation. Time spent by Dr. Quigley making
-                phone calls on your behalf or reviewing your medical or legal records after a consultation or medical
-                examination will also be billed.
-              </p>
-            </div>
+
+      {/* Step 1: Personal Information */}
+      <div
+        className={`w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6 ${
+          currentStep !== 1 && !completedSteps.has(1) ? "opacity-50" : ""
+        }`}
+      >
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-white">Personal Information</h2>
+          {completedSteps.has(1) && currentStep !== 1 && (
+            <button
+              type="button"
+              onClick={() => handleEditStep(1)}
+              className="bg-transparent hover:bg-[#f1a208] border-2 border-[#f1a208] duration-200 font-bold text-lg whitespace-normal text-center px-2 py-1 rounded-lg flex items-center gap-2 text-[#f1a208] hover:text-black transition-colors cursor-pointer"
+            >
+              <Edit2 className="w-4 h-4" />
+              Edit
+            </button>
           )}
         </div>
+
+        {(currentStep === 1 || completedSteps.has(1)) && (
+          <>
+            <div className="flex flex-col sm:flex-row w-full gap-4">
+              <div className="flex-1">
+                <label className="block text-white text-lg font-semibold mb-2" htmlFor="firstName">
+                  First Name
+                </label>
+                <input
+                  id="firstName"
+                  name="firstName"
+                  type="text"
+                  maxLength={50}
+                  required
+                  disabled={completedSteps.has(1) && currentStep !== 1}
+                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  placeholder="Enter your first name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+              </div>
+              <div className="sm:basis-1/6">
+                <label className="block text-white text-lg font-semibold mb-2" htmlFor="middleInitial">
+                  Middle Initial
+                </label>
+                <input
+                  id="middleInitial"
+                  name="middleInitial"
+                  type="text"
+                  maxLength={3}
+                  required
+                  disabled={completedSteps.has(1) && currentStep !== 1}
+                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  placeholder="M.I."
+                  value={middleInitial}
+                  onChange={(e) => setMiddleInitial(e.target.value)}
+                />
+              </div>
+              <div className="flex-1">
+                <label className="block text-white text-lg font-semibold mb-2" htmlFor="lastName">
+                  Last Name
+                </label>
+                <input
+                  id="lastName"
+                  name="lastName"
+                  type="text"
+                  maxLength={50}
+                  required
+                  disabled={completedSteps.has(1) && currentStep !== 1}
+                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  placeholder="Enter your last name"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row w-full gap-4">
+              <div className="flex-1">
+                <label className="block text-white text-lg font-semibold mb-2" htmlFor="birthday">
+                  Birthday
+                </label>
+                <div className="w-full">
+                  <DatePicker
+                    selected={birthday}
+                    onChange={(date) => setBirthday(date)}
+                    maxDate={new Date()}
+                    dropdownMode="select"
+                    showYearDropdown
+                    showMonthDropdown
+                    disabled={completedSteps.has(1) && currentStep !== 1}
+                    className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                    placeholderText="##/##/####"
+                    dateFormat="MM/dd/yyyy"
+                    wrapperClassName="w-full"
+                  />
+                </div>
+              </div>
+              <div className="flex-1">
+                <label className="block text-white text-lg font-semibold mb-2" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  maxLength={254}
+                  required
+                  disabled={completedSteps.has(1) && currentStep !== 1}
+                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="flex-1">
+                <label className="block text-white text-lg font-semibold mb-2" htmlFor="phone">
+                  Phone Number
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  disabled={completedSteps.has(1) && currentStep !== 1}
+                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  placeholder="(###) ### - ####"
+                  maxLength={19}
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(formatPhoneNumber(e.target.value))}
+                />
+              </div>
+            </div>
+
+            {currentStep === 1 && (
+              <div className="flex justify-end pt-4">
+                <button
+                  type="button"
+                  onClick={() => handleNextStep(1)}
+                  disabled={!validatePersonalInfo()}
+                  className="flex items-center gap-2 bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer"
+                >
+                  Continue
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
+            )}
+          </>
+        )}
       </div>
-      <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6">
-        <h2 className="text-2xl font-bold mb-4 text-white pb-4 border-b">Calendar Booking</h2>
-        <div className="flex flex-col md:flex-row gap-4 items-start">
-          <div>
-            <label className="block text-white text-lg font-semibold mb-2">Select Date</label>
-            <DatePicker
-              selected={selectedBookingDate}
-              onChange={(date) => setSelectedBookingDate(date)}
-              minDate={new Date()}
-              includeDates={availableDays}
-              dropdownMode="select"
-              showMonthDropdown
-              showYearDropdown
-              className="p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
-              placeholderText="Choose a date"
-              dateFormat="MMMM d, yyyy"
-            />
-          </div>
-          <div className="flex-1">
-            <label className="block text-white text-lg font-semibold mb-2">Select Time</label>
-            <select
-              className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer transition-opacity duration-200 disabled:opacity-60 disabled:bg-slate-700 disabled:cursor-not-allowed"
-              value={selectedTime}
-              onChange={(e) => setSelectedTime(e.target.value)}
-              disabled={!selectedBookingDate || availableTimes.length === 0}
-            >
-              <option value="" disabled>
-                {selectedBookingDate
-                  ? availableTimes.length === 0
-                    ? "No appointments available for this day"
-                    : "Select a time"
-                  : "Select a date first"}
-              </option>
-              {availableTimes.map((time) => (
-                <option key={time} value={time}>
-                  {time}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold py-3 rounded-lg transition-transform duration-200 hover:scale-105 cursor-pointer"
-          disabled={true}
+
+      {/* Step 2: Appointment Information */}
+      {(currentStep >= 2 || completedSteps.has(2)) && (
+        <div
+          className={`w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6 ${
+            currentStep !== 2 && !completedSteps.has(2) ? "opacity-50" : ""
+          }`}
         >
-          Schedule Appointment
-        </button>
-      </div>
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-white">Appointment Information</h2>
+            {completedSteps.has(2) && currentStep !== 2 && (
+              <button
+                type="button"
+                onClick={() => handleEditStep(2)}
+                className="bg-transparent hover:bg-[#f1a208] border-2 border-[#f1a208] duration-200 font-bold text-lg whitespace-normal text-center px-2 py-1 rounded-lg flex items-center gap-2 text-[#f1a208] hover:text-black transition-colors cursor-pointer"
+              >
+                <Edit2 className="w-4 h-4" />
+                Edit
+              </button>
+            )}
+          </div>
+
+          {(currentStep === 2 || completedSteps.has(2)) && (
+            <>
+              <div>
+                <label className="block text-white text-lg font-semibold mb-2" htmlFor="appointmentType">
+                  What type of exam are you scheduling?
+                </label>
+                <select
+                  id="appointmentType"
+                  name="appointmentType"
+                  required
+                  disabled={completedSteps.has(2) && currentStep !== 2}
+                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  value={selectedAppointmentType}
+                  onChange={(e) => setSelectedAppointmentType(e.target.value)}
+                >
+                  <option value="" disabled>
+                    Select appointment type
+                  </option>
+                  {appointmentTypes.map((type) => (
+                    <option key={type.id} value={type.id}>
+                      {type.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningClient">
+                  Are you a new or returning client?
+                </label>
+                <select
+                  id="newOrReturningClient"
+                  name="newOrReturningClient"
+                  required
+                  disabled={completedSteps.has(2) && currentStep !== 2}
+                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  value={newOrReturningClient}
+                  onChange={(e) => setNewOrReturningClients(e.target.value)}
+                >
+                  <option value="" disabled>
+                    Select client type
+                  </option>
+                  <option value="new">New Client</option>
+                  <option value="returning">Returning Client</option>
+                </select>
+              </div>
+              {newOrReturningClient === "returning" && (
+                <>
+                  <div>
+                    <label className="block text-white text-lg font-semibold mb-2" htmlFor="newHeathConditions">
+                      Do you have any new health issues since your last examination?
+                    </label>
+                    <select
+                      id="newHeathConditions"
+                      name="newHeathConditions"
+                      required
+                      disabled={completedSteps.has(2) && currentStep !== 2}
+                      className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                      value={newHealthConditions}
+                      onChange={(e) => setNewHealthConditions(e.target.value)}
+                    >
+                      <option value="" disabled>
+                        Select option
+                      </option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      className="block text-white text-lg font-semibold mb-2"
+                      htmlFor="newMedicationsOrSupplements"
+                    >
+                      Are you taking any new medications/supplements (prescribed or over-the-counter) since your last
+                      examination?
+                    </label>
+                    <select
+                      id="newMedicationsOrSupplements"
+                      name="newMedicationsOrSupplements"
+                      required
+                      disabled={completedSteps.has(2) && currentStep !== 2}
+                      className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                      value={newMedications}
+                      onChange={(e) => setNewMedications(e.target.value)}
+                    >
+                      <option value="" disabled>
+                        Select option
+                      </option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                  </div>
+                </>
+              )}
+              <div>
+                <label className="block text-white text-lg font-semibold" htmlFor="hasQuestions">
+                  Do you have any questions/concerns to discuss with Dr. Quigley prior to your examination?
+                </label>
+                <p className="block text-white/80 text-base font-normal mb-2">
+                  Sometimes it is best to discuss potential issues <span className="underline">prior to</span>{" "}
+                  initiating the examination/certification process to improve the possibility of receiving certification
+                  as soon as possible.
+                </p>
+                <select
+                  id="hasQuestions"
+                  name="hasQuestions"
+                  required
+                  disabled={completedSteps.has(2) && currentStep !== 2}
+                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  value={hasQuestions}
+                  onChange={(e) => setHasQuestions(e.target.value)}
+                >
+                  <option value="" disabled>
+                    Select option
+                  </option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+                {hasQuestions === "yes" && (
+                  <div className="mt-4 bg-blue-900/50 border-l-4 border-blue-400 p-4 rounded">
+                    <h3 className="font-bold text-xl text-blue-300 mb-2">NOTE:</h3>
+                    <p className="text-white text-base">
+                      You can schedule a pre-exam consultation appointment with Dr. Quigley before scheduling your exam
+                      to discuss any potential issues, questions, or concerns with the goal of making the certification
+                      process as smooth as possible.
+                      <br />
+                      <br />
+                      Consultations will be billed by time spent during the consultation. Time spent by Dr. Quigley
+                      making phone calls on your behalf or reviewing your medical or legal records after a consultation
+                      or medical examination will also be billed.
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {currentStep === 2 && (
+                <div className="flex justify-end pt-4">
+                  <button
+                    type="button"
+                    onClick={() => handleNextStep(2)}
+                    disabled={!validateAppointmentInfo()}
+                    className="flex items-center gap-2 bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer"
+                  >
+                    Continue
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      )}
+
+      {/* Step 3: Calendar Booking */}
+      {(currentStep >= 3 || completedSteps.has(3)) && (
+        <div
+          className={`w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6 ${
+            currentStep !== 3 && !completedSteps.has(3) ? "opacity-50" : ""
+          }`}
+        >
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-white">Calendar Booking</h2>
+            {completedSteps.has(3) && currentStep !== 3 && (
+              <button
+                type="button"
+                onClick={() => handleEditStep(3)}
+                className="bg-transparent hover:bg-[#f1a208] border-2 border-[#f1a208] duration-200 font-bold text-lg whitespace-normal text-center px-2 py-1 rounded-lg flex items-center gap-2 text-[#f1a208] hover:text-black transition-colors cursor-pointer"
+              >
+                <Edit2 className="w-4 h-4" />
+                Edit
+              </button>
+            )}
+          </div>
+
+          {(currentStep === 3 || completedSteps.has(3)) && (
+            <>
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1">
+                  <label className="block text-white text-lg font-semibold mb-2">Select Date</label>
+                  <div className="w-full">
+                    <DatePicker
+                      selected={selectedBookingDate}
+                      onChange={(date) => setSelectedBookingDate(date)}
+                      minDate={new Date()}
+                      includeDates={availableDays}
+                      dropdownMode="select"
+                      showMonthDropdown
+                      showYearDropdown
+                      disabled={completedSteps.has(3) && currentStep !== 3}
+                      className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                      placeholderText="Choose a date"
+                      dateFormat="MMMM d, yyyy"
+                      wrapperClassName="w-full"
+                    />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <label className="block text-white text-lg font-semibold mb-2">Select Time</label>
+                  <select
+                    className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer transition-opacity duration-200 disabled:opacity-50 disabled:bg-slate-700 disabled:cursor-not-allowed"
+                    value={selectedTime}
+                    onChange={(e) => setSelectedTime(e.target.value)}
+                    disabled={
+                      !selectedBookingDate ||
+                      availableTimes.length === 0 ||
+                      (completedSteps.has(3) && currentStep !== 3)
+                    }
+                  >
+                    <option value="" disabled>
+                      {selectedBookingDate
+                        ? availableTimes.length === 0
+                          ? "No appointments available for this day"
+                          : "Select a time"
+                        : "Select a date first"}
+                    </option>
+                    {availableTimes.map((time) => (
+                      <option key={time} value={time}>
+                        {time}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {currentStep === 3 && (
+                <div className="flex justify-end pt-4">
+                  <button
+                    type="button"
+                    onClick={() => handleNextStep(3)}
+                    disabled={!validateCalendarBooking()}
+                    className="flex items-center gap-2 bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer"
+                  >
+                    Continue
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      )}
+
+      {/* Final Step - All completed */}
+      {completedSteps.has(3) && currentStep === 4 && (
+        <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl text-center">
+          <div className="text-green-500 mb-4">
+            <Check className="w-16 h-16 mx-auto" />
+          </div>
+          <h2 className="text-2xl font-bold text-white mb-4">Ready to Submit</h2>
+          <p className="text-white/80 mb-6">
+            All sections have been completed. Review your information above and submit your appointment request when
+            ready.
+          </p>
+          <button
+            type="submit"
+            className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold py-3 px-8 rounded-lg transition-transform duration-200 hover:scale-105 cursor-pointer"
+            disabled={true}
+          >
+            Schedule Appointment
+          </button>
+        </div>
+      )}
     </form>
   );
 };
