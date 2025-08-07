@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-import { AppointmentOption } from "@/lib/types/api/appointment-option";
+import { ServiceTypeResponse } from "@/lib/types/api/services";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 import { formatPhoneNumber } from "@/lib/utils/schedule-appointment";
@@ -17,7 +17,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
 
   // API Pulls
-  const [appointmentTypes, setAppointmentTypes] = useState<AppointmentOption[]>([]);
+  const [appointmentTypes, setAppointmentTypes] = useState<ServiceTypeResponse[]>([]);
 
   // Form values
   // Personal Information
