@@ -30,6 +30,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [availableTimes, setAvailableTimes] = useState<string[]>([]);
   const [selectedTime, setSelectedTime] = useState("");
+  const [availableDays, setAvailableDays] = useState<Date[]>([]);
 
   useEffect(() => {
     params.then(({ lang }) => {
@@ -47,6 +48,30 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   }, []);
 
   useEffect(() => {
+    if (!selectedAppointmentType) {
+      setAvailableDays([]);
+      return;
+    }
+    const fetchAvailableDays = async () => {
+      const res = await fetch(`/api/appointments/available-days?serviceId=${selectedAppointmentType}`);
+      const data = await res.json();
+
+      try {
+        setAvailableDays(
+          data.map((dateStr: string) => {
+            // Convert to local timezone
+            const [year, month, day] = dateStr.split("-").map(Number);
+            return new Date(year, month - 1, day);
+          })
+        );
+      } catch {
+        setAvailableDays([]);
+      }
+    };
+    fetchAvailableDays();
+  }, [selectedAppointmentType]);
+
+  useEffect(() => {
     if (!selectedDate || !selectedAppointmentType) {
       setAvailableTimes([]);
       setSelectedTime("");
@@ -62,6 +87,12 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     };
     fetchTimes();
   }, [selectedDate, selectedAppointmentType]);
+
+  useEffect(() => {
+    if (selectedDate && !availableDays.some((d) => d.toDateString() === selectedDate.toDateString())) {
+      setSelectedDate(null);
+    }
+  }, [availableDays]);
 
   if (!dict || appointmentTypes.length === 0) {
     return (
@@ -284,6 +315,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
               minDate={new Date()}
+              includeDates={availableDays}
               className="p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
               placeholderText="Choose a date"
               dateFormat="MMMM d, yyyy"
