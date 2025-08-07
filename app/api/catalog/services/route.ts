@@ -1,10 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { SquareClient, SquareEnvironment } from "square";
 
 import { AppointmentOption } from "@/lib/types/api/appointment-option";
 
-export async function GET(request: NextRequest): Promise<NextResponse<AppointmentOption[] | { error: string }>> {
-  // Initialize Square client
+export async function GET(): Promise<NextResponse<AppointmentOption[] | { error: string }>> {
   const client = new SquareClient({
     token: process.env.SQUARE_PRODUCTION_ACCESS_TOKEN,
     environment: SquareEnvironment.Production,
@@ -14,7 +13,7 @@ export async function GET(request: NextRequest): Promise<NextResponse<Appointmen
     const response = await client.catalog.list({ types: "ITEM" });
 
     const services: AppointmentOption[] = response.data.map((item: any) => ({
-      id: item.id,
+      id: item.itemData.variations[0].id,
       name: item.itemData.name,
     }));
 

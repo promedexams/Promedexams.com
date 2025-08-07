@@ -22,6 +22,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [phoneNumber, setPhoneNumber] = useState("");
 
   // Appointment Information
+  const [selectedAppointmentType, setSelectedAppointmentType] = useState("");
   const [newOrReturningClient, setNewOrReturningClients] = useState("");
   const [hasQuestions, setHasQuestions] = useState("");
 
@@ -46,20 +47,21 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   }, []);
 
   useEffect(() => {
-    if (!selectedDate) {
+    if (!selectedDate || !selectedAppointmentType) {
       setAvailableTimes([]);
       setSelectedTime("");
       return;
     }
 
     const fetchTimes = async () => {
-      const res = await fetch("/api/appointments/available-times");
+      const dateStr = selectedDate.toISOString().split("T")[0];
+      const res = await fetch(`/api/appointments/available-times?serviceId=${selectedAppointmentType}&date=${dateStr}`);
       const data = await res.json();
-      setAvailableTimes(data);
+      setAvailableTimes(Array.isArray(data) ? data : []);
       setSelectedTime("");
     };
     fetchTimes();
-  }, [selectedDate]);
+  }, [selectedDate, selectedAppointmentType]);
 
   if (!dict || appointmentTypes.length === 0) {
     return (
@@ -161,7 +163,8 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             name="appointmentType"
             required
             className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
-            defaultValue=""
+            value={selectedAppointmentType}
+            onChange={(e) => setSelectedAppointmentType(e.target.value)}
           >
             <option value="" disabled>
               Select appointment type
@@ -289,13 +292,17 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           <div className="flex-1">
             <label className="block text-white text-lg font-semibold mb-2">Select Time</label>
             <select
-              className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer"
+              className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer transition-opacity duration-200 disabled:opacity-60 disabled:bg-slate-700 disabled:cursor-not-allowed"
               value={selectedTime}
               onChange={(e) => setSelectedTime(e.target.value)}
               disabled={!selectedDate || availableTimes.length === 0}
             >
               <option value="" disabled>
-                {selectedDate ? "Select a time" : "Select a date first"}
+                {selectedDate
+                  ? availableTimes.length === 0
+                    ? "No appointments available for this day"
+                    : "Select a time"
+                  : "Select a date first"}
               </option>
               {availableTimes.map((time) => (
                 <option key={time} value={time}>
