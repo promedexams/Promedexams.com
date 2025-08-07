@@ -28,3 +28,29 @@ export function formatPhoneNumber(value: string) {
     return `+${country} (${match[1]}) ${match[2]}-${match[3]}`;
   }
 }
+
+/**
+ * Formats a string of digits into a date string in the format "DD/MM/YYYY".
+ *
+ * Non-digit characters are removed from the input, and only the first 8 digits are considered.
+ * The function inserts slashes to separate day, month, and year components as the user types.
+ *
+ * @param value - The input string potentially containing a date.
+ * @returns The formatted date string as "DD/MM/YYYY", or a partial format if fewer digits are provided.
+ */
+export function formatDate(value: string) {
+  const digits = value.replace(/\D/g, "").slice(0, 8);
+  let formatted = "";
+
+  if (digits.length > 0) {
+    formatted += digits.slice(0, 2);
+  }
+  if (digits.length >= 3) {
+    formatted += "/" + digits.slice(2, 4);
+  }
+  if (digits.length >= 5) {
+    formatted += "/" + digits.slice(4, 8);
+  }
+
+  return formatted;
+}

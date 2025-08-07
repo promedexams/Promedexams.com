@@ -19,6 +19,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
   // Form values
   // Personal Information
+  const [birthday, setBirthday] = useState<Date | null>(null);
   const [phoneNumber, setPhoneNumber] = useState("");
 
   // Appointment Information
@@ -27,7 +28,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [hasQuestions, setHasQuestions] = useState("");
 
   // Date and Time selection
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [selectedBookingDate, setSelectedBookingDate] = useState<Date | null>(null);
   const [availableTimes, setAvailableTimes] = useState<string[]>([]);
   const [selectedTime, setSelectedTime] = useState("");
   const [availableDays, setAvailableDays] = useState<Date[]>([]);
@@ -72,27 +73,27 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   }, [selectedAppointmentType]);
 
   useEffect(() => {
-    if (!selectedDate || !selectedAppointmentType) {
+    if (!selectedBookingDate || !selectedAppointmentType) {
       setAvailableTimes([]);
       setSelectedTime("");
       return;
     }
 
     const fetchTimes = async () => {
-      const dateStr = selectedDate.toISOString().split("T")[0];
+      const dateStr = selectedBookingDate.toISOString().split("T")[0];
       const res = await fetch(`/api/appointments/available-times?serviceId=${selectedAppointmentType}&date=${dateStr}`);
       const data = await res.json();
       setAvailableTimes(Array.isArray(data) ? data : []);
       setSelectedTime("");
     };
     fetchTimes();
-  }, [selectedDate, selectedAppointmentType]);
+  }, [selectedBookingDate, selectedAppointmentType]);
 
   useEffect(() => {
-    if (selectedDate && !availableDays.some((d) => d.toDateString() === selectedDate.toDateString())) {
-      setSelectedDate(null);
+    if (selectedBookingDate && !availableDays.some((d) => d.toDateString() === selectedBookingDate.toDateString())) {
+      setSelectedBookingDate(null);
     }
-  }, [availableDays]);
+  }, [availableDays, selectedBookingDate]);
 
   if (!dict || appointmentTypes.length === 0) {
     return (
@@ -151,6 +152,22 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           </div>
         </div>
         <div className="flex flex-row w-full gap-4">
+          <div className="flex-1">
+            <label className="block text-white text-lg font-semibold mb-2" htmlFor="birthday">
+              Birthday
+            </label>
+            <DatePicker
+              selected={birthday}
+              onChange={(date) => setBirthday(date)}
+              maxDate={new Date()}
+              dropdownMode="select"
+              showYearDropdown
+              showMonthDropdown
+              className="p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
+              placeholderText="##/##/####"
+              dateFormat="MM/dd/yyyy"
+            />
+          </div>
           <div className="flex-1">
             <label className="block text-white text-lg font-semibold mb-2" htmlFor="email">
               Email
@@ -312,10 +329,13 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           <div>
             <label className="block text-white text-lg font-semibold mb-2">Select Date</label>
             <DatePicker
-              selected={selectedDate}
-              onChange={(date) => setSelectedDate(date)}
+              selected={selectedBookingDate}
+              onChange={(date) => setSelectedBookingDate(date)}
               minDate={new Date()}
               includeDates={availableDays}
+              dropdownMode="select"
+              showMonthDropdown
+              showYearDropdown
               className="p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none"
               placeholderText="Choose a date"
               dateFormat="MMMM d, yyyy"
@@ -327,10 +347,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer transition-opacity duration-200 disabled:opacity-60 disabled:bg-slate-700 disabled:cursor-not-allowed"
               value={selectedTime}
               onChange={(e) => setSelectedTime(e.target.value)}
-              disabled={!selectedDate || availableTimes.length === 0}
+              disabled={!selectedBookingDate || availableTimes.length === 0}
             >
               <option value="" disabled>
-                {selectedDate
+                {selectedBookingDate
                   ? availableTimes.length === 0
                     ? "No appointments available for this day"
                     : "Select a time"
