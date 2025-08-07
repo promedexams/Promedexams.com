@@ -1,7 +1,7 @@
 "use client";
 
 import { ChangeEvent, useEffect, useState } from "react";
-import { Check, ChevronRight, Edit2, Loader2 } from "lucide-react";
+import { CalendarSearchIcon, Check, ChevronRight, ClipboardClockIcon, Edit2, Loader2, UserIcon } from "lucide-react";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -292,8 +292,11 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           currentStep !== 1 && !completedSteps.has(1) ? "opacity-50" : ""
         }`}
       >
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-white">Personal Information</h2>
+        <div className="flex gap-2 items-center justify-between">
+          <div className="flex flex-row gap-2 items-center">
+            <UserIcon className="hidden sm:flex" />
+            <h2 className="text-2xl font-bold text-white">Personal Information</h2>
+          </div>
           {completedSteps.has(1) && currentStep !== 1 && (
             <button
               type="button"
@@ -443,7 +446,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           }`}
         >
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-white">Appointment Information</h2>
+            <div className="flex flex-row gap-2 items-center">
+              <ClipboardClockIcon className="hidden sm:flex" />
+              <h2 className="text-2xl font-bold text-white">Appointment Information</h2>
+            </div>
             {completedSteps.has(2) && currentStep !== 2 && (
               <button
                 type="button"
@@ -616,7 +622,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           }`}
         >
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-white">Calendar Booking</h2>
+            <div className="flex flex-row gap-2 items-center">
+              <CalendarSearchIcon className="hidden sm:flex" />
+              <h2 className="text-2xl font-bold text-white">Calendar Booking</h2>
+            </div>
             {completedSteps.has(3) && currentStep !== 3 && (
               <button
                 type="button"

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { fromZonedTime } from "date-fns-tz";
 import { SquareClient, SquareEnvironment } from "square";
 
 import { BookingRequest } from "@/lib/types/api/booking";
@@ -190,11 +191,7 @@ async function createBooking(client: SquareClient, bookingData: BookingRequest, 
 }
 
 function convertToDateTime(date: string, time: string): string {
-  // Parse the date (YYYY-MM-DD format)
-  // Mountain Time is UTC-7 (MST) or UTC-6 (MDT, daylight saving)
-  // This version assumes MST (UTC-7) year-round. For DST, use a library like luxon.
-
-  // Parse time (e.g., "10:00 AM" or "2:30 PM")
+  // Combine date and time strings
   const [timeStr, period] = time.split(" ");
   const [hours, minutes] = timeStr.split(":").map(Number);
 
@@ -205,13 +202,12 @@ function convertToDateTime(date: string, time: string): string {
     hour24 = 0;
   }
 
-  // Create a Date object in UTC for the given date and time in MST
-  const appointmentDate = new Date(`${date}T00:00:00.000Z`);
-  // Set the time as if it were MST, then add 7 hours to convert MST to UTC
-  appointmentDate.setUTCHours(hour24 + 7, minutes, 0, 0);
+  const localDateTime = new Date(`${date}T00:00:00.000`);
+  localDateTime.setHours(hour24, minutes);
 
-  // Return in RFC 3339 format (ISO string)
-  return appointmentDate.toISOString();
+  const zonedTime = fromZonedTime(localDateTime, "America/Denver");
+
+  return zonedTime.toISOString();
 }
 
 function generateCustomerNote(bookingData: BookingRequest): string {
