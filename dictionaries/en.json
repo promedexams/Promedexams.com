@@ -353,8 +353,95 @@
       "title": "Schedule Appointment",
       "description": "Please fill out the form below to schedule your appointment. We will get back to you as soon as possible to confirm your appointment.",
       "maintenanceWindow": {
-        "header": "Self-Scheduling Undergoing Maintenance",
-        "subheader": "The ability to schedule an appointment through our website will be available soon. In the meantime, please call (720) 517-3111 or email office@promedexams.com to schedule an appointment."
+        "header": "A Note About Our New System",
+        "subheader": "We've recently launched our new scheduling platform to make booking easier. As with any new system, we are working to refine the experience. If you run into any problems, please reach out so we can assist you.",
+        "contactButtonText": "Contact Us"
+      },
+      "scheduleForm": {
+        "steps": {
+          "editFormText": "Edit",
+          "continueText": "Continue",
+          "personalInfoStep": {
+            "title": "Personal Information",
+            "firstName": {
+              "label": "First Name",
+              "placeholderText": "Enter your first name"
+            },
+            "middleInitial": {
+              "label": "Middle Initial",
+              "placeholderText": "M.I."
+            },
+            "lastName": {
+              "label": "Last Name",
+              "placeholderText": "Enter your last name"
+            },
+            "dateOfBirth": {
+              "label": "Date of Birth"
+            },
+            "email": {
+              "label": "Email",
+              "placeholderText": "Enter your email"
+            },
+            "phoneNumber": {
+              "label": "Phone Number"
+            }
+          },
+          "appointmentInfoStep": {
+            "title": "Appointment Information",
+            "typeOfExam": {
+              "label": "What type of exam are you scheduling?",
+              "placeholderText": "Select appointment type"
+            },
+            "newOrReturningClient": {
+              "label": "Are you a new or returning client?",
+              "placeholderText": "Select client type",
+              "options": ["New Client", "Returning Client"]
+            },
+            "healthIssuesSinceLastExam": {
+              "label": "Do you have any new health issues since your last examination?",
+              "placeholderText": "Select option",
+              "options": ["Yes", "No"]
+            },
+            "medicationsSinceLastExam": {
+              "label": "Are you taking any new medications/supplements (prescribed or over-the-counter) since your last examination?",
+              "placeholderText": "Select option",
+              "options": ["Yes", "No"]
+            },
+            "questionsOrConcerns": {
+              "label": "Do you have any questions/concerns to discuss with Dr. Quigley prior to your examination?",
+              "detail": "Sometimes it is best to discuss potential issues prior to initiating the examination/certification process to improve the possibility of receiving certification as soon as possible.",
+              "placeholderText": "Select option",
+              "options": ["Yes", "No"],
+              "noteBox": {
+                "title": "NOTE:",
+                "messageParagraphs": [
+                  "You can schedule a pre-exam consultation appointment with Dr. Quigley before scheduling your exam to discuss any potential issues, questions, or concerns with the goal of making the certification process as smooth as possible.",
+                  "Consultations will be billed by time spent during the consultation. Time spent by Dr. Quigley making phone calls on your behalf or reviewing your medical or legal records after a consultation or medical examination will also be billed."
+                ]
+              }
+            }
+          },
+          "calendarBookingStep": {
+            "title": "Calendar Booking",
+            "selectDate": {
+              "label": "Select Date",
+              "placeholderText": "Choose a date"
+            },
+            "selectTime": {
+              "label": "Select Time",
+              "nothingSelectedText": "Select a date first",
+              "selectTimeText": "Select a time",
+              "noAppointmentsText": "No appointments for this day",
+              "checkingAvailabilityText": "Checking availability..."
+            }
+          },
+          "submissionStep": {
+            "title": "Ready to Submit",
+            "description": "All sections have been completed. Review your information above and submit your appointment request when ready.",
+            "scheduleAppointmentButtonText": "Schedule Appointment",
+            "schedulingAppointmentButtonText": "Scheduling..."
+          }
+        }
       }
     },
     "notFound": {

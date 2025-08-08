@@ -290,9 +290,21 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   }
 
   const steps = [
-    { number: 1, title: "Personal Information", isCompleted: completedSteps.has(1) },
-    { number: 2, title: "Appointment Information", isCompleted: completedSteps.has(2) },
-    { number: 3, title: "Calendar Booking", isCompleted: completedSteps.has(3) },
+    {
+      number: 1,
+      title: dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.title,
+      isCompleted: completedSteps.has(1),
+    },
+    {
+      number: 2,
+      title: dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.title,
+      isCompleted: completedSteps.has(2),
+    },
+    {
+      number: 3,
+      title: dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.title,
+      isCompleted: completedSteps.has(3),
+    },
   ];
 
   return (
@@ -416,7 +428,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
         <div className="flex gap-2 items-center justify-between">
           <div className="flex flex-row gap-2 items-center">
             <UserIcon className="hidden sm:flex" />
-            <h2 className="text-2xl font-bold text-white">Personal Information</h2>
+            <h2 className="text-2xl font-bold text-white">
+              {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.title}
+            </h2>
           </div>
           {completedSteps.has(1) && currentStep !== 1 && (
             <button
@@ -425,7 +439,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               className="bg-transparent hover:bg-[#f1a208] border-2 border-[#f1a208] duration-200 font-bold text-lg whitespace-normal text-center px-2 py-1 rounded-lg flex items-center gap-2 text-[#f1a208] hover:text-black transition-colors cursor-pointer"
             >
               <Edit2 className="w-4 h-4" />
-              Edit
+              {dict.pages.scheduleAppointment.scheduleForm.steps.editFormText}
             </button>
           )}
         </div>
@@ -435,7 +449,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             <div className="flex flex-col sm:flex-row w-full gap-4">
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="firstName">
-                  First Name
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.firstName.label}
                 </label>
                 <input
                   id="firstName"
@@ -445,14 +459,16 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   required
                   disabled={completedSteps.has(1) && currentStep !== 1}
                   className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
-                  placeholder="Enter your first name"
+                  placeholder={
+                    dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.firstName.placeholderText
+                  }
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
               <div className="sm:basis-1/6">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="middleInitial">
-                  Middle Initial
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.middleInitial.label}
                 </label>
                 <input
                   id="middleInitial"
@@ -462,14 +478,16 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   required
                   disabled={completedSteps.has(1) && currentStep !== 1}
                   className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
-                  placeholder="M.I."
+                  placeholder={
+                    dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.middleInitial.placeholderText
+                  }
                   value={middleInitial}
                   onChange={(e) => setMiddleInitial(e.target.value)}
                 />
               </div>
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="lastName">
-                  Last Name
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.lastName.label}
                 </label>
                 <input
                   id="lastName"
@@ -479,7 +497,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   required
                   disabled={completedSteps.has(1) && currentStep !== 1}
                   className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
-                  placeholder="Enter your last name"
+                  placeholder={
+                    dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.lastName.placeholderText
+                  }
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                 />
@@ -488,7 +508,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             <div className="flex flex-col sm:flex-row w-full gap-4">
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="birthday">
-                  Date of Birth
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.dateOfBirth.label}
                 </label>
                 <div className="w-full">
                   <DatePicker
@@ -508,7 +528,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               </div>
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="email">
-                  Email
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.email.label}
                 </label>
                 <input
                   id="email"
@@ -518,14 +538,14 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   required
                   disabled={completedSteps.has(1) && currentStep !== 1}
                   className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
-                  placeholder="Enter your email"
+                  placeholder={dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.email.placeholderText}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="phone">
-                  Phone Number
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.phoneNumber.label}
                 </label>
                 <input
                   id="phone"
@@ -550,7 +570,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   disabled={!validatePersonalInfo()}
                   className="flex items-center gap-2 bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer"
                 >
-                  Continue
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.continueText}
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
@@ -569,7 +589,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           <div className="flex items-center justify-between">
             <div className="flex flex-row gap-2 items-center">
               <ClipboardClockIcon className="hidden sm:flex" />
-              <h2 className="text-2xl font-bold text-white">Appointment Information</h2>
+              <h2 className="text-2xl font-bold text-white">
+                {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.title}
+              </h2>
             </div>
             {completedSteps.has(2) && currentStep !== 2 && (
               <button
@@ -578,7 +600,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 className="bg-transparent hover:bg-[#f1a208] border-2 border-[#f1a208] duration-200 font-bold text-lg whitespace-normal text-center px-2 py-1 rounded-lg flex items-center gap-2 text-[#f1a208] hover:text-black transition-colors cursor-pointer"
               >
                 <Edit2 className="w-4 h-4" />
-                Edit
+                {dict.pages.scheduleAppointment.scheduleForm.steps.editFormText}
               </button>
             )}
           </div>
@@ -587,7 +609,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             <>
               <div>
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="appointmentType">
-                  What type of exam are you scheduling?
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.typeOfExam.label}
                 </label>
                 <select
                   id="appointmentType"
@@ -599,7 +621,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   onChange={handleAppointmentTypeChange}
                 >
                   <option value="" disabled>
-                    Select appointment type
+                    {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.typeOfExam.placeholderText}
                   </option>
                   {appointmentTypes.map((type) => (
                     <option key={type.id} value={type.id}>
@@ -610,7 +632,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               </div>
               <div>
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningClient">
-                  Are you a new or returning client?
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.newOrReturningClient.label}
                 </label>
                 <select
                   id="newOrReturningClient"
@@ -622,17 +644,33 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   onChange={(e) => setNewOrReturningClients(e.target.value)}
                 >
                   <option value="" disabled>
-                    Select client type
+                    {
+                      dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.newOrReturningClient
+                        .placeholderText
+                    }
                   </option>
-                  <option value="new">New Client</option>
-                  <option value="returning">Returning Client</option>
+                  <option value="new">
+                    {
+                      dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.newOrReturningClient
+                        .options[0]
+                    }
+                  </option>
+                  <option value="returning">
+                    {
+                      dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.newOrReturningClient
+                        .options[1]
+                    }
+                  </option>
                 </select>
               </div>
               {newOrReturningClient === "returning" && (
                 <>
                   <div>
                     <label className="block text-white text-lg font-semibold mb-2" htmlFor="newHeathConditions">
-                      Do you have any new health issues since your last examination?
+                      {
+                        dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.healthIssuesSinceLastExam
+                          .label
+                      }
                     </label>
                     <select
                       id="newHeathConditions"
@@ -644,10 +682,23 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                       onChange={(e) => setNewHealthConditions(e.target.value)}
                     >
                       <option value="" disabled>
-                        Select option
+                        {
+                          dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep
+                            .healthIssuesSinceLastExam.placeholderText
+                        }
                       </option>
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
+                      <option value="yes">
+                        {
+                          dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep
+                            .healthIssuesSinceLastExam.options[0]
+                        }
+                      </option>
+                      <option value="no">
+                        {
+                          dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep
+                            .healthIssuesSinceLastExam.options[1]
+                        }
+                      </option>
                     </select>
                   </div>
                   <div>
@@ -655,8 +706,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                       className="block text-white text-lg font-semibold mb-2"
                       htmlFor="newMedicationsOrSupplements"
                     >
-                      Are you taking any new medications/supplements (prescribed or over-the-counter) since your last
-                      examination?
+                      {
+                        dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.medicationsSinceLastExam
+                          .label
+                      }
                     </label>
                     <select
                       id="newMedicationsOrSupplements"
@@ -668,22 +721,33 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                       onChange={(e) => setNewMedications(e.target.value)}
                     >
                       <option value="" disabled>
-                        Select option
+                        {
+                          dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.medicationsSinceLastExam
+                            .placeholderText
+                        }
                       </option>
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
+                      <option value="yes">
+                        {
+                          dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.medicationsSinceLastExam
+                            .options[0]
+                        }
+                      </option>
+                      <option value="no">
+                        {
+                          dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.medicationsSinceLastExam
+                            .options[1]
+                        }
+                      </option>
                     </select>
                   </div>
                 </>
               )}
               <div>
                 <label className="block text-white text-lg font-semibold" htmlFor="hasQuestions">
-                  Do you have any questions/concerns to discuss with Dr. Quigley prior to your examination?
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns.label}
                 </label>
                 <p className="block text-white/80 text-base font-normal mb-2">
-                  Sometimes it is best to discuss potential issues <span className="underline">prior to</span>{" "}
-                  initiating the examination/certification process to improve the possibility of receiving certification
-                  as soon as possible.
+                  {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns.detail}
                 </p>
                 <select
                   id="hasQuestions"
@@ -695,24 +759,41 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   onChange={(e) => setHasQuestions(e.target.value)}
                 >
                   <option value="" disabled>
-                    Select option
+                    {
+                      dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns
+                        .placeholderText
+                    }
                   </option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
+                  <option value="yes">
+                    {
+                      dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns
+                        .options[0]
+                    }
+                  </option>
+                  <option value="no">
+                    {
+                      dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns
+                        .options[1]
+                    }
+                  </option>
                 </select>
                 {hasQuestions === "yes" && (
                   <div className="mt-4 bg-blue-900/50 border-l-4 border-blue-400 p-4 rounded">
-                    <h3 className="font-bold text-xl text-blue-300 mb-2">NOTE:</h3>
-                    <p className="text-white text-base">
-                      You can schedule a pre-exam consultation appointment with Dr. Quigley before scheduling your exam
-                      to discuss any potential issues, questions, or concerns with the goal of making the certification
-                      process as smooth as possible.
-                      <br />
-                      <br />
-                      Consultations will be billed by time spent during the consultation. Time spent by Dr. Quigley
-                      making phone calls on your behalf or reviewing your medical or legal records after a consultation
-                      or medical examination will also be billed.
-                    </p>
+                    <h3 className="font-bold text-xl text-blue-300 mb-2">
+                      {
+                        dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns
+                          .noteBox.title
+                      }
+                    </h3>
+                    <div className="flex flex-col items-start text-start gap-4">
+                      {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns.noteBox.messageParagraphs.map(
+                        (paragraph: string, idx: number) => (
+                          <p key={idx} className="text-white text-base">
+                            {paragraph}
+                          </p>
+                        )
+                      )}
+                    </div>
                   </div>
                 )}
               </div>
@@ -725,7 +806,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                     disabled={!validateAppointmentInfo()}
                     className="flex items-center gap-2 bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer"
                   >
-                    Continue
+                    {dict.pages.scheduleAppointment.scheduleForm.steps.continueText}
                     <ChevronRight className="w-5 h-5" />
                   </button>
                 </div>
@@ -745,7 +826,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           <div className="flex items-center justify-between">
             <div className="flex flex-row gap-2 items-center">
               <CalendarSearchIcon className="hidden sm:flex" />
-              <h2 className="text-2xl font-bold text-white">Calendar Booking</h2>
+              <h2 className="text-2xl font-bold text-white">
+                {dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.title}
+              </h2>
             </div>
             {completedSteps.has(3) && currentStep !== 3 && (
               <button
@@ -754,7 +837,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 className="bg-transparent hover:bg-[#f1a208] border-2 border-[#f1a208] duration-200 font-bold text-lg whitespace-normal text-center px-2 py-1 rounded-lg flex items-center gap-2 text-[#f1a208] hover:text-black transition-colors cursor-pointer"
               >
                 <Edit2 className="w-4 h-4" />
-                Edit
+                {dict.pages.scheduleAppointment.scheduleForm.steps.editFormText}
               </button>
             )}
           </div>
@@ -763,7 +846,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             <>
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex-1">
-                  <label className="block text-white text-lg font-semibold mb-2">Select Date</label>
+                  <label className="block text-white text-lg font-semibold mb-2">
+                    {dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectDate.label}
+                  </label>
                   <div className="w-full">
                     <DatePicker
                       selected={selectedBookingDate}
@@ -775,16 +860,19 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                       showYearDropdown
                       disabled={completedSteps.has(3) && currentStep !== 3}
                       className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
-                      placeholderText="Choose a date"
+                      placeholderText={
+                        dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectDate.placeholderText
+                      }
                       dateFormat="MMMM d, yyyy"
                       wrapperClassName="w-full"
                     />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <label className="block text-white text-lg font-semibold mb-2">Select Time</label>
+                  <label className="block text-white text-lg font-semibold mb-2">
+                    {dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectTime.label}
+                  </label>
                   <div className="relative">
-                    {/* Spinner absolutely positioned inside the select */}
                     {isLoadingTimes && (
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center pointer-events-none z-10">
                         <Loader2 className="w-5 h-5 animate-spin text-white/80" />
@@ -803,12 +891,16 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                     >
                       <option value="" disabled>
                         {!selectedBookingDate
-                          ? "Select a date first"
+                          ? dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectTime
+                              .nothingSelectedText
                           : isLoadingTimes
-                            ? "Checking availability..."
+                            ? dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectTime
+                                .checkingAvailabilityText
                             : availableTimes.length === 0
-                              ? "No appointments available for this day"
-                              : "Select a time"}
+                              ? dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectTime
+                                  .noAppointmentsText
+                              : dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectTime
+                                  .selectTimeText}
                       </option>
                       {!isLoadingTimes &&
                         availableTimes.map((time) => (
@@ -829,7 +921,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                     disabled={!validateCalendarBooking()}
                     className="flex items-center gap-2 bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer"
                   >
-                    Continue
+                    {dict.pages.scheduleAppointment.scheduleForm.steps.continueText}
                     <ChevronRight className="w-5 h-5" />
                   </button>
                 </div>
@@ -845,10 +937,11 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           <div className="text-green-500 mb-4">
             <Check className="w-16 h-16 mx-auto" />
           </div>
-          <h2 className="text-2xl font-bold text-white mb-4">Ready to Submit</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {dict.pages.scheduleAppointment.scheduleForm.steps.submissionStep.title}
+          </h2>
           <p className="text-white/80 mb-6">
-            All sections have been completed. Review your information above and submit your appointment request when
-            ready.
+            {dict.pages.scheduleAppointment.scheduleForm.steps.submissionStep.description}
           </p>
 
           <button
@@ -859,10 +952,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             {isSubmitting ? (
               <>
                 <Loader2 className="w-5 h-5 animate-spin" />
-                Scheduling...
+                {dict.pages.scheduleAppointment.scheduleForm.steps.submissionStep.schedulingAppointmentButtonText}
               </>
             ) : (
-              "Schedule Appointment"
+              dict.pages.scheduleAppointment.scheduleForm.steps.submissionStep.scheduleAppointmentButtonText
             )}
           </button>
         </div>

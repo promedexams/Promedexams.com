@@ -27,21 +27,19 @@ const ScheduleAppointmentPage = async ({ params }: SupportedLanguagesProps) => {
                 <div className="bg-[#f1a208]/20 p-2 rounded-lg">
                   <InfoIcon className="w-5 h-5 text-[#f1a208]" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">A Note About Our New System</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  {dict.pages.scheduleAppointment.maintenanceWindow.header}
+                </h3>
               </div>
               <div className="pl-12">
-                <p className="text-white/80">
-                  We've recently launched our new scheduling platform to make booking easier. As with any new system, we
-                  are working to refine the experience. If you run into any problems, please reach out so we can assist
-                  you.
-                </p>
+                <p className="text-white/80">{dict.pages.scheduleAppointment.maintenanceWindow.subheader}</p>
                 <div className="pt-6">
                   <Link
                     href="/contact"
                     className="inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#f1a208] px-6 py-3 font-bold text-[#f1a208] transition-all duration-200 hover:scale-105 hover:bg-[#f1a208]/20"
                   >
                     <MailPlusIcon className="w-5 h-5" />
-                    <span>Contact Us</span>
+                    <span>{dict.pages.scheduleAppointment.maintenanceWindow.contactButtonText}</span>
                   </Link>
                 </div>
               </div>
