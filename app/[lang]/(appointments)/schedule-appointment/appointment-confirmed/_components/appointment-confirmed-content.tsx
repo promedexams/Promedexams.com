@@ -333,7 +333,7 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
       {appointmentTypeInfo && (
         <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl">
           <h2 className="text-2xl font-bold text-white mb-6 pb-4 border-b border-white/20 text-center">
-            What to Expect
+            {dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.title}
           </h2>
           <div className="space-y-6">
             <div className="bg-slate-900/50 p-5 rounded-xl">
@@ -341,7 +341,9 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
                 <div className="bg-[#f1a208]/20 p-2 rounded-lg">
                   <FileTextIcon className="w-5 h-5 text-[#f1a208]" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">About Your Visit</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  {dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.about.title}
+                </h3>
               </div>
               <p className="text-white/80 pl-12">{appointmentTypeInfo.description}</p>
             </div>
@@ -352,7 +354,9 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
                   <div className="bg-[#f1a208]/20 p-2 rounded-lg">
                     <AlertTriangleIcon className="w-5 h-5 text-[#f1a208]" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">Important Reminders</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.title}
+                  </h3>
                 </div>
                 <div className="pl-12">
                   <ul className="space-y-3">
@@ -385,10 +389,12 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
                 <div className="bg-[#f1a208]/20 p-2 rounded-lg">
                   <CalendarX2Icon className="w-5 h-5 text-[#f1a208]" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">Cancellation Policy</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  {dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.cancellation.title}
+                </h3>
               </div>
               <p className="text-white/80 pl-12">
-                Appointments cancelled with less than 24 hours notice may be subject to a cancellation fee.
+                {dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.cancellation.text}
               </p>
             </div>
 
@@ -397,11 +403,12 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
                 <div className="bg-[#f1a208]/20 p-2 rounded-lg">
                   <PenSquareIcon className="w-5 h-5 text-[#f1a208]" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">Changes to Your Appointment</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  {dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.changes.title}
+                </h3>
               </div>
               <p className="text-white/80 pl-12">
-                Please reach out to our office by either giving us a phone call or sending us an email to reschedule or
-                make changes to your appointment.
+                {dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.changes.text}
               </p>
               <div className="pl-12 pt-6">
                 <Link
@@ -409,7 +416,9 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
                   className="inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#f1a208] px-6 py-3 font-bold text-[#f1a208] transition-all duration-200 hover:scale-105 hover:bg-[#f1a208]/20"
                 >
                   <MailPlusIcon className="w-5 h-5" />
-                  <span>Contact Us</span>
+                  <span>
+                    {dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.changes.contactButtonText}
+                  </span>
                 </Link>
               </div>
             </div>

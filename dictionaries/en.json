@@ -462,6 +462,25 @@
           "location": {
             "title": "Location"
           }
+        },
+        "whatToExpectSection": {
+          "title": "What to Expect",
+          "about": {
+            "title": "About Your Visit"
+          },
+          "reminders": {
+            "title": "Important Reminders",
+            "learnMoreButtonText": "Learn More About Your Appointment"
+          },
+          "cancellation": {
+            "title": "Cancellation Policy",
+            "text": "Appointments cancelled with less than 24 hours notice may be subject to a cancellation fee."
+          },
+          "changes": {
+            "title": "Changes to Your Appointment",
+            "text": "Please reach out to our office by either giving us a phone call or sending us an email to reschedule or make changes to your appointment.",
+            "contactButtonText": "Contact Us"
+          }
         }
       }
     },

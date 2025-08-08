@@ -462,6 +462,25 @@
           "location": {
             "title": "Ubicación"
           }
+        },
+        "whatToExpectSection": {
+          "title": "Qué Esperar",
+          "about": {
+            "title": "Sobre su Cita"
+          },
+          "reminders": {
+            "title": "Recordatorios Importantes",
+            "learnMoreButtonText": "Conozca Más Sobre su Cita"
+          },
+          "cancellation": {
+            "title": "Política de Cancelación",
+            "text": "Las citas canceladas con menos de 24 horas de antelación pueden estar sujetas a un cargo por cancelación."
+          },
+          "changes": {
+            "title": "Cambios en su Cita",
+            "text": "Por favor, póngase en contacto con nuestra oficina, ya sea llamándonos por teléfono o enviándonos un correo electrónico, para reprogramar o hacer cambios en su cita.",
+            "contactButtonText": "Contáctenos"
+          }
         }
       }
     },
