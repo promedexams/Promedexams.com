@@ -444,6 +444,11 @@
         }
       },
       "appointmentConfirmed": {
+        "appointmentNotFound": {
+          "title": "Cita No Encontrada",
+          "description": "No pudimos encontrar la confirmación de su cita. Por favor, póngase en contacto con nuestra oficina si cree que esto es un error.",
+          "contactButtonText": "Contáctenos"
+        },
         "overviewSection": {
           "title": "Cita Confirmada",
           "subheader": "Su cita ha sido agendada con éxito.",
@@ -470,6 +475,58 @@
           },
           "reminders": {
             "title": "Recordatorios Importantes",
+            "serviceTypes": {
+              "dot": {
+                "title": "Examen Físico del DOT",
+                "description": "Un examen físico del Departamento de Transporte (DOT) para asegurar que cumple con los estándares de salud requeridos para la conducción comercial.",
+                "remindersList": [
+                  "Asegúrese de traer: Formulario de Informe de Examen Médico (MER), licencia de conducir vigente emitida por el estado, lentes de contacto/gafas (si aplica) – Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir, audífonos (si aplica), lista de medicamentos actuales con dosis y el nombre de quien los recetó, cualquier circunstancia especial o carta de exención de su(s) médico(s) y/o expedientes médicos o legales pertinentes (si aplica).",
+                  "Asegúrese de completar las secciones de información del conductor e historial de salud en las dos primeras páginas del Formulario de Informe de Examen Médico (MCSA-5875) antes de su cita.",
+                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina al comienzo de su cita.",
+                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina y estar listo para su cita a tiempo."
+                ]
+              },
+              "faa": {
+                "title": "Examen Médico de Aviación de la FAA (2da y 3ra Clase)",
+                "description": "Examen de certificación médica de la Administración Federal de Aviación para pilotos privados y comerciales. Proporcionamos certificados médicos de 2da y 3ra clase.",
+                "remindersList": [
+                  "Asegúrese de traer: Identificación con foto vigente (Licencia de conducir o Pasaporte), lentes de contacto/gafas (si aplica) – Si usa lentes de contacto, traiga un estuche para quitárselenos y poder revisar la visión sin corregir, audífonos (si aplica), expedientes médicos o legales pertinentes (si aplica), número de confirmación de MedXPress.",
+                  "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress antes de su llegada.",
+                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina al comienzo de su cita.",
+                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina y estar listo para su cita a tiempo."
+                ]
+              },
+              "schoolSportsCamp": {
+                "title": "Examen Físico Escolar, Deportivo y de Campamento",
+                "description": "Examen físico integral para la inscripción escolar, participación deportiva o autorización para asistir a campamentos.",
+                "remindersList": [
+                  "Asegúrese de traer: Cualquier formulario proporcionado por su escuela, programa deportivo o campamento que deba ser completado y/o firmado por la Dra. Quigley, registros de inmunización, lista de alergias y medicamentos actuales con dosis (recetados y de venta libre), lista de lesiones y cirugías pasadas e historial familiar pertinente.",
+                  "Asegúrese de completar cualquier parte de los formularios de participación que deba ser llenada por el paciente o su padre/tutor.",
+                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina al comienzo de su cita si su formulario de participación requiere un análisis de orina.",
+                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina si es necesario y estar listo para su cita a tiempo."
+                ]
+              },
+              "consultation": {
+                "title": "Consulta",
+                "description": "Una cita de consulta para discutir su próximo examen médico, revisar el historial médico y abordar cualquier inquietud o pregunta que pueda tener.",
+                "remindersList": [
+                  "Por favor, traiga una identificación con fotografía.",
+                  "Por favor, traiga la información de su seguro.",
+                  "Por favor, traiga una lista de sus medicamentos actuales.",
+                  "Si necesita cancelar o reprogramar, por favor llame con al menos 24 horas de antelación."
+                ]
+              },
+              "general": {
+                "title": "Cita General",
+                "description": "Su cita ha sido confirmada. Por favor, llegue 15 minutos antes para completar cualquier papeleo necesario.",
+                "remindersList": [
+                  "Por favor, traiga una identificación con fotografía.",
+                  "Por favor, traiga la información de su seguro.",
+                  "Por favor, traiga una lista de sus medicamentos actuales.",
+                  "Si necesita cancelar o reprogramar, por favor llame con al menos 24 horas de antelación."
+                ]
+              }
+            },
             "learnMoreButtonText": "Conozca Más Sobre su Cita"
           },
           "cancellation": {

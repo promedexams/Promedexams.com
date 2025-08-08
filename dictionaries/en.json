@@ -444,6 +444,11 @@
         }
       },
       "appointmentConfirmed": {
+        "appointmentNotFound": {
+          "title": "Appointment Not Found",
+          "description": "We couldn't find your appointment confirmation. Please contact our office if you believe this is an error.",
+          "contactButtonText": "Contact Us"
+        },
         "overviewSection": {
           "title": "Appointment Confirmed",
           "subheader": "Your appointment has been successfully scheduled.",
@@ -470,6 +475,58 @@
           },
           "reminders": {
             "title": "Important Reminders",
+            "serviceTypes": {
+              "dot": {
+                "title": "DOT Physical Examination",
+                "description": "A Department of Transportation (DOT) physical examination to ensure you meet the health standards required for commercial driving.",
+                "remindersList": [
+                  "Make sure to bring: Medical Examination Report (MER) Form, Current state-issued driver’s license, Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), List of current medications with dosages and prescriber’s name, Special circumstances or exemption letters from your doctor(s) and/or pertinent medical or legal records (if applicable)",
+                  "Be sure to complete the driver information and health history sections on the first two pages of the Medical Examination Report Form (MCSA-5875) prior to your appointment.",
+                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
+                  "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time."
+                ]
+              },
+              "faa": {
+                "title": "FAA Aviation Medical Examination (2nd & 3rd Class)",
+                "description": "Federal Aviation Administration medical certification examination for private and commercial pilots. We provide 2nd and 3rd class medical certificates.",
+                "remindersList": [
+                  "Make sure to bring: Current photo ID (Driver’s license or Passport), Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), Pertinent medical or legal records (if applicable), MedXPress confirmation number",
+                  "Be sure to update your health history and current medications in MedXPress prior to your arrival.",
+                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
+                  "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time."
+                ]
+              },
+              "schoolSportsCamp": {
+                "title": "School, Sports & Camp Physical",
+                "description": "Comprehensive physical examination for school enrollment, sports participation, or camp attendance clearance.",
+                "remindersList": [
+                  "Make sure to bring: Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley, Immunization records, List of allergies and current medications with dosages (prescription and over-the-counter), List of past injuries and surgeries and pertinent family history",
+                  "Be sure to complete any parts of participation forms that are to be completed by the client or their parent/guardian",
+                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment if your participation form requires a urinalysis.",
+                  "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample if necessary, and be ready for your appointment on time."
+                ]
+              },
+              "consultation": {
+                "title": "Consultation",
+                "description": "A consultation appointment to discuss your upcoming medical examination, review medical history, and address any concerns or questions you may have.",
+                "remindersList": [
+                  "Please bring a photo identification.",
+                  "Please bring your insurance information.",
+                  "Please bring a list of current medications.",
+                  "If you need to cancel or reschedule, please call at least 24 hours in advance"
+                ]
+              },
+              "general": {
+                "title": "General Appointment",
+                "description": "Your appointment has been confirmed. Please arrive 15 minutes early to complete any necessary paperwork.",
+                "remindersList": [
+                  "Please bring a photo identification.",
+                  "Please bring your insurance information.",
+                  "Please bring a list of current medications.",
+                  "If you need to cancel or reschedule, please call at least 24 hours in advance"
+                ]
+              }
+            },
             "learnMoreButtonText": "Learn More About Your Appointment"
           },
           "cancellation": {

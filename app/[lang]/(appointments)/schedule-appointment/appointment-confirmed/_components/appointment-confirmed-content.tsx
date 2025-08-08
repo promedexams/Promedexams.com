@@ -24,87 +24,6 @@ import { BookingDetails } from "@/lib/types/api/booking";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
-const getAppointmentTypeInfo = (appointmentType: string) => {
-  const appointmentInfo: Record<
-    string,
-    {
-      title: string;
-      description: string;
-      reminders?: string[];
-      servicePageUrl?: string;
-    }
-  > = {
-    "DOT Physicals": {
-      title: "DOT Physical Examination",
-      description:
-        "A Department of Transportation (DOT) physical examination to ensure you meet the health standards required for commercial driving.",
-      reminders: [
-        "Make sure to bring: Medical Examination Report (MER) Form, Current state-issued driver’s license, Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), List of current medications with dosages and prescriber’s name, Special circumstances or exemption letters from your doctor(s) and/or pertinent medical or legal records (if applicable)",
-        "Be sure to complete the driver information and health history sections on the first two pages of the Medical Examination Report Form (MCSA-5875) prior to your appointment.",
-        "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
-        "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time.",
-      ],
-      servicePageUrl: "/services/dot-physicals",
-    },
-    "FAA Physicals (2nd & 3rd Class)": {
-      title: "FAA Aviation Medical Examination (2nd & 3rd Class)",
-      description:
-        "Federal Aviation Administration medical certification examination for private and commercial pilots. We provide 2nd and 3rd class medical certificates.",
-      reminders: [
-        "Make sure to bring: Current photo ID (Driver’s license or Passport), Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), Pertinent medical or legal records (if applicable), MedXPress confirmation number",
-        "Be sure to update your health history and current medications in MedXPress prior to your arrival.",
-        "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
-        "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time.",
-      ],
-      servicePageUrl: "/services/faa-physicals",
-    },
-    "School/Sports/Camp Physicals": {
-      title: "School, Sports & Camp Physical",
-      description:
-        "Comprehensive physical examination for school enrollment, sports participation, or camp attendance clearance.",
-      reminders: [
-        "Make sure to bring: Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley, Immunization records, List of allergies and current medications with dosages (prescription and over-the-counter), List of past injuries and surgeries and pertinent family history",
-        "Be sure to complete any parts of participation forms that are to be completed by the client or their parent/guardian",
-        "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment if your participation form requires a urinalysis.",
-        "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample if necessary, and be ready for your appointment on time.",
-      ],
-      servicePageUrl: "/services/school-sports-camp-physicals",
-    },
-    "USCIS Medical Exam": {
-      title: "USCIS Immigrant Medical Examination",
-      description:
-        "A medical examination required for immigrants applying for adjustment of status or an immigrant visa, in accordance with U.S. Citizenship and Immigration Services (USCIS) requirements.",
-      reminders: [
-        "Make sure to bring: Valid passport or other government-issued photo identification, Vaccination records, Form I-693 (Report of Medical Examination and Vaccination Record), List of current medications, Pertinent past medical or legal records (see promedexams.com for more information regarding what to bring to your appointment)",
-        "Be sure to complete parts 1-4 on pages 1-3 of Form I-693 prior to your arrival.",
-        "If necessary, please bring an interpreter to your appointment if possible. An interpretation device will be used if an interpreter is needed but not available.",
-        "You do NOT need to be fasting for your appointment, but you may need to leave a urine sample and have blood drawn immediately after your appointment.",
-        "Please show up to your appointment 10-15 minutes early to check in, get instructions for where to go for your lab draw after your appointment, and be ready for your appointment on time.",
-      ],
-    },
-    Consultation: {
-      title: "Consultation",
-      description:
-        "A consultation appointment to discuss your upcoming medical examination, review medical history, and address any concerns or questions you may have.",
-    },
-  };
-
-  // Return the matching appointment type or a default
-  return (
-    appointmentInfo[appointmentType] || {
-      title: appointmentType || "General Appointment",
-      description:
-        "Your appointment has been confirmed. Please arrive 15 minutes early to complete any necessary paperwork.",
-      reminders: [
-        "Please bring a photo identification.",
-        "Please bring your insurance information.",
-        "Please bring a list of current medications.",
-        "If you need to cancel or reschedule, please call at least 24 hours in advance",
-      ],
-    }
-  );
-};
-
 const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
   const [dict, setDict] = useState<any>(null);
   const searchParams = useSearchParams();
@@ -130,7 +49,7 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
     const email = searchParams.get("email");
     const phoneNumber = searchParams.get("phoneNumber");
 
-    if (bookingId && appointmentType && appointmentDate && appointmentTime && firstName && lastName) {
+    if (bookingId && appointmentType && appointmentDate && appointmentTime && firstName && lastName && dict) {
       const details: BookingDetails = {
         bookingId,
         customerId: customerId || "",
@@ -151,7 +70,7 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
       setAppointmentTypeInfo(null);
       setBookingLoading(false);
     }
-  }, [searchParams]);
+  }, [searchParams, dict]);
 
   const getMonthYear = (dateStr: string) => {
     const date = new Date(dateStr);
@@ -177,6 +96,78 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
       .toUpperCase();
   };
 
+  const getAppointmentTypeInfo = (appointmentType: string) => {
+    const appointmentInfo: Record<
+      string,
+      {
+        title: string;
+        description: string;
+        reminders?: string[];
+        servicePageUrl?: string;
+      }
+    > = {
+      "DOT Physicals": {
+        title: dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.dot.title,
+        description:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.dot
+            .description,
+        reminders:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.dot
+            .remindersList,
+        servicePageUrl: "/services/dot-physicals",
+      },
+      "FAA Physicals (2nd & 3rd Class)": {
+        title: dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.faa.title,
+        description:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.faa
+            .description,
+        reminders:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.faa
+            .remindersList,
+        servicePageUrl: "/services/faa-physicals",
+      },
+      "School/Sports/Camp Physicals": {
+        title:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes
+            .schoolSportsCamp.title,
+        description:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes
+            .schoolSportsCamp.description,
+        reminders:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes
+            .schoolSportsCamp.remindersList,
+        servicePageUrl: "/services/school-sports-camp-physicals",
+      },
+      Consultation: {
+        title:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.consultation
+            .title,
+        description:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.consultation
+            .description,
+        reminders:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.consultation
+            .remindersList,
+        servicePageUrl: "/services",
+      },
+    };
+
+    // Return the matching appointment type or a default
+    return (
+      appointmentInfo[appointmentType] || {
+        title:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general.title,
+        description:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general
+            .description,
+        reminders:
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general
+            .remindersList,
+        servicePageUrl: "/services",
+      }
+    );
+  };
+
   if (!dict || bookingLoading) {
     return (
       <div className="flex justify-center mb-8 items-center">
@@ -190,9 +181,11 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
       <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl">
         <div className="text-center">
           <AlertCircleIcon className="w-16 h-16 mx-auto text-red-400 mb-4" />
-          <h1 className="text-3xl font-bold text-white mb-4">Appointment Not Found</h1>
+          <h1 className="text-3xl font-bold text-white mb-4">
+            {dict.pages.scheduleAppointment.appointmentConfirmed.appointmentNotFound.title}
+          </h1>
           <p className="text-white/80">
-            We couldn't find your appointment confirmation. Please contact our office if you believe this is an error.
+            {dict.pages.scheduleAppointment.appointmentConfirmed.appointmentNotFound.description}
           </p>
           <div className="pt-6">
             <Link
@@ -200,7 +193,7 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
               className="inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#f1a208] px-6 py-3 font-bold text-[#f1a208] transition-all duration-200 hover:scale-105 hover:bg-[#f1a208]/20"
             >
               <MailPlusIcon className="w-5 h-5" />
-              <span>Contact Us</span>
+              <span>{dict.pages.scheduleAppointment.appointmentConfirmed.appointmentNotFound.contactButtonText}</span>
             </Link>
           </div>
         </div>
