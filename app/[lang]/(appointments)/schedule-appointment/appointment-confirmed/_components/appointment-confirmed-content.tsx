@@ -8,9 +8,8 @@ import {
   ClipboardIcon,
   ClockIcon,
   CopyIcon,
-  MailIcon,
+  InfoIcon,
   MapPinIcon,
-  PhoneIcon,
   UserIcon,
 } from "lucide-react";
 
@@ -37,8 +36,8 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: string;
       description: string;
       duration: string;
-      instructions: string[];
-      additionalNotes?: string[];
+      reminders?: string[];
+      servicePageUrl?: string;
     }
   > = {
     "DOT Physicals": {
@@ -46,50 +45,51 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       description:
         "A Department of Transportation (DOT) physical examination to ensure you meet the health standards required for commercial driving.",
       duration: "45-60 minutes",
-      instructions: [
-        "Valid driver's license or state-issued ID",
-        "List of current medications",
-        "Glasses or contact lenses (if applicable)",
-        "Medical history and any relevant medical records",
+      reminders: [
+        "Make sure to bring: Medical Examination Report (MER) Form, Current state-issued driver’s license, Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), List of current medications with dosages and prescriber’s name, Special circumstances or exemption letters from your doctor(s) and/or pertinent medical or legal records (if applicable)",
+        "Be sure to complete the driver information and health history sections on the first two pages of the Medical Examination Report Form (MCSA-5875) prior to your appointment.",
+        "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
+        "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time.",
       ],
-      additionalNotes: [
-        "Please arrive 15 minutes early to complete paperwork",
-        "Avoid caffeine before your appointment for accurate blood pressure reading",
-        "Bring any medical exemption certificates if applicable",
-      ],
+      servicePageUrl: "/services/dot-physicals",
     },
     "FAA Physicals (2nd & 3rd Class)": {
       title: "FAA Aviation Medical Examination (2nd & 3rd Class)",
       description:
         "Federal Aviation Administration medical certification examination for private and commercial pilots. We provide 2nd and 3rd class medical certificates.",
       duration: "60-90 minutes",
-      instructions: [
-        "Government-issued photo ID",
-        "Current pilot certificate (if applicable)",
-        "Prescription medications list",
-        "Eyeglasses or contact lenses (if worn)",
+      reminders: [
+        "Make sure to bring: Current photo ID (Driver’s license or Passport), Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), Pertinent medical or legal records (if applicable), MedXPress confirmation number",
+        "Be sure to update your health history and current medications in MedXPress prior to your arrival.",
+        "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
+        "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time.",
       ],
-      additionalNotes: [
-        "Fast for 8-12 hours if bloodwork is required",
-        "Bring medical records for any chronic conditions",
-        "Complete MedXPress application before arrival",
-      ],
+      servicePageUrl: "/services/faa-physicals",
     },
     "School/Sports/Camp Physicals": {
       title: "School, Sports & Camp Physical",
       description:
         "Comprehensive physical examination for school enrollment, sports participation, or camp attendance clearance.",
       duration: "30-45 minutes",
-      instructions: [
-        "Immunization records",
-        "School, sports, or camp forms to be completed",
-        "Insurance card",
-        "List of any medications or allergies",
+      reminders: [
+        "Make sure to bring: Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley, Immunization records, List of allergies and current medications with dosages (prescription and over-the-counter), List of past injuries and surgeries and pertinent family history",
+        "Be sure to complete any parts of participation forms that are to be completed by the client or their parent/guardian",
+        "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment if your participation form requires a urinalysis.",
+        "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample if necessary, and be ready for your appointment on time.",
       ],
-      additionalNotes: [
-        "Student/camper should wear comfortable clothing",
-        "Parent/guardian must accompany minors",
-        "Bring any specialized forms from school, sports organization, or camp",
+      servicePageUrl: "/services/school-sports-camp-physicals",
+    },
+    "USCIS Medical Exam": {
+      title: "USCIS Immigrant Medical Examination",
+      description:
+        "A medical examination required for immigrants applying for adjustment of status or an immigrant visa, in accordance with U.S. Citizenship and Immigration Services (USCIS) requirements.",
+      duration: "60-75 minutes",
+      reminders: [
+        "Make sure to bring: Valid passport or other government-issued photo identification, Vaccination records, Form I-693 (Report of Medical Examination and Vaccination Record), List of current medications, Pertinent past medical or legal records (see promedexams.com for more information regarding what to bring to your appointment)",
+        "Be sure to complete parts 1-4 on pages 1-3 of Form I-693 prior to your arrival.",
+        "If necessary, please bring an interpreter to your appointment if possible. An interpretation device will be used if an interpreter is needed but not available.",
+        "You do NOT need to be fasting for your appointment, but you may need to leave a urine sample and have blood drawn immediately after your appointment.",
+        "Please show up to your appointment 10-15 minutes early to check in, get instructions for where to go for your lab draw after your appointment, and be ready for your appointment on time.",
       ],
     },
     "Pre-Exam Consultation": {
@@ -97,17 +97,6 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       description:
         "A consultation appointment to discuss your upcoming medical examination, review medical history, and address any concerns or questions you may have.",
       duration: "15-30 minutes",
-      instructions: [
-        "List of questions or concerns",
-        "Current medications list",
-        "Medical history documentation",
-        "Any relevant medical records",
-      ],
-      additionalNotes: [
-        "This is a consultation only - no physical examination will be performed",
-        "Perfect for discussing complex medical histories before your actual exam",
-        "Helps ensure you're fully prepared for your certification examination",
-      ],
     },
   };
 
@@ -118,14 +107,10 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       description:
         "Your appointment has been confirmed. Please arrive 15 minutes early to complete any necessary paperwork.",
       duration: "Varies",
-      instructions: [
-        "Photo identification",
-        "Insurance information",
-        "List of current medications",
-        "Any relevant medical records",
-      ],
-      additionalNotes: [
-        "Please arrive 15 minutes early",
+      reminders: [
+        "Please bring a photo identification.",
+        "Please bring your insurance information.",
+        "Please bring a list of current medications.",
         "If you need to cancel or reschedule, please call at least 24 hours in advance",
       ],
     }
@@ -239,7 +224,7 @@ const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps)
         </div>
         <div className="flex flex-col sm:flex-row gap-6 items-stretch min-h-[420px]">
           {/* Left Side - Calendar + Confirmation Number */}
-          <div className="flex flex-col gap-6 items-center sm:items-stretch w-full max-w-[320px] mx-auto sm:mx-0">
+          <div className="flex flex-col gap-6 items-center sm:items-stretch w-full sm:max-w-[320px] mx-auto sm:mx-0">
             {/* Calendar Card */}
             <div className="w-full">
               <div className="bg-gradient-to-b from-slate-900/70 to-slate-900/50 rounded-2xl overflow-hidden shadow-2xl w-full flex flex-col">
@@ -337,91 +322,47 @@ const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps)
       </div>
 
       {/* What to Expect Section */}
-      {appointmentTypeInfo && appointmentTypeInfo.instructions && (
+      {appointmentTypeInfo && (
         <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl">
           <h2 className="text-2xl font-bold text-white mb-6 pb-4 border-b border-white/20">What to Expect</h2>
-
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-white mb-3">About Your Visit</h3>
               <p className="text-white/80">{appointmentTypeInfo.description}</p>
             </div>
 
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-3">What to Bring</h3>
-              <div className="bg-slate-900/50 p-4 rounded-lg">
-                <ul className="space-y-2">
-                  {appointmentTypeInfo.instructions.map((instruction: string, index: number) => (
-                    <li key={index} className="flex items-start gap-3 text-white/80">
-                      <span className="w-2 h-2 bg-[#f1a208] rounded-full mt-2 flex-shrink-0"></span>
-                      <span>{instruction}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {appointmentTypeInfo.additionalNotes && appointmentTypeInfo.additionalNotes.length > 0 && (
-              <div className="bg-blue-900/20 border border-blue-400/30 p-4 rounded-lg">
-                <div className="flex items-start gap-3">
-                  <AlertCircleIcon className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-blue-400 mb-2">Important Reminders</h3>
-                    <ul className="space-y-1">
-                      {appointmentTypeInfo.additionalNotes.map((note: string, index: number) => (
-                        <li key={index} className="text-white/80 text-sm">
-                          • {note}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+            {appointmentTypeInfo.reminders && appointmentTypeInfo.reminders.length > 0 && (
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-3">Important Reminders</h3>
+                <div className="bg-slate-900/50 p-4 rounded-lg">
+                  <ul className="space-y-3">
+                    {appointmentTypeInfo.reminders.map((reminder: string, index: number) => (
+                      <li key={index} className="flex items-start gap-3 text-white/80">
+                        <span className="w-2 h-2 bg-[#f1a208] rounded-full mt-2 flex-shrink-0"></span>
+                        <span>{reminder}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
+              </div>
+            )}
+
+            {appointmentTypeInfo.servicePageUrl && (
+              <div className="pt-4 text-center">
+                <a
+                  href={appointmentTypeInfo.servicePageUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#f1a208] px-6 py-3 font-bold text-[#f1a208] transition-all duration-200 hover:scale-105 hover:bg-[#f1a208]/20"
+                >
+                  <InfoIcon className="w-5 h-5" />
+                  <span>Learn More About Your Appointment</span>
+                </a>
               </div>
             )}
           </div>
         </div>
       )}
-
-      {/* Need to Make Changes */}
-      <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl">
-        <h2 className="text-2xl font-bold text-white mb-6 pb-4 border-b border-white/20">Need to Make Changes?</h2>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <p className="text-white/80 mb-4">
-              To reschedule or cancel your appointment, please contact us at least 24 hours in advance.
-            </p>
-            <div className="bg-slate-900/50 p-4 rounded-lg space-y-3">
-              <div className="flex items-center gap-3">
-                <PhoneIcon className="w-4 h-4 text-[#f1a208]" />
-                <span className="text-white">(720) 517-3111</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MailIcon className="w-4 h-4 text-[#f1a208]" />
-                <span className="text-white">office@promedexams.com</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <ClockIcon className="w-4 h-4 text-[#f1a208]" />
-                <span className="text-white/80 text-sm">Mon-Thu: 7:30 AM - 4:30 PM</span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="bg-amber-900/20 border border-amber-400/30 p-4 rounded-lg">
-              <h3 className="font-semibold text-amber-400 mb-2">Cancellation Policy</h3>
-              <p className="text-white/80 text-sm">
-                Appointments cancelled with less than 24 hours notice may be subject to a cancellation fee.
-              </p>
-            </div>
-            <div className="mt-4 bg-slate-900/50 p-4 rounded-lg">
-              <p className="text-white/60 text-sm mb-2">Office Hours</p>
-              <p className="text-white text-sm">Monday - Thursday: 7:30 AM - 4:30 PM</p>
-              <p className="text-white/60 text-sm mt-1">Closed Friday, Saturday, and Sunday</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Save Your Confirmation */}
       <div className="w-full bg-slate-800/20 p-8 rounded-2xl shadow-xl text-center">
