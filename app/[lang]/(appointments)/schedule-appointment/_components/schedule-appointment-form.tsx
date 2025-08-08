@@ -172,6 +172,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     if (selectedService) {
       setSelectedAppointmentType(selectedService.id);
       setSelectedAppointmentVariationVersion(Number(selectedService.variationVersion));
+      setSelectedBookingDate(null);
+      setSelectedTime("");
+      setAvailableTimes([]);
     }
   };
 
