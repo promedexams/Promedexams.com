@@ -52,3 +52,37 @@ export interface BookingResponse {
   appointmentId?: string;
   error?: string;
 }
+
+/**
+ * Represents the details of a booking, including customer information and appointment specifics.
+ *
+ * @property bookingId - Unique identifier for the booking.
+ * @property customerId - Unique identifier for the customer making the booking.
+ * @property appointmentType - Type or category of the appointment.
+ * @property appointmentDate - Date of the appointment (ISO 8601 format recommended).
+ * @property appointmentTime - Time of the appointment (24-hour format recommended).
+ * @property firstName - First name of the customer.
+ * @property lastName - Last name of the customer.
+ * @property email - Email address of the customer.
+ * @property phoneNumber - Contact phone number of the customer.
+ */
+export interface BookingDetails {
+  bookingId: string;
+  customerId: string;
+  appointmentType: string;
+  appointmentDate: string;
+  appointmentTime: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+}
+
+/**
+ * Props for the AppointmentConfirmedContent component.
+ *
+ * @property dict - An object containing localized strings or dictionary values used for rendering content.
+ */
+export interface AppointmentConfirmedContentProps {
+  dict: any;
+}

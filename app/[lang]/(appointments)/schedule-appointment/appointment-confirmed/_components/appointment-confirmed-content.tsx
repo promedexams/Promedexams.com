@@ -12,27 +12,16 @@ import {
   ClockIcon,
   FileTextIcon,
   InfoIcon,
+  Loader2,
   MailPlusIcon,
   MapPinIcon,
   PenSquareIcon,
   UserIcon,
 } from "lucide-react";
 
-// interface AppointmentConfirmedContentProps {
-//   dict: any;
-// }
-
-interface BookingDetails {
-  bookingId: string;
-  customerId: string;
-  appointmentType: string;
-  appointmentDate: string;
-  appointmentTime: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-}
+import { BookingDetails } from "@/lib/types/api/booking";
+import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
+import { getDictionary } from "@/lib/utils/dictionaries";
 
 const getAppointmentTypeInfo = (appointmentType: string) => {
   const appointmentInfo: Record<
@@ -115,13 +104,21 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
   );
 };
 
-// const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps) => {  const searchParams = useSearchParams();
-const AppointmentConfirmedContent = () => {
+const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
+  const [dict, setDict] = useState<any>(null);
   const searchParams = useSearchParams();
   const [bookingDetails, setBookingDetails] = useState<BookingDetails | null>(null);
   const [appointmentTypeInfo, setAppointmentTypeInfo] = useState<any>(null);
+  const [bookingLoading, setBookingLoading] = useState(true);
 
   useEffect(() => {
+    params.then(({ lang }) => {
+      getDictionary(lang).then(setDict);
+    });
+  }, [params]);
+
+  useEffect(() => {
+    setBookingLoading(true);
     const bookingId = searchParams.get("bookingId");
     const customerId = searchParams.get("customerId");
     const appointmentType = searchParams.get("appointmentType");
@@ -147,6 +144,11 @@ const AppointmentConfirmedContent = () => {
 
       setBookingDetails(details);
       setAppointmentTypeInfo(getAppointmentTypeInfo(appointmentType));
+      setBookingLoading(false);
+    } else {
+      setBookingDetails(null);
+      setAppointmentTypeInfo(null);
+      setBookingLoading(false);
     }
   }, [searchParams]);
 
@@ -173,6 +175,14 @@ const AppointmentConfirmedContent = () => {
       })
       .toUpperCase();
   };
+
+  if (!dict || bookingLoading) {
+    return (
+      <div className="flex justify-center items-center">
+        <Loader2 className="w-24 h-24 animate-spin" />
+      </div>
+    );
+  }
 
   if (!bookingDetails) {
     return (
