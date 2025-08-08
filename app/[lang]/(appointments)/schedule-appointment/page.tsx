@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { InfoIcon, MailPlusIcon } from "lucide-react";
+
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
@@ -17,6 +20,32 @@ const ScheduleAppointmentPage = async ({ params }: SupportedLanguagesProps) => {
               {dict.pages.scheduleAppointment.title}
             </h1>
             <p className="text-lg text-white/80 text-center">{dict.pages.scheduleAppointment.description}</p>
+          </div>
+          <div className="w-full mb-6">
+            <div className="bg-slate-900/50 p-5 rounded-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-[#f1a208]/20 p-2 rounded-lg">
+                  <InfoIcon className="w-5 h-5 text-[#f1a208]" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">A Note About Our New System</h3>
+              </div>
+              <div className="pl-12">
+                <p className="text-white/80">
+                  We've recently launched our new scheduling platform to make booking easier. As with any new system, we
+                  are working to refine the experience. If you run into any problems, please reach out so we can assist
+                  you.
+                </p>
+                <div className="pt-6">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#f1a208] px-6 py-3 font-bold text-[#f1a208] transition-all duration-200 hover:scale-105 hover:bg-[#f1a208]/20"
+                  >
+                    <MailPlusIcon className="w-5 h-5" />
+                    <span>Contact Us</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
           <ScheduleAppointmentForm params={params} />
         </div>
