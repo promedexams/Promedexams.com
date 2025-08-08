@@ -446,7 +446,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
         {(currentStep === 1 || completedSteps.has(1)) && (
           <>
-            <div className="flex flex-col sm:flex-row w-full gap-4">
+            <div className="flex flex-col sm:flex-row w-full gap-4 sm:items-end">
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="firstName">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.firstName.label}
@@ -505,7 +505,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 />
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row w-full gap-4">
+            <div className="flex flex-col sm:flex-row w-full gap-4 sm:items-end">
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="birthday">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.dateOfBirth.label}
