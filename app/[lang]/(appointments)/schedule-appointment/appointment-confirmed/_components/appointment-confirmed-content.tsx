@@ -40,7 +40,6 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
     {
       title: string;
       description: string;
-      duration: string;
       reminders?: string[];
       servicePageUrl?: string;
     }
@@ -49,7 +48,6 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: "DOT Physical Examination",
       description:
         "A Department of Transportation (DOT) physical examination to ensure you meet the health standards required for commercial driving.",
-      duration: "60 minutes",
       reminders: [
         "Make sure to bring: Medical Examination Report (MER) Form, Current state-issued driver’s license, Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), List of current medications with dosages and prescriber’s name, Special circumstances or exemption letters from your doctor(s) and/or pertinent medical or legal records (if applicable)",
         "Be sure to complete the driver information and health history sections on the first two pages of the Medical Examination Report Form (MCSA-5875) prior to your appointment.",
@@ -62,7 +60,6 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: "FAA Aviation Medical Examination (2nd & 3rd Class)",
       description:
         "Federal Aviation Administration medical certification examination for private and commercial pilots. We provide 2nd and 3rd class medical certificates.",
-      duration: "60 minutes",
       reminders: [
         "Make sure to bring: Current photo ID (Driver’s license or Passport), Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), Pertinent medical or legal records (if applicable), MedXPress confirmation number",
         "Be sure to update your health history and current medications in MedXPress prior to your arrival.",
@@ -75,7 +72,6 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: "School, Sports & Camp Physical",
       description:
         "Comprehensive physical examination for school enrollment, sports participation, or camp attendance clearance.",
-      duration: "60 minutes",
       reminders: [
         "Make sure to bring: Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley, Immunization records, List of allergies and current medications with dosages (prescription and over-the-counter), List of past injuries and surgeries and pertinent family history",
         "Be sure to complete any parts of participation forms that are to be completed by the client or their parent/guardian",
@@ -88,7 +84,6 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: "USCIS Immigrant Medical Examination",
       description:
         "A medical examination required for immigrants applying for adjustment of status or an immigrant visa, in accordance with U.S. Citizenship and Immigration Services (USCIS) requirements.",
-      duration: "60 minutes",
       reminders: [
         "Make sure to bring: Valid passport or other government-issued photo identification, Vaccination records, Form I-693 (Report of Medical Examination and Vaccination Record), List of current medications, Pertinent past medical or legal records (see promedexams.com for more information regarding what to bring to your appointment)",
         "Be sure to complete parts 1-4 on pages 1-3 of Form I-693 prior to your arrival.",
@@ -97,11 +92,10 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
         "Please show up to your appointment 10-15 minutes early to check in, get instructions for where to go for your lab draw after your appointment, and be ready for your appointment on time.",
       ],
     },
-    "Pre-Exam Consultation": {
-      title: "Pre-Examination Consultation",
+    Consultation: {
+      title: "Consultation",
       description:
         "A consultation appointment to discuss your upcoming medical examination, review medical history, and address any concerns or questions you may have.",
-      duration: "60 minutes",
     },
   };
 
@@ -111,7 +105,6 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: appointmentType || "General Appointment",
       description:
         "Your appointment has been confirmed. Please arrive 15 minutes early to complete any necessary paperwork.",
-      duration: "Varies",
       reminders: [
         "Please bring a photo identification.",
         "Please bring your insurance information.",
@@ -285,9 +278,6 @@ const AppointmentConfirmedContent = () => {
                 <p className="text-white text-lg font-medium">
                   {appointmentTypeInfo?.title || bookingDetails.appointmentType}
                 </p>
-                {appointmentTypeInfo?.duration && (
-                  <p className="text-white/70 text-sm">Duration: {appointmentTypeInfo.duration}</p>
-                )}
               </div>
             </div>
 

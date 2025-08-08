@@ -436,7 +436,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             <div className="flex flex-col sm:flex-row w-full gap-4">
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="birthday">
-                  Birthday
+                  Date of Birth
                 </label>
                 <div className="w-full">
                   <DatePicker
