@@ -49,7 +49,7 @@ const ContactCard = async ({ params }: SupportedLanguagesProps) => {
           <MapPinIcon className="w-9 h-9 mt-1 text-[#f1a208] shrink-0" />
           <div>
             <h3 className="font-bold text-xl mb-1">{dict.contactCard.address}</h3>
-            <p className="text-white/90 text-lg">{BusinessInfo.ContactInformation.Address}</p>
+            <p className="text-white/90 text-lg">{BusinessInfo.ContactInformation.FullAddress}</p>
           </div>
         </div>
         <div className="flex items-center gap-5">

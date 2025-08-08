@@ -442,6 +442,27 @@
             "schedulingAppointmentButtonText": "Agendando..."
           }
         }
+      },
+      "appointmentConfirmed": {
+        "overviewSection": {
+          "title": "Cita Confirmada",
+          "subheader": "Su cita ha sido agendada con éxito.",
+          "calendar": {
+            "timezoneDisplay": "HORA DE LA MONTAÑA (MT)"
+          },
+          "confirmationNumber": {
+            "title": "NÚMERO DE CONFIRMACIÓN"
+          },
+          "clientInfo": {
+            "title": "Información del Paciente"
+          },
+          "appointmentType": {
+            "title": "Tipo de Cita"
+          },
+          "location": {
+            "title": "Ubicación"
+          }
+        }
       }
     },
     "notFound": {

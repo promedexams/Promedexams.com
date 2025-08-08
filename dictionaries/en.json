@@ -442,6 +442,27 @@
             "schedulingAppointmentButtonText": "Scheduling..."
           }
         }
+      },
+      "appointmentConfirmed": {
+        "overviewSection": {
+          "title": "Appointment Confirmed",
+          "subheader": "Your appointment has been successfully scheduled.",
+          "calendar": {
+            "timezoneDisplay": "MOUNTAIN TIME (MT)"
+          },
+          "confirmationNumber": {
+            "title": "CONFIRMATION NUMBER"
+          },
+          "clientInfo": {
+            "title": "Client Information"
+          },
+          "appointmentType": {
+            "title": "Appointment Type"
+          },
+          "location": {
+            "title": "Location"
+          }
+        }
       }
     },
     "notFound": {

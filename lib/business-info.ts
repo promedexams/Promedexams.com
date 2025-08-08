@@ -20,7 +20,9 @@ export const BusinessInfo = {
         null, // Saturday
       ],
     },
-    Address: "4 W Dry Creek Cir #135, Littleton, CO 80120",
+    addressLine1: "4 W Dry Creek Cir #135,",
+    addressLine2: "Littleton, CO 80120",
+    FullAddress: "4 W Dry Creek Cir #135, Littleton, CO 80120",
     OfficeEmail: "office@promedexams.com",
     PhoneNumber: "(720) 517-3111",
     FaxNumber: "(303) 997-2147",

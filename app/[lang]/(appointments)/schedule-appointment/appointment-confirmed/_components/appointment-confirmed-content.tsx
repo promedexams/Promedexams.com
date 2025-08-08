@@ -19,6 +19,7 @@ import {
   UserIcon,
 } from "lucide-react";
 
+import { BusinessInfo } from "@/lib/business-info";
 import { BookingDetails } from "@/lib/types/api/booking";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
@@ -178,7 +179,7 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
 
   if (!dict || bookingLoading) {
     return (
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center mb-8 items-center">
         <Loader2 className="w-24 h-24 animate-spin" />
       </div>
     );
@@ -214,9 +215,13 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
         <div className="flex flex-col items-center mb-8">
           <div className="flex flex-col items-center justify-center text-center gap-3 mb-3">
             <CheckCircleIcon className="w-10 h-10 text-green-400" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-white">Appointment Confirmed</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-white">
+              {dict.pages.scheduleAppointment.appointmentConfirmed.overviewSection.title}
+            </h1>
           </div>
-          <p className="text-center text-white/80 text-lg">Your appointment has been successfully scheduled.</p>
+          <p className="text-center text-white/80 text-lg">
+            {dict.pages.scheduleAppointment.appointmentConfirmed.overviewSection.subheader}
+          </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-6 items-stretch min-h-[420px]">
           {/* Left Side - Calendar + Confirmation Number */}
@@ -249,7 +254,9 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
                       </div>
                       <div className="text-left">
                         <p className="text-2xl font-bold text-white">{bookingDetails.appointmentTime}</p>
-                        <p className="text-xs text-white/60 uppercase tracking-wide">Mountain Time (MT)</p>
+                        <p className="text-xs text-white/60 uppercase tracking-wide">
+                          {dict.pages.scheduleAppointment.appointmentConfirmed.overviewSection.calendar.timezoneDisplay}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -258,7 +265,9 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
             </div>
             {/* Confirmation Number Box */}
             <div className="bg-slate-900/50 p-4 rounded-xl text-center flex flex-col justify-center w-full flex-1">
-              <span className="text-xs text-white/60 uppercase tracking-wider">Confirmation Number</span>
+              <span className="text-xs text-white/60 uppercase tracking-wider">
+                {dict.pages.scheduleAppointment.appointmentConfirmed.overviewSection.confirmationNumber.title}
+              </span>
               <p className="text-lg font-mono font-bold text-[#f1a208]">{bookingDetails.bookingId}</p>
             </div>
           </div>
@@ -270,7 +279,9 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
                 <div className="bg-[#f1a208]/20 p-2 rounded-lg">
                   <UserIcon className="w-5 h-5 text-[#f1a208]" />
                 </div>
-                <h3 className="font-bold text-white text-lg">Client Information</h3>
+                <h3 className="font-bold text-white text-lg">
+                  {dict.pages.scheduleAppointment.appointmentConfirmed.overviewSection.clientInfo.title}
+                </h3>
               </div>
               <div className="pl-12 space-y-1">
                 <p className="text-white text-lg font-medium">
@@ -287,7 +298,9 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
                 <div className="bg-[#f1a208]/20 p-2 rounded-lg">
                   <ClipboardIcon className="w-5 h-5 text-[#f1a208]" />
                 </div>
-                <h3 className="font-bold text-white text-lg">Appointment Type</h3>
+                <h3 className="font-bold text-white text-lg">
+                  {dict.pages.scheduleAppointment.appointmentConfirmed.overviewSection.appointmentType.title}
+                </h3>
               </div>
               <div className="pl-12 space-y-1">
                 <p className="text-white text-lg font-medium">
@@ -302,12 +315,14 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
                 <div className="bg-[#f1a208]/20 p-2 rounded-lg">
                   <MapPinIcon className="w-5 h-5 text-[#f1a208]" />
                 </div>
-                <h3 className="font-bold text-white text-lg">Location</h3>
+                <h3 className="font-bold text-white text-lg">
+                  {dict.pages.scheduleAppointment.appointmentConfirmed.overviewSection.location.title}
+                </h3>
               </div>
               <div className="pl-12 space-y-1">
-                <p className="text-white text-lg font-medium">ProMed Exams</p>
-                <p className="text-white/70 text-sm">4 W Dry Creek Cir #135</p>
-                <p className="text-white/70 text-sm">Littleton, CO 80120</p>
+                <p className="text-white text-lg font-medium">{BusinessInfo.Name}</p>
+                <p className="text-white/70 text-sm">{BusinessInfo.ContactInformation.addressLine1}</p>
+                <p className="text-white/70 text-sm">{BusinessInfo.ContactInformation.addressLine2}</p>
               </div>
             </div>
           </div>
