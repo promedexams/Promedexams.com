@@ -47,6 +47,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [availableTimes, setAvailableTimes] = useState<string[]>([]);
   const [selectedTime, setSelectedTime] = useState("");
   const [availableDays, setAvailableDays] = useState<Date[]>([]);
+  const [isLoadingTimes, setIsLoadingTimes] = useState(false);
 
   // Booking Submission
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -101,10 +102,15 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     if (!selectedBookingDate || !selectedAppointmentType) {
       setAvailableTimes([]);
       setSelectedTime("");
+      setIsLoadingTimes(false);
       return;
     }
 
     const fetchTimes = async () => {
+      setIsLoadingTimes(true);
+      setAvailableTimes([]);
+      setSelectedTime("");
+
       try {
         const dateStr = selectedBookingDate.toISOString().split("T")[0];
         const res = await fetch(
@@ -113,11 +119,11 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
         if (!res.ok) throw new Error("Failed to fetch available times");
         const data = await res.json();
         setAvailableTimes(Array.isArray(data) ? data : []);
-        setSelectedTime("");
       } catch {
         setError(getErrorInfo("NETWORK_ERROR"));
         setAvailableTimes([]);
-        setSelectedTime("");
+      } finally {
+        setIsLoadingTimes(false); // Stop loading
       }
     };
     fetchTimes();
@@ -731,29 +737,41 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 </div>
                 <div className="flex-1">
                   <label className="block text-white text-lg font-semibold mb-2">Select Time</label>
-                  <select
-                    className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer transition-opacity duration-200 disabled:opacity-50 disabled:bg-slate-700 disabled:cursor-not-allowed"
-                    value={selectedTime}
-                    onChange={(e) => setSelectedTime(e.target.value)}
-                    disabled={
-                      !selectedBookingDate ||
-                      availableTimes.length === 0 ||
-                      (completedSteps.has(3) && currentStep !== 3)
-                    }
-                  >
-                    <option value="" disabled>
-                      {selectedBookingDate
-                        ? availableTimes.length === 0
-                          ? "No appointments available for this day"
-                          : "Select a time"
-                        : "Select a date first"}
-                    </option>
-                    {availableTimes.map((time) => (
-                      <option key={time} value={time}>
-                        {time}
+                  <div className="relative">
+                    {/* Spinner absolutely positioned inside the select */}
+                    {isLoadingTimes && (
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center pointer-events-none z-10">
+                        <Loader2 className="w-5 h-5 animate-spin text-white/80" />
+                      </span>
+                    )}
+                    <select
+                      className={`w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer transition-opacity duration-200 disabled:opacity-50 disabled:bg-slate-700 disabled:cursor-not-allowed ${isLoadingTimes ? "pl-10" : ""}`}
+                      value={selectedTime}
+                      onChange={(e) => setSelectedTime(e.target.value)}
+                      disabled={
+                        !selectedBookingDate ||
+                        isLoadingTimes ||
+                        availableTimes.length === 0 ||
+                        (completedSteps.has(3) && currentStep !== 3)
+                      }
+                    >
+                      <option value="" disabled>
+                        {!selectedBookingDate
+                          ? "Select a date first"
+                          : isLoadingTimes
+                            ? "Checking availability..."
+                            : availableTimes.length === 0
+                              ? "No appointments available for this day"
+                              : "Select a time"}
                       </option>
-                    ))}
-                  </select>
+                      {!isLoadingTimes &&
+                        availableTimes.map((time) => (
+                          <option key={time} value={time}>
+                            {time}
+                          </option>
+                        ))}
+                    </select>
+                  </div>
                 </div>
               </div>
 
