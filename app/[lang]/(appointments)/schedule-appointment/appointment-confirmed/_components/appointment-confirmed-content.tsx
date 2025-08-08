@@ -239,7 +239,7 @@ const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps)
         </div>
         <div className="flex flex-col sm:flex-row gap-6 items-stretch min-h-[420px]">
           {/* Left Side - Calendar + Confirmation Number */}
-          <div className="flex flex-col gap-6 h-full items-center sm:items-stretch w-full max-w-[320px] mx-auto sm:mx-0">
+          <div className="flex flex-col gap-6 items-center sm:items-stretch w-full max-w-[320px] mx-auto sm:mx-0">
             {/* Calendar Card */}
             <div className="w-full">
               <div className="bg-gradient-to-b from-slate-900/70 to-slate-900/50 rounded-2xl overflow-hidden shadow-2xl w-full flex flex-col">
@@ -276,7 +276,7 @@ const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps)
               </div>
             </div>
             {/* Confirmation Number Box */}
-            <div className="bg-slate-900/50 p-4 rounded-xl text-center flex flex-col justify-center w-full h-full">
+            <div className="bg-slate-900/50 p-4 rounded-xl text-center flex flex-col justify-center w-full flex-1">
               <span className="text-xs text-white/60 uppercase tracking-wider">Confirmation Number</span>
               <p className="text-lg font-mono font-bold text-[#f1a208]">{bookingDetails.bookingId}</p>
             </div>
