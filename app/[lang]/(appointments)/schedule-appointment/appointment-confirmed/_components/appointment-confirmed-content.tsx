@@ -1,21 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
   AlertCircleIcon,
+  AlertTriangleIcon,
+  CalendarX2Icon,
   CheckCircleIcon,
   ClipboardIcon,
   ClockIcon,
-  CopyIcon,
+  FileTextIcon,
   InfoIcon,
+  MailPlusIcon,
   MapPinIcon,
+  PenSquareIcon,
   UserIcon,
 } from "lucide-react";
 
-interface AppointmentConfirmedContentProps {
-  dict: any;
-}
+// interface AppointmentConfirmedContentProps {
+//   dict: any;
+// }
 
 interface BookingDetails {
   bookingId: string;
@@ -44,7 +49,7 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: "DOT Physical Examination",
       description:
         "A Department of Transportation (DOT) physical examination to ensure you meet the health standards required for commercial driving.",
-      duration: "45-60 minutes",
+      duration: "60 minutes",
       reminders: [
         "Make sure to bring: Medical Examination Report (MER) Form, Current state-issued driver’s license, Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), List of current medications with dosages and prescriber’s name, Special circumstances or exemption letters from your doctor(s) and/or pertinent medical or legal records (if applicable)",
         "Be sure to complete the driver information and health history sections on the first two pages of the Medical Examination Report Form (MCSA-5875) prior to your appointment.",
@@ -57,7 +62,7 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: "FAA Aviation Medical Examination (2nd & 3rd Class)",
       description:
         "Federal Aviation Administration medical certification examination for private and commercial pilots. We provide 2nd and 3rd class medical certificates.",
-      duration: "60-90 minutes",
+      duration: "60 minutes",
       reminders: [
         "Make sure to bring: Current photo ID (Driver’s license or Passport), Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), Pertinent medical or legal records (if applicable), MedXPress confirmation number",
         "Be sure to update your health history and current medications in MedXPress prior to your arrival.",
@@ -70,7 +75,7 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: "School, Sports & Camp Physical",
       description:
         "Comprehensive physical examination for school enrollment, sports participation, or camp attendance clearance.",
-      duration: "30-45 minutes",
+      duration: "60 minutes",
       reminders: [
         "Make sure to bring: Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley, Immunization records, List of allergies and current medications with dosages (prescription and over-the-counter), List of past injuries and surgeries and pertinent family history",
         "Be sure to complete any parts of participation forms that are to be completed by the client or their parent/guardian",
@@ -83,7 +88,7 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: "USCIS Immigrant Medical Examination",
       description:
         "A medical examination required for immigrants applying for adjustment of status or an immigrant visa, in accordance with U.S. Citizenship and Immigration Services (USCIS) requirements.",
-      duration: "60-75 minutes",
+      duration: "60 minutes",
       reminders: [
         "Make sure to bring: Valid passport or other government-issued photo identification, Vaccination records, Form I-693 (Report of Medical Examination and Vaccination Record), List of current medications, Pertinent past medical or legal records (see promedexams.com for more information regarding what to bring to your appointment)",
         "Be sure to complete parts 1-4 on pages 1-3 of Form I-693 prior to your arrival.",
@@ -96,7 +101,7 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
       title: "Pre-Examination Consultation",
       description:
         "A consultation appointment to discuss your upcoming medical examination, review medical history, and address any concerns or questions you may have.",
-      duration: "15-30 minutes",
+      duration: "60 minutes",
     },
   };
 
@@ -117,11 +122,11 @@ const getAppointmentTypeInfo = (appointmentType: string) => {
   );
 };
 
-const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps) => {
+// const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps) => {  const searchParams = useSearchParams();
+const AppointmentConfirmedContent = () => {
   const searchParams = useSearchParams();
   const [bookingDetails, setBookingDetails] = useState<BookingDetails | null>(null);
   const [appointmentTypeInfo, setAppointmentTypeInfo] = useState<any>(null);
-  const [copySuccess, setCopySuccess] = useState(false);
 
   useEffect(() => {
     const bookingId = searchParams.get("bookingId");
@@ -152,17 +157,6 @@ const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps)
     }
   }, [searchParams]);
 
-  const formatDate = (dateStr: string) => {
-    const date = new Date(dateStr);
-    return date.toLocaleDateString("en-US", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      timeZone: "UTC",
-    });
-  };
-
   const getMonthYear = (dateStr: string) => {
     const date = new Date(dateStr);
     return date.toLocaleDateString("en-US", {
@@ -185,12 +179,6 @@ const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps)
         timeZone: "UTC",
       })
       .toUpperCase();
-  };
-
-  const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href);
-    setCopySuccess(true);
-    setTimeout(() => setCopySuccess(false), 2000);
   };
 
   if (!bookingDetails) {
@@ -324,17 +312,29 @@ const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps)
       {/* What to Expect Section */}
       {appointmentTypeInfo && (
         <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl">
-          <h2 className="text-2xl font-bold text-white mb-6 pb-4 border-b border-white/20">What to Expect</h2>
+          <h2 className="text-2xl font-bold text-white mb-6 pb-4 border-b border-white/20 text-center">
+            What to Expect
+          </h2>
           <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-3">About Your Visit</h3>
-              <p className="text-white/80">{appointmentTypeInfo.description}</p>
+            <div className="bg-slate-900/50 p-5 rounded-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-[#f1a208]/20 p-2 rounded-lg">
+                  <FileTextIcon className="w-5 h-5 text-[#f1a208]" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">About Your Visit</h3>
+              </div>
+              <p className="text-white/80 pl-12">{appointmentTypeInfo.description}</p>
             </div>
 
             {appointmentTypeInfo.reminders && appointmentTypeInfo.reminders.length > 0 && (
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-3">Important Reminders</h3>
-                <div className="bg-slate-900/50 p-4 rounded-lg">
+              <div className="bg-slate-900/50 p-5 rounded-xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-[#f1a208]/20 p-2 rounded-lg">
+                    <AlertTriangleIcon className="w-5 h-5 text-[#f1a208]" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">Important Reminders</h3>
+                </div>
+                <div className="pl-12">
                   <ul className="space-y-3">
                     {appointmentTypeInfo.reminders.map((reminder: string, index: number) => (
                       <li key={index} className="flex items-start gap-3 text-white/80">
@@ -343,41 +343,59 @@ const AppointmentConfirmedContent = ({ dict }: AppointmentConfirmedContentProps)
                       </li>
                     ))}
                   </ul>
+                  {appointmentTypeInfo.servicePageUrl && (
+                    <div className="pt-6">
+                      <Link
+                        href={appointmentTypeInfo.servicePageUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#f1a208] px-6 py-3 font-bold text-[#f1a208] transition-all duration-200 hover:scale-105 hover:bg-[#f1a208]/20"
+                      >
+                        <InfoIcon className="w-5 h-5" />
+                        <span>Learn More About Your Appointment</span>
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             )}
 
-            {appointmentTypeInfo.servicePageUrl && (
-              <div className="pt-4 text-center">
-                <a
-                  href={appointmentTypeInfo.servicePageUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            <div className="bg-slate-900/50 p-5 rounded-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-[#f1a208]/20 p-2 rounded-lg">
+                  <CalendarX2Icon className="w-5 h-5 text-[#f1a208]" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">Cancellation Policy</h3>
+              </div>
+              <p className="text-white/80 pl-12">
+                Appointments cancelled with less than 24 hours notice may be subject to a cancellation fee.
+              </p>
+            </div>
+
+            <div className="bg-slate-900/50 p-5 rounded-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-[#f1a208]/20 p-2 rounded-lg">
+                  <PenSquareIcon className="w-5 h-5 text-[#f1a208]" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">Changes to Your Appointment</h3>
+              </div>
+              <p className="text-white/80 pl-12">
+                Please reach out to our office by either giving us a phone call or sending us an email to reschedule or
+                make changes to your appointment.
+              </p>
+              <div className="pl-12 pt-6">
+                <Link
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#f1a208] px-6 py-3 font-bold text-[#f1a208] transition-all duration-200 hover:scale-105 hover:bg-[#f1a208]/20"
                 >
-                  <InfoIcon className="w-5 h-5" />
-                  <span>Learn More About Your Appointment</span>
-                </a>
+                  <MailPlusIcon className="w-5 h-5" />
+                  <span>Contact Us</span>
+                </Link>
               </div>
-            )}
+            </div>
           </div>
         </div>
       )}
-
-      {/* Save Your Confirmation */}
-      <div className="w-full bg-slate-800/20 p-8 rounded-2xl shadow-xl text-center">
-        <h3 className="text-xl font-semibold text-white mb-3">Save Your Confirmation</h3>
-        <p className="text-white/80 mb-6">
-          Keep this page bookmarked or copy the link to access your appointment details anytime.
-        </p>
-        <button
-          onClick={handleCopyLink}
-          className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black font-bold py-3 px-6 rounded-lg transition-all duration-200 hover:scale-105 inline-flex items-center gap-2"
-        >
-          <CopyIcon className="w-5 h-5" />
-          {copySuccess ? "Link Copied!" : "Copy Confirmation Link"}
-        </button>
-      </div>
     </>
   );
 };

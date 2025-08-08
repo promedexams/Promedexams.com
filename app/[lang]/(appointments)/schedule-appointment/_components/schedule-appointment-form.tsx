@@ -65,7 +65,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
         if (!res.ok) throw new Error("Failed to fetch appointment types");
         const data = await res.json();
         setAppointmentTypes(data);
-      } catch (err) {
+      } catch {
         setError(getErrorInfo("NETWORK_ERROR"));
         setAppointmentTypes([]);
       }
@@ -89,7 +89,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             return new Date(year, month - 1, day);
           })
         );
-      } catch (err) {
+      } catch {
         setError(getErrorInfo("NETWORK_ERROR"));
         setAvailableDays([]);
       }
@@ -114,7 +114,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
         const data = await res.json();
         setAvailableTimes(Array.isArray(data) ? data : []);
         setSelectedTime("");
-      } catch (err) {
+      } catch {
         setError(getErrorInfo("NETWORK_ERROR"));
         setAvailableTimes([]);
         setSelectedTime("");
