@@ -186,16 +186,21 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
 
   if (!bookingDetails) {
     return (
-      <div className="w-full bg-slate-800/20 p-8 rounded-2xl shadow-xl">
+      <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl">
         <div className="text-center">
           <AlertCircleIcon className="w-16 h-16 mx-auto text-red-400 mb-4" />
-          <h1 className="text-3xl font-bold text-white mb-4">Booking Not Found</h1>
+          <h1 className="text-3xl font-bold text-white mb-4">Appointment Not Found</h1>
           <p className="text-white/80">
-            We couldn't find your booking confirmation. Please contact our office if you believe this is an error.
+            We couldn't find your appointment confirmation. Please contact our office if you believe this is an error.
           </p>
-          <div className="mt-6 p-4 bg-slate-900/50 rounded-lg inline-block">
-            <p className="text-white/60 text-sm mb-1">Call us at</p>
-            <p className="text-white font-bold">(720) 517-3111</p>
+          <div className="pt-6">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-3 rounded-lg border-2 border-[#f1a208] px-6 py-3 font-bold text-[#f1a208] transition-all duration-200 hover:scale-105 hover:bg-[#f1a208]/20"
+            >
+              <MailPlusIcon className="w-5 h-5" />
+              <span>Contact Us</span>
+            </Link>
           </div>
         </div>
       </div>
