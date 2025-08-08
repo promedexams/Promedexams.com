@@ -353,8 +353,192 @@
       "title": "Schedule Appointment",
       "description": "Please fill out the form below to schedule your appointment. We will get back to you as soon as possible to confirm your appointment.",
       "maintenanceWindow": {
-        "header": "Self-Scheduling Undergoing Maintenance",
-        "subheader": "The ability to schedule an appointment through our website will be available soon. In the meantime, please call (720) 517-3111 or email office@promedexams.com to schedule an appointment."
+        "header": "A Note About Our New System",
+        "subheader": "We've recently launched our new scheduling platform to make booking easier. As with any new system, we are working to refine the experience. If you run into any problems, please reach out so we can assist you.",
+        "contactButtonText": "Contact Us"
+      },
+      "scheduleForm": {
+        "steps": {
+          "editFormText": "Edit",
+          "continueText": "Continue",
+          "personalInfoStep": {
+            "title": "Personal Information",
+            "firstName": {
+              "label": "First Name",
+              "placeholderText": "Enter your first name"
+            },
+            "middleInitial": {
+              "label": "Middle Initial",
+              "placeholderText": "M.I."
+            },
+            "lastName": {
+              "label": "Last Name",
+              "placeholderText": "Enter your last name"
+            },
+            "dateOfBirth": {
+              "label": "Date of Birth"
+            },
+            "email": {
+              "label": "Email",
+              "placeholderText": "Enter your email"
+            },
+            "phoneNumber": {
+              "label": "Phone Number"
+            }
+          },
+          "appointmentInfoStep": {
+            "title": "Appointment Information",
+            "typeOfExam": {
+              "label": "What type of exam are you scheduling?",
+              "placeholderText": "Select appointment type"
+            },
+            "newOrReturningClient": {
+              "label": "Are you a new or returning client?",
+              "placeholderText": "Select client type",
+              "options": ["New Client", "Returning Client"]
+            },
+            "healthIssuesSinceLastExam": {
+              "label": "Do you have any new health issues since your last examination?",
+              "placeholderText": "Select option",
+              "options": ["Yes", "No"]
+            },
+            "medicationsSinceLastExam": {
+              "label": "Are you taking any new medications/supplements (prescribed or over-the-counter) since your last examination?",
+              "placeholderText": "Select option",
+              "options": ["Yes", "No"]
+            },
+            "questionsOrConcerns": {
+              "label": "Do you have any questions/concerns to discuss with Dr. Quigley prior to your examination?",
+              "detail": "Sometimes it is best to discuss potential issues prior to initiating the examination/certification process to improve the possibility of receiving certification as soon as possible.",
+              "placeholderText": "Select option",
+              "options": ["Yes", "No"],
+              "noteBox": {
+                "title": "NOTE:",
+                "messageParagraphs": [
+                  "You can schedule a pre-exam consultation appointment with Dr. Quigley before scheduling your exam to discuss any potential issues, questions, or concerns with the goal of making the certification process as smooth as possible.",
+                  "Consultations will be billed by time spent during the consultation. Time spent by Dr. Quigley making phone calls on your behalf or reviewing your medical or legal records after a consultation or medical examination will also be billed."
+                ]
+              }
+            }
+          },
+          "calendarBookingStep": {
+            "title": "Calendar Booking",
+            "selectDate": {
+              "label": "Select Date",
+              "placeholderText": "Choose a date"
+            },
+            "selectTime": {
+              "label": "Select Time",
+              "nothingSelectedText": "Select a date first",
+              "selectTimeText": "Select a time",
+              "noAppointmentsText": "No appointments for this day",
+              "checkingAvailabilityText": "Checking availability..."
+            }
+          },
+          "submissionStep": {
+            "title": "Ready to Submit",
+            "description": "All sections have been completed. Review your information above and submit your appointment request when ready.",
+            "scheduleAppointmentButtonText": "Schedule Appointment",
+            "schedulingAppointmentButtonText": "Scheduling..."
+          }
+        }
+      },
+      "appointmentConfirmed": {
+        "appointmentNotFound": {
+          "title": "Appointment Not Found",
+          "description": "We couldn't find your appointment confirmation. Please contact our office if you believe this is an error.",
+          "contactButtonText": "Contact Us"
+        },
+        "overviewSection": {
+          "title": "Appointment Confirmed",
+          "subheader": "Your appointment has been successfully scheduled.",
+          "calendar": {
+            "timezoneDisplay": "MOUNTAIN TIME (MT)"
+          },
+          "confirmationNumber": {
+            "title": "CONFIRMATION NUMBER"
+          },
+          "clientInfo": {
+            "title": "Client Information"
+          },
+          "appointmentType": {
+            "title": "Appointment Type"
+          },
+          "location": {
+            "title": "Location"
+          }
+        },
+        "whatToExpectSection": {
+          "title": "What to Expect",
+          "about": {
+            "title": "About Your Visit"
+          },
+          "reminders": {
+            "title": "Important Reminders",
+            "serviceTypes": {
+              "dot": {
+                "title": "DOT Physical Examination",
+                "description": "A Department of Transportation (DOT) physical examination to ensure you meet the health standards required for commercial driving.",
+                "remindersList": [
+                  "Make sure to bring: Medical Examination Report (MER) Form, Current state-issued driver’s license, Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), List of current medications with dosages and prescriber’s name, Special circumstances or exemption letters from your doctor(s) and/or pertinent medical or legal records (if applicable)",
+                  "Be sure to complete the driver information and health history sections on the first two pages of the Medical Examination Report Form (MCSA-5875) prior to your appointment.",
+                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
+                  "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time."
+                ]
+              },
+              "faa": {
+                "title": "FAA Aviation Medical Examination (2nd & 3rd Class)",
+                "description": "Federal Aviation Administration medical certification examination for private and commercial pilots. We provide 2nd and 3rd class medical certificates.",
+                "remindersList": [
+                  "Make sure to bring: Current photo ID (Driver’s license or Passport), Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), Pertinent medical or legal records (if applicable), MedXPress confirmation number",
+                  "Be sure to update your health history and current medications in MedXPress prior to your arrival.",
+                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
+                  "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time."
+                ]
+              },
+              "schoolSportsCamp": {
+                "title": "School, Sports & Camp Physical",
+                "description": "Comprehensive physical examination for school enrollment, sports participation, or camp attendance clearance.",
+                "remindersList": [
+                  "Make sure to bring: Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley, Immunization records, List of allergies and current medications with dosages (prescription and over-the-counter), List of past injuries and surgeries and pertinent family history",
+                  "Be sure to complete any parts of participation forms that are to be completed by the client or their parent/guardian",
+                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment if your participation form requires a urinalysis.",
+                  "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample if necessary, and be ready for your appointment on time."
+                ]
+              },
+              "consultation": {
+                "title": "Consultation",
+                "description": "A consultation appointment to discuss your upcoming medical examination, review medical history, and address any concerns or questions you may have.",
+                "remindersList": [
+                  "Please bring a photo identification.",
+                  "Please bring your insurance information.",
+                  "Please bring a list of current medications.",
+                  "If you need to cancel or reschedule, please call at least 24 hours in advance"
+                ]
+              },
+              "general": {
+                "title": "General Appointment",
+                "description": "Your appointment has been confirmed. Please arrive 15 minutes early to complete any necessary paperwork.",
+                "remindersList": [
+                  "Please bring a photo identification.",
+                  "Please bring your insurance information.",
+                  "Please bring a list of current medications.",
+                  "If you need to cancel or reschedule, please call at least 24 hours in advance"
+                ]
+              }
+            },
+            "learnMoreButtonText": "Learn More About Your Appointment"
+          },
+          "cancellation": {
+            "title": "Cancellation Policy",
+            "text": "Appointments cancelled with less than 24 hours notice may be subject to a cancellation fee."
+          },
+          "changes": {
+            "title": "Changes to Your Appointment",
+            "text": "Please reach out to our office by either giving us a phone call or sending us an email to reschedule or make changes to your appointment.",
+            "contactButtonText": "Contact Us"
+          }
+        }
       }
     },
     "notFound": {

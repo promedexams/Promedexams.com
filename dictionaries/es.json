@@ -353,8 +353,192 @@
       "title": "Agendar Cita",
       "description": "Por favor, complete el formulario a continuación para agendar su cita. Nos pondremos en contacto con usted lo antes posible para confirmar su cita.",
       "maintenanceWindow": {
-        "header": "La Programación de Citas en Línea está en Mantenimiento",
-        "subheader": "La opción de agendar una cita a través de nuestro sitio web estará disponible pronto. Mientras tanto, por favor, llame al (720) 517-3111 o envíe un correo electrónico a office@promedexams.com para agendar una cita."
+        "header": "Una Nota Sobre Nuestro Nuevo Sistema",
+        "subheader": "Recientemente hemos lanzado nuestra nueva plataforma de programación para facilitar la reservación de citas. Como con cualquier sistema nuevo, estamos trabajando para refinar la experiencia. Si encuentra algún problema, por favor, póngase en contacto con nosotros para que podamos ayudarle.",
+        "contactButtonText": "Contáctenos"
+      },
+      "scheduleForm": {
+        "steps": {
+          "editFormText": "Editar",
+          "continueText": "Continuar",
+          "personalInfoStep": {
+            "title": "Información Personal",
+            "firstName": {
+              "label": "Nombre",
+              "placeholderText": "Ingrese su nombre"
+            },
+            "middleInitial": {
+              "label": "Inicial del segundo nombre",
+              "placeholderText": "I."
+            },
+            "lastName": {
+              "label": "Apellido",
+              "placeholderText": "Ingrese su apellido"
+            },
+            "dateOfBirth": {
+              "label": "Fecha de Nacimiento"
+            },
+            "email": {
+              "label": "Correo Electrónico",
+              "placeholderText": "Ingrese su correo electrónico"
+            },
+            "phoneNumber": {
+              "label": "Número de Teléfono"
+            }
+          },
+          "appointmentInfoStep": {
+            "title": "Información de la Cita",
+            "typeOfExam": {
+              "label": "¿Qué tipo de examen está agendando?",
+              "placeholderText": "Seleccione el tipo de cita"
+            },
+            "newOrReturningClient": {
+              "label": "¿Es un paciente nuevo o recurrente?",
+              "placeholderText": "Seleccione el tipo de paciente",
+              "options": ["Paciente Nuevo", "Paciente Recurrente"]
+            },
+            "healthIssuesSinceLastExam": {
+              "label": "¿Tiene algún problema de salud nuevo desde su último examen?",
+              "placeholderText": "Seleccione una opción",
+              "options": ["Sí", "No"]
+            },
+            "medicationsSinceLastExam": {
+              "label": "¿Está tomando algún medicamento o suplemento nuevo (recetado o de venta libre) desde su último examen?",
+              "placeholderText": "Seleccione una opción",
+              "options": ["Sí", "No"]
+            },
+            "questionsOrConcerns": {
+              "label": "¿Tiene alguna pregunta o inquietud que desee discutir con la Dra. Quigley antes de su examen?",
+              "detail": "A veces es mejor discutir los posibles problemas antes de iniciar el proceso de examen/certificación para aumentar la posibilidad de recibir la certificación lo antes posible.",
+              "placeholderText": "Seleccione una opción",
+              "options": ["Sí", "No"],
+              "noteBox": {
+                "title": "NOTA:",
+                "messageParagraphs": [
+                  "Puede agendar una cita de consulta previa al examen con la Dra. Quigley antes de agendar su examen para discutir cualquier posible problema, pregunta o inquietud, con el objetivo de que el proceso de certificación sea lo más fluido posible.",
+                  "Las consultas se facturarán según el tiempo dedicado durante la consulta. El tiempo que la Dra. Quigley dedique a hacer llamadas telefónicas en su nombre o a revisar sus expedientes médicos o legales después de una consulta o un examen médico también se facturará."
+                ]
+              }
+            }
+          },
+          "calendarBookingStep": {
+            "title": "Selección de Fecha y Hora",
+            "selectDate": {
+              "label": "Seleccionar Fecha",
+              "placeholderText": "Elija una fecha"
+            },
+            "selectTime": {
+              "label": "Seleccionar Hora",
+              "nothingSelectedText": "Primero seleccione una fecha",
+              "selectTimeText": "Seleccione una hora",
+              "noAppointmentsText": "No hay citas disponibles este día",
+              "checkingAvailabilityText": "Verificando disponibilidad..."
+            }
+          },
+          "submissionStep": {
+            "title": "Listo para Enviar",
+            "description": "Se han completado todas las secciones. Revise su información anterior y envíe su solicitud de cita cuando esté listo.",
+            "scheduleAppointmentButtonText": "Agendar Cita",
+            "schedulingAppointmentButtonText": "Agendando..."
+          }
+        }
+      },
+      "appointmentConfirmed": {
+        "appointmentNotFound": {
+          "title": "Cita No Encontrada",
+          "description": "No pudimos encontrar la confirmación de su cita. Por favor, póngase en contacto con nuestra oficina si cree que esto es un error.",
+          "contactButtonText": "Contáctenos"
+        },
+        "overviewSection": {
+          "title": "Cita Confirmada",
+          "subheader": "Su cita ha sido agendada con éxito.",
+          "calendar": {
+            "timezoneDisplay": "HORA DE LA MONTAÑA (MT)"
+          },
+          "confirmationNumber": {
+            "title": "NÚMERO DE CONFIRMACIÓN"
+          },
+          "clientInfo": {
+            "title": "Información del Paciente"
+          },
+          "appointmentType": {
+            "title": "Tipo de Cita"
+          },
+          "location": {
+            "title": "Ubicación"
+          }
+        },
+        "whatToExpectSection": {
+          "title": "Qué Esperar",
+          "about": {
+            "title": "Sobre su Cita"
+          },
+          "reminders": {
+            "title": "Recordatorios Importantes",
+            "serviceTypes": {
+              "dot": {
+                "title": "Examen Físico del DOT",
+                "description": "Un examen físico del Departamento de Transporte (DOT) para asegurar que cumple con los estándares de salud requeridos para la conducción comercial.",
+                "remindersList": [
+                  "Asegúrese de traer: Formulario de Informe de Examen Médico (MER), licencia de conducir vigente emitida por el estado, lentes de contacto/gafas (si aplica) – Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir, audífonos (si aplica), lista de medicamentos actuales con dosis y el nombre de quien los recetó, cualquier circunstancia especial o carta de exención de su(s) médico(s) y/o expedientes médicos o legales pertinentes (si aplica).",
+                  "Asegúrese de completar las secciones de información del conductor e historial de salud en las dos primeras páginas del Formulario de Informe de Examen Médico (MCSA-5875) antes de su cita.",
+                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina al comienzo de su cita.",
+                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina y estar listo para su cita a tiempo."
+                ]
+              },
+              "faa": {
+                "title": "Examen Médico de Aviación de la FAA (2da y 3ra Clase)",
+                "description": "Examen de certificación médica de la Administración Federal de Aviación para pilotos privados y comerciales. Proporcionamos certificados médicos de 2da y 3ra clase.",
+                "remindersList": [
+                  "Asegúrese de traer: Identificación con foto vigente (Licencia de conducir o Pasaporte), lentes de contacto/gafas (si aplica) – Si usa lentes de contacto, traiga un estuche para quitárselenos y poder revisar la visión sin corregir, audífonos (si aplica), expedientes médicos o legales pertinentes (si aplica), número de confirmación de MedXPress.",
+                  "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress antes de su llegada.",
+                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina al comienzo de su cita.",
+                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina y estar listo para su cita a tiempo."
+                ]
+              },
+              "schoolSportsCamp": {
+                "title": "Examen Físico Escolar, Deportivo y de Campamento",
+                "description": "Examen físico integral para la inscripción escolar, participación deportiva o autorización para asistir a campamentos.",
+                "remindersList": [
+                  "Asegúrese de traer: Cualquier formulario proporcionado por su escuela, programa deportivo o campamento que deba ser completado y/o firmado por la Dra. Quigley, registros de inmunización, lista de alergias y medicamentos actuales con dosis (recetados y de venta libre), lista de lesiones y cirugías pasadas e historial familiar pertinente.",
+                  "Asegúrese de completar cualquier parte de los formularios de participación que deba ser llenada por el paciente o su padre/tutor.",
+                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina al comienzo de su cita si su formulario de participación requiere un análisis de orina.",
+                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina si es necesario y estar listo para su cita a tiempo."
+                ]
+              },
+              "consultation": {
+                "title": "Consulta",
+                "description": "Una cita de consulta para discutir su próximo examen médico, revisar el historial médico y abordar cualquier inquietud o pregunta que pueda tener.",
+                "remindersList": [
+                  "Por favor, traiga una identificación con fotografía.",
+                  "Por favor, traiga la información de su seguro.",
+                  "Por favor, traiga una lista de sus medicamentos actuales.",
+                  "Si necesita cancelar o reprogramar, por favor llame con al menos 24 horas de antelación."
+                ]
+              },
+              "general": {
+                "title": "Cita General",
+                "description": "Su cita ha sido confirmada. Por favor, llegue 15 minutos antes para completar cualquier papeleo necesario.",
+                "remindersList": [
+                  "Por favor, traiga una identificación con fotografía.",
+                  "Por favor, traiga la información de su seguro.",
+                  "Por favor, traiga una lista de sus medicamentos actuales.",
+                  "Si necesita cancelar o reprogramar, por favor llame con al menos 24 horas de antelación."
+                ]
+              }
+            },
+            "learnMoreButtonText": "Conozca Más Sobre su Cita"
+          },
+          "cancellation": {
+            "title": "Política de Cancelación",
+            "text": "Las citas canceladas con menos de 24 horas de antelación pueden estar sujetas a un cargo por cancelación."
+          },
+          "changes": {
+            "title": "Cambios en su Cita",
+            "text": "Por favor, póngase en contacto con nuestra oficina, ya sea llamándonos por teléfono o enviándonos un correo electrónico, para reprogramar o hacer cambios en su cita.",
+            "contactButtonText": "Contáctenos"
+          }
+        }
       }
     },
     "notFound": {
