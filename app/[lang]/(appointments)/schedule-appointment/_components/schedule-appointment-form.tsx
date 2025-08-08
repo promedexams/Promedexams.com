@@ -328,39 +328,82 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
       {/* Progress Indicator */}
       <div className="w-full bg-slate-800/20 p-6 mb-8 rounded-2xl shadow-xl">
         <div className="flex flex-col sm:flex-row items-center justify-center">
-          {steps.map((step, index) => (
-            <div key={step.number} className="flex flex-col sm:flex-row items-center">
-              <div className="flex flex-col items-center">
-                <div
-                  className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
-                    step.isCompleted
-                      ? "bg-green-600 text-white shadow-lg"
-                      : currentStep === step.number
-                        ? "bg-[#f1a208] text-black shadow-lg"
-                        : "bg-slate-600 text-white"
-                  }`}
-                >
-                  {step.isCompleted ? <Check className="w-6 h-6" /> : step.number}
-                </div>
-                <span
-                  className={`mt-2 font-medium text-sm text-center max-w-24 ${
-                    step.isCompleted || currentStep === step.number ? "text-white" : "text-white/60"
-                  }`}
-                >
-                  {step.title}
-                </span>
-              </div>
-              {index < steps.length - 1 && (
-                <div className="flex items-center my-4 sm:my-0 sm:mx-8">
+          {/* Mobile vertical stepper */}
+          <div className="flex flex-col gap-0 sm:hidden relative justify-center h-full">
+            {steps.map((step, index) => (
+              <div key={step.number} className="flex items-start relative min-h-[64px] last:min-h-0">
+                {/* Step circle */}
+                <div className="relative z-10 flex flex-col items-center">
                   <div
-                    className={`w-1 h-12 sm:w-24 sm:h-1 rounded-full transition-all duration-300 ${
-                      step.isCompleted ? "bg-green-600" : "bg-slate-600"
+                    className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
+                      step.isCompleted
+                        ? "bg-green-600 text-white shadow-lg"
+                        : currentStep === step.number
+                          ? "bg-[#f1a208] text-black shadow-lg"
+                          : "bg-slate-600 text-white"
                     }`}
-                  />
+                  >
+                    {step.isCompleted ? <Check className="w-6 h-6" /> : step.number}
+                  </div>
+                  {/* Vertical line below the circle, except for last step */}
+                  {index < steps.length - 1 && (
+                    <div
+                      className={`w-1 flex-1 min-h-[48px] ${
+                        steps[index].isCompleted ? "bg-green-600" : "bg-slate-600"
+                      }`}
+                      style={{ marginTop: 0 }}
+                    />
+                  )}
                 </div>
-              )}
-            </div>
-          ))}
+                {/* Step text */}
+                <div className="ml-4 flex flex-col justify-center min-h-[48px]">
+                  <span
+                    className={`font-medium text-base ${
+                      step.isCompleted || currentStep === step.number ? "text-white" : "text-white/60"
+                    }`}
+                  >
+                    {step.title}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* Desktop horizontal stepper */}
+          <div className="hidden sm:flex flex-row items-center justify-center">
+            {steps.map((step, index) => (
+              <div key={step.number} className="flex flex-col sm:flex-row items-center">
+                <div className="flex flex-col items-center">
+                  <div
+                    className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
+                      step.isCompleted
+                        ? "bg-green-600 text-white shadow-lg"
+                        : currentStep === step.number
+                          ? "bg-[#f1a208] text-black shadow-lg"
+                          : "bg-slate-600 text-white"
+                    }`}
+                  >
+                    {step.isCompleted ? <Check className="w-6 h-6" /> : step.number}
+                  </div>
+                  <span
+                    className={`mt-2 font-medium text-sm text-center max-w-24 ${
+                      step.isCompleted || currentStep === step.number ? "text-white" : "text-white/60"
+                    }`}
+                  >
+                    {step.title}
+                  </span>
+                </div>
+                {index < steps.length - 1 && (
+                  <div className="flex items-center my-4 sm:my-0 sm:mx-8">
+                    <div
+                      className={`w-1 h-12 sm:w-24 sm:h-1 rounded-full transition-all duration-300 ${
+                        step.isCompleted ? "bg-green-600" : "bg-slate-600"
+                      }`}
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
