@@ -467,6 +467,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="firstName">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.firstName.label}
+                  <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
                 <input
                   id="firstName"
@@ -504,6 +505,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="lastName">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.lastName.label}
+                  <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
                 <input
                   id="lastName"
@@ -525,6 +527,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="birthday">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.dateOfBirth.label}
+                  <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
                 <div className="w-full">
                   <DatePicker
@@ -545,6 +548,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="email">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.email.label}
+                  <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
                 <input
                   id="email"
@@ -562,6 +566,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <div className="flex-1">
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="phone">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.phoneNumber.label}
+                  <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
                 <input
                   id="phone"
@@ -626,6 +631,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <div>
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="appointmentType">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.typeOfExam.label}
+                  <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
                 <select
                   id="appointmentType"
@@ -649,6 +655,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <div>
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningClient">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.newOrReturningClient.label}
+                  <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
                 <select
                   id="newOrReturningClient"
@@ -687,6 +694,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                         dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.healthIssuesSinceLastExam
                           .label
                       }
+                      <span className="font-bold text-[#f1a208] select-none"> *</span>
                     </label>
                     <select
                       id="newHeathConditions"
@@ -726,6 +734,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                         dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.medicationsSinceLastExam
                           .label
                       }
+                      <span className="font-bold text-[#f1a208] select-none"> *</span>
                     </label>
                     <select
                       id="newMedicationsOrSupplements"
@@ -761,6 +770,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <div>
                 <label className="block text-white text-lg font-semibold" htmlFor="hasQuestions">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns.label}
+                  <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
                 <p className="block text-white/80 text-base font-normal mb-2">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns.detail}
@@ -864,6 +874,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 <div className="flex-1">
                   <label className="block text-white text-lg font-semibold mb-2">
                     {dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectDate.label}
+                    <span className="font-bold text-[#f1a208] select-none"> *</span>
                   </label>
                   <div className="w-full">
                     <DatePicker
@@ -887,6 +898,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 <div className="flex-1">
                   <label className="block text-white text-lg font-semibold mb-2">
                     {dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectTime.label}
+                    <span className="font-bold text-[#f1a208] select-none"> *</span>
                   </label>
                   <div className="relative">
                     {isLoadingTimes && (
