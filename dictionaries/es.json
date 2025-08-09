@@ -531,7 +531,7 @@
           },
           "cancellation": {
             "title": "Política de Cancelación",
-            "text": "Las citas canceladas con menos de 24 horas de antelación pueden estar sujetas a un cargo por cancelación."
+            "text": "Las citas canceladas o reprogramadas con menos de 24 horas de antelación pueden estar sujetas a un cargo por cancelación."
           },
           "changes": {
             "title": "Cambios en su Cita",
