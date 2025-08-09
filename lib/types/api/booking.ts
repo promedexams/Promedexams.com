@@ -19,7 +19,7 @@
 export interface BookingRequest {
   // Personal Information
   firstName: string;
-  middleInitial: string;
+  middleInitial?: string;
   lastName: string;
   birthday: string; // ISO date string
   email: string;

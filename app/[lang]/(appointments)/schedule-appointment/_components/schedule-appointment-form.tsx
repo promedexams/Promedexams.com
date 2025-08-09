@@ -139,7 +139,6 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const validatePersonalInfo = () => {
     return (
       firstName.trim() !== "" &&
-      middleInitial.trim() !== "" &&
       lastName.trim() !== "" &&
       birthday !== null &&
       email.trim() !== "" &&
@@ -221,10 +220,24 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
     setIsSubmitting(true);
 
     try {
-      const bookingData = {
+      const bookingData: {
+        firstName: string;
+        middleInitial?: string;
+        lastName: string;
+        birthday: string;
+        email: string;
+        phoneNumber: string;
+        serviceId: string;
+        serviceVariationVersion: number | null;
+        newOrReturningClient: "new" | "returning";
+        newHealthConditions?: "yes" | "no";
+        newMedications?: "yes" | "no";
+        hasQuestions: "yes" | "no";
+        appointmentDate: string;
+        appointmentTime: string;
+      } = {
         // Personal Information
         firstName: firstName.trim(),
-        middleInitial: middleInitial.trim(),
         lastName: lastName.trim(),
         birthday: birthday!.toISOString().split("T")[0], // Convert to YYYY-MM-DD
         email: email.trim().toLowerCase(),
@@ -242,6 +255,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
         appointmentDate: selectedBookingDate!.toISOString().split("T")[0],
         appointmentTime: selectedTime,
       };
+
+      if (middleInitial.trim() !== "") {
+        bookingData.middleInitial = middleInitial.trim();
+      }
 
       const response = await fetch("/api/appointments/create-booking", {
         method: "POST",
@@ -475,7 +492,6 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   name="middleInitial"
                   type="text"
                   maxLength={3}
-                  required
                   disabled={completedSteps.has(1) && currentStep !== 1}
                   className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
                   placeholder={
