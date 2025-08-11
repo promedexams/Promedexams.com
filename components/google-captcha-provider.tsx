@@ -5,5 +5,17 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 export function GoogleCaptchaProvider({ children }: { children: React.ReactNode }) {
   const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_PUBLIC_KEY;
 
-  return <GoogleReCaptchaProvider reCaptchaKey={recaptchaKey ?? ""}>{children}</GoogleReCaptchaProvider>;
+  return (
+    <GoogleReCaptchaProvider
+      reCaptchaKey={recaptchaKey ?? ""}
+      container={{
+        parameters: {
+          badge: "bottomleft",
+          theme: "dark",
+        },
+      }}
+    >
+      {children}
+    </GoogleReCaptchaProvider>
+  );
 }

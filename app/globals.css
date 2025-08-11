@@ -167,4 +167,27 @@ html {
 .grecaptcha-badge {
   left: 24px !important;
   right: auto !important;
+  bottom: 24px !important;
+  width: 70px !important;
+  min-width: 0 !important;
+  height: 60px !important;
+  z-index: 99999 !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  position: fixed !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.grecaptcha-badge > div {
+  width: 70px !important;
+  min-width: 0 !important;
+}
+.grecaptcha-badge span,
+.grecaptcha-badge .grecaptcha-logo-text,
+.grecaptcha-badge .grecaptcha-badge-text {
+  display: none !important;
 }
