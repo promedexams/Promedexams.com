@@ -4,6 +4,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { CalendarSearchIcon, Check, ChevronRight, ClipboardClockIcon, Edit2, Loader2, UserIcon } from "lucide-react";
 import DatePicker from "react-datepicker";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
@@ -21,6 +22,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   const [dict, setDict] = useState<any>(null);
   const [currentStep, setCurrentStep] = useState(1);
   const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   // API Pulls
   const [appointmentTypes, setAppointmentTypes] = useState<ServiceTypeResponse[]>([]);
@@ -217,9 +219,17 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
       return;
     }
 
+    if (!executeRecaptcha) {
+      console.error("Execute recaptcha not yet available");
+      setError(getErrorInfo("NETWORK_ERROR"));
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
+      const gRecaptchaToken = await executeRecaptcha("appointmentSubmit");
+
       const bookingData: {
         firstName: string;
         middleInitial?: string;
@@ -235,6 +245,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
         hasQuestions: "yes" | "no";
         appointmentDate: string;
         appointmentTime: string;
+        gRecaptchaToken: string;
       } = {
         // Personal Information
         firstName: firstName.trim(),
@@ -254,6 +265,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
         // Date/Time
         appointmentDate: selectedBookingDate!.toISOString().split("T")[0],
         appointmentTime: selectedTime,
+
+        // Security
+        gRecaptchaToken,
       };
 
       if (middleInitial.trim() !== "") {

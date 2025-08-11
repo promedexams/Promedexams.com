@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import BackToTopButton from "@/components/back-to-top-button";
+import { GoogleCaptchaProvider } from "@/components/google-captcha-provider";
 import { BusinessInfo } from "@/lib/business-info";
 import { DOMAIN_URL } from "@/lib/links";
 
@@ -50,7 +51,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body id="top" className="overflow-x-clip bg-[#07001c]">
-        {children}
+        <GoogleCaptchaProvider>{children}</GoogleCaptchaProvider>
         <BackToTopButton />
       </body>
     </html>

@@ -36,6 +36,9 @@ export interface BookingRequest {
   // Date/Time
   appointmentDate: string; // ISO date string
   appointmentTime: string; // e.g., "10:00 AM"
+
+  // GoogleRecaptcha
+  gRecaptchaToken: string;
 }
 
 /**
