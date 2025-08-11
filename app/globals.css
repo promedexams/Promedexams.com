@@ -163,3 +163,8 @@ html {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
 }
+
+.grecaptcha-badge {
+  left: 24px !important;
+  right: auto !important;
+}

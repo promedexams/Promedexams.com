@@ -8,6 +8,23 @@ export async function POST(request: NextRequest) {
   try {
     const bookingData: BookingRequest = await request.json();
 
+    // Validate reCAPTCHA token
+    const recaptchaResponse = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `secret=${process.env.RECAPTCHA_PRIVATE_KEY}&response=${bookingData.gRecaptchaToken}`,
+    });
+    const recaptchaData = await recaptchaResponse.json();
+
+    if (!recaptchaData.success || recaptchaData.score < 0.5) {
+      return NextResponse.json(
+        { success: false, error: "reCAPTCHA verification failed", code: "RECAPTCHA_ERROR" },
+        { status: 400 }
+      );
+    }
+
     // Validate required fields
     const requiredFields = [
       "firstName",
