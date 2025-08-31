@@ -12,12 +12,12 @@ const ServicesPage = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   const Services = [
-    // {
-    //   icon: "globe",
-    //   title: dict.pages.services.services.immigrationMedicalExams.title,
-    //   description: dict.pages.services.services.immigrationMedicalExams.shortDescription,
-    //   href: "/services/immigration-medical-exams",
-    // },
+    {
+      icon: "globe",
+      title: dict.pages.services.services.immigrationMedicalExams.title,
+      description: dict.pages.services.services.immigrationMedicalExams.shortDescription,
+      href: "/services/immigration-medical-exams",
+    },
     {
       icon: "plane",
       title: dict.pages.services.services.faaPhysicals.title,

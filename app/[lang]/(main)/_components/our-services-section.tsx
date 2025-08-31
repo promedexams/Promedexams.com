@@ -9,12 +9,12 @@ const OurServicesSection = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   const Services = [
-    // {
-    //   icon: "globe",
-    //   title: dict.pages.home.ourServicesSection.services.immigrationMedicalExams.title,
-    //   description: dict.pages.home.ourServicesSection.services.immigrationMedicalExams.description,
-    //   href: "/services/immigration-medical-exams",
-    // },
+    {
+      icon: "globe",
+      title: dict.pages.home.ourServicesSection.services.immigrationMedicalExams.title,
+      description: dict.pages.home.ourServicesSection.services.immigrationMedicalExams.description,
+      href: "/services/immigration-medical-exams",
+    },
     {
       icon: "plane",
       title: dict.pages.home.ourServicesSection.services.faaPhysicals.title,
@@ -42,7 +42,7 @@ const OurServicesSection = async ({ params }: SupportedLanguagesProps) => {
         <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto">
           {dict.pages.home.ourServicesSection.description}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
           {Services.map((service, index) => (
             <Link href={service.href} key={index}>
               <div className="bg-gray-700/40 p-8 rounded-lg text-center h-full flex flex-col items-center hover:bg-gray-700/30 transition-all duration-200 transform hover:-translate-y-2">

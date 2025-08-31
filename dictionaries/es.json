@@ -66,7 +66,7 @@
       "title": "Inicio",
       "heroSection": {
         "descriptorWords": ["Excelencia", "Integridad", "Eficiencia"],
-        "description": "Ofrecemos *exámenes médicos de la FAA*, *exámenes médicos del DOT* y *exámenes físicos escolares, deportivos y de campamento* para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo se dedica a garantizar una experiencia ágil, oportuna y sin estrés de principio a fin.",
+        "description": "Ofrecemos *Exámenes Médicos de Inmigración*, *exámenes médicos de la FAA*, *exámenes médicos del DOT* y *exámenes físicos escolares, deportivos y de campamento* para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo se dedica a garantizar una experiencia ágil, oportuna y sin estrés de principio a fin.",
         "scheduleAppointment": "Agendar Cita",
         "scrollDownText": "desliza para más"
       },
@@ -136,7 +136,7 @@
     },
     "services": {
       "title": "Servicios",
-      "description": "En ProMed Exams, nos dedicamos a ofrecer eficientes exámenes médicos de la FAA, exámenes médicos del DOT, y exámenes físicos escolares, deportivos y de campamento para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo experimentado y certificado está aquí para garantizar un proceso ágil y oportuno para todas sus necesidades de examinación. Creemos en la comunicación honesta y clara, y en una atención compasiva y centrada en el paciente.",
+      "description": "En ProMed Exams, nos dedicamos a ofrecer eficientes exámenes médicos de inmigración, exámenes médicos de la FAA, exámenes médicos del DOT, y exámenes físicos escolares, deportivos y de campamento para ayudarle a cumplir con los requisitos importantes de certificación y autorización. Nuestro equipo experimentado y certificado está aquí para garantizar un proceso ágil y oportuno para todas sus necesidades de examinación. Creemos en la comunicación honesta y clara, y en una atención compasiva y centrada en el paciente.",
       "services": {
         "moreInfoButton": "Más Información",
         "immigrationMedicalExams": {
@@ -153,13 +153,14 @@
               "header": "Qué Esperar",
               "description": [
                 "El examen evalúa su estado de salud para determinar si cumple con los requisitos de inmigración a los EE. UU. Puede esperar una revisión de su historial médico, su salud mental y un examen físico.",
-                "Se requieren análisis de sangre y orina según la edad para evaluar enfermedades infecciosas, incluyendo tuberculosis, sífilis y gonorrea. En su cita, se le entregará una orden de laboratorio prepagada para LabCorp/Quest. Deberá realizarse los análisis inmediatamente después de su examen médico. Si es necesario, le proporcionaremos información con las ubicaciones e indicaciones para llegar a LabCorp/Quest. Se requiere una radiografía de tórax si el análisis de sangre para tuberculosis da positivo. Se requieren vacunas si las vacunas apropiadas para la edad, según la recomendación de los CDC (Centros para el Control y la Prevención de Enfermedades), no están al día. No proporcionamos vacunas, pero podemos dirigirle a la ubicación más cercana y económica para vacunarse. Puede comer y beber antes del examen.",
-                "Las condiciones médicas comunes como la diabetes, el colesterol alto y la presión arterial alta, que no son una preocupación para la salud pública, no interfieren con el proceso de inmigración, pero deben ser listadas en el Formulario I-693 del USCIS (Informe de Examen Médico y Registro de Vacunación). Al completar todos los requisitos del Formulario I-693, se le entregará el formulario completado, firmado y fechado en un sobre sellado. No abra este sobre; debe presentarlo sellado al USCIS como parte del proceso de solicitud. También se le proporcionará un juego idéntico de documentos sin sellar."
+                "Se requieren análisis de sangre y orina según la edad para evaluar enfermedades infecciosas, incluyendo tuberculosis, sífilis y gonorrea. En su cita, se le entregará una orden de laboratorio para LabCorp/Quest. Deberá realizarse los análisis inmediatamente después de su examen médico. Si es necesario, le proporcionaremos información con las ubicaciones e indicaciones para llegar a LabCorp/Quest. Se requiere una radiografía de tórax si el análisis de sangre para tuberculosis da positivo. Se requieren vacunas si las vacunas apropiadas para la edad, según la recomendación de los CDC (Centros para el Control y la Prevención de Enfermedades), no están al día. No proporcionamos vacunas, pero podemos dirigirle a la ubicación más cercana y económica para vacunarse. Puede comer y beber antes del examen.",
+                "Las condiciones médicas comunes como la diabetes, el colesterol alto y la presión arterial alta, que no son una preocupación para la salud pública, no interfieren con el proceso de inmigración, pero deben ser listadas en el Formulario I-693 del USCIS (Informe de Examen Médico y Registro de Vacunación). Al completar todos los requisitos del Formulario I-693, se le entregará el formulario completado, firmado y fechado en un sobre sellado. No abra este sobre; debe presentarlo sellado al USCIS como parte del proceso de solicitud. También se le proporcionará un juego idéntico de documentos sin sellar.",
+                "El costo del examen y el papeleo es de $200. Los análisis de laboratorio y las inmunizaciones se pagan por separado a fuentes externas, como Quest/LabCorp para los análisis y el departamento de salud del condado para las inmunizaciones."
               ],
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
               "updatePanel": {
-                "title": "ACTUALIZACIÓN (2 de diciembre de 2024)",
-                "message": "El USCIS anunció que se requiere que presente el Formulario I-693 junto con su Formulario I-485. No puede optar por enviar los resultados del examen médico por correo en una fecha posterior. Si no presenta el Formulario I-693 como parte de su paquete de solicitud de ajuste de estatus, el USCIS puede rechazar su solicitud completa."
+                "title": "ACTUALIZACIÓN",
+                "message": "A partir del 2 de diciembre de 2024, el USCIS anunció que se requiere que presente el Formulario I-693 junto con su Formulario I-485. No puede optar por enviar los resultados del examen médico por correo en una fecha posterior. Si no presenta el Formulario I-693 como parte de su paquete de solicitud de ajuste de estatus, el USCIS puede rechazar su solicitud completa."
               }
             }
           },

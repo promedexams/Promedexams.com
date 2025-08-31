@@ -66,7 +66,7 @@
       "title": "Home",
       "heroSection": {
         "descriptorWords": ["Excellence", "Integrity", "Efficiency"],
-        "description": "Providing *FAA Physicals*, *DOT Physicals*, and *School/Sports/Camp Physicals* to help you meet important requirements for certification and clearance. Our team is dedicated to ensuring a smooth, timely, and stress-free experience from start to finish.",
+        "description": "Providing *Immigration Medical Exams*, *FAA Physicals*, *DOT Physicals*, and *School/Sports/Camp Physicals* to help you meet important requirements for certification and clearance. Our team is dedicated to ensuring a smooth, timely, and stress-free experience from start to finish.",
         "scheduleAppointment": "Schedule Appointment",
         "scrollDownText": "scroll for more"
       },
@@ -136,7 +136,7 @@
     },
     "services": {
       "title": "Services",
-      "description": "At ProMed Exams, we are dedicated to providing efficient FAA physicals, DOT physicals, and school/sports/camp physicals to help you meet important requirements for certification and clearance. Our experienced and certified team is here to ensure a smooth and timely process for all your examination needs. We believe in honest, clear communication and compassionate, patient-centered care.",
+      "description": "At ProMed Exams, we are dedicated to providing efficient Immigration Medical Exams, FAA physicals, DOT physicals, and school/sports/camp physicals to help you meet important requirements for certification and clearance. Our experienced and certified team is here to ensure a smooth and timely process for all your examination needs. We believe in honest, clear communication and compassionate, patient-centered care.",
       "services": {
         "moreInfoButton": "Learn More",
         "immigrationMedicalExams": {
@@ -153,13 +153,14 @@
               "header": "What to Expect",
               "description": [
                 "The exam assesses your health to determine if you meet the requirements for immigration to the U.S. Expect a review of your medical history, mental health, and physical exam.",
-                "Blood and urine testing is required based on age to evaluate infectious diseases including tuberculosis, syphilis, and gonorrhea. A pre-paid lab order to LabCorp/Quest will be given to you at your appointment. You are expected to have your labs done immediately after your medical exam. We will provide information with locations and directions to LabCorp/Quest if needed. A chest x-ray is required if the tuberculosis blood test is positive. Vaccinations are required if age-appropriate vaccinations per CDC (Centers for Disease Control and Prevention) recommendation are not up-to-date. We do not provide vaccines but can direct you to the nearest, most cost-effective location for vaccination. You can eat/drink before the exam.",
-                "Common medical conditions such as diabetes, high cholesterol, and high blood pressure that are not of concern to public health do not interfere with the immigration process but are required to be listed on USCIS Form I-693 (Report of Medical Examination and Vaccination Record). Upon completion of all Form I-693 requirements, you will be given a completed signed and dated Form I-693 in a sealed envelope. Do not open this envelope; it should be submitted in the sealed envelope to the USCIS as part of the application process. An unsealed identical set of documents will also be provided to you."
+                "Blood and urine testing is required based on age to evaluate infectious diseases including tuberculosis, syphilis, and gonorrhea. A lab order to LabCorp/Quest will be given to you at your appointment. You are expected to have your labs done immediately after your medical exam. We will provide information with locations and directions to LabCorp/Quest if needed. A chest x-ray is required if the tuberculosis blood test is positive. Vaccinations are required if age-appropriate vaccinations per CDC (Centers for Disease Control and Prevention) recommendation are not up-to-date. We do not provide vaccines but can direct you to the nearest, most cost-effective location for vaccination. You can eat/drink before the exam.",
+                "Common medical conditions such as diabetes, high cholesterol, and high blood pressure that are not of concern to public health do not interfere with the immigration process but are required to be listed on USCIS Form I-693 (Report of Medical Examination and Vaccination Record). Upon completion of all Form I-693 requirements, you will be given a completed signed and dated Form I-693 in a sealed envelope. Do not open this envelope; it should be submitted in the sealed envelope to the USCIS as part of the application process. An unsealed identical set of documents will also be provided to you.",
+                "Cost of exam and paperwork is $200. Labs and immunizations are paid separately to outside sources such as Quest/LabCorp for labs and county health department for immunizations."
               ],
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
               "updatePanel": {
-                "title": "UPDATE (December 2, 2024)",
-                "message": "USCIS announced that you are required to submit Form I-693 with your Form I-485. You may not opt to mail the medical exam results at a later date. If you do not submit Form I-693 as a part of your adjustment of status application package, USCIS may reject your entire application."
+                "title": "UPDATE",
+                "message": "As of December 2, 2024, USCIS announced that you are required to submit Form I-693 with your Form I-485. You may not opt to mail the medical exam results at a later date. If you do not submit Form I-693 as a part of your adjustment of status application package, USCIS may reject your entire application."
               }
             }
           },
