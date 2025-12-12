@@ -13,10 +13,10 @@ export const BusinessInfo = {
       hours: [
         null, // Sunday
         { open: "07:30", close: "16:30" }, // Monday
-        null, // Tuesday
-        null, // Wednesday
-        null, // Thursday
-        { open: "07:30", close: "16:30" }, // Friday
+        { open: "07:30", close: "16:30" }, // Tuesday
+        { open: "07:30", close: "16:30" }, // Wednesday
+        { open: "07:30", close: "16:30" }, // Thursday
+        null, // Friday
         null, // Saturday
       ],
     },
