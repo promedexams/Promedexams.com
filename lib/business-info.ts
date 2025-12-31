@@ -24,7 +24,7 @@ export const BusinessInfo = {
     addressLine2: "Littleton, CO 80120",
     FullAddress: "4 W Dry Creek Cir #135, Littleton, CO 80120",
     OfficeEmail: "office@promedexams.com",
-    PhoneNumber: "(720) 517-3111",
+    PhoneNumber: "(303) 798-1210",
     FaxNumber: "(303) 997-2147",
   },
   Employees: {
