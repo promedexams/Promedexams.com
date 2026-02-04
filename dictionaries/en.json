@@ -158,6 +158,7 @@
                 "Cost of exam and paperwork is $200. Labs and immunizations are paid separately to outside sources such as Quest/LabCorp for labs and county health department for immunizations."
               ],
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
+              "faqButtonText": "FAQ",
               "updatePanel": {
                 "title": "UPDATE",
                 "message": "As of December 2, 2024, USCIS announced that you are required to submit Form I-693 with your Form I-485. You may not opt to mail the medical exam results at a later date. If you do not submit Form I-693 as a part of your adjustment of status application package, USCIS may reject your entire application."

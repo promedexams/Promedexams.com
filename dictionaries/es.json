@@ -158,6 +158,7 @@
                 "El costo del examen y el papeleo es de $200. Los análisis de laboratorio y las inmunizaciones se pagan por separado a fuentes externas, como Quest/LabCorp para los análisis y el departamento de salud del condado para las inmunizaciones."
               ],
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
+              "faqButtonText": "Preguntas Frecuentes",
               "updatePanel": {
                 "title": "ACTUALIZACIÓN",
                 "message": "A partir del 2 de diciembre de 2024, el USCIS anunció que se requiere que presente el Formulario I-693 junto con su Formulario I-485. No puede optar por enviar los resultados del examen médico por correo en una fecha posterior. Si no presenta el Formulario I-693 como parte de su paquete de solicitud de ajuste de estatus, el USCIS puede rechazar su solicitud completa."
