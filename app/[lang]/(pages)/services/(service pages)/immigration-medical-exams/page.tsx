@@ -95,15 +95,17 @@ const ImmigrationMedicalExamsPage = async ({ params }: SupportedLanguagesProps) 
                   {dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.disclaimer}
                 </p>
               </div>
-              <Link href={IMMIGRATION_FAQ_URL} target="_blank">
-                <Button
-                  size="lg"
-                  className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-8"
-                >
-                  <MessageCircleQuestionMarkIcon />
-                  {dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.faqButtonText}
-                </Button>
-              </Link>
+              <div className="flex justify-center">
+                <Link href={IMMIGRATION_FAQ_URL} target="_blank">
+                  <Button
+                    size="lg"
+                    className="bg-blue-300 hover:bg-blue-300/80 text-black font-bold cursor-pointer transition-colors duration-200 mt-8"
+                  >
+                    <MessageCircleQuestionMarkIcon />
+                    {dict.pages.services.services.immigrationMedicalExams.informationSection.whatToExpect.faqButtonText}
+                  </Button>
+                </Link>
+              </div>
             </div>
             <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
               <h3 className="font-bold text-xl text-blue-300 mb-2">
