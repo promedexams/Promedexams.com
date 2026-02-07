@@ -210,7 +210,7 @@
             "items": [
               "Identificación con foto vigente (Licencia de conducir o Pasaporte)",
               "Número de confirmación de MedXPress",
-              "Lentes de contacto/gafas, audífonos (si aplica) - Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir",
+              "Lentes de contacto/gafas, audífonos (si aplica)",
               "Venga preparado para proporcionar una muestra de orina."
             ],
             "messagePanel": {
@@ -251,7 +251,7 @@
               "Formulario de Informe de Examen Médico (MCSA-5875)",
               "Lista de medicamentos actuales con dosis y el nombre de quien los recetó",
               "Cualquier circunstancia especial o carta de exención de su(s) médico(s)",
-              "Lentes de contacto/gafas, audífonos (si aplica) - Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir",
+              "Lentes de contacto/gafas, audífonos (si aplica)",
               "Esté preparado para proporcionar una muestra de orina"
             ],
             "messagePanel": {

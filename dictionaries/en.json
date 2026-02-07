@@ -210,7 +210,7 @@
             "items": [
               "Current photo ID (Driver's license or Passport)",
               "MedXPress confirmation number",
-              "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
+              "Contacts/glasses, hearing aids (if applicable)",
               "Be prepared to leave a urine sample"
             ],
             "messagePanel": {
@@ -251,7 +251,7 @@
               "Medical Examination Report Form (MCSA-5875)",
               "List of current medications with dosages and prescriber's name",
               "Any special circumstances or exemption letters from your doctor(s)",
-              "Contacts/glasses, hearing aids (if applicable) - If you wear contacts, bring a contact case to remove contacts to check uncorrected vision",
+              "Contacts/glasses, hearing aids (if applicable)",
               "Be prepared to leave a urine sample"
             ],
             "messagePanel": {
