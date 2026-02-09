@@ -23,7 +23,9 @@ export async function GET(): Promise<NextResponse<ServiceTypeResponse[] | { erro
       variationVersion: service.variationVersion ? service.variationVersion.toString() : undefined,
     }));
 
-    return NextResponse.json(formattedServices);
+    const sortedServices = formattedServices.sort((a, b) => a.name.localeCompare(b.name));
+
+    return NextResponse.json(sortedServices);
   } catch (error) {
     console.error("Square Catalog API error:", error);
     return NextResponse.json({ error: "Failed to fetch services" }, { status: 500 });
