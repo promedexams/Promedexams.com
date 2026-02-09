@@ -4,6 +4,8 @@ export const GOOGLE_MAPS_URL =
 
 // Service Links
 export const FORM_I693_URL = "https://www.uscis.gov/sites/default/files/document/forms/i-693.pdf";
+export const IMMIGRATION_FAQ_URL =
+  "https://docs.google.com/document/d/e/2PACX-1vT47vf638Cs6YsjpuI0AdXzSJR4YmU5iE9vd81AEZOriReLTqbNk4SNoLQSJlX8Vg/pub";
 export const MED_XPRESS_URL = "https://medxpress.faa.gov/";
 export const MCSA_5875_URL =
   "https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/2025-04/Medical%20Examination%20Report%20Form%20MCSA-5875%20508pdf.pdf";
