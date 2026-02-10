@@ -32,7 +32,7 @@
       "services": {
         "header": "Services",
         "ImmigrationMedicalExams": "Immigration Medical Exams",
-        "FAAPhysicals": "FAA Physicals (2nd & 3rd Class, No Basic Med)",
+        "FAAPhysicals": "FAA Physicals (1st, 2nd & 3rd Class, No Basic Med)",
         "DOTPhysicals": "DOT Physicals",
         "schoolSportsCampPhysicals": "School/Sports/Camp Physicals"
       },
@@ -79,7 +79,7 @@
             "description": "USCIS-designated civil surgeon performing immigration medical exams."
           },
           "faaPhysicals": {
-            "title": "FAA Physicals (2nd & 3rd Class, No Basic Med)",
+            "title": "FAA Physicals (1st, 2nd & 3rd Class, No Basic Med)",
             "description": "FAA-designated aviation medical examiner performing pilot physicals."
           },
           "dotPhysicals": {
@@ -186,7 +186,7 @@
           }
         },
         "faaPhysicals": {
-          "title": "FAA Physicals (2nd & 3rd Class, No Basic Med)",
+          "title": "FAA Physicals (1st, 2nd & 3rd Class, No Basic Med)",
           "shortDescription": "The Federal Aviation Administration (FAA) requires pilots to be medically certified for their desired class of pilot certificate so that potential medical issues can be identified and addressed to prevent accidents and improve aviation safety.",
           "informationSection": {
             "whoApplies": {
@@ -487,8 +487,8 @@
                 ]
               },
               "faa": {
-                "title": "FAA Aviation Medical Examination (2nd & 3rd Class)",
-                "description": "Federal Aviation Administration medical certification examination for private and commercial pilots. We provide 2nd and 3rd class medical certificates.",
+                "title": "FAA Aviation Medical Examination (1st, 2nd & 3rd Class)",
+                "description": "Federal Aviation Administration medical certification examination for private and commercial pilots. We provide 1st, 2nd, and 3rd class medical certificates.",
                 "remindersList": [
                   "Make sure to bring: Current photo ID (Driver’s license or Passport), Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), Pertinent medical or legal records (if applicable), MedXPress confirmation number",
                   "Be sure to update your health history and current medications in MedXPress prior to your arrival.",
