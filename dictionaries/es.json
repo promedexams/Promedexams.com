@@ -43,7 +43,7 @@
       },
       "legal": {
         "header": "Legal",
-        "noticeOfPrivacyPolicy": "Aviso de Política de Privacidad (NPP)",
+        "noticeOfPrivacyPolicy": "Aviso de Prácticas de Privacidad (NPP)",
         "pilotBillOfRights": "Declaración de Derechos del Piloto"
       }
     },
@@ -180,7 +180,7 @@
             ],
             "messagePanel": {
               "title": "NOTA IMPORTANTE",
-              "message": "Asegúrese de completar las partes 1 a 5 de las páginas 1 a 3 del Formulario I-693 *antes* de su cita.",
+              "message": "Asegúrese de completar las partes 1 a 4 de las páginas 1 a 3 del Formulario I-693 *antes* de su cita.",
               "buttonText": "Formulario I-693"
             }
           }
@@ -216,7 +216,7 @@
             "messagePanel": {
               "title": "NOTA IMPORTANTE",
               "message": "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress *antes* de su cita.",
-              "buttonText": "FAA MedExpress"
+              "buttonText": "FAA MedXPress"
             }
           }
         },
