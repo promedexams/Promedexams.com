@@ -353,8 +353,8 @@
       "title": "Agendar Cita",
       "description": "Por favor, complete el formulario a continuación para agendar su cita. Nos pondremos en contacto con usted lo antes posible para confirmar su cita.",
       "maintenanceWindow": {
-        "header": "Una Nota Sobre Nuestro Nuevo Sistema",
-        "subheader": "Recientemente hemos lanzado nuestra nueva plataforma de programación para facilitar la reservación de citas. Como con cualquier sistema nuevo, estamos trabajando para refinar la experiencia. Si encuentra algún problema, por favor, póngase en contacto con nosotros para que podamos ayudarle.",
+        "header": "Una Nota Sobre Nuestro Sistema de Programación en Línea",
+        "subheader": "Nuestra plataforma de programación en línea tiene como objetivo facilitarle la programación de su(s) cita(s), por lo que si encuentra algún problema o NO le resulta más fácil realizar la programación, por favor póngase en contacto con nosotros para que podamos ayudarle.",
         "contactButtonText": "Contáctenos"
       },
       "scheduleForm": {

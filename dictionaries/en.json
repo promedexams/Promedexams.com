@@ -353,8 +353,8 @@
       "title": "Schedule Appointment",
       "description": "Please fill out the form below to schedule your appointment. We will get back to you as soon as possible to confirm your appointment.",
       "maintenanceWindow": {
-        "header": "A Note About Our New System",
-        "subheader": "We've recently launched our new scheduling platform to make booking easier. As with any new system, we are working to refine the experience. If you run into any problems, please reach out so we can assist you.",
+        "header": "A Note About Our Online Scheduling System",
+        "subheader": "Our online scheduling platform is intended to make scheduling your appointment(s) easier for you, so if you run into any problems or do NOT find it easier to schedule, please reach out so we can assist you.",
         "contactButtonText": "Contact Us"
       },
       "scheduleForm": {
