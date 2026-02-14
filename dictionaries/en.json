@@ -419,6 +419,24 @@
                   "Consultations will be billed by time spent during the consultation. Time spent by Dr. Quigley making phone calls on your behalf or reviewing your medical or legal records after a consultation or medical examination will also be billed."
                 ]
               }
+            },
+            "serviceReminders": {
+              "faaFirst": {
+                "title": "IMPORTANT REMINDER:",
+                "message": "Be sure to update your health history and current medications in MedXPress prior to your appointment."
+              },
+              "faaSecondThird": {
+                "title": "IMPORTANT REMINDER:",
+                "message": "Be sure to update your health history and current medications in MedXPress prior to your appointment."
+              },
+              "dot": {
+                "title": "IMPORTANT REMINDER:",
+                "message": "Be sure to complete the driver information and health history sections on the Medical Examination Report Form (MCSA-5875) prior to your appointment."
+              },
+              "immigration": {
+                "title": "IMPORTANT REMINDER:",
+                "message": "Be sure to complete parts 1-4 on pages 1-3 of Form I-693 prior to your appointment."
+              }
             }
           },
           "calendarBookingStep": {

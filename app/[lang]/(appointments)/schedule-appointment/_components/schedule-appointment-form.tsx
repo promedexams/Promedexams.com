@@ -12,6 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import Link from "next/link";
 
+import { getServiceReminderKey } from "@/lib/service-reminders";
 import { ServiceTypeResponse } from "@/lib/types/api/services";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
 import { getDictionary } from "@/lib/utils/dictionaries";
@@ -39,6 +40,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   // Appointment Information
   const [selectedAppointmentType, setSelectedAppointmentType] = useState("");
   const [selectedAppointmentVariationVersion, setSelectedAppointmentVariationVersion] = useState<number | null>(null);
+  const [serviceReminderKey, setServiceReminderKey] = useState<string | null>(null);
   const [newOrReturningClient, setNewOrReturningClients] = useState("");
   const [newHealthConditions, setNewHealthConditions] = useState("");
   const [newMedications, setNewMedications] = useState("");
@@ -176,6 +178,8 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
       setSelectedBookingDate(null);
       setSelectedTime("");
       setAvailableTimes([]);
+      const reminderKey = getServiceReminderKey(selectedService.name);
+      setServiceReminderKey(reminderKey);
     }
   };
 
@@ -666,6 +670,30 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   ))}
                 </select>
               </div>
+
+              {/* Service-specific reminder */}
+              {serviceReminderKey &&
+                dict?.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.serviceReminders[
+                  serviceReminderKey
+                ] && (
+                  <div className="bg-amber-900/50 border-l-4 border-amber-400 p-4 rounded">
+                    <h3 className="font-bold text-xl text-amber-300 mb-2">
+                      {
+                        dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.serviceReminders[
+                          serviceReminderKey
+                        ].title
+                      }
+                    </h3>
+                    <p className="text-white text-base">
+                      {
+                        dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.serviceReminders[
+                          serviceReminderKey
+                        ].message
+                      }
+                    </p>
+                  </div>
+                )}
+
               <div>
                 <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningClient">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.newOrReturningClient.label}
