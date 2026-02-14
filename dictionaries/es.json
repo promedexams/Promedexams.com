@@ -419,6 +419,24 @@
                   "Las consultas se facturarán según el tiempo dedicado durante la consulta. El tiempo que la Dra. Quigley dedique a hacer llamadas telefónicas en su nombre o a revisar sus expedientes médicos o legales después de una consulta o un examen médico también se facturará."
                 ]
               }
+            },
+            "serviceReminders": {
+              "faaFirst": {
+                "title": "RECORDATORIO IMPORTANTE:",
+                "message": "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress antes de su cita."
+              },
+              "faaSecondThird": {
+                "title": "RECORDATORIO IMPORTANTE:",
+                "message": "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress antes de su cita."
+              },
+              "dot": {
+                "title": "RECORDATORIO IMPORTANTE:",
+                "message": "Asegúrese de completar las secciones de información del conductor e historial de salud en el Formulario de Informe de Examen Médico (MCSA-5875) antes de su cita."
+              },
+              "immigration": {
+                "title": "RECORDATORIO IMPORTANTE:",
+                "message": "Asegúrese de completar las partes 1 a 4 en las páginas 1 a 3 del Formulario I-693 antes de su cita."
+              }
             }
           },
           "calendarBookingStep": {
