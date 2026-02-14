@@ -15,6 +15,13 @@ const BackToTopButton = () => {
     const onScroll = () => {
       setShow(window.scrollY > 100);
 
+      const isMobile = window.innerWidth < 640;
+
+      if (isMobile) {
+        setBottomOffset(24);
+        return;
+      }
+
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
