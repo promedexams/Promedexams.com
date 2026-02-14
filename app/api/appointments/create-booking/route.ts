@@ -106,21 +106,14 @@ async function createOrGetCustomer(client: SquareClient, bookingData: BookingReq
       },
     });
 
-    // If customer exists, check if DOB matches
+    // If customers with this email exist, check if any match this person (by DOB)
     if (searchResponse.customers && searchResponse.customers.length > 0) {
-      const existingCustomer = searchResponse.customers[0];
+      const matchingCustomer = searchResponse.customers.find((customer) => customer.birthday === bookingData.birthday);
 
-      // Check if DOB matches
-      if (existingCustomer.birthday === bookingData.birthday) {
+      if (matchingCustomer) {
         return {
           success: true,
-          customerId: existingCustomer.id!,
-        };
-      } else {
-        // DOB doesn't match - this might be a different person with same email
-        return {
-          success: false,
-          error: "Customer with this email exists but date of birth doesn't match",
+          customerId: matchingCustomer.id!,
         };
       }
     }
