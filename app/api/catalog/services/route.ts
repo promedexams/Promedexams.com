@@ -16,10 +16,14 @@ export async function GET(): Promise<NextResponse<ServiceTypeResponse[] | { erro
       id: item.itemData.variations[0].id,
       name: item.itemData.name,
       variationVersion: item.itemData.variations[0].version,
+      isBookable: item.itemData.variations[0].itemVariationData.availableForBooking,
     }));
 
-    const formattedServices = services.map((service) => ({
-      ...service,
+    const filteredServices = services.filter((service) => service.isBookable == true);
+
+    const formattedServices = filteredServices.map((service) => ({
+      id: service.id,
+      name: service.name,
       variationVersion: service.variationVersion ? service.variationVersion.toString() : undefined,
     }));
 
