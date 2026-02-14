@@ -64,7 +64,6 @@ export async function GET() {
       }
     }
 
-    console.log(`Generated ${availableDays.length} available days`);
     return NextResponse.json(availableDays);
   } catch (error) {
     console.error("Error fetching available days:", error);
