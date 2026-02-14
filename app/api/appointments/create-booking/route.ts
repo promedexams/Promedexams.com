@@ -106,9 +106,14 @@ async function createOrGetCustomer(client: SquareClient, bookingData: BookingReq
       },
     });
 
-    // If customers with this email exist, check if any match this person (by DOB)
+    // If customers with this email exist, check if any match this person (by DOB and name)
     if (searchResponse.customers && searchResponse.customers.length > 0) {
-      const matchingCustomer = searchResponse.customers.find((customer) => customer.birthday === bookingData.birthday);
+      const matchingCustomer = searchResponse.customers.find(
+        (customer) =>
+          customer.birthday === bookingData.birthday &&
+          customer.givenName?.toLowerCase() === bookingData.firstName.toLowerCase() &&
+          customer.familyName?.toLowerCase() === bookingData.lastName.toLowerCase()
+      );
 
       if (matchingCustomer) {
         return {
