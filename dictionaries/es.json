@@ -498,20 +498,24 @@
                 "title": "Examen Físico del DOT",
                 "description": "Un examen físico del Departamento de Transporte (DOT) para asegurar que cumple con los estándares de salud requeridos para la conducción comercial.",
                 "remindersList": [
-                  "Asegúrese de traer: Formulario de Informe de Examen Médico (MER), licencia de conducir vigente emitida por el estado, lentes de contacto/gafas (si aplica) – Si usa lentes de contacto, traiga un estuche para quitárselos y poder revisar la visión sin corregir, audífonos (si aplica), lista de medicamentos actuales con dosis y el nombre de quien los recetó, cualquier circunstancia especial o carta de exención de su(s) médico(s) y/o expedientes médicos o legales pertinentes (si aplica).",
+                  "Asegúrese de traer: Formulario de Informe de Examen Médico (MER), licencia de conducir vigente emitida por el estado, lentes de contacto/gafas (si aplica), audífonos (si aplica), lista de medicamentos actuales con dosis y el nombre de quien los recetó, cartas de circunstancias especiales o exención, cartas de autorización de su(s) médico(s) y/o expedientes médicos o legales pertinentes (si aplica).",
                   "Asegúrese de completar las secciones de información del conductor e historial de salud en las dos primeras páginas del Formulario de Informe de Examen Médico (MCSA-5875) antes de su cita.",
-                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina al comienzo de su cita.",
-                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina y estar listo para su cita a tiempo."
+                  "Si llega a su cita sin la preparación necesaria, se le cobrará un cargo adicional.",
+                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina.",
+                  "Por favor, llegue a su cita 15 minutos antes para registrarse y estar listo para su cita a tiempo.",
+                  "Si llega tarde a su cita, es posible que deba reprogramarla y se le cobrará un cargo por cancelación tardía."
                 ]
               },
               "faa": {
-                "title": "Examen Médico de Aviación de la FAA (1ra, 2da y 3ra Clase)",
-                "description": "Examen de certificación médica de la Administración Federal de Aviación para pilotos privados y comerciales. Proporcionamos certificados médicos de 1ra, 2da y 3ra clase.",
+                "title": "Examen Médico de Aviación de la FAA (1.ª, 2.ª y 3.ª Clase)",
+                "description": "Examen de certificación médica de la Administración Federal de Aviación para pilotos privados y comerciales. Proporcionamos certificados médicos de 1.ª, 2.ª y 3.ª clase.",
                 "remindersList": [
-                  "Asegúrese de traer: Identificación con foto vigente (Licencia de conducir o Pasaporte), lentes de contacto/gafas (si aplica) – Si usa lentes de contacto, traiga un estuche para quitárselenos y poder revisar la visión sin corregir, audífonos (si aplica), expedientes médicos o legales pertinentes (si aplica), número de confirmación de MedXPress.",
+                  "Asegúrese de traer: Identificación con foto vigente (Licencia de conducir o Pasaporte), lentes de contacto/gafas (si aplica), audífonos (si aplica), expedientes médicos o legales pertinentes (si aplica), número de confirmación de MedXPress.",
                   "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress antes de su llegada.",
-                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina al comienzo de su cita.",
-                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina y estar listo para su cita a tiempo."
+                  "Si llega a su cita sin la preparación necesaria, se le cobrará un cargo adicional.",
+                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina.",
+                  "Por favor, llegue a su cita 10 minutos antes para registrarse y estar listo para su cita a tiempo.",
+                  "Si llega tarde a su cita, es posible que deba reprogramarla y se le cobrará un cargo por cancelación tardía."
                 ]
               },
               "schoolSportsCamp": {
@@ -520,38 +524,39 @@
                 "remindersList": [
                   "Asegúrese de traer: Cualquier formulario proporcionado por su escuela, programa deportivo o campamento que deba ser completado y/o firmado por la Dra. Quigley, registros de inmunización, lista de alergias y medicamentos actuales con dosis (recetados y de venta libre), lista de lesiones y cirugías pasadas e historial familiar pertinente.",
                   "Asegúrese de completar cualquier parte de los formularios de participación que deba ser llenada por el paciente o su padre/tutor.",
-                  "NO necesita estar en ayunas para su cita, pero deberá dejar una muestra de orina al comienzo de su cita si su formulario de participación requiere un análisis de orina.",
-                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina si es necesario y estar listo para su cita a tiempo."
+                  "NO necesita estar en ayunas para su cita, pero es posible que deba dejar una muestra de orina si su formulario de participación requiere un análisis de orina.",
+                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse y estar listo para su cita a tiempo.",
+                  "Si llega tarde a su cita, es posible que deba reprogramarla y se le cobrará un cargo por cancelación tardía."
                 ]
               },
               "immigration": {
                 "title": "Examen Médico de Inmigración",
                 "description": "Examen médico requerido por el USCIS para solicitudes de inmigración y ajuste de estatus. Este examen incluye una revisión de los registros de vacunación, historial médico y un examen físico.",
                 "remindersList": [
-                  "Asegúrese de traer: Pasaporte válido u otra identificación con foto emitida por el gobierno, Formulario I-693 (Informe de Examen Médico y Registro de Vacunación), registros de vacunación, lista de medicamentos actuales",
+                  "Asegúrese de traer: Pasaporte válido u otra identificación con foto emitida por el gobierno, Formulario I-693 (Informe de Examen Médico y Registro de Vacunación), registros de vacunación, lista de medicamentos actuales, información del seguro, cualquier registro médico pertinente.",
+                  "Si llega a su cita sin la preparación necesaria, se le cobrará un cargo adicional.",
                   "A partir del 2 de diciembre de 2024, el USCIS requiere que el Formulario I-693 se presente junto con su Formulario I-485. Si no presenta el Formulario I-693 con su paquete de solicitud de ajuste de estatus, el USCIS puede rechazar su solicitud por completo.",
                   "NO necesita estar en ayunas para su cita, pero es posible que deba dejar una muestra de orina.",
-                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse y estar listo para su cita a tiempo."
+                  "Por favor, llegue a su cita 15 minutos antes para registrarse y estar listo para su cita a tiempo.",
+                  "Si llega tarde a su cita, es posible que deba reprogramarla y se le cobrará un cargo por cancelación tardía."
                 ]
               },
               "consultation": {
                 "title": "Consulta",
                 "description": "Una cita de consulta para discutir su próximo examen médico, revisar el historial médico y abordar cualquier inquietud o pregunta que pueda tener.",
                 "remindersList": [
-                  "Por favor, traiga una identificación con fotografía.",
-                  "Por favor, traiga la información de su seguro.",
-                  "Por favor, traiga una lista de sus medicamentos actuales.",
-                  "Si necesita cancelar o reprogramar, por favor llame con al menos 24 horas de antelación."
+                  "Por favor, traiga una identificación con foto, lista de medicamentos y cualquier registro médico pertinente para discutir.",
+                  "Por favor, llegue a su cita 10 minutos antes para registrarse y estar listo para su cita a tiempo.",
+                  "Si llega tarde a su cita, es posible que deba reprogramarla y se le cobrará un cargo por cancelación tardía."
                 ]
               },
               "general": {
                 "title": "Cita General",
                 "description": "Su cita ha sido confirmada. Por favor, llegue 15 minutos antes para completar cualquier papeleo necesario.",
                 "remindersList": [
-                  "Por favor, traiga una identificación con fotografía.",
-                  "Por favor, traiga la información de su seguro.",
-                  "Por favor, traiga una lista de sus medicamentos actuales.",
-                  "Si necesita cancelar o reprogramar, por favor llame con al menos 24 horas de antelación."
+                  "Por favor, traiga una identificación con foto, lista de medicamentos y cualquier registro médico pertinente para discutir.",
+                  "Por favor, llegue a su cita 10 minutos antes para registrarse y estar listo para su cita a tiempo.",
+                  "Si llega tarde a su cita, es posible que deba reprogramarla y se le cobrará un cargo por cancelación tardía."
                 ]
               }
             },
