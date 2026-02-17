@@ -498,20 +498,24 @@
                 "title": "DOT Physical Examination",
                 "description": "A Department of Transportation (DOT) physical examination to ensure you meet the health standards required for commercial driving.",
                 "remindersList": [
-                  "Make sure to bring: Medical Examination Report (MER) Form, Current state-issued driver’s license, Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), List of current medications with dosages and prescriber’s name, Special circumstances or exemption letters from your doctor(s) and/or pertinent medical or legal records (if applicable)",
+                  "Make sure to bring: Medical Examination Report (MER) Form, Current state-issued driver's license, Contacts/glasses (if applicable), Hearing aids (if applicable), List of current medications with dosages and prescriber's name, Special circumstances or exemption letters, clearance letters from your doctor(s) and/or pertinent medical or legal records (if applicable)",
                   "Be sure to complete the driver information and health history sections on the first two pages of the Medical Examination Report Form (MCSA-5875) prior to your appointment.",
-                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
-                  "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time."
+                  "If you arrive at your appointment unprepared, you will be charged an additional fee.",
+                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample.",
+                  "Please show up to your appointment 15 minutes early to check in and be ready for your appointment on time.",
+                  "If you arrive late for your appointment, you may have to reschedule and will be charged a late cancellation fee."
                 ]
               },
               "faa": {
                 "title": "FAA Aviation Medical Examination (1st, 2nd & 3rd Class)",
                 "description": "Federal Aviation Administration medical certification examination for private and commercial pilots. We provide 1st, 2nd, and 3rd class medical certificates.",
                 "remindersList": [
-                  "Make sure to bring: Current photo ID (Driver’s license or Passport), Contacts/glasses (if applicable) – If you wear contacts, bring a contact case to remove contacts to check uncorrected vision, Hearing aids (if applicable), Pertinent medical or legal records (if applicable), MedXPress confirmation number",
+                  "Make sure to bring: Current photo ID (Driver's license or Passport), Contacts/glasses (if applicable), Hearing aids (if applicable), Pertinent medical or legal records (if applicable), MedXPress confirmation number",
                   "Be sure to update your health history and current medications in MedXPress prior to your arrival.",
-                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment.",
-                  "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample, and be ready for your appointment on time."
+                  "If you arrive at your appointment unprepared, you will be charged an additional fee.",
+                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample.",
+                  "Please show up to your appointment 10 minutes early to check in and be ready for your appointment on time.",
+                  "If you arrive late for your appointment, you may have to reschedule and will be charged a late cancellation fee."
                 ]
               },
               "schoolSportsCamp": {
@@ -520,28 +524,39 @@
                 "remindersList": [
                   "Make sure to bring: Any forms provided by your school, sports program, or camp that need to be completed and/or signed by Dr. Quigley, Immunization records, List of allergies and current medications with dosages (prescription and over-the-counter), List of past injuries and surgeries and pertinent family history",
                   "Be sure to complete any parts of participation forms that are to be completed by the client or their parent/guardian",
-                  "You do NOT need to be fasting for your appointment, but you will need to leave a urine sample at the beginning of your appointment if your participation form requires a urinalysis.",
-                  "Please show up to your appointment 10-15 minutes early to check in, leave a urine sample if necessary, and be ready for your appointment on time."
+                  "You do NOT need to be fasting for your appointment, but you may need to leave a urine sample if your participation form requires a urinalysis.",
+                  "Please show up to your appointment 10-15 minutes early to check in and be ready for your appointment on time.",
+                  "If you arrive late for your appointment, you may have to reschedule and will be charged a late cancellation fee."
+                ]
+              },
+              "immigration": {
+                "title": "Immigration Medical Examination",
+                "description": "USCIS-required medical examination for immigration and adjustment of status applications. This exam includes a review of vaccination records, medical history, and a physical examination.",
+                "remindersList": [
+                  "Make sure to bring: Valid passport or other government-issued photo ID, Form I-693 (Report of Medical Examination and Vaccination Record), Vaccination records, List of current medications, Insurance information, Any pertinent medical records",
+                  "If you arrive at your appointment unprepared, you will be charged an additional fee.",
+                  "As of December 2, 2024, USCIS requires Form I-693 to be submitted with your Form I-485. If you do not submit Form I-693 with your adjustment of status application package, USCIS may reject your entire application.",
+                  "You do NOT need to be fasting for your appointment, but you may need to leave a urine sample.",
+                  "Please show up to your appointment 15 minutes early to check in and be ready for your appointment on time.",
+                  "If you arrive late for your appointment, you may have to reschedule and will be charged a late cancellation fee."
                 ]
               },
               "consultation": {
                 "title": "Consultation",
                 "description": "A consultation appointment to discuss your upcoming medical examination, review medical history, and address any concerns or questions you may have.",
                 "remindersList": [
-                  "Please bring a photo identification.",
-                  "Please bring your insurance information.",
-                  "Please bring a list of current medications.",
-                  "If you need to cancel or reschedule, please call at least 24 hours in advance"
+                  "Please bring a photo ID, medication list, and any pertinent medical records to discuss.",
+                  "Please show up to your appointment 10 minutes early to check in and be ready for your appointment on time.",
+                  "If you arrive late for your appointment, you may have to reschedule and will be charged a late cancellation fee."
                 ]
               },
               "general": {
                 "title": "General Appointment",
                 "description": "Your appointment has been confirmed. Please arrive 15 minutes early to complete any necessary paperwork.",
                 "remindersList": [
-                  "Please bring a photo identification.",
-                  "Please bring your insurance information.",
-                  "Please bring a list of current medications.",
-                  "If you need to cancel or reschedule, please call at least 24 hours in advance"
+                  "Please bring a photo ID, medication list, and any pertinent medical records to discuss.",
+                  "Please show up to your appointment 10 minutes early to check in and be ready for your appointment on time.",
+                  "If you arrive late for your appointment, you may have to reschedule and will be charged a late cancellation fee."
                 ]
               }
             },
