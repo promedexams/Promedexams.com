@@ -524,6 +524,16 @@
                   "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse, dejar una muestra de orina si es necesario y estar listo para su cita a tiempo."
                 ]
               },
+              "immigration": {
+                "title": "Examen Médico de Inmigración",
+                "description": "Examen médico requerido por el USCIS para solicitudes de inmigración y ajuste de estatus. Este examen incluye una revisión de los registros de vacunación, historial médico y un examen físico.",
+                "remindersList": [
+                  "Asegúrese de traer: Pasaporte válido u otra identificación con foto emitida por el gobierno, Formulario I-693 (Informe de Examen Médico y Registro de Vacunación), registros de vacunación, lista de medicamentos actuales",
+                  "A partir del 2 de diciembre de 2024, el USCIS requiere que el Formulario I-693 se presente junto con su Formulario I-485. Si no presenta el Formulario I-693 con su paquete de solicitud de ajuste de estatus, el USCIS puede rechazar su solicitud por completo.",
+                  "NO necesita estar en ayunas para su cita, pero es posible que deba dejar una muestra de orina.",
+                  "Por favor, llegue a su cita con 10-15 minutos de antelación para registrarse y estar listo para su cita a tiempo."
+                ]
+              },
               "consultation": {
                 "title": "Consulta",
                 "description": "Una cita de consulta para discutir su próximo examen médico, revisar el historial médico y abordar cualquier inquietud o pregunta que pueda tener.",

@@ -97,75 +97,63 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
   };
 
   const getAppointmentTypeInfo = (appointmentType: string) => {
-    const appointmentInfo: Record<
-      string,
+    // Configuration array similar to service-reminders.ts
+    const appointmentTypeConfigs = [
       {
-        title: string;
-        description: string;
-        reminders?: string[];
-        servicePageUrl?: string;
-      }
-    > = {
-      "DOT Physicals": {
-        title: dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.dot.title,
-        description:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.dot
-            .description,
-        reminders:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.dot
-            .remindersList,
+        pattern: /DOT/i,
+        dictionaryKey: "dot",
         servicePageUrl: "/services/dot-physicals",
       },
-      "FAA Physicals (2nd & 3rd Class)": {
-        title: dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.faa.title,
-        description:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.faa
-            .description,
-        reminders:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.faa
-            .remindersList,
+      {
+        pattern: /FAA/i,
+        dictionaryKey: "faa",
         servicePageUrl: "/services/faa-physicals",
       },
-      "School/Sports/Camp Physicals": {
-        title:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes
-            .schoolSportsCamp.title,
-        description:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes
-            .schoolSportsCamp.description,
-        reminders:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes
-            .schoolSportsCamp.remindersList,
+      {
+        pattern: /School|Sports|Camp/i,
+        dictionaryKey: "schoolSportsCamp",
         servicePageUrl: "/services/school-sports-camp-physicals",
       },
-      Consultation: {
-        title:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.consultation
-            .title,
-        description:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.consultation
-            .description,
-        reminders:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.consultation
-            .remindersList,
+      {
+        pattern: /Immigration/i,
+        dictionaryKey: "immigration",
+        servicePageUrl: "/services/immigration",
+      },
+      {
+        pattern: /Consultation/i,
+        dictionaryKey: "consultation",
         servicePageUrl: "/services",
       },
-    };
+    ];
 
-    // Return the matching appointment type or a default
-    return (
-      appointmentInfo[appointmentType] || {
-        title:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general.title,
-        description:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general
-            .description,
-        reminders:
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general
-            .remindersList,
-        servicePageUrl: "/services",
+    // Try to find a matching pattern
+    for (const config of appointmentTypeConfigs) {
+      if (config.pattern.test(appointmentType)) {
+        const serviceData =
+          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes[
+            config.dictionaryKey
+          ];
+        return {
+          title: serviceData.title,
+          description: serviceData.description,
+          reminders: serviceData.remindersList,
+          servicePageUrl: config.servicePageUrl,
+        };
       }
-    );
+    }
+
+    // Default fallback
+    return {
+      title:
+        dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general.title,
+      description:
+        dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general
+          .description,
+      reminders:
+        dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general
+          .remindersList,
+      servicePageUrl: "/services",
+    };
   };
 
   if (!dict || bookingLoading) {
