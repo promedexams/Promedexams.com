@@ -4,7 +4,7 @@
       "hoursOfOperation": "Hours of Operation",
       "closed": "Closed",
       "daysOfTheWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "timezoneDisclaimer": "All times listed are in mountain time (MT)."
+      "timezoneDisclaimer": "All times listed are in mountain time (MT). Subject to change."
     },
     "address": "Address",
     "email": "Email",

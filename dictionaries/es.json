@@ -4,7 +4,7 @@
       "hoursOfOperation": "Horario de Atención",
       "closed": "Cerrado",
       "daysOfTheWeek": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
-      "timezoneDisclaimer": "Todos los horarios se muestran en la hora de la Montaña (MT)."
+      "timezoneDisclaimer": "Todos los horarios mostrados están en hora de la montaña (MT). Sujeto a modificaciones."
     },
     "address": "Dirección",
     "email": "Correo Electrónico",
