@@ -117,7 +117,7 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
       {
         pattern: /Immigration/i,
         dictionaryKey: "immigration",
-        servicePageUrl: "/services/immigration",
+        servicePageUrl: "/services/immigration-medical-exams",
       },
       {
         pattern: /Consultation/i,
