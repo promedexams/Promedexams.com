@@ -14,8 +14,10 @@ const LanguagePopup = ({ params }: SupportedLanguagesProps) => {
   const [lang, setLang] = useState<SupportedLanguages>(SiteSettings.DefaultLocale as SupportedLanguages);
 
   useEffect(() => {
+    // The locale cookie can only be read on the client, so open the popup after mount if it is unset.
     const languageCookie = Cookies.get("SITE_LOCALE");
     if (!languageCookie) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsOpen(true);
     }
     params.then((result) => {

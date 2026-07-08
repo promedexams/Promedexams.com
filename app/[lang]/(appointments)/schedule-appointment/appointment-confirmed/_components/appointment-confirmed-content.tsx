@@ -27,50 +27,12 @@ import { getDictionary } from "@/lib/utils/dictionaries";
 const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
   const [dict, setDict] = useState<any>(null);
   const searchParams = useSearchParams();
-  const [bookingDetails, setBookingDetails] = useState<BookingDetails | null>(null);
-  const [appointmentTypeInfo, setAppointmentTypeInfo] = useState<any>(null);
-  const [bookingLoading, setBookingLoading] = useState(true);
 
   useEffect(() => {
     params.then(({ lang }) => {
       getDictionary(lang).then(setDict);
     });
   }, [params]);
-
-  useEffect(() => {
-    setBookingLoading(true);
-    const bookingId = searchParams.get("bookingId");
-    const customerId = searchParams.get("customerId");
-    const appointmentType = searchParams.get("appointmentType");
-    const appointmentDate = searchParams.get("appointmentDate");
-    const appointmentTime = searchParams.get("appointmentTime");
-    const firstName = searchParams.get("firstName");
-    const lastName = searchParams.get("lastName");
-    const email = searchParams.get("email");
-    const phoneNumber = searchParams.get("phoneNumber");
-
-    if (bookingId && appointmentType && appointmentDate && appointmentTime && firstName && lastName && dict) {
-      const details: BookingDetails = {
-        bookingId,
-        customerId: customerId || "",
-        appointmentType,
-        appointmentDate,
-        appointmentTime,
-        firstName,
-        lastName,
-        email: email || "",
-        phoneNumber: phoneNumber || "",
-      };
-
-      setBookingDetails(details);
-      setAppointmentTypeInfo(getAppointmentTypeInfo(appointmentType));
-      setBookingLoading(false);
-    } else {
-      setBookingDetails(null);
-      setAppointmentTypeInfo(null);
-      setBookingLoading(false);
-    }
-  }, [searchParams, dict]);
 
   const getMonthYear = (dateStr: string) => {
     const date = new Date(dateStr);
@@ -156,7 +118,35 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
     };
   };
 
-  if (!dict || bookingLoading) {
+  // Booking details are derived directly from the URL search params during render.
+  const bookingId = searchParams.get("bookingId");
+  const customerId = searchParams.get("customerId");
+  const appointmentType = searchParams.get("appointmentType");
+  const appointmentDate = searchParams.get("appointmentDate");
+  const appointmentTime = searchParams.get("appointmentTime");
+  const firstName = searchParams.get("firstName");
+  const lastName = searchParams.get("lastName");
+  const email = searchParams.get("email");
+  const phoneNumber = searchParams.get("phoneNumber");
+
+  const bookingDetails: BookingDetails | null =
+    bookingId && appointmentType && appointmentDate && appointmentTime && firstName && lastName
+      ? {
+          bookingId,
+          customerId: customerId || "",
+          appointmentType,
+          appointmentDate,
+          appointmentTime,
+          firstName,
+          lastName,
+          email: email || "",
+          phoneNumber: phoneNumber || "",
+        }
+      : null;
+
+  const appointmentTypeInfo = bookingDetails && dict ? getAppointmentTypeInfo(bookingDetails.appointmentType) : null;
+
+  if (!dict) {
     return (
       <div className="mb-8 flex items-center justify-center">
         <Loader2 className="h-24 w-24 animate-spin" />

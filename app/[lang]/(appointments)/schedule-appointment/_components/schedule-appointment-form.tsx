@@ -79,11 +79,11 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   }, []);
 
   useEffect(() => {
-    if (!selectedAppointmentType) {
-      setAvailableDays([]);
-      return;
-    }
     const fetchAvailableDays = async () => {
+      if (!selectedAppointmentType) {
+        setAvailableDays([]);
+        return;
+      }
       try {
         const res = await fetch(`/api/appointments/available-days?serviceId=${selectedAppointmentType}`);
         if (!res.ok) throw new Error("Failed to fetch available days");
@@ -103,14 +103,14 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   }, [selectedAppointmentType]);
 
   useEffect(() => {
-    if (!selectedBookingDate || !selectedAppointmentType) {
-      setAvailableTimes([]);
-      setSelectedTime("");
-      setIsLoadingTimes(false);
-      return;
-    }
-
     const fetchTimes = async () => {
+      if (!selectedBookingDate || !selectedAppointmentType) {
+        setAvailableTimes([]);
+        setSelectedTime("");
+        setIsLoadingTimes(false);
+        return;
+      }
+
       setIsLoadingTimes(true);
       setAvailableTimes([]);
       setSelectedTime("");
@@ -134,7 +134,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
   }, [selectedBookingDate, selectedAppointmentType]);
 
   useEffect(() => {
+    // Clear the selected date if it is no longer offered once the available days refresh.
     if (selectedBookingDate && !availableDays.some((d) => d.toDateString() === selectedBookingDate.toDateString())) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSelectedBookingDate(null);
     }
   }, [availableDays, selectedBookingDate]);
