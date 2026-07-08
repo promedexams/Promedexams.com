@@ -37,6 +37,7 @@ export function proxy(request: NextRequest) {
     "/branding/",
     "/fonts/",
     "/legal-documents/",
+    "/forms/",
     "/icons/",
     "/api/",
   ];
