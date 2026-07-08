@@ -192,16 +192,38 @@
             "whoApplies": {
               "header": "Who Needs an FAA Physical?",
               "description": [
-                "The FAA designates physicians known as Aviation Medical Examiners (AME) who complete specialized FAA training to perform these medical certification exams. While the priority is aviation safety, my goal as an AME is to help pilots attain and maintain certification to fly. In addition, we can assist when medical conditions occur that require additional information for certification. At ProMed Exams, we offer prompt services to help get you in the air again as soon as possible, and we understand the importance of accuracy to avoid processing delays."
+                "The FAA designates physicians known as Aviation Medical Examiners (AME) who complete specialized FAA training to perform these medical certification exams. While the priority is aviation safety, my goal as an AME is to help pilots attain and maintain certification to fly. In addition, we can assist when medical conditions occur that require additional information for certification and advocate on your behalf. At ProMed Exams, we offer prompt services to help get you in the air again as soon as possible, and we understand the importance of accuracy to avoid processing delays."
               ]
             },
             "whatToExpect": {
               "header": "What to Expect",
               "description": [
-                "The exam assesses your overall physical and mental fitness for duty to ensure you can safely operate an aircraft. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.",
-                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, in most cases (unless concerns arise requiring deferment), you will leave your appointment with your medical certification.",
-                "Cost of exam is $200 for all classes. Extra charges may apply for SODA, CACI, Special Issuance based on case complexity."
+                "The exam assesses your overall physical and mental fitness for duty to ensure you can safely operate an aircraft. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for every exam. EKG is required only for FIRST CLASS at age 35 and yearly starting at age 40. Waggoner color vision test is required ONCE for all first-time applicants and returning pilots that hold a 3rd class SODA or LOE that want to upgrade to 1st or 2nd class.",
+                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, in most cases (unless concerns arise requiring deferment), you will leave your appointment with your medical certification."
               ],
+              "pricing": {
+                "title": "Current Pricing for Services",
+                "disclaimer": "Credit card processing fees apply.",
+                "items": [
+                  {
+                    "service": "Exam (all classes)",
+                    "price": "$200",
+                    "note": "Additional charges may apply for Special Issuance and multiple CACI conditions based on case complexity"
+                  },
+                  {
+                    "service": "EKG",
+                    "price": "$150"
+                  },
+                  {
+                    "service": "Waggoner Color Vision (with exam)",
+                    "price": "$35"
+                  },
+                  {
+                    "service": "Consultation Only (no MedXPress, no certificate)",
+                    "price": "$75 per 15 min"
+                  }
+                ]
+              },
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider."
             }
           },
@@ -215,7 +237,7 @@
             ],
             "messagePanel": {
               "title": "IMPORTANT NOTE",
-              "message": "Be sure to update your health history and current medications in MedXPress *prior* to your appointment.",
+              "message": "You MUST complete an online MedXPress application PRIOR to every FAA medical exam. Either send your MedXPress confirmation number to ProMed Exams prior to your appointment or bring it to your appointment – Dr. Quigley cannot begin the exam without it.",
               "buttonText": "FAA MedXPress"
             }
           }

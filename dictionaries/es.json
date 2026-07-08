@@ -192,16 +192,38 @@
             "whoApplies": {
               "header": "¿Quién necesita un examen médico de la FAA?",
               "description": [
-                "La FAA designa a médicos conocidos como Examinadores Médicos de Aviación (AME, por sus siglas en inglés) que completan una formación especializada de la FAA para realizar estos exámenes de certificación médica. Aunque la prioridad es la seguridad de la aviación, mi objetivo como AME es ayudar a los pilotos a obtener y mantener la certificación para volar. Además, podemos ayudar cuando surgen condiciones médicas que requieren información adicional para la certificación. En ProMed Exams, ofrecemos servicios rápidos para ayudarle a volver al aire lo antes posible, y entendemos la importancia de la precisión para evitar retrasos en el procesamiento."
+                "La FAA designa a médicos conocidos como Médicos Examinadores de Aviación (AME, por sus siglas en inglés) que completan una capacitación especializada de la FAA para realizar estos exámenes de certificación médica. Si bien la prioridad es la seguridad en la aviación, mi objetivo como AME es ayudar a los pilotos a obtener y mantener la certificación para volar. Además, podemos asistir cuando se presentan condiciones médicas que requieren información adicional para la certificación y abogar en su nombre. En ProMed Exams, ofrecemos servicios rápidos para ayudarle a estar en el aire de nuevo lo antes posible, y entendemos la importancia de la precisión para evitar retrasos en el procesamiento."
               ]
             },
             "whatToExpect": {
               "header": "Qué Esperar",
               "description": [
-                "El examen evalúa su aptitud física y mental general para el servicio, para garantizar que puede operar una aeronave de forma segura. Puede esperar una revisión de su historial médico, salud mental y un examen físico. Para el examen se requiere la evaluación de la presión arterial, la frecuencia cardíaca, la altura/peso, la visión, la audición y un análisis de orina.",
-                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran un aplazamiento), saldrá de su cita con su certificación médica.",
-                "El costo del examen es de $200 para todas las clases. Se pueden aplicar cargos adicionales para SODA, CACI y Emisiones Especiales (Special Issuance) según la complejidad del caso."
+                "El examen evalúa su aptitud física y mental general para el deber con el fin de garantizar que pueda operar una aeronave de manera segura. Espere una revisión de su historial médico, salud mental y un examen físico. Para cada examen se requiere la evaluación de la presión arterial, frecuencia cardíaca, altura/peso, visión, audición y análisis de orina. El electrocardiograma (EKG) solo se requiere para PRIMERA CLASE a los 35 años y anualmente a partir de los 40 años. La prueba de visión de colores de Waggoner se requiere UNA VEZ para todos los solicitantes por primera vez y los pilotos que regresan que tienen un SODA o LOE de tercera clase y que desean ascender a primera o segunda clase.",
+                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran un aplazamiento), saldrá de su cita con su certificación médica."
               ],
+              "pricing": {
+                "title": "Precios actuales de los servicios",
+                "disclaimer": "Se aplican cargos por procesamiento de tarjeta de crédito.",
+                "items": [
+                  {
+                    "service": "Examen (todas las clases)",
+                    "price": "$200",
+                    "note": "Pueden aplicarse cargos adicionales por Emisión Especial y múltiples condiciones CACI según la complejidad del caso"
+                  },
+                  {
+                    "service": "EKG",
+                    "price": "$150"
+                  },
+                  {
+                    "service": "Visión de colores Waggoner (con examen)",
+                    "price": "$35"
+                  },
+                  {
+                    "service": "Solo consulta (sin MedXPress, sin certificado)",
+                    "price": "$75 por 15 min"
+                  }
+                ]
+              },
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria."
             }
           },
@@ -215,7 +237,7 @@
             ],
             "messagePanel": {
               "title": "NOTA IMPORTANTE",
-              "message": "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress *antes* de su cita.",
+              "message": "DEBE completar una solicitud en línea de MedXPress ANTES de cada examen médico de la FAA. Envíe su número de confirmación de MedXPress a ProMed Exams antes de su cita o tráigalo a su cita; la Dra. Quigley no puede comenzar el examen sin él.",
               "buttonText": "FAA MedXPress"
             }
           }

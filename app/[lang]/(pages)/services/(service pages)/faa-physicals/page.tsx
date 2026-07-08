@@ -21,6 +21,8 @@ const FAAPhysicalsPage = async ({ params }: SupportedLanguagesProps) => {
     { text: dict.pages.services.services.faaPhysicals.whatToBringSection.items[3], icon: ToiletIcon },
   ];
 
+  const pricing = dict.pages.services.services.faaPhysicals.informationSection.whatToExpect.pricing;
+
   return (
     <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#4F759B]">
       <Navbar params={params} />
@@ -63,6 +65,26 @@ const FAAPhysicalsPage = async ({ params }: SupportedLanguagesProps) => {
                     <p key={index}>{paragraph}</p>
                   )
                 )}
+                <div className="rounded-xl border border-[#f1a208]/30 bg-slate-900/40 p-6">
+                  <h3 className="text-xl font-bold text-[#f1a208] leading-tight">{pricing.title}</h3>
+                  <p className="text-sm text-white/60 italic">{pricing.disclaimer}</p>
+                  <ul className="mt-5 space-y-4">
+                    {pricing.items.map((item: { service: string; price: string; note?: string }, index: number) => (
+                      <li
+                        key={index}
+                        className="flex flex-col gap-1 border-b border-white/10 pb-4 last:border-0 last:pb-0"
+                      >
+                        <div className="flex items-baseline justify-between gap-4">
+                          <span className="font-semibold text-white">{item.service}</span>
+                          <span className="shrink-0 rounded-full bg-[#f1a208]/15 px-3 py-1 text-sm font-bold text-[#f1a208]">
+                            {item.price}
+                          </span>
+                        </div>
+                        {item.note && <p className="text-sm text-white/60">{item.note}</p>}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <p className="italic">
                   {dict.pages.services.services.faaPhysicals.informationSection.whatToExpect.disclaimer}
                 </p>
@@ -78,7 +100,7 @@ const FAAPhysicalsPage = async ({ params }: SupportedLanguagesProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
               {whatToBring.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <item.icon className="w-8 h-8 text-[#f1a208] mt-1" />
                   </div>
                   <p className="text-lg text-white/90">{item.text}</p>
