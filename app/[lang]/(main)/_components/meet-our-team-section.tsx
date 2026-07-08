@@ -37,20 +37,20 @@ const MeetOurTeamSection = async ({ params }: SupportedLanguagesProps) => {
           </div>
           <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl flex flex-col items-center text-center">
             <Image
-              src={BusinessInfo.Employees.Trish.Headshot}
-              alt={`A picture of ${BusinessInfo.Employees.Trish.Name}`}
+              src={BusinessInfo.Employees.Laura.Headshot}
+              alt={`A picture of ${BusinessInfo.Employees.Laura.Name}`}
               width={200}
               height={200}
               unoptimized
               className="rounded-full border-4 border-[#f1a208] drop-shadow-lg mb-6"
             />
             <h3 className="text-3xl font-bold text-[#f1a208]">
-              {dict.pages.home.meetOurTeamSection.employee.trish.name}
+              {dict.pages.home.meetOurTeamSection.employee.laura.name}
             </h3>
             <h4 className="text-lg text-white/90 font-semibold mb-4">
-              {dict.pages.home.meetOurTeamSection.employee.trish.jobTitle}
+              {dict.pages.home.meetOurTeamSection.employee.laura.jobTitle}
             </h4>
-            <p className="text-white/80">{dict.pages.home.meetOurTeamSection.employee.trish.shortDescription}</p>
+            <p className="text-white/80">{dict.pages.home.meetOurTeamSection.employee.laura.shortDescription}</p>
           </div>
         </div>
         <div className="mt-12 flex justify-center w-full">

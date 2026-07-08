@@ -47,8 +47,8 @@ const TeamPage = async ({ params }: SupportedLanguagesProps) => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center bg-slate-800/20 p-8 rounded-2xl shadow-xl">
               <div className="md:col-span-1 flex justify-center">
                 <Image
-                  src={BusinessInfo.Employees.Trish.Headshot}
-                  alt={`Picture of ${dict.pages.team.employee.trish.name}`}
+                  src={BusinessInfo.Employees.Laura.Headshot}
+                  alt={`Picture of ${dict.pages.team.employee.laura.name}`}
                   width={400}
                   height={400}
                   unoptimized
@@ -56,11 +56,11 @@ const TeamPage = async ({ params }: SupportedLanguagesProps) => {
                 />
               </div>
               <div className="md:col-span-2 space-y-4">
-                <h2 className="text-4xl font-bold text-[#f1a208]">{dict.pages.team.employee.trish.name}</h2>
-                <h3 className="text-xl text-white/90 font-semibold">{dict.pages.team.employee.trish.jobTitle}</h3>
+                <h2 className="text-4xl font-bold text-[#f1a208]">{dict.pages.team.employee.laura.name}</h2>
+                <h3 className="text-xl text-white/90 font-semibold">{dict.pages.team.employee.laura.jobTitle}</h3>
                 <div className="text-white/90 flex flex-col gap-4 max-w-prose">
-                  {dict.pages.team.employee.trish.bioParagraphs.map((paragraph, i) => (
-                    <p key={`trish-bio-${i}`}>{paragraph}</p>
+                  {dict.pages.team.employee.laura.bioParagraphs.map((paragraph, i) => (
+                    <p key={`laura-bio-${i}`}>{paragraph}</p>
                   ))}
                 </div>
               </div>
