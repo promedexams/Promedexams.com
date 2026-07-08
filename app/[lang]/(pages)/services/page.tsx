@@ -39,23 +39,23 @@ const ServicesPage = async ({ params }: SupportedLanguagesProps) => {
   ];
 
   return (
-    <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#4F759B]">
+    <div className="relative m-0 flex min-h-screen w-screen flex-col bg-[#4F759B] p-0">
       <Navbar params={params} />
-      <main className="md:relative flex flex-col gap-8 flex-1 justify-center items-center p-4 z-10">
-        <div className="text-white w-full max-w-7xl pt-8 md:p-8 ">
-          <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl">
-            <h1 className="text-5xl font-bold mb-4 text-center text-white pb-4 border-b">
+      <main className="z-10 flex flex-1 flex-col items-center justify-center gap-8 p-4 md:relative">
+        <div className="w-full max-w-7xl pt-8 text-white md:p-8">
+          <div className="mb-8 w-full rounded-2xl bg-slate-800/20 p-8 shadow-xl">
+            <h1 className="mb-4 border-b pb-4 text-center text-5xl font-bold text-white">
               {dict.pages.services.title}
             </h1>
             <p className="text-lg text-white/80">{dict.pages.services.description}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {Services.map((service, index) => (
               <div
                 key={index}
-                className="bg-slate-800/20 p-8 rounded-2xl shadow-xl flex flex-col items-center text-center"
+                className="flex flex-col items-center rounded-2xl bg-slate-800/20 p-8 text-center shadow-xl"
               >
-                <div className="p-4 bg-[#f1a208] rounded-full inline-flex items-center justify-center mb-4 h-20 w-20">
+                <div className="mb-4 inline-flex h-20 w-20 items-center justify-center rounded-full bg-[#f1a208] p-4">
                   {service.icon === "globe" && (
                     <Image
                       src="/icons/immigration.svg"
@@ -64,12 +64,12 @@ const ServicesPage = async ({ params }: SupportedLanguagesProps) => {
                       alt="Immigration Icon"
                       draggable={false}
                       unoptimized
-                      className="w-12 h-12 select-none"
+                      className="h-12 w-12 select-none"
                       style={{ objectFit: "contain" }}
                     />
                   )}
-                  {service.icon === "plane" && <PlaneIcon className="w-12 h-12 text-black" />}
-                  {service.icon === "truck" && <TruckIcon className="w-12 h-12 text-black" />}
+                  {service.icon === "plane" && <PlaneIcon className="h-12 w-12 text-black" />}
+                  {service.icon === "truck" && <TruckIcon className="h-12 w-12 text-black" />}
                   {service.icon === "school" && (
                     <Image
                       src="/icons/school-sports-camp.svg"
@@ -78,15 +78,15 @@ const ServicesPage = async ({ params }: SupportedLanguagesProps) => {
                       alt="School/Sports/Camp Icon"
                       draggable={false}
                       unoptimized
-                      className="w-12 h-12 select-none"
+                      className="h-12 w-12 select-none"
                       style={{ objectFit: "contain" }}
                     />
                   )}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-white/80 mb-6">{service.description}</p>
+                <h3 className="mb-2 text-2xl font-bold text-white">{service.title}</h3>
+                <p className="mb-6 text-white/80">{service.description}</p>
                 <Link href={service.href}>
-                  <Button className="bg-transparent hover:bg-[#f1a208] text-white hover:text-black border-2 border-[#f1a208] transition-colors duration-200 font-bold text-lg cursor-pointer whitespace-normal text-center px-4 py-2 rounded-lg">
+                  <Button className="cursor-pointer rounded-lg border-2 border-[#f1a208] bg-transparent px-4 py-2 text-center text-lg font-bold whitespace-normal text-white transition-colors duration-200 hover:bg-[#f1a208] hover:text-black">
                     {dict.pages.services.services.moreInfoButton}
                   </Button>
                 </Link>
@@ -94,25 +94,25 @@ const ServicesPage = async ({ params }: SupportedLanguagesProps) => {
             ))}
           </div>
         </div>
-        <div className="text-center text-white mb-10 bg-slate-800/20 p-12 rounded-2xl w-full max-w-5xl shadow-xl">
-          <h2 className="text-4xl font-bold mb-4">{dict.pages.services.contactSubSection.header}</h2>
-          <p className="mb-8 text-lg max-w-2xl mx-auto text-white/80">
+        <div className="mb-10 w-full max-w-5xl rounded-2xl bg-slate-800/20 p-12 text-center text-white shadow-xl">
+          <h2 className="mb-4 text-4xl font-bold">{dict.pages.services.contactSubSection.header}</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">
             {dict.pages.services.contactSubSection.message}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center align-middle">
+          <div className="flex flex-col items-center justify-center gap-4 align-middle sm:flex-row">
             <Link href="/schedule-appointment">
               <Button
                 size="lg"
-                className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105 my-2"
+                className="my-2 cursor-pointer bg-[#f1a208] text-lg font-bold text-black transition-transform duration-200 hover:scale-105 hover:bg-[#f1a208]/90"
               >
-                <CalendarDaysIcon className="w-5 h-5 mr-2" />
+                <CalendarDaysIcon className="mr-2 h-5 w-5" />
                 {dict.pages.services.contactSubSection.scheduleAppointmentButtonText}
               </Button>
             </Link>
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-transparent hover:bg-[#f1a208] text-white hover:text-black border-2 border-[#f1a208] transition-colors duration-200 font-bold text-lg cursor-pointer whitespace-normal text-center px-2 py-1 rounded-lg"
+                className="cursor-pointer rounded-lg border-2 border-[#f1a208] bg-transparent px-2 py-1 text-center text-lg font-bold whitespace-normal text-white transition-colors duration-200 hover:bg-[#f1a208] hover:text-black"
               >
                 {dict.pages.services.contactSubSection.contactButtonText}
               </Button>

@@ -318,8 +318,8 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
   if (!dict || appointmentTypes.length === 0) {
     return (
-      <div className="flex justify-center items-center">
-        <Loader2 className="w-24 h-24 animate-spin" />
+      <div className="flex items-center justify-center">
+        <Loader2 className="h-24 w-24 animate-spin" />
       </div>
     );
   }
@@ -357,8 +357,8 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               {error?.title}
             </DialogTitle>
             <DialogDescription>
-              <div className="text-white mb-2">{error?.message}</div>
-              {error?.action && <div className="text-sm text-white/90 mt-1">{error.action}</div>}
+              <div className="mb-2 text-white">{error?.message}</div>
+              {error?.action && <div className="mt-1 text-sm text-white/90">{error.action}</div>}
               <hr className="my-4 border-t border-white/30" />
               <div className="text-white">
                 If the problem persists, please visit our{" "}
@@ -373,16 +373,16 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
       </Dialog>
 
       {/* Progress Indicator */}
-      <div className="w-full bg-slate-800/20 p-6 mb-8 rounded-2xl shadow-xl">
-        <div className="flex flex-col sm:flex-row items-center justify-center">
+      <div className="mb-8 w-full rounded-2xl bg-slate-800/20 p-6 shadow-xl">
+        <div className="flex flex-col items-center justify-center sm:flex-row">
           {/* Mobile vertical stepper */}
-          <div className="flex flex-col gap-0 sm:hidden relative justify-center h-full">
+          <div className="relative flex h-full flex-col justify-center gap-0 sm:hidden">
             {steps.map((step, index) => (
-              <div key={step.number} className="flex items-start relative min-h-[64px] last:min-h-0">
+              <div key={step.number} className="relative flex min-h-[64px] items-start last:min-h-0">
                 {/* Step circle */}
                 <div className="relative z-10 flex flex-col items-center">
                   <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
+                    className={`flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold transition-all duration-300 ${
                       step.isCompleted
                         ? "bg-green-600 text-white shadow-lg"
                         : currentStep === step.number
@@ -390,12 +390,12 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                           : "bg-slate-600 text-white"
                     }`}
                   >
-                    {step.isCompleted ? <Check className="w-6 h-6" /> : step.number}
+                    {step.isCompleted ? <Check className="h-6 w-6" /> : step.number}
                   </div>
                   {/* Vertical line below the circle, except for last step */}
                   {index < steps.length - 1 && (
                     <div
-                      className={`w-1 flex-1 min-h-[48px] ${
+                      className={`min-h-[48px] w-1 flex-1 ${
                         steps[index].isCompleted ? "bg-green-600" : "bg-slate-600"
                       }`}
                       style={{ marginTop: 0 }}
@@ -403,9 +403,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   )}
                 </div>
                 {/* Step text */}
-                <div className="ml-4 flex flex-col justify-center min-h-[48px]">
+                <div className="ml-4 flex min-h-[48px] flex-col justify-center">
                   <span
-                    className={`font-medium text-base ${
+                    className={`text-base font-medium ${
                       step.isCompleted || currentStep === step.number ? "text-white" : "text-white/60"
                     }`}
                   >
@@ -416,12 +416,12 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             ))}
           </div>
           {/* Desktop horizontal stepper */}
-          <div className="hidden sm:flex flex-row items-center justify-center">
+          <div className="hidden flex-row items-center justify-center sm:flex">
             {steps.map((step, index) => (
-              <div key={step.number} className="flex flex-col sm:flex-row items-center">
+              <div key={step.number} className="flex flex-col items-center sm:flex-row">
                 <div className="flex flex-col items-center">
                   <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
+                    className={`flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold transition-all duration-300 ${
                       step.isCompleted
                         ? "bg-green-600 text-white shadow-lg"
                         : currentStep === step.number
@@ -429,10 +429,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                           : "bg-slate-600 text-white"
                     }`}
                   >
-                    {step.isCompleted ? <Check className="w-6 h-6" /> : step.number}
+                    {step.isCompleted ? <Check className="h-6 w-6" /> : step.number}
                   </div>
                   <span
-                    className={`mt-2 font-medium text-sm text-center max-w-24 ${
+                    className={`mt-2 max-w-24 text-center text-sm font-medium ${
                       step.isCompleted || currentStep === step.number ? "text-white" : "text-white/60"
                     }`}
                   >
@@ -440,9 +440,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   </span>
                 </div>
                 {index < steps.length - 1 && (
-                  <div className="flex items-center my-4 sm:my-0 sm:mx-8">
+                  <div className="my-4 flex items-center sm:mx-8 sm:my-0">
                     <div
-                      className={`w-1 h-12 sm:w-24 sm:h-1 rounded-full transition-all duration-300 ${
+                      className={`h-12 w-1 rounded-full transition-all duration-300 sm:h-1 sm:w-24 ${
                         step.isCompleted ? "bg-green-600" : "bg-slate-600"
                       }`}
                     />
@@ -456,12 +456,12 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
       {/* Step 1: Personal Information */}
       <div
-        className={`w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6 ${
+        className={`mb-8 w-full space-y-6 rounded-2xl bg-slate-800/20 p-8 shadow-xl ${
           currentStep !== 1 && !completedSteps.has(1) ? "opacity-50" : ""
         }`}
       >
-        <div className="flex gap-2 items-center justify-between">
-          <div className="flex flex-row gap-2 items-center">
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex flex-row items-center gap-2">
             <UserIcon className="hidden sm:flex" />
             <h2 className="text-2xl font-bold text-white">
               {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.title}
@@ -471,9 +471,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
             <button
               type="button"
               onClick={() => handleEditStep(1)}
-              className="bg-transparent hover:bg-[#f1a208] border-2 border-[#f1a208] duration-200 font-bold text-lg whitespace-normal text-center px-2 py-1 rounded-lg flex items-center gap-2 text-[#f1a208] hover:text-black transition-colors cursor-pointer"
+              className="flex cursor-pointer items-center gap-2 rounded-lg border-2 border-[#f1a208] bg-transparent px-2 py-1 text-center text-lg font-bold whitespace-normal text-[#f1a208] transition-colors duration-200 hover:bg-[#f1a208] hover:text-black"
             >
-              <Edit2 className="w-4 h-4" />
+              <Edit2 className="h-4 w-4" />
               {dict.pages.scheduleAppointment.scheduleForm.steps.editFormText}
             </button>
           )}
@@ -481,9 +481,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
         {(currentStep === 1 || completedSteps.has(1)) && (
           <>
-            <div className="flex flex-col sm:flex-row w-full gap-4 sm:items-end">
+            <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-end">
               <div className="flex-1">
-                <label className="block text-white text-lg font-semibold mb-2" htmlFor="firstName">
+                <label className="mb-2 block text-lg font-semibold text-white" htmlFor="firstName">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.firstName.label}
                   <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
@@ -494,7 +494,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   maxLength={50}
                   required
                   disabled={completedSteps.has(1) && currentStep !== 1}
-                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:opacity-50"
                   placeholder={
                     dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.firstName.placeholderText
                   }
@@ -503,7 +503,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 />
               </div>
               <div className="sm:basis-1/6">
-                <label className="block text-white text-lg font-semibold mb-2" htmlFor="middleInitial">
+                <label className="mb-2 block text-lg font-semibold text-white" htmlFor="middleInitial">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.middleInitial.label}
                 </label>
                 <input
@@ -512,7 +512,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   type="text"
                   maxLength={3}
                   disabled={completedSteps.has(1) && currentStep !== 1}
-                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:opacity-50"
                   placeholder={
                     dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.middleInitial.placeholderText
                   }
@@ -521,7 +521,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 />
               </div>
               <div className="flex-1">
-                <label className="block text-white text-lg font-semibold mb-2" htmlFor="lastName">
+                <label className="mb-2 block text-lg font-semibold text-white" htmlFor="lastName">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.lastName.label}
                   <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
@@ -532,7 +532,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   maxLength={50}
                   required
                   disabled={completedSteps.has(1) && currentStep !== 1}
-                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:opacity-50"
                   placeholder={
                     dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.lastName.placeholderText
                   }
@@ -541,9 +541,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 />
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row w-full gap-4 sm:items-end">
+            <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-end">
               <div className="flex-1">
-                <label className="block text-white text-lg font-semibold mb-2" htmlFor="birthday">
+                <label className="mb-2 block text-lg font-semibold text-white" htmlFor="birthday">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.dateOfBirth.label}
                   <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
@@ -556,7 +556,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                     showYearDropdown
                     showMonthDropdown
                     disabled={completedSteps.has(1) && currentStep !== 1}
-                    className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:opacity-50"
                     placeholderText="##/##/####"
                     dateFormat="MM/dd/yyyy"
                     wrapperClassName="w-full"
@@ -564,7 +564,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 </div>
               </div>
               <div className="flex-1">
-                <label className="block text-white text-lg font-semibold mb-2" htmlFor="email">
+                <label className="mb-2 block text-lg font-semibold text-white" htmlFor="email">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.email.label}
                   <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
@@ -575,14 +575,14 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   maxLength={254}
                   required
                   disabled={completedSteps.has(1) && currentStep !== 1}
-                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:opacity-50"
                   placeholder={dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.email.placeholderText}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="flex-1">
-                <label className="block text-white text-lg font-semibold mb-2" htmlFor="phone">
+                <label className="mb-2 block text-lg font-semibold text-white" htmlFor="phone">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.personalInfoStep.phoneNumber.label}
                   <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
@@ -592,7 +592,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   type="tel"
                   required
                   disabled={completedSteps.has(1) && currentStep !== 1}
-                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:opacity-50"
                   placeholder="(###) ### - ####"
                   maxLength={19}
                   value={phoneNumber}
@@ -607,10 +607,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   type="button"
                   onClick={() => handleNextStep(1)}
                   disabled={!validatePersonalInfo()}
-                  className="flex items-center gap-2 bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer"
+                  className="flex cursor-pointer items-center gap-2 rounded-lg bg-[#f1a208] px-6 py-3 text-lg font-bold text-black transition-all duration-200 hover:bg-[#f1a208]/90 disabled:cursor-not-allowed disabled:bg-slate-600 disabled:text-white"
                 >
                   {dict.pages.scheduleAppointment.scheduleForm.steps.continueText}
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="h-5 w-5" />
                 </button>
               </div>
             )}
@@ -621,12 +621,12 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
       {/* Step 2: Appointment Information */}
       {(currentStep >= 2 || completedSteps.has(2)) && (
         <div
-          className={`w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6 ${
+          className={`mb-8 w-full space-y-6 rounded-2xl bg-slate-800/20 p-8 shadow-xl ${
             currentStep !== 2 && !completedSteps.has(2) ? "opacity-50" : ""
           }`}
         >
           <div className="flex items-center justify-between">
-            <div className="flex flex-row gap-2 items-center">
+            <div className="flex flex-row items-center gap-2">
               <ClipboardClockIcon className="hidden sm:flex" />
               <h2 className="text-2xl font-bold text-white">
                 {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.title}
@@ -636,9 +636,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <button
                 type="button"
                 onClick={() => handleEditStep(2)}
-                className="bg-transparent hover:bg-[#f1a208] border-2 border-[#f1a208] duration-200 font-bold text-lg whitespace-normal text-center px-2 py-1 rounded-lg flex items-center gap-2 text-[#f1a208] hover:text-black transition-colors cursor-pointer"
+                className="flex cursor-pointer items-center gap-2 rounded-lg border-2 border-[#f1a208] bg-transparent px-2 py-1 text-center text-lg font-bold whitespace-normal text-[#f1a208] transition-colors duration-200 hover:bg-[#f1a208] hover:text-black"
               >
-                <Edit2 className="w-4 h-4" />
+                <Edit2 className="h-4 w-4" />
                 {dict.pages.scheduleAppointment.scheduleForm.steps.editFormText}
               </button>
             )}
@@ -647,7 +647,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
           {(currentStep === 2 || completedSteps.has(2)) && (
             <>
               <div>
-                <label className="block text-white text-lg font-semibold mb-2" htmlFor="appointmentType">
+                <label className="mb-2 block text-lg font-semibold text-white" htmlFor="appointmentType">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.typeOfExam.label}
                   <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
@@ -656,7 +656,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   name="appointmentType"
                   required
                   disabled={completedSteps.has(2) && currentStep !== 2}
-                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cursor-pointer rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                   value={selectedAppointmentType}
                   onChange={handleAppointmentTypeChange}
                 >
@@ -676,15 +676,15 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 dict?.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.serviceReminders[
                   serviceReminderKey
                 ] && (
-                  <div className="bg-amber-900/50 border-l-4 border-amber-400 p-4 rounded">
-                    <h3 className="font-bold text-xl text-amber-300 mb-2">
+                  <div className="rounded border-l-4 border-amber-400 bg-amber-900/50 p-4">
+                    <h3 className="mb-2 text-xl font-bold text-amber-300">
                       {
                         dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.serviceReminders[
                           serviceReminderKey
                         ].title
                       }
                     </h3>
-                    <p className="text-white text-base">
+                    <p className="text-base text-white">
                       {
                         dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.serviceReminders[
                           serviceReminderKey
@@ -695,7 +695,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 )}
 
               <div>
-                <label className="block text-white text-lg font-semibold mb-2" htmlFor="newOrReturningClient">
+                <label className="mb-2 block text-lg font-semibold text-white" htmlFor="newOrReturningClient">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.newOrReturningClient.label}
                   <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
@@ -704,7 +704,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   name="newOrReturningClient"
                   required
                   disabled={completedSteps.has(2) && currentStep !== 2}
-                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cursor-pointer rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                   value={newOrReturningClient}
                   onChange={(e) => setNewOrReturningClients(e.target.value)}
                 >
@@ -731,7 +731,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               {newOrReturningClient === "returning" && (
                 <>
                   <div>
-                    <label className="block text-white text-lg font-semibold mb-2" htmlFor="newHeathConditions">
+                    <label className="mb-2 block text-lg font-semibold text-white" htmlFor="newHeathConditions">
                       {
                         dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.healthIssuesSinceLastExam
                           .label
@@ -743,7 +743,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                       name="newHeathConditions"
                       required
                       disabled={completedSteps.has(2) && currentStep !== 2}
-                      className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full cursor-pointer rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                       value={newHealthConditions}
                       onChange={(e) => setNewHealthConditions(e.target.value)}
                     >
@@ -769,7 +769,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   </div>
                   <div>
                     <label
-                      className="block text-white text-lg font-semibold mb-2"
+                      className="mb-2 block text-lg font-semibold text-white"
                       htmlFor="newMedicationsOrSupplements"
                     >
                       {
@@ -783,7 +783,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                       name="newMedicationsOrSupplements"
                       required
                       disabled={completedSteps.has(2) && currentStep !== 2}
-                      className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full cursor-pointer rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                       value={newMedications}
                       onChange={(e) => setNewMedications(e.target.value)}
                     >
@@ -810,11 +810,11 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                 </>
               )}
               <div>
-                <label className="block text-white text-lg font-semibold" htmlFor="hasQuestions">
+                <label className="block text-lg font-semibold text-white" htmlFor="hasQuestions">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns.label}
                   <span className="font-bold text-[#f1a208] select-none"> *</span>
                 </label>
-                <p className="block text-white/80 text-base font-normal mb-2">
+                <p className="mb-2 block text-base font-normal text-white/80">
                   {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns.detail}
                 </p>
                 <select
@@ -822,7 +822,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   name="hasQuestions"
                   required
                   disabled={completedSteps.has(2) && currentStep !== 2}
-                  className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cursor-pointer rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                   value={hasQuestions}
                   onChange={(e) => setHasQuestions(e.target.value)}
                 >
@@ -846,17 +846,17 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   </option>
                 </select>
                 {hasQuestions === "yes" && (
-                  <div className="mt-4 bg-blue-900/50 border-l-4 border-blue-400 p-4 rounded">
-                    <h3 className="font-bold text-xl text-blue-300 mb-2">
+                  <div className="mt-4 rounded border-l-4 border-blue-400 bg-blue-900/50 p-4">
+                    <h3 className="mb-2 text-xl font-bold text-blue-300">
                       {
                         dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns
                           .noteBox.title
                       }
                     </h3>
-                    <div className="flex flex-col items-start text-start gap-4">
+                    <div className="flex flex-col items-start gap-4 text-start">
                       {dict.pages.scheduleAppointment.scheduleForm.steps.appointmentInfoStep.questionsOrConcerns.noteBox.messageParagraphs.map(
                         (paragraph: string, idx: number) => (
-                          <p key={idx} className="text-white text-base">
+                          <p key={idx} className="text-base text-white">
                             {paragraph}
                           </p>
                         )
@@ -872,10 +872,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                     type="button"
                     onClick={() => handleNextStep(2)}
                     disabled={!validateAppointmentInfo()}
-                    className="flex items-center gap-2 bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer"
+                    className="flex cursor-pointer items-center gap-2 rounded-lg bg-[#f1a208] px-6 py-3 text-lg font-bold text-black transition-all duration-200 hover:bg-[#f1a208]/90 disabled:cursor-not-allowed disabled:bg-slate-600 disabled:text-white"
                   >
                     {dict.pages.scheduleAppointment.scheduleForm.steps.continueText}
-                    <ChevronRight className="w-5 h-5" />
+                    <ChevronRight className="h-5 w-5" />
                   </button>
                 </div>
               )}
@@ -887,12 +887,12 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
       {/* Step 3: Calendar Booking */}
       {(currentStep >= 3 || completedSteps.has(3)) && (
         <div
-          className={`w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl space-y-6 ${
+          className={`mb-8 w-full space-y-6 rounded-2xl bg-slate-800/20 p-8 shadow-xl ${
             currentStep !== 3 && !completedSteps.has(3) ? "opacity-50" : ""
           }`}
         >
           <div className="flex items-center justify-between">
-            <div className="flex flex-row gap-2 items-center">
+            <div className="flex flex-row items-center gap-2">
               <CalendarSearchIcon className="hidden sm:flex" />
               <h2 className="text-2xl font-bold text-white">
                 {dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.title}
@@ -902,9 +902,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
               <button
                 type="button"
                 onClick={() => handleEditStep(3)}
-                className="bg-transparent hover:bg-[#f1a208] border-2 border-[#f1a208] duration-200 font-bold text-lg whitespace-normal text-center px-2 py-1 rounded-lg flex items-center gap-2 text-[#f1a208] hover:text-black transition-colors cursor-pointer"
+                className="flex cursor-pointer items-center gap-2 rounded-lg border-2 border-[#f1a208] bg-transparent px-2 py-1 text-center text-lg font-bold whitespace-normal text-[#f1a208] transition-colors duration-200 hover:bg-[#f1a208] hover:text-black"
               >
-                <Edit2 className="w-4 h-4" />
+                <Edit2 className="h-4 w-4" />
                 {dict.pages.scheduleAppointment.scheduleForm.steps.editFormText}
               </button>
             )}
@@ -912,9 +912,9 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
           {(currentStep === 3 || completedSteps.has(3)) && (
             <>
-              <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex flex-col gap-4 md:flex-row">
                 <div className="flex-1">
-                  <label className="block text-white text-lg font-semibold mb-2">
+                  <label className="mb-2 block text-lg font-semibold text-white">
                     {dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectDate.label}
                     <span className="font-bold text-[#f1a208] select-none"> *</span>
                   </label>
@@ -928,7 +928,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                       showMonthDropdown
                       showYearDropdown
                       disabled={completedSteps.has(3) && currentStep !== 3}
-                      className="w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none disabled:opacity-50"
+                      className="w-full rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white focus:outline-none disabled:opacity-50"
                       placeholderText={
                         dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectDate.placeholderText
                       }
@@ -938,18 +938,18 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <label className="block text-white text-lg font-semibold mb-2">
+                  <label className="mb-2 block text-lg font-semibold text-white">
                     {dict.pages.scheduleAppointment.scheduleForm.steps.calendarBookingStep.selectTime.label}
                     <span className="font-bold text-[#f1a208] select-none"> *</span>
                   </label>
                   <div className="relative">
                     {isLoadingTimes && (
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center pointer-events-none z-10">
-                        <Loader2 className="w-5 h-5 animate-spin text-white/80" />
+                      <span className="pointer-events-none absolute top-1/2 left-3 z-10 flex -translate-y-1/2 items-center">
+                        <Loader2 className="h-5 w-5 animate-spin text-white/80" />
                       </span>
                     )}
                     <select
-                      className={`w-full p-3 rounded-lg bg-slate-900/60 text-white border border-slate-700 focus:outline-none cursor-pointer transition-opacity duration-200 disabled:opacity-50 disabled:bg-slate-700 disabled:cursor-not-allowed ${isLoadingTimes ? "pl-10" : ""}`}
+                      className={`w-full cursor-pointer rounded-lg border border-slate-700 bg-slate-900/60 p-3 text-white transition-opacity duration-200 focus:outline-none disabled:cursor-not-allowed disabled:bg-slate-700 disabled:opacity-50 ${isLoadingTimes ? "pl-10" : ""}`}
                       value={selectedTime}
                       onChange={(e) => setSelectedTime(e.target.value)}
                       disabled={
@@ -989,10 +989,10 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
                     type="button"
                     onClick={() => handleNextStep(3)}
                     disabled={!validateCalendarBooking()}
-                    className="flex items-center gap-2 bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer"
+                    className="flex cursor-pointer items-center gap-2 rounded-lg bg-[#f1a208] px-6 py-3 text-lg font-bold text-black transition-all duration-200 hover:bg-[#f1a208]/90 disabled:cursor-not-allowed disabled:bg-slate-600 disabled:text-white"
                   >
                     {dict.pages.scheduleAppointment.scheduleForm.steps.continueText}
-                    <ChevronRight className="w-5 h-5" />
+                    <ChevronRight className="h-5 w-5" />
                   </button>
                 </div>
               )}
@@ -1003,32 +1003,32 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
 
       {/* Final Step - All completed */}
       {completedSteps.has(3) && currentStep === 4 && (
-        <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl text-center">
-          <div className="text-green-500 mb-4">
-            <Check className="w-16 h-16 mx-auto" />
+        <div className="mb-8 w-full rounded-2xl bg-slate-800/20 p-8 text-center shadow-xl">
+          <div className="mb-4 text-green-500">
+            <Check className="mx-auto h-16 w-16" />
           </div>
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="mb-4 text-2xl font-bold text-white">
             {dict.pages.scheduleAppointment.scheduleForm.steps.submissionStep.title}
           </h2>
-          <p className="text-white/80 mb-6">
+          <p className="mb-6 text-white/80">
             {dict.pages.scheduleAppointment.scheduleForm.steps.submissionStep.description}
           </p>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-[#f1a208] hover:bg-[#f1a208]/90 disabled:bg-slate-600 disabled:cursor-not-allowed text-black disabled:text-white text-lg font-bold py-3 px-8 rounded-lg transition-transform duration-200 hover:scale-105 cursor-pointer flex items-center gap-2 mx-auto"
+            className="mx-auto flex cursor-pointer items-center gap-2 rounded-lg bg-[#f1a208] px-8 py-3 text-lg font-bold text-black transition-transform duration-200 hover:scale-105 hover:bg-[#f1a208]/90 disabled:cursor-not-allowed disabled:bg-slate-600 disabled:text-white"
           >
             {isSubmitting ? (
               <>
-                <Loader2 className="w-5 h-5 animate-spin" />
+                <Loader2 className="h-5 w-5 animate-spin" />
                 {dict.pages.scheduleAppointment.scheduleForm.steps.submissionStep.schedulingAppointmentButtonText}
               </>
             ) : (
               dict.pages.scheduleAppointment.scheduleForm.steps.submissionStep.scheduleAppointmentButtonText
             )}
           </button>
-          <p className="text-white/60 text-sm text-center mt-4">
+          <p className="mt-4 text-center text-sm text-white/60">
             This site is protected by reCAPTCHA and the Google{" "}
             <a
               href="https://policies.google.com/privacy"

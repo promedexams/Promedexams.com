@@ -49,9 +49,9 @@ const BackToTopButton = () => {
       onClick={scrollToTop}
       size="icon"
       style={{ bottom: bottomOffset, right: 24, position: "fixed", zIndex: 50 }}
-      className="bg-[#07001C] border-2 border-[#f1a208] hover:bg-[#f1a208] text-white hover:text-[#07001C] rounded-full p-2 shadow-lg transition-colors duration-200 w-12 h-12 cursor-pointer"
+      className="h-12 w-12 cursor-pointer rounded-full border-2 border-[#f1a208] bg-[#07001C] p-2 text-white shadow-lg transition-colors duration-200 hover:bg-[#f1a208] hover:text-[#07001C]"
     >
-      <ChevronUpIcon className="w-8 h-8" />
+      <ChevronUpIcon className="h-8 w-8" />
     </Button>
   );
 };

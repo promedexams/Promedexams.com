@@ -41,7 +41,7 @@ const LanguagePopup = ({ params }: SupportedLanguagesProps) => {
         <LanguageSwitcher params={params} />
         <Button
           size="lg"
-          className="bg-[#07001C] hover:bg-[#07001C]/90 text-white cursor-pointer transition-colors duration-200"
+          className="cursor-pointer bg-[#07001C] text-white transition-colors duration-200 hover:bg-[#07001C]/90"
           onClick={handleConfirmLanguage}
         >
           Confirm

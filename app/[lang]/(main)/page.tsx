@@ -9,7 +9,7 @@ import WhyChooseUsSection from "./_components/why-choose-us-section";
 
 const MainPage = async ({ params }: SupportedLanguagesProps) => {
   return (
-    <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#4F759B]">
+    <div className="relative m-0 flex min-h-screen w-screen flex-col bg-[#4F759B] p-0">
       <Navbar params={params} />
       <main className="flex-1">
         <HeroSection params={params} />

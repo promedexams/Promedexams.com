@@ -8,14 +8,14 @@ const FindUsSection = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-7xl mx-auto text-center text-white">
-        <h2 className="text-4xl font-extrabold tracking-tight mb-4">{dict.pages.home.findUsSection.header}</h2>
-        <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto">{dict.pages.home.findUsSection.description}</p>
+    <section className="px-4 py-20">
+      <div className="mx-auto max-w-7xl text-center text-white">
+        <h2 className="mb-4 text-4xl font-extrabold tracking-tight">{dict.pages.home.findUsSection.header}</h2>
+        <p className="mx-auto mb-12 max-w-3xl text-lg text-white/80">{dict.pages.home.findUsSection.description}</p>
         <ContactCard params={params} />
-        <div className="mt-12 flex justify-center w-full">
+        <div className="mt-12 flex w-full justify-center">
           <Link href="/contact" className="inline-block">
-            <button className="bg-transparent hover:bg-[#f1a208] text-white hover:text-black border-2 border-[#f1a208] transition-colors duration-200 font-bold text-lg cursor-pointer whitespace-normal text-center px-2 py-1 rounded-lg">
+            <button className="cursor-pointer rounded-lg border-2 border-[#f1a208] bg-transparent px-2 py-1 text-center text-lg font-bold whitespace-normal text-white transition-colors duration-200 hover:bg-[#f1a208] hover:text-black">
               {dict.pages.home.findUsSection.buttonText}
             </button>
           </Link>

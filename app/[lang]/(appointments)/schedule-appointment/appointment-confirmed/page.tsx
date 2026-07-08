@@ -5,10 +5,10 @@ import AppointmentConfirmedContent from "./_components/appointment-confirmed-con
 
 const AppointmentConfirmedPage = async ({ params }: SupportedLanguagesProps) => {
   return (
-    <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#4F759B]">
+    <div className="relative m-0 flex min-h-screen w-screen flex-col bg-[#4F759B] p-0">
       <Navbar params={params} />
-      <main className="md:relative flex flex-col gap-8 flex-1 justify-center items-center p-4 z-10">
-        <div className="text-white w-full max-w-4xl pt-8 md:p-8">
+      <main className="z-10 flex flex-1 flex-col items-center justify-center gap-8 p-4 md:relative">
+        <div className="w-full max-w-4xl pt-8 text-white md:p-8">
           <AppointmentConfirmedContent params={params} />
         </div>
       </main>
