@@ -94,7 +94,7 @@ const DOTPhysicalsPage = async ({ params }: SupportedLanguagesProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
               {whatToBring.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <item.icon className="w-8 h-8 text-[#f1a208] mt-1" />
                   </div>
                   <p className="text-lg text-white/90">{item.text}</p>
