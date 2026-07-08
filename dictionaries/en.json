@@ -237,6 +237,32 @@
                 "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, your results will be reported electronically to the National Registry of Certified Medical Examiners (NRCME). If you meet all FMCSA requirements, you will leave your appointment with your medical examiner's certificate (DOT medical card).",
                 "If we find an issue that needs attention, you may need to see your primary care provider and/or a specialist for further testing, treatment, or paperwork. You may still qualify for your medical certificate, but only after taking care of the medical issue or obtaining necessary documentation. In some cases, a health condition may disqualify you from receiving a medical certificate."
               ],
+              "pricing": {
+                "title": "Current Pricing for Services",
+                "disclaimer": "Credit card processing fees apply.",
+                "items": [
+                  {
+                    "service": "Exam",
+                    "price": "$150",
+                    "note": "Additional charges may apply based on case complexity"
+                  },
+                  {
+                    "service": "Fingerstick Glucose",
+                    "price": "$15",
+                    "note": "If glucose noted on urinalysis"
+                  },
+                  {
+                    "service": "Spirometry",
+                    "price": "$80",
+                    "note": "If pulmonary symptoms present and not done with your PCP or specialist"
+                  },
+                  {
+                    "service": "EKG",
+                    "price": "$150",
+                    "note": "If cardiac symptoms present and not done with your PCP or specialist"
+                  }
+                ]
+              },
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
               "updatePanel": {
                 "title": "UPDATE",

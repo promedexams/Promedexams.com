@@ -237,6 +237,32 @@
                 "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, sus resultados se informarán electrónicamente al Registro Nacional de Examinadores Médicos Certificados (NRCME). Si cumple con todos los requisitos de la FMCSA, saldrá de su cita con su certificado de examinador médico (tarjeta médica del DOT).",
                 "Si encontramos un problema que requiere atención, es posible que deba consultar a su proveedor de atención primaria y/o a un especialista para realizar más pruebas, tratamientos o trámites. Aún podría calificar para su certificado médico, pero solo después de resolver el problema médico u obtener la documentación necesaria. En algunos casos, una condición de salud puede descalificarlo para recibir un certificado médico."
               ],
+              "pricing": {
+                "title": "Precios actuales de los servicios",
+                "disclaimer": "Se aplican cargos por procesamiento de tarjeta de crédito.",
+                "items": [
+                  {
+                    "service": "Examen",
+                    "price": "$150",
+                    "note": "Pueden aplicarse cargos adicionales según la complejidad del caso"
+                  },
+                  {
+                    "service": "Glucosa capilar",
+                    "price": "$15",
+                    "note": "Si se observa glucosa en el análisis de orina"
+                  },
+                  {
+                    "service": "Espirometría",
+                    "price": "$80",
+                    "note": "Si presenta síntomas pulmonares y no se ha realizado con su médico de cabecera o especialista"
+                  },
+                  {
+                    "service": "Electrocardiograma (EKG)",
+                    "price": "$150",
+                    "note": "Si presenta síntomas cardíacos y no se ha realizado con su médico de cabecera o especialista"
+                  }
+                ]
+              },
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
               "updatePanel": {
                 "title": "ACTUALIZACIÓN",
