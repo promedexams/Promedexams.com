@@ -81,7 +81,7 @@ const MobileNavbar = ({ dict }: { dict: any; lang: SupportedLanguages }) => {
             animate="visible"
             exit="hidden"
             variants={menuVariants}
-            className="absolute top-full left-0 w-full bg-[#07001c] text-white z-20 origin-top"
+            className="absolute top-full left-0 z-20 w-full origin-top bg-[#07001c] text-white"
           >
             <div className="flex flex-col items-center pt-8">
               <div className="flex flex-col items-center gap-8">
@@ -99,12 +99,12 @@ const MobileNavbar = ({ dict }: { dict: any; lang: SupportedLanguages }) => {
                 </Link>
                 <Link href="/schedule-appointment" onClick={closeMenu}>
                   <Button className={buttonClasses}>
-                    <CalendarDaysIcon className="w-5 h-5 mr-2" />
+                    <CalendarDaysIcon className="mr-2 h-5 w-5" />
                     {dict.navbar.navlinks.scheduleAppointment}
                   </Button>
                 </Link>
               </div>
-              <div className="w-full h-px bg-gray-300 mt-8" />
+              <div className="mt-8 h-px w-full bg-gray-300" />
             </div>
           </motion.div>
         )}

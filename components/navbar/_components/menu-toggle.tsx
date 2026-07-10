@@ -9,7 +9,7 @@ const MenuToggle = forwardRef<HTMLButtonElement, { toggle: () => void; isOpen: b
   <button
     ref={ref}
     onClick={toggle}
-    className="z-30 grid h-10 w-10 place-items-center text-[#f1a208] transition-transform duration-200 ease-in-out hover:scale-110 focus:outline-none cursor-pointer"
+    className="z-30 grid h-10 w-10 cursor-pointer place-items-center text-[#f1a208] transition-transform duration-200 ease-in-out hover:scale-110 focus:outline-none"
     aria-label="Toggle navigation menu"
   >
     <svg width="30" height="30" viewBox="0 0 30 30">

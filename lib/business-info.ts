@@ -12,10 +12,10 @@ export const BusinessInfo = {
       timezone: "America/Denver",
       hours: [
         null, // Sunday
-        { open: "07:30", close: "16:30" }, // Monday
-        { open: "07:30", close: "16:30" }, // Tuesday
-        { open: "07:30", close: "16:30" }, // Wednesday
-        { open: "07:30", close: "16:30" }, // Thursday
+        { open: "07:30", close: "15:00" }, // Monday
+        { open: "07:30", close: "15:00" }, // Tuesday
+        { open: "07:30", close: "15:00" }, // Wednesday
+        { open: "07:30", close: "15:00" }, // Thursday
         null, // Friday
         null, // Saturday
       ],
@@ -25,7 +25,7 @@ export const BusinessInfo = {
     FullAddress: "4 W Dry Creek Cir #135, Littleton, CO 80120",
     OfficeEmail: "office@promedexams.com",
     PhoneNumber: "(303) 798-1210",
-    FaxNumber: "(303) 997-2147",
+    FaxNumber: "(303) 484-5687",
   },
   Employees: {
     Jill: {
@@ -33,9 +33,9 @@ export const BusinessInfo = {
       Headshot: "/headshots/jill-quigley-square.jpg",
       Email: "jquigley@promedexams.com",
     },
-    Trish: {
-      Name: "Trish Peery",
-      Headshot: "/headshots/trish-peery-square.jpg",
+    Laura: {
+      Name: "Laura Wyse",
+      Headshot: "/headshots/placeholder.jpg",
       Email: "office@promedexams.com",
     },
   },

@@ -8,12 +8,12 @@ const ContactPage = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary((await params).lang);
 
   return (
-    <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#4F759B]">
+    <div className="relative m-0 flex min-h-screen w-screen flex-col bg-[#4F759B] p-0">
       <Navbar params={params} />
-      <main className="md:relative flex flex-col gap-8 flex-1 justify-center items-center p-4 z-10">
-        <div className="text-white px-2 py-8 w-full max-w-6xl">
-          <div className="w-full bg-slate-800/20 p-8 mb-8 rounded-2xl shadow-xl">
-            <h1 className="text-5xl font-bold mb-4 text-center text-white pb-4 border-b">{dict.pages.contact.title}</h1>
+      <main className="z-10 flex flex-1 flex-col items-center justify-center gap-8 p-4 md:relative">
+        <div className="w-full max-w-6xl px-2 py-8 text-white">
+          <div className="mb-8 w-full rounded-2xl bg-slate-800/20 p-8 shadow-xl">
+            <h1 className="mb-4 border-b pb-4 text-center text-5xl font-bold text-white">{dict.pages.contact.title}</h1>
             <p className="text-lg text-white/80">{dict.pages.contact.description}</p>
           </div>
           <ContactCard params={params} />

@@ -25,12 +25,12 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: SupportedLanguagesProps
   ];
 
   return (
-    <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#4F759B]">
+    <div className="relative m-0 flex min-h-screen w-screen flex-col bg-[#4F759B] p-0">
       <Navbar params={params} />
-      <main className="md:relative flex flex-col gap-12 flex-1 justify-center items-center p-4 z-10 text-white">
-        <section className="w-full max-w-5xl text-center pt-8">
-          <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl">
-            <div className="p-4 bg-[#f1a208] rounded-full inline-block mb-4">
+      <main className="z-10 flex flex-1 flex-col items-center justify-center gap-12 p-4 text-white md:relative">
+        <section className="w-full max-w-5xl pt-8 text-center">
+          <div className="rounded-2xl bg-slate-800/20 p-8 shadow-xl">
+            <div className="mb-4 inline-block rounded-full bg-[#f1a208] p-4">
               <Image
                 src="/icons/school-sports-camp.svg"
                 width={1}
@@ -38,21 +38,21 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: SupportedLanguagesProps
                 alt="School/Sports/Camp Icon"
                 draggable={false}
                 unoptimized
-                className="w-16 h-16 select-none"
+                className="h-16 w-16 select-none"
               />
             </div>
-            <h1 className="text-2xl sm:text-5xl font-bold mb-4 text-center">
+            <h1 className="mb-4 text-center text-2xl font-bold sm:text-5xl">
               {dict.pages.services.services.schoolSportsCampPhysicals.title}
             </h1>
-            <p className="text-lg text-white/80 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-lg text-white/80">
               {dict.pages.services.services.schoolSportsCampPhysicals.shortDescription}
             </p>
           </div>
         </section>
         <section className="w-full max-w-5xl">
-          <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl space-y-8">
+          <div className="space-y-8 rounded-2xl bg-slate-800/20 p-8 shadow-xl">
             <div>
-              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">
+              <h2 className="mb-4 text-3xl font-bold text-[#f1a208]">
                 {dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whoApplies.header}
               </h2>
               <div className="space-y-4 text-lg text-white/90">
@@ -63,9 +63,9 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: SupportedLanguagesProps
                 )}
               </div>
             </div>
-            <div className="w-full h-px bg-white/20" />
+            <div className="h-px w-full bg-white/20" />
             <div>
-              <h2 className="text-3xl font-bold text-[#f1a208] mb-4">
+              <h2 className="mb-4 text-3xl font-bold text-[#f1a208]">
                 {dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whatToExpect.header}
               </h2>
               <div className="space-y-4 text-lg text-white/90">
@@ -78,8 +78,8 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: SupportedLanguagesProps
                   {dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whatToExpect.disclaimer}
                 </p>
               </div>
-              <div className="bg-blue-900/50 border border-blue-400 p-6 rounded-lg mt-8">
-                <h3 className="font-bold text-xl text-blue-300 mb-2">
+              <div className="mt-8 rounded-lg border border-blue-400 bg-blue-900/50 p-6">
+                <h3 className="mb-2 text-xl font-bold text-blue-300">
                   {
                     dict.pages.services.services.schoolSportsCampPhysicals.informationSection.whatToExpect.messagePanel
                       .title
@@ -96,15 +96,15 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: SupportedLanguagesProps
           </div>
         </section>
         <section className="w-full max-w-5xl">
-          <div className="bg-slate-800/20 p-8 rounded-2xl shadow-xl">
-            <h2 className="text-3xl font-bold text-center text-[#f1a208] mb-8">
+          <div className="rounded-2xl bg-slate-800/20 p-8 shadow-xl">
+            <h2 className="mb-8 text-center text-3xl font-bold text-[#f1a208]">
               {dict.pages.services.services.schoolSportsCampPhysicals.whatToBringSection.header}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
               {whatToBring.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <item.icon className="w-8 h-8 text-[#f1a208] mt-1" />
+                    <item.icon className="mt-1 h-8 w-8 text-[#f1a208]" />
                   </div>
                   <p className="text-lg text-white/90">{item.text}</p>
                 </div>
@@ -112,33 +112,33 @@ const SchoolSportsCampPhysicalsPage = async ({ params }: SupportedLanguagesProps
             </div>
           </div>
         </section>
-        <section className="text-center text-white bg-slate-800/20 p-12 rounded-2xl w-full max-w-5xl shadow-xl">
-          <h2 className="text-4xl font-bold mb-4">
+        <section className="w-full max-w-5xl rounded-2xl bg-slate-800/20 p-12 text-center text-white shadow-xl">
+          <h2 className="mb-4 text-4xl font-bold">
             {dict.pages.services.services.specificServicePages.scheduleSection.header}
           </h2>
-          <p className="mb-8 text-lg max-w-2xl mx-auto text-white/80">
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">
             {dict.pages.services.services.specificServicePages.scheduleSection.description}
           </p>
           <Link href="/schedule-appointment">
             <Button
               size="lg"
-              className="bg-[#f1a208] hover:bg-[#f1a208]/90 text-black text-lg font-bold cursor-pointer transition-transform duration-200 hover:scale-105"
+              className="cursor-pointer bg-[#f1a208] text-lg font-bold text-black transition-transform duration-200 hover:scale-105 hover:bg-[#f1a208]/90"
             >
-              <CalendarDaysIcon className="w-5 h-5 mr-2" />
+              <CalendarDaysIcon className="mr-2 h-5 w-5" />
               {dict.pages.services.services.specificServicePages.scheduleSection.scheduleAppointmentButtonText}
             </Button>
           </Link>
         </section>
-        <section className="text-center text-white bg-slate-800/20 mb-10 p-12 rounded-2xl w-full max-w-5xl shadow-xl">
-          <h2 className="text-4xl font-bold mb-4">
+        <section className="mb-10 w-full max-w-5xl rounded-2xl bg-slate-800/20 p-12 text-center text-white shadow-xl">
+          <h2 className="mb-4 text-4xl font-bold">
             {dict.pages.services.services.specificServicePages.wrongServiceSection.header}
           </h2>
-          <p className="mb-8 text-lg max-w-2xl mx-auto text-white/80">
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">
             {dict.pages.services.services.specificServicePages.wrongServiceSection.description}
           </p>
-          <div className="mt-12 flex justify-center w-full">
+          <div className="mt-12 flex w-full justify-center">
             <Link href="/services" className="inline-block">
-              <button className="bg-transparent hover:bg-[#f1a208] text-white hover:text-black border-2 border-[#f1a208] transition-colors duration-200 font-bold text-lg cursor-pointer whitespace-normal text-center px-2 py-1 rounded-lg">
+              <button className="cursor-pointer rounded-lg border-2 border-[#f1a208] bg-transparent px-2 py-1 text-center text-lg font-bold whitespace-normal text-white transition-colors duration-200 hover:bg-[#f1a208] hover:text-black">
                 {dict.pages.services.services.specificServicePages.wrongServiceSection.otherServicesButtonText}
               </button>
             </Link>

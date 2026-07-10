@@ -14,8 +14,10 @@ const LanguagePopup = ({ params }: SupportedLanguagesProps) => {
   const [lang, setLang] = useState<SupportedLanguages>(SiteSettings.DefaultLocale as SupportedLanguages);
 
   useEffect(() => {
+    // The locale cookie can only be read on the client, so open the popup after mount if it is unset.
     const languageCookie = Cookies.get("SITE_LOCALE");
     if (!languageCookie) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsOpen(true);
     }
     params.then((result) => {
@@ -41,7 +43,7 @@ const LanguagePopup = ({ params }: SupportedLanguagesProps) => {
         <LanguageSwitcher params={params} />
         <Button
           size="lg"
-          className="bg-[#07001C] hover:bg-[#07001C]/90 text-white cursor-pointer transition-colors duration-200"
+          className="cursor-pointer bg-[#07001C] text-white transition-colors duration-200 hover:bg-[#07001C]/90"
           onClick={handleConfirmLanguage}
         >
           Confirm

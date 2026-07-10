@@ -57,7 +57,7 @@ const LanguageSwitcher = ({
           role="combobox"
           aria-expanded={open}
           aria-label="Switch Language"
-          className="w-auto justify-start gap-2 border-0 bg-[#f1a208] hover:bg-[#f1a208]/80 text-black cursor-pointer"
+          className="w-auto cursor-pointer justify-start gap-2 border-0 bg-[#f1a208] text-black hover:bg-[#f1a208]/80"
         >
           {languages.find((language) => language.value === value)?.flag && (
             <span className="inline-block align-middle">
@@ -88,7 +88,7 @@ const LanguageSwitcher = ({
                     onSelect={handleSelect}
                   >
                     <CheckIcon className={cn("mr-2 h-4 w-4", value === language.value ? "opacity-100" : "opacity-0")} />
-                    {FlagIcon && <FlagIcon className="inline mr-2 h-4 w-6" />} {language.label}
+                    {FlagIcon && <FlagIcon className="mr-2 inline h-4 w-6" />} {language.label}
                   </CommandItem>
                 );
               })}

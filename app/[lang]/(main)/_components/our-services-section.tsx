@@ -36,17 +36,17 @@ const OurServicesSection = async ({ params }: SupportedLanguagesProps) => {
   ];
 
   return (
-    <section className="bg-slate-800/20 py-20 px-4">
-      <div className="max-w-7xl mx-auto text-center text-white">
-        <h2 className="text-4xl font-extrabold tracking-tight mb-4">{dict.pages.home.ourServicesSection.header}</h2>
-        <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto">
+    <section className="bg-slate-800/20 px-4 py-20">
+      <div className="mx-auto max-w-7xl text-center text-white">
+        <h2 className="mb-4 text-4xl font-extrabold tracking-tight">{dict.pages.home.ourServicesSection.header}</h2>
+        <p className="mx-auto mb-12 max-w-3xl text-lg text-white/80">
           {dict.pages.home.ourServicesSection.description}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+        <div className="grid grid-cols-1 justify-center gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {Services.map((service, index) => (
             <Link href={service.href} key={index}>
-              <div className="bg-gray-700/40 p-8 rounded-lg text-center h-full flex flex-col items-center hover:bg-gray-700/30 transition-all duration-200 transform hover:-translate-y-2">
-                <div className="p-4 bg-[#f1a208] rounded-full inline-flex items-center justify-center mb-4 h-20 w-20">
+              <div className="flex h-full transform flex-col items-center rounded-lg bg-gray-700/40 p-8 text-center transition-all duration-200 hover:-translate-y-2 hover:bg-gray-700/30">
+                <div className="mb-4 inline-flex h-20 w-20 items-center justify-center rounded-full bg-[#f1a208] p-4">
                   {service.icon === "globe" && (
                     <Image
                       src="/icons/immigration.svg"
@@ -55,12 +55,12 @@ const OurServicesSection = async ({ params }: SupportedLanguagesProps) => {
                       alt="Immigration Icon"
                       draggable={false}
                       unoptimized
-                      className="w-12 h-12 select-none"
+                      className="h-12 w-12 select-none"
                       style={{ objectFit: "contain" }}
                     />
                   )}
-                  {service.icon === "plane" && <PlaneIcon className="w-12 h-12 text-black" />}
-                  {service.icon === "truck" && <TruckIcon className="w-12 h-12 text-black" />}
+                  {service.icon === "plane" && <PlaneIcon className="h-12 w-12 text-black" />}
+                  {service.icon === "truck" && <TruckIcon className="h-12 w-12 text-black" />}
                   {service.icon === "school" && (
                     <Image
                       src="/icons/school-sports-camp.svg"
@@ -69,20 +69,20 @@ const OurServicesSection = async ({ params }: SupportedLanguagesProps) => {
                       alt="School/Sports/Camp Icon"
                       draggable={false}
                       unoptimized
-                      className="w-12 h-12 select-none"
+                      className="h-12 w-12 select-none"
                       style={{ objectFit: "contain" }}
                     />
                   )}
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
+                <h3 className="mb-2 text-xl font-bold text-white">{service.title}</h3>
                 <p className="text-white/80">{service.description}</p>
               </div>
             </Link>
           ))}
         </div>
-        <div className="mt-12 flex justify-center w-full">
+        <div className="mt-12 flex w-full justify-center">
           <Link href="/services" className="inline-block">
-            <button className="bg-transparent hover:bg-[#f1a208] text-white hover:text-black border-2 border-[#f1a208] transition-colors duration-200 font-bold text-lg cursor-pointer whitespace-normal text-center px-2 py-1 rounded-lg">
+            <button className="cursor-pointer rounded-lg border-2 border-[#f1a208] bg-transparent px-2 py-1 text-center text-lg font-bold whitespace-normal text-white transition-colors duration-200 hover:bg-[#f1a208] hover:text-black">
               {dict.pages.home.ourServicesSection.learnMoreButton}
             </button>
           </Link>

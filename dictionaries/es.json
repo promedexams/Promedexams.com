@@ -4,7 +4,7 @@
       "hoursOfOperation": "Horario de Atención",
       "closed": "Cerrado",
       "daysOfTheWeek": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
-      "timezoneDisclaimer": "Todos los horarios se muestran en la hora de la Montaña (MT)."
+      "timezoneDisclaimer": "Todos los horarios mostrados están en hora de la montaña (MT). Sujeto a modificaciones."
     },
     "address": "Dirección",
     "email": "Correo Electrónico",
@@ -120,10 +120,10 @@
             "jobTitle": "Médica Principal",
             "shortDescription": "La Dra. Quigley ha practicado la medicina desde 2008 y está certificada por el consejo en Medicina Familiar. Se dedica a brindar una atención excepcional y oportuna a cada paciente."
           },
-          "trish": {
-            "name": "Trish Peery",
+          "laura": {
+            "name": "Laura Wyse",
             "jobTitle": "Gerente de Oficina",
-            "shortDescription": "Con una sólida experiencia en la gerencia de recepción, Trish se asegura de que nuestra oficina funcione sin problemas y de que su experiencia sea perfecta de principio a fin."
+            "shortDescription": "Con una sólida experiencia en la gerencia de recepción, Laura se asegura de que nuestra oficina funcione sin problemas y de que su experiencia sea perfecta de principio a fin."
           }
         },
         "learnMoreButton": "Conozca Más Sobre Nuestro Equipo"
@@ -153,9 +153,9 @@
               "header": "Qué Esperar",
               "description": [
                 "El examen evalúa su estado de salud para determinar si cumple con los requisitos de inmigración a los EE. UU. Puede esperar una revisión de su historial médico, su salud mental y un examen físico.",
-                "Se requieren análisis de sangre y orina según la edad para evaluar enfermedades infecciosas, incluyendo tuberculosis, sífilis y gonorrea. En su cita, se le entregará una orden de laboratorio para LabCorp/Quest. Deberá realizarse los análisis inmediatamente después de su examen médico. Si es necesario, le proporcionaremos información con las ubicaciones e indicaciones para llegar a LabCorp/Quest. Se requiere una radiografía de tórax si el análisis de sangre para tuberculosis da positivo. Se requieren vacunas si las vacunas apropiadas para la edad, según la recomendación de los CDC (Centros para el Control y la Prevención de Enfermedades), no están al día. No proporcionamos vacunas, pero podemos dirigirle a la ubicación más cercana y económica para vacunarse. Puede comer y beber antes del examen.",
+                "Se requieren pruebas de sangre y orina según la edad para evaluar enfermedades infecciosas, incluyendo tuberculosis, sífilis y gonorrea. Se le entregará una orden de laboratorio para un centro de extracción local de Quest Diagnostics en su cita, después de hablar con el Dr. Quigley sobre qué pruebas de laboratorio son apropiadas para usted (según la edad y la necesidad de títulos de anticuerpos para demostrar inmunidad). Las pruebas de laboratorio DEBEN ser ordenadas por un cirujano civil designado por USCIS (como el Dr. Quigley) EN su examen. Se espera que se haga las pruebas de laboratorio inmediatamente DESPUÉS de su examen médico. *Las pruebas de laboratorio ordenadas por otro médico antes de su examen médico de inmigración no están permitidas según las pautas de USCIS.* Proporcionaremos información con ubicaciones y direcciones de Quest Diagnostics. Por favor, hable con nosotros si requiere que las pruebas de laboratorio se extraigan en un laboratorio diferente. Se requieren vacunas si el comprobante de las vacunas apropiadas para la edad según la recomendación de los CDC (Centros para el Control y la Prevención de Enfermedades) no está actualizado. No proporcionamos vacunas, pero tenemos recursos para ayudarle a encontrar lugares rentables para la vacunación. Puede comer y beber antes del examen.",
                 "Las condiciones médicas comunes como la diabetes, el colesterol alto y la presión arterial alta, que no son una preocupación para la salud pública, no interfieren con el proceso de inmigración, pero deben ser listadas en el Formulario I-693 del USCIS (Informe de Examen Médico y Registro de Vacunación). Al completar todos los requisitos del Formulario I-693, se le entregará el formulario completado, firmado y fechado en un sobre sellado. No abra este sobre; debe presentarlo sellado al USCIS como parte del proceso de solicitud. También se le proporcionará un juego idéntico de documentos sin sellar.",
-                "El costo del examen y el papeleo es de $200 en efectivo o $210 con tarjeta de crédito. Los análisis de laboratorio y las vacunas se pagan por separado a fuentes externas, como Quest/LabCorp para los análisis y farmacias o departamentos de salud para las vacunas."
+                "El costo del examen y del papeleo es de $235, con un descuento de $10 si se paga en efectivo. Además, se otorga un descuento de $25 si recibimos los documentos y el formulario completados según las instrucciones al menos 24 horas antes de su cita. Los únicos costos adicionales serán por las pruebas de laboratorio y las vacunas. El costo de las pruebas de laboratorio y las vacunas se analiza en las secciones de Pruebas de laboratorio y Vacunación en el enlace de Preguntas frecuentes a continuación."
               ],
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
               "faqButtonText": "Preguntas Frecuentes",
@@ -169,7 +169,7 @@
             "header": "Qué Traer a su Cita",
             "items": [
               "Pasaporte válido u otra identificación con fotografía emitida por el gobierno",
-              "Formulario I-693, Informe de Examen Médico y Registro de Vacunación",
+              "Formulario I-693, Informe Médico y Registro de Vacunación con las páginas 1 a 3 completadas (por favor, envíelo a nuestra oficina antes de su cita)",
               "Registros de vacunación",
               "Lista de medicamentos actuales",
               "Informe de la condición y cualquier requisito de educación especial o supervisión si inmigra con discapacidades de aprendizaje",
@@ -192,16 +192,38 @@
             "whoApplies": {
               "header": "¿Quién necesita un examen médico de la FAA?",
               "description": [
-                "La FAA designa a médicos conocidos como Examinadores Médicos de Aviación (AME, por sus siglas en inglés) que completan una formación especializada de la FAA para realizar estos exámenes de certificación médica. Aunque la prioridad es la seguridad de la aviación, mi objetivo como AME es ayudar a los pilotos a obtener y mantener la certificación para volar. Además, podemos ayudar cuando surgen condiciones médicas que requieren información adicional para la certificación. En ProMed Exams, ofrecemos servicios rápidos para ayudarle a volver al aire lo antes posible, y entendemos la importancia de la precisión para evitar retrasos en el procesamiento."
+                "La FAA designa a médicos conocidos como Médicos Examinadores de Aviación (AME, por sus siglas en inglés) que completan una capacitación especializada de la FAA para realizar estos exámenes de certificación médica. Si bien la prioridad es la seguridad en la aviación, mi objetivo como AME es ayudar a los pilotos a obtener y mantener la certificación para volar. Además, podemos asistir cuando se presentan condiciones médicas que requieren información adicional para la certificación y abogar en su nombre. En ProMed Exams, ofrecemos servicios rápidos para ayudarle a estar en el aire de nuevo lo antes posible, y entendemos la importancia de la precisión para evitar retrasos en el procesamiento."
               ]
             },
             "whatToExpect": {
               "header": "Qué Esperar",
               "description": [
-                "El examen evalúa su aptitud física y mental general para el servicio, para garantizar que puede operar una aeronave de forma segura. Puede esperar una revisión de su historial médico, salud mental y un examen físico. Para el examen se requiere la evaluación de la presión arterial, la frecuencia cardíaca, la altura/peso, la visión, la audición y un análisis de orina.",
-                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran un aplazamiento), saldrá de su cita con su certificación médica.",
-                "El costo del examen es de $200 para todas las clases. Se pueden aplicar cargos adicionales para SODA, CACI y Emisiones Especiales (Special Issuance) según la complejidad del caso."
+                "El examen evalúa su aptitud física y mental general para el deber con el fin de garantizar que pueda operar una aeronave de manera segura. Espere una revisión de su historial médico, salud mental y un examen físico. Para cada examen se requiere la evaluación de la presión arterial, frecuencia cardíaca, altura/peso, visión, audición y análisis de orina. El electrocardiograma (EKG) solo se requiere para PRIMERA CLASE a los 35 años y anualmente a partir de los 40 años. La prueba de visión de colores de Waggoner se requiere UNA VEZ para todos los solicitantes por primera vez y los pilotos que regresan que tienen un SODA o LOE de tercera clase y que desean ascender a primera o segunda clase.",
+                "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, en la mayoría de los casos (a menos que surjan inquietudes que requieran un aplazamiento), saldrá de su cita con su certificación médica."
               ],
+              "pricing": {
+                "title": "Precios actuales de los servicios",
+                "disclaimer": "Se aplican cargos por procesamiento de tarjeta de crédito.",
+                "items": [
+                  {
+                    "service": "Examen (todas las clases)",
+                    "price": "$200",
+                    "note": "Pueden aplicarse cargos adicionales por Emisión Especial y múltiples condiciones CACI según la complejidad del caso"
+                  },
+                  {
+                    "service": "EKG",
+                    "price": "$150"
+                  },
+                  {
+                    "service": "Visión de colores Waggoner (con examen)",
+                    "price": "$35"
+                  },
+                  {
+                    "service": "Solo consulta (sin MedXPress, sin certificado)",
+                    "price": "$75 por 15 min"
+                  }
+                ]
+              },
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria."
             }
           },
@@ -215,7 +237,7 @@
             ],
             "messagePanel": {
               "title": "NOTA IMPORTANTE",
-              "message": "Asegúrese de actualizar su historial de salud y sus medicamentos actuales en MedXPress *antes* de su cita.",
+              "message": "DEBE completar una solicitud en línea de MedXPress ANTES de cada examen médico de la FAA. Envíe su número de confirmación de MedXPress a ProMed Exams antes de su cita o tráigalo a su cita; la Dra. Quigley no puede comenzar el examen sin él.",
               "buttonText": "FAA MedXPress"
             }
           }
@@ -237,6 +259,32 @@
                 "Por favor, venga preparado para proporcionar una muestra de orina. Puede comer y beber antes del examen. Al finalizar el examen, sus resultados se informarán electrónicamente al Registro Nacional de Examinadores Médicos Certificados (NRCME). Si cumple con todos los requisitos de la FMCSA, saldrá de su cita con su certificado de examinador médico (tarjeta médica del DOT).",
                 "Si encontramos un problema que requiere atención, es posible que deba consultar a su proveedor de atención primaria y/o a un especialista para realizar más pruebas, tratamientos o trámites. Aún podría calificar para su certificado médico, pero solo después de resolver el problema médico u obtener la documentación necesaria. En algunos casos, una condición de salud puede descalificarlo para recibir un certificado médico."
               ],
+              "pricing": {
+                "title": "Precios actuales de los servicios",
+                "disclaimer": "Se aplican cargos por procesamiento de tarjeta de crédito.",
+                "items": [
+                  {
+                    "service": "Examen",
+                    "price": "$150",
+                    "note": "Pueden aplicarse cargos adicionales según la complejidad del caso"
+                  },
+                  {
+                    "service": "Glucosa capilar",
+                    "price": "$15",
+                    "note": "Si se observa glucosa en el análisis de orina"
+                  },
+                  {
+                    "service": "Espirometría",
+                    "price": "$80",
+                    "note": "Si presenta síntomas pulmonares y no se ha realizado con su médico de cabecera o especialista"
+                  },
+                  {
+                    "service": "Electrocardiograma (EKG)",
+                    "price": "$150",
+                    "note": "Si presenta síntomas cardíacos y no se ha realizado con su médico de cabecera o especialista"
+                  }
+                ]
+              },
               "disclaimer": "Este examen no sustituye un examen físico completo, consulta, diagnóstico o tratamiento por parte de su proveedor de atención médica primaria.",
               "updatePanel": {
                 "title": "ACTUALIZACIÓN",
@@ -248,7 +296,7 @@
             "header": "Qué Traer a su Cita",
             "items": [
               "Licencia de conducir vigente emitida por el estado",
-              "Formulario de Informe de Examen Médico (MCSA-5875)",
+              "Formulario de Informe de Examen Médico (MCSA-5875) con la Sección 1 completada (por favor, envíelo a nuestra oficina antes de su cita).",
               "Lista de medicamentos actuales con dosis y el nombre de quien los recetó",
               "Cualquier circunstancia especial o carta de exención de su(s) médico(s)",
               "Lentes de contacto/gafas, audífonos (si aplica)",
@@ -325,15 +373,15 @@
           "bioParagraphs": [
             "La Dra. Quigley creció en el área de Kansas City, Missouri, asistió a la facultad de medicina en la University of Missouri-Columbia School of Medicine y completó su residencia en medicina familiar en la Wake Forest University School of Medicine. Ha practicado la medicina desde 2008 y está certificada por el consejo en Medicina Familiar.",
             "Después de ejercer la medicina familiar durante más de 16 años, se entusiasmó por embarcarse en una nueva trayectoria más enfocada en la medicina, realizando exámenes médicos específicos como examinadora médica de aviación designada por la FAA (AME, por sus siglas en inglés) para chequeos de pilotos, examinadora médica certificada por la FMCSA para chequeos del DOT, y cirujana civil designada por el USCIS para exámenes médicos de inmigración. También quería seguir atendiendo a niños, adolescentes y adultos para sus chequeos escolares, deportivos y de campamento. Se esfuerza por brindar una atención excepcional y oportuna a cada persona. Cree en la comunicación honesta y clara, la escucha, la atención a los detalles, la puntualidad y el respeto mutuo.",
-            "La Dra. Quigley está felizmente casada y tiene dos perros (Linda y Margie). Le gusta viajar, hacer senderismo, esquiar, la jardinería, la música y leer."
+            "La Dra. Quigley está felizmente casada y tiene tres perros (Lucy, Linda y Margie). Le gusta viajar, hacer senderismo, esquiar, la jardinería, la música y leer."
           ]
         },
-        "trish": {
-          "name": "Trish Peery",
+        "laura": {
+          "name": "Laura Wyse",
           "jobTitle": "Gerente de Oficina",
           "bioParagraphs": [
-            "Trish trabajó en la consulta de medicina familiar de la Dra. Quigley durante 10 años como gerente de recepción. Su experiencia previa fue en la industria de seguros y finanzas, trabajando para State Farm y Edward Jones. Actualmente, mantiene su Licencia de Seguros de CO.",
-            "A Trish le gusta viajar, correr, esquiar y pasar tiempo con su familia. Disfruta trabajar con la Dra. Quigley mientras sirven a la comunidad con cuidado, compasión y equilibrio de vida."
+            "Laura aporta a ProMed Exams, PC más de 10 años de experiencia en administración y gestión de oficinas. Le apasiona apoyar a las pequeñas empresas y ayudarlas a crecer, prosperar y alcanzar sus objetivos.",
+            "Originaria del oeste de Michigan, Laura se mudó a Colorado en 2009 junto a su esposo y sus dos hijos. Aunque siempre guardará un cariño especial por la playa, ha llegado a amar los hermosos paisajes montañosos de Colorado. En su tiempo libre, disfruta realizando manualidades, explorando nuevos proyectos creativos y viendo los últimos estrenos de cine con su esposo."
           ]
         }
       },
@@ -351,7 +399,14 @@
     },
     "scheduleAppointment": {
       "title": "Agendar Cita",
-      "description": "Por favor, complete el formulario a continuación para agendar su cita. Nos pondremos en contacto con usted lo antes posible para confirmar su cita.",
+      "description": "Por favor, complete el siguiente formulario para programar su cita. Ingrese la dirección de correo electrónico y el número de teléfono en los que prefiere recibir las siguientes comunicaciones de ProMed Exams después de programar su cita:",
+      "communicationsList": [
+        "Correo electrónico y mensaje de texto inmediatos a través de Square (nuestro software de programación) aceptando su cita.",
+        "Correo electrónico de bienvenida de Laura Wyse en ProMed Exams con toda la información que DEBE leer y seguir las instrucciones para estar preparado para su cita. Si no recibe este correo electrónico dentro de las 24 horas hábiles (L-J) después de programar su cita, por favor envíe un correo electrónico a Laura a office@promedexams.com y hágaselo saber.",
+        "Mensaje de texto de solicitud de confirmación a través de Square 5 días antes de la cita.",
+        "Correo electrónico de recordatorio a través de Square 2 días antes de la cita.",
+        "Texto de recordatorio a través de Square 1 día antes de la cita."
+      ],
       "maintenanceWindow": {
         "header": "Una Nota Sobre Nuestro Sistema de Programación en Línea",
         "subheader": "Nuestra plataforma de programación en línea tiene como objetivo facilitarle la programación de su(s) cita(s), por lo que si encuentra algún problema o NO le resulta más fácil realizar la programación, por favor póngase en contacto con nosotros para que podamos ayudarle.",

@@ -4,7 +4,7 @@
       "hoursOfOperation": "Hours of Operation",
       "closed": "Closed",
       "daysOfTheWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "timezoneDisclaimer": "All times listed are in mountain time (MT)."
+      "timezoneDisclaimer": "All times listed are in mountain time (MT). Subject to change."
     },
     "address": "Address",
     "email": "Email",
@@ -120,10 +120,10 @@
             "jobTitle": "Lead Physician",
             "shortDescription": "Dr. Quigley has been practicing medicine since 2008 and is board certified in Family Medicine. She is dedicated to providing exceptional care in a timely manner to every patient."
           },
-          "trish": {
-            "name": "Trish Peery",
+          "laura": {
+            "name": "Laura Wyse",
             "jobTitle": "Office Manager",
-            "shortDescription": "With a strong background in front office management, Trish ensures that our office runs smoothly and that your experience is seamless from start to finish."
+            "shortDescription": "With a strong background in front office management, Laura ensures that our office runs smoothly and that your experience is seamless from start to finish."
           }
         },
         "learnMoreButton": "Learn More About Our Team"
@@ -153,9 +153,9 @@
               "header": "What to Expect",
               "description": [
                 "The exam assesses your health to determine if you meet the requirements for immigration to the U.S. Expect a review of your medical history, mental health, and physical exam.",
-                "Blood and urine testing is required based on age to evaluate infectious diseases including tuberculosis, syphilis, and gonorrhea. A lab order to LabCorp/Quest will be given to you at your appointment. You are expected to have your labs done immediately after your medical exam. We will provide information with locations and directions to LabCorp/Quest if needed. A chest x-ray is required if the tuberculosis blood test is positive. Vaccinations are required if age-appropriate vaccinations per CDC (Centers for Disease Control and Prevention) recommendation are not up-to-date. We do not provide vaccines but can direct you to the nearest, most cost-effective location for vaccination. You can eat/drink before the exam.",
+                "Blood and urine testing is required based on age to evaluate infectious diseases including tuberculosis, syphilis, and gonorrhea. A lab order to a local Quest Diagnostics draw site will be given to you at your appointment after discussing with Dr. Quigley which labs are appropriate for you (based on age and need for antibody titers to prove immunity). Labs MUST be ordered by a USCIS-designated civil surgeon (such as Dr. Quigley) AT your exam. You are expected to have your labs done immediately AFTER your medical exam. *Labs ordered by another physician prior to your immigration medical exam are not allowed per USCIS guidelines.* We will provide information with locations and directions to Quest Diagnostics. Please discuss with us if you require labs to be drawn at a different lab. Vaccinations are required if proof of age-appropriate vaccinations per CDC (Centers for Disease Control and Prevention) recommendation is not up to date. We do not provide vaccines but we do have resources to help you find cost-effective locations for vaccination. You can eat/drink before the exam.",
                 "Common medical conditions such as diabetes, high cholesterol, and high blood pressure that are not of concern to public health do not interfere with the immigration process but are required to be listed on USCIS Form I-693 (Report of Medical Examination and Vaccination Record). Upon completion of all Form I-693 requirements, you will be given a completed signed and dated Form I-693 in a sealed envelope. Do not open this envelope; it should be submitted in the sealed envelope to the USCIS as part of the application process. An unsealed identical set of documents will also be provided to you.",
-                "Cost of exam and paperwork is $200 cash or $210 with a credit card. Labs and vaccines are paid separately to outside sources such as Quest/LabCorp for labs and pharmacies/health departments for vaccines."
+                "Cost of exam and paperwork is $235 with a $10 discount if paid in cash. In addition, a $25 discount is given if we receive the documents and form completed as instructed at least 24 hours prior to your appointment. The only additional costs will be for labs and vaccines. The cost of labs and vaccines is discussed in the Lab Testing and Vaccinations sections in the link for Frequently Asked Questions below."
               ],
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
               "faqButtonText": "Frequently Asked Questions",
@@ -169,7 +169,7 @@
             "header": "What to Bring to Your Appointment",
             "items": [
               "Valid passport or other government-issued photo identification",
-              "Form I-693, Report of Medical Examination and Vaccination Record",
+              "Form I-693, Report of Medical Examination and Vaccination Record with Pages 1-3 completed (please send to our office prior to your appointment)",
               "Vaccination records",
               "List of current medications",
               "Report of the condition and any special education or supervision requirements if immigrating with learning disabilities",
@@ -192,16 +192,38 @@
             "whoApplies": {
               "header": "Who Needs an FAA Physical?",
               "description": [
-                "The FAA designates physicians known as Aviation Medical Examiners (AME) who complete specialized FAA training to perform these medical certification exams. While the priority is aviation safety, my goal as an AME is to help pilots attain and maintain certification to fly. In addition, we can assist when medical conditions occur that require additional information for certification. At ProMed Exams, we offer prompt services to help get you in the air again as soon as possible, and we understand the importance of accuracy to avoid processing delays."
+                "The FAA designates physicians known as Aviation Medical Examiners (AME) who complete specialized FAA training to perform these medical certification exams. While the priority is aviation safety, my goal as an AME is to help pilots attain and maintain certification to fly. In addition, we can assist when medical conditions occur that require additional information for certification and advocate on your behalf. At ProMed Exams, we offer prompt services to help get you in the air again as soon as possible, and we understand the importance of accuracy to avoid processing delays."
               ]
             },
             "whatToExpect": {
               "header": "What to Expect",
               "description": [
-                "The exam assesses your overall physical and mental fitness for duty to ensure you can safely operate an aircraft. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for the exam.",
-                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, in most cases (unless concerns arise requiring deferment), you will leave your appointment with your medical certification.",
-                "Cost of exam is $200 for all classes. Extra charges may apply for SODA, CACI, Special Issuance based on case complexity."
+                "The exam assesses your overall physical and mental fitness for duty to ensure you can safely operate an aircraft. Expect a review of your medical history, mental health, and physical exam. Evaluation of blood pressure, heart rate, height/weight, vision, hearing, and urinalysis are required for every exam. EKG is required only for FIRST CLASS at age 35 and yearly starting at age 40. Waggoner color vision test is required ONCE for all first-time applicants and returning pilots that hold a 3rd class SODA or LOE that want to upgrade to 1st or 2nd class.",
+                "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, in most cases (unless concerns arise requiring deferment), you will leave your appointment with your medical certification."
               ],
+              "pricing": {
+                "title": "Current Pricing for Services",
+                "disclaimer": "Credit card processing fees apply.",
+                "items": [
+                  {
+                    "service": "Exam (all classes)",
+                    "price": "$200",
+                    "note": "Additional charges may apply for Special Issuance and multiple CACI conditions based on case complexity"
+                  },
+                  {
+                    "service": "EKG",
+                    "price": "$150"
+                  },
+                  {
+                    "service": "Waggoner Color Vision (with exam)",
+                    "price": "$35"
+                  },
+                  {
+                    "service": "Consultation Only (no MedXPress, no certificate)",
+                    "price": "$75 per 15 min"
+                  }
+                ]
+              },
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider."
             }
           },
@@ -215,7 +237,7 @@
             ],
             "messagePanel": {
               "title": "IMPORTANT NOTE",
-              "message": "Be sure to update your health history and current medications in MedXPress *prior* to your appointment.",
+              "message": "You MUST complete an online MedXPress application PRIOR to every FAA medical exam. Either send your MedXPress confirmation number to ProMed Exams prior to your appointment or bring it to your appointment – Dr. Quigley cannot begin the exam without it.",
               "buttonText": "FAA MedXPress"
             }
           }
@@ -237,6 +259,32 @@
                 "Please come prepared to provide a urine sample. You can eat/drink before the exam. Upon completion of the exam, your results will be reported electronically to the National Registry of Certified Medical Examiners (NRCME). If you meet all FMCSA requirements, you will leave your appointment with your medical examiner's certificate (DOT medical card).",
                 "If we find an issue that needs attention, you may need to see your primary care provider and/or a specialist for further testing, treatment, or paperwork. You may still qualify for your medical certificate, but only after taking care of the medical issue or obtaining necessary documentation. In some cases, a health condition may disqualify you from receiving a medical certificate."
               ],
+              "pricing": {
+                "title": "Current Pricing for Services",
+                "disclaimer": "Credit card processing fees apply.",
+                "items": [
+                  {
+                    "service": "Exam",
+                    "price": "$150",
+                    "note": "Additional charges may apply based on case complexity"
+                  },
+                  {
+                    "service": "Fingerstick Glucose",
+                    "price": "$15",
+                    "note": "If glucose noted on urinalysis"
+                  },
+                  {
+                    "service": "Spirometry",
+                    "price": "$80",
+                    "note": "If pulmonary symptoms present and not done with your PCP or specialist"
+                  },
+                  {
+                    "service": "EKG",
+                    "price": "$150",
+                    "note": "If cardiac symptoms present and not done with your PCP or specialist"
+                  }
+                ]
+              },
               "disclaimer": "This examination is not a substitute for a full physical examination, consultation, diagnosis, or treatment by your primary health care provider.",
               "updatePanel": {
                 "title": "UPDATE",
@@ -248,7 +296,7 @@
             "header": "What to Bring to Your Appointment",
             "items": [
               "Current state-issued driver's license",
-              "Medical Examination Report Form (MCSA-5875)",
+              "Medical Examination Report Form (MCSA-5875) with Section 1 completed (please send to our office prior to your appointment)",
               "List of current medications with dosages and prescriber's name",
               "Any special circumstances or exemption letters from your doctor(s)",
               "Contacts/glasses, hearing aids (if applicable)",
@@ -325,15 +373,15 @@
           "bioParagraphs": [
             "Dr. Quigley grew up in the Kansas City, Missouri area, attended medical school at the University of Missouri-Columbia School of Medicine, and completed family medicine residency at Wake Forest University School of Medicine. She has been practicing medicine since 2008 and is board certified in Family Medicine.",
             "After practicing family medicine for more than 16 years, she was excited to embark on a new, more focused journey in medicine performing specific medical examinations as an FAA-designated aviation medical examiner (AME) performing pilot physicals, FMCSA-certified medical examiner performing DOT physicals, and USCIS-designated civil surgeon performing immigration medical examinations. She also wanted to continue seeing children, adolescents, and adults for their school/sports/camp physicals. She strives to give exceptional care in a timely manner to every person. She believes in honest clear communication, listening, caring about the details, being on time, and mutual respect.",
-            "Dr. Quigley is happily married with two dogs (Linda and Margie). She enjoys traveling, hiking, skiing, gardening, music, and reading."
+            "Dr. Quigley is happily married with three dogs (Lucy, Linda, and Margie). She enjoys traveling, hiking, skiing, gardening, music, and reading."
           ]
         },
-        "trish": {
-          "name": "Trish Peery",
+        "laura": {
+          "name": "Laura Wyse",
           "jobTitle": "Office Manager",
           "bioParagraphs": [
-            "Trish worked at Dr. Quigley's family practice for 10 years as her front office manager. Her previous background was in the insurance and finance industry working for State Farm and Edward Jones. She continues to hold her CO Insurance License.",
-            "Trish enjoys traveling, jogging, skiing, and family. She enjoys working with Dr. Quigley as they serve the community with care, compassion, and life balance."
+            "Laura brings more than 10 years of experience in office administration and management to ProMed Exams, PC. She is passionate about supporting small businesses and helping them grow, thrive, and achieve their goals.",
+            "Originally from West Michigan, Laura relocated to Colorado in 2009 with her husband and their two children. While she will always have a special appreciation for the beach, she has grown to love Colorado’s beautiful mountain scenery. In her free time, Laura enjoys crafting, exploring new creative projects, and seeing the newest movie releases with her husband."
           ]
         }
       },
@@ -351,7 +399,14 @@
     },
     "scheduleAppointment": {
       "title": "Schedule Appointment",
-      "description": "Please fill out the form below to schedule your appointment. We will get back to you as soon as possible to confirm your appointment.",
+      "description": "Please fill out the form below to schedule your appointment. Enter the email address and phone number which you prefer to receive the following communications from ProMed Exams after scheduling your appointment:",
+      "communicationsList": [
+        "Immediate email & text message through Square (our scheduling software) accepting your appointment.",
+        "Welcome email from Laura Wyse at ProMed Exams with all the information that you MUST read and follow the instructions to be prepared for your appointment. If you do not receive this email within 24 business hours (M-Th) after scheduling your appointment, then please email Laura at office@promedexams.com and let her know.",
+        "Confirmation request text message through Square 5 days prior to appointment.",
+        "Reminder email through Square 2 days prior to appointment.",
+        "Reminder text through Square 1 day prior to appointment."
+      ],
       "maintenanceWindow": {
         "header": "A Note About Our Online Scheduling System",
         "subheader": "Our online scheduling platform is intended to make scheduling your appointment(s) easier for you, so if you run into any problems or do NOT find it easier to schedule, please reach out so we can assist you.",

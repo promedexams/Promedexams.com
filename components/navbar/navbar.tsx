@@ -12,28 +12,28 @@ const Navbar = async ({ params }: SupportedLanguagesProps) => {
   const dict = await getDictionary(lang);
 
   return (
-    <nav className="p-8 flex flex-row h-full relative border-b border-gray-200 justify-between items-center bg-[#07001c] z-40">
+    <nav className="relative z-40 flex h-full flex-row items-center justify-between border-b border-gray-200 bg-[#07001c] p-8">
       <CombinationMark params={params} />
-      <div className="hidden min-[980px]:flex flex-row gap-4 justify-center items-center text-white text-lg">
-        <Link href="/" className="font-bold hover-underline-animation">
+      <div className="hidden flex-row items-center justify-center gap-4 text-lg text-white min-[980px]:flex">
+        <Link href="/" className="hover-underline-animation font-bold">
           {dict.navbar.navlinks.home}
         </Link>
         •
-        <Link href="/services" className="font-bold hover-underline-animation">
+        <Link href="/services" className="hover-underline-animation font-bold">
           {dict.navbar.navlinks.services}
         </Link>
         •
-        <Link href="/team" className="font-bold hover-underline-animation">
+        <Link href="/team" className="hover-underline-animation font-bold">
           {dict.navbar.navlinks.team}
         </Link>
         •
-        <Link href="/contact" className="font-bold hover-underline-animation">
+        <Link href="/contact" className="hover-underline-animation font-bold">
           {dict.navbar.navlinks.contact}
         </Link>
         •
         <Link href="/schedule-appointment">
-          <Button className="bg-[#f1a208] hover:bg-[#f1a208]/80 cursor-pointer text-black text-base font-bold duration-200 hover:scale-105">
-            <CalendarDaysIcon className="w-4 h-4" /> {dict.navbar.navlinks.scheduleAppointment}
+          <Button className="cursor-pointer bg-[#f1a208] text-base font-bold text-black duration-200 hover:scale-105 hover:bg-[#f1a208]/80">
+            <CalendarDaysIcon className="h-4 w-4" /> {dict.navbar.navlinks.scheduleAppointment}
           </Button>
         </Link>
       </div>

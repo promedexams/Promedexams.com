@@ -33,7 +33,7 @@ const Logo = ({
       height={1}
       unoptimized
       draggable={false}
-      className={cn("w-10 h-10 select-none", className)}
+      className={cn("h-10 w-10 select-none", className)}
     />
   );
 };
