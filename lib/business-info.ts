@@ -12,10 +12,10 @@ export const BusinessInfo = {
       timezone: "America/Denver",
       hours: [
         null, // Sunday
-        { open: "07:30", close: "16:30" }, // Monday
-        { open: "07:30", close: "16:30" }, // Tuesday
-        { open: "07:30", close: "16:30" }, // Wednesday
-        { open: "07:30", close: "16:30" }, // Thursday
+        { open: "07:30", close: "15:00" }, // Monday
+        { open: "07:30", close: "15:00" }, // Tuesday
+        { open: "07:30", close: "15:00" }, // Wednesday
+        { open: "07:30", close: "15:00" }, // Thursday
         null, // Friday
         null, // Saturday
       ],
