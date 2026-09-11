@@ -23,17 +23,13 @@ interface AttachmentConfig {
 }
 
 /**
- * Source files live under public/forms. MCSA-5875 is already hosted for the DOT
- * page download; the email-only documents live under public/forms/email.
+ * Source files live under public/forms and public/legal-documents.
  *
  * The Notice of Privacy Practices and Pilot Bill of Rights already ship with the
  * site (they are linked from the footer) and are reused here.
  *
  * The I-693 already has ProMed's civil-surgeon info completed on page 4 and is the
  * same file linked from the immigration page.
- *
- * TODO: add the one PDF the client still owes, under public/forms/email/:
- *   - dot-dmv-mec-info.pdf  (what to do if the DMV cannot find your DOT MEC)
  */
 const ATTACHMENT_CONFIGS: Record<AttachmentId, AttachmentConfig> = {
   mcsa5875: {
@@ -45,7 +41,7 @@ const ATTACHMENT_CONFIGS: Record<AttachmentId, AttachmentConfig> = {
     displayName: "Notice of Privacy Practices.pdf",
   },
   dotDmvMecInfo: {
-    publicPath: "forms/email/dot-dmv-mec-info.pdf",
+    publicPath: "forms/dot/dot-dmv-mec-info.pdf",
     displayName: "If the DMV Cannot Find Your DOT MEC.pdf",
   },
   i693: {

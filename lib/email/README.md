@@ -46,7 +46,7 @@ MS_SENDER_EMAIL   # e.g. office@promedexams.com
 | `forms/dot/MCSA-5875.pdf`                                           | DOT welcome        | present |
 | `legal-documents/notice-of-privacy-policy-july-2025.pdf`            | all welcome emails | present |
 | `legal-documents/pilot-bill-of-rights-july-2025.pdf`                | FAA welcome (new)  | present |
-| `forms/email/dot-dmv-mec-info.pdf` (DMV can't find your DOT MEC)    | DOT welcome        | needed  |
+| `forms/dot/dot-dmv-mec-info.pdf` (DMV can't find your DOT MEC)      | DOT welcome        | present |
 | `forms/immigration/I-693.pdf` (page 4 civil-surgeon info completed) | IME welcome        | present |
 
 Missing files are skipped with a console warning; the email still sends without them.
