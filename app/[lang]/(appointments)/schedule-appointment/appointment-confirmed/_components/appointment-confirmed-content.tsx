@@ -22,6 +22,7 @@ import {
 import { BusinessInfo } from "@/lib/business-info";
 import { BookingDetails } from "@/lib/types/api/booking";
 import { SupportedLanguagesProps } from "@/lib/types/supported-languages";
+import { getAppointmentType } from "@/lib/utils/appointment-type";
 import { getDictionary } from "@/lib/utils/dictionaries";
 
 const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
@@ -59,62 +60,15 @@ const AppointmentConfirmedContent = ({ params }: SupportedLanguagesProps) => {
   };
 
   const getAppointmentTypeInfo = (appointmentType: string) => {
-    // Configuration array similar to service-reminders.ts
-    const appointmentTypeConfigs = [
-      {
-        pattern: /DOT/i,
-        dictionaryKey: "dot",
-        servicePageUrl: "/services/dot-physicals",
-      },
-      {
-        pattern: /FAA/i,
-        dictionaryKey: "faa",
-        servicePageUrl: "/services/faa-physicals",
-      },
-      {
-        pattern: /School|Sports|Camp/i,
-        dictionaryKey: "schoolSportsCamp",
-        servicePageUrl: "/services/school-sports-camp-physicals",
-      },
-      {
-        pattern: /Immigration/i,
-        dictionaryKey: "immigration",
-        servicePageUrl: "/services/immigration-medical-exams",
-      },
-      {
-        pattern: /Consultation/i,
-        dictionaryKey: "consultation",
-        servicePageUrl: "/services",
-      },
-    ];
+    const { key, servicePageUrl } = getAppointmentType(appointmentType);
+    const serviceData =
+      dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes[key];
 
-    // Try to find a matching pattern
-    for (const config of appointmentTypeConfigs) {
-      if (config.pattern.test(appointmentType)) {
-        const serviceData =
-          dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes[
-            config.dictionaryKey
-          ];
-        return {
-          title: serviceData.title,
-          description: serviceData.description,
-          reminders: serviceData.remindersList,
-          servicePageUrl: config.servicePageUrl,
-        };
-      }
-    }
-
-    // Default fallback
     return {
-      title:
-        dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general.title,
-      description:
-        dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general
-          .description,
-      reminders:
-        dict.pages.scheduleAppointment.appointmentConfirmed.whatToExpectSection.reminders.serviceTypes.general
-          .remindersList,
-      servicePageUrl: "/services",
+      title: serviceData.title,
+      description: serviceData.description,
+      reminders: serviceData.remindersList,
+      servicePageUrl,
     };
   };
 
