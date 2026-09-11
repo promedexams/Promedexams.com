@@ -13,6 +13,7 @@ import {
   CDC_VACCINATION_TECHNICAL_INSTRUCTIONS_URL,
   CDC_VACCINES_BY_AGE_URL,
   DOMAIN_URL,
+  DOT_PHYSICALS_PAGE_URL,
   FAA_AME_GUIDE_URL,
   FAA_PHYSICALS_PAGE_URL,
   I693_INSTRUCTIONS_URL,
@@ -194,7 +195,59 @@ const dotInstructionsBlock = `
   <ul style="${listStyle}">
     <li><strong>Left-click in the shaded areas</strong> and type your Personal Information. You can &lsquo;tab&rsquo; over instead of clicking on each area if you prefer. Your age should autopopulate after you enter your date of birth on page 1. Your name &amp; date of birth should autopopulate on the tops of pages 2-5 after you enter the information on page 1.</li>
     <li>If you check &ldquo;Yes&rdquo; to prior surgery, then the associated area below will become shaded and allow you to type. Please enter the surgery, date of surgery, &amp; any complications.</li>
-  </ul>`;
+    <li>If you check &ldquo;Yes&rdquo; to medications, then you will be able to enter the name of the medication, dosage, frequency, name of the prescribing physician, &amp; any side effects.</li>
+    <li>Make sure to check either &ldquo;Yes, No, or Not Sure&rdquo; for <strong>all 32 questions</strong> on the top of pg 2. If you answer &ldquo;Yes&rdquo; to #13 (Diabetes), then make sure to also check if you use insulin or not (insulin type and dose should also be listed on your medication list on pg 1).</li>
+    <li>If you check &ldquo;Yes&rdquo; to other health conditions, then explain with some detail in the area below.</li>
+    <li>If you check &ldquo;Yes&rdquo; to any of the 32 questions, then you need to give more detail in the final space above &ldquo;CMV Driver's Signature&rdquo;.</li>
+    <li><strong>DO NOT sign or date</strong> Driver's Signature on page 2 until you are instructed <strong>AT</strong> your exam.</li>
+    <li>Once you have completed all parts of Section 1 on pages 1-2, then click the Save icon (third icon from the right) in the ribbon at the top of the page, or press Ctrl (or Command) and S on your keyboard. Save it to your Desktop or Downloads folder again.
+      <ul style="${subListStyle}">
+        <li>Click &lsquo;yes&rsquo; when asked if you want to replace the file.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p style="margin:0 0 6px;font-weight:700;">Step 4: Send the Form (with pages 1-2 completed) to ProMed Exams via Encrypted Email</p>
+  <ul style="${listStyle}">
+    <li>Open the encrypted email sent to you by Laura Wyse from ${link(`mailto:${OFFICE_EMAIL}`, OFFICE_EMAIL)}.
+      <ul style="${subListStyle}">
+        <li>Email may be found in your junk/spam folder until you choose &lsquo;Report Not Spam&rsquo; or &lsquo;Trusted Sender&rsquo; and save ${link(`mailto:${OFFICE_EMAIL}`, OFFICE_EMAIL)} as a contact in your email.</li>
+      </ul>
+    </li>
+    <li><strong>Reply to the encrypted email</strong> with the partially completed Form MCSA-5875 attached.
+      <ul style="${subListStyle}">
+        <li>Replying to Laura via the encrypted email will keep your information protected.</li>
+      </ul>
+    </li>
+    <li>You can also fax the partially completed form to our office at ${BusinessInfo.ContactInformation.FaxNumber} or drop it off at our office.</li>
+  </ul>
+
+  <p style="margin:0 0 8px;font-weight:700;text-decoration:underline;">3. Bring ALL the following to your appointment</p>
+  <ul style="${listStyle}">
+    <li>Driver License</li>
+    <li>Medication list including dosages, frequency, prescriber's name, &amp; side effects &rarr; this information should already be on Form MCSA-5875 and sent to ProMed Exams prior to your appointment. Include daily supplements &amp; over-the-counter medications.</li>
+    <li>Any applicable medical records, clearance letters, or exemption letters from your doctors (if necessary for chronic health conditions such as diabetes, sleep apnea, warfarin use; or for acute/new issues since your last DOT exam such as hospitalization, surgery, injury).</li>
+    <li>Glasses/Contacts/Hearing aids if needed to pass the exam.</li>
+  </ul>
+
+  <p style="${pStyle}">For more details on what to expect during your exam, visit our website at ${link(DOT_PHYSICALS_PAGE_URL, "www.promedexams.com")}.</p>
+
+  ${callout(
+    `<div style="font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:${NAVY};margin-bottom:10px;">Important</div>
+    <ul style="margin:0;padding-left:22px;">
+      <li style="margin-bottom:8px;">Please arrive <strong>15 minutes prior</strong> to your appointment time to complete the check-in process.</li>
+      <li style="margin-bottom:8px;">Be prepared to leave a <strong>urine sample</strong> (NOT for drug testing) at your appointment.</li>
+      <li>If you do not have pages 1-2 of Form MCSA-5875 completed by your appointment time, you (the applicant, not LPS) will be charged a <strong>$50 fee</strong>. If you do not have the form completed by 5 minutes after your appointment time and have to reschedule, then you will be charged a <strong>$100 late cancellation fee</strong>. The same late cancellation fee will apply if you arrive more than 5 minutes late to your appointment and have to reschedule, fail to show up for your appointment, or cancel with less than 24 hours' notice.
+        <ul style="margin:8px 0 0;padding-left:22px;">
+          <li style="margin-bottom:6px;">Since we ask that you show up 15 minutes early to complete the check-in process prior to the start of your appointment, more than 5 minutes after the appointment time will be considered 20 minutes late and you may have to reschedule.</li>
+          <li style="margin-bottom:6px;">In return for coming to your appointment early with your paperwork already completed and sent, Dr. Quigley will have reviewed your paperwork and be prepared for your appointment and see you on time. This will allow the appointment to go as efficiently and on time as possible so you can get back to your day, and we can be on time for the next applicant.</li>
+          <li>In addition, if Dr. Quigley notices further information is necessary to make a decision to issue your medical certificate with enough time before your appointment, we will contact you to let you know what to bring to your appointment. This will increase the probability of receiving your medical exam certificate at the end of your appointment instead of having to gather more information after your appointment, which may affect your ability to return to work.</li>
+        </ul>
+      </li>
+    </ul>`
+  )}
+
+  <p style="${pStyle}">We look forward to seeing you at your upcoming DOT physical!</p>`;
 
 // --- DOT ------------------------------------------------------------------
 

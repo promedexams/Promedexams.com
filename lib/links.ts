@@ -13,6 +13,7 @@ export const MCSA_5875_URL = "/forms/dot/MCSA-5875.pdf";
 export const ADOBE_READER_URL = "https://get.adobe.com/reader/";
 export const FAA_AME_GUIDE_URL = "https://www.faa.gov/ame_guide";
 export const FAA_PHYSICALS_PAGE_URL = `${DOMAIN_URL}/services/faa-physicals`;
+export const DOT_PHYSICALS_PAGE_URL = `${DOMAIN_URL}/services/dot-physicals`;
 export const IMMIGRATION_PAGE_URL = `${DOMAIN_URL}/services/immigration-medical-exams`;
 export const I693_INSTRUCTIONS_URL =
   "https://docs.google.com/document/d/17RNxE0VuUVc0MTdJAoKT2OlKw4uoQWBh-I8EE360mlE/edit?usp=sharing";
