@@ -42,3 +42,6 @@ next-env.d.ts
 
 # tmpo CLI time tracking
 .tmporc
+
+# generated email previews (see lib/email/README.md)
+/email-previews

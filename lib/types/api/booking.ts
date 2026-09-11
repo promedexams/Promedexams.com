@@ -9,6 +9,7 @@
  * @property phoneNumber - The client's phone number.
  * @property serviceId - The identifier for the requested service.
  * @property serviceVariationVersion - The version of the service variation
+ * @property appointmentType - The human-readable service name (e.g. "DOT Physical"), used to route appointment emails.
  * @property newOrReturningClient - Indicates if the client is new or returning ("new" | "returning").
  * @property newHealthConditions - Optional. Indicates if the client has new health conditions ("yes" | "no").
  * @property newMedications - Optional. Indicates if the client is taking new medications ("yes" | "no").
@@ -28,6 +29,7 @@ export interface BookingRequest {
   // Appointment Information
   serviceId: string;
   serviceVariationVersion: string;
+  appointmentType: string;
   newOrReturningClient: "new" | "returning";
   newHealthConditions?: "yes" | "no";
   newMedications?: "yes" | "no";

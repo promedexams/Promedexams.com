@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { fromZonedTime } from "date-fns-tz";
 import { SquareClient, SquareEnvironment } from "square";
 
+import { sendAppointmentEmails } from "@/lib/email/send-appointment-emails";
 import { BookingRequest } from "@/lib/types/api/booking";
 
 export async function POST(request: NextRequest) {
@@ -76,6 +77,18 @@ export async function POST(request: NextRequest) {
         },
         { status: 500 }
       );
+    }
+
+    // Send appointment emails (welcome + encrypted). Wrapped so a failure here
+    // never affects the successful booking response.
+    try {
+      await sendAppointmentEmails({
+        to: bookingData.email,
+        appointmentType: bookingData.appointmentType,
+        newOrReturningClient: bookingData.newOrReturningClient,
+      });
+    } catch (emailError) {
+      console.error("Error sending appointment emails:", emailError);
     }
 
     return NextResponse.json({

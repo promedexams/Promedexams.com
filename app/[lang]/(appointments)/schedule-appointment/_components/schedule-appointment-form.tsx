@@ -245,6 +245,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
         phoneNumber: string;
         serviceId: string;
         serviceVariationVersion: number | null;
+        appointmentType: string;
         newOrReturningClient: "new" | "returning";
         newHealthConditions?: "yes" | "no";
         newMedications?: "yes" | "no";
@@ -263,6 +264,7 @@ const ScheduleAppointmentForm = ({ params }: SupportedLanguagesProps) => {
         // Appointment Information
         serviceId: selectedAppointmentType,
         serviceVariationVersion: selectedAppointmentVariationVersion,
+        appointmentType: appointmentTypes.find((service) => service.id === selectedAppointmentType)?.name ?? "Unknown",
         newOrReturningClient: newOrReturningClient as "new" | "returning",
         newHealthConditions: newHealthConditions as "yes" | "no" | undefined,
         newMedications: newMedications as "yes" | "no" | undefined,

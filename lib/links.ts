@@ -8,3 +8,17 @@ export const IMMIGRATION_FAQ_URL =
   "https://docs.google.com/document/d/e/2PACX-1vT47vf638Cs6YsjpuI0AdXzSJR4YmU5iE9vd81AEZOriReLTqbNk4SNoLQSJlX8Vg/pub";
 export const MED_XPRESS_URL = "https://medxpress.faa.gov/";
 export const MCSA_5875_URL = "/forms/dot/MCSA-5875.pdf";
+
+// Appointment email links
+export const ADOBE_READER_URL = "https://get.adobe.com/reader/";
+export const FAA_AME_GUIDE_URL = "https://www.faa.gov/ame_guide";
+export const FAA_PHYSICALS_PAGE_URL = `${DOMAIN_URL}/services/faa-physicals`;
+export const DOT_PHYSICALS_PAGE_URL = `${DOMAIN_URL}/services/dot-physicals`;
+export const IMMIGRATION_PAGE_URL = `${DOMAIN_URL}/services/immigration-medical-exams`;
+export const I693_INSTRUCTIONS_URL =
+  "https://docs.google.com/document/d/17RNxE0VuUVc0MTdJAoKT2OlKw4uoQWBh-I8EE360mlE/edit?usp=sharing";
+export const QUEST_LAB_APPOINTMENT_URL = "https://locations.questdiagnostics.com/co/littleton/8199-southpark-ln";
+export const CDC_VACCINES_BY_AGE_URL =
+  "https://www.cdc.gov/immigrant-refugee-health/media/pdfs/Vaccine-Requirements-According-to-Applicant-Age-civil-surgeons-p.pdf";
+export const CDC_VACCINATION_TECHNICAL_INSTRUCTIONS_URL =
+  "https://www.cdc.gov/immigrant-refugee-health/hcp/civil-surgeons/vaccination.html";
