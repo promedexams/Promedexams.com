@@ -35,7 +35,7 @@ export const BusinessInfo = {
     },
     Laura: {
       Name: "Laura Wyse",
-      Headshot: "/headshots/placeholder.jpg",
+      Headshot: "/headshots/laura-wyse-square.jpg",
       Email: "office@promedexams.com",
     },
   },
